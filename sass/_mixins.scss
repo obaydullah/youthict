@@ -1,0 +1,40 @@
+@mixin btn__orange {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: linear-gradient(
+    to right,
+    $color-secondary 55%,
+    $color-secondary-light 85%
+  );
+  border: none;
+  padding: 1rem 1.2rem;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+@mixin btn__transparent {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid $color-secondary;
+  padding: 1rem 1.2rem;
+  text-transform: uppercase;
+  color: $color-secondary;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+@mixin video__gradiant {
+  background: linear-gradient(
+    to top,
+    rgba(17, 88, 109, 0.9) 30%,
+    rgba(0, 173, 238, 0.5) 90%
+  );
+}
+@mixin video__gradiant--two {
+  background: linear-gradient(
+    to top,
+    rgba(241, 111, 33, 0.6) 30%,
+    rgba(244, 136, 72, 0.3) 50%
+  );
+}

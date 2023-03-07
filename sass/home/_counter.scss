@@ -1,0 +1,47 @@
+.counter__area {
+  background: linear-gradient(
+      to top,
+      rgba(17, 88, 109, 0.9) 30%,
+      rgba(17, 88, 109, 0.9) 30%
+    ),
+    url("../../img/counter__bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 4rem 0;
+
+  &--header {
+    text-align: center;
+
+    h2 {
+      font-size: 5rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.7rem;
+      width: 60%;
+      margin: 1rem auto;
+    }
+  }
+
+  .counter__area--inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+  }
+
+  .counter__area--single {
+    text-align: center;
+
+    .counter__icon {
+      font-size: 6rem;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 3rem;
+      font-weight: 400;
+    }
+  }
+}

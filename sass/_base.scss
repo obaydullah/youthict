@@ -1,0 +1,62 @@
+$color-primary: #11586d;
+$color-primary-light: #00adee;
+$color-secondary: #f16f21;
+$color-secondary-light: #f48848;
+$color-black: #333;
+$color-bg-one: #e8faff;
+$color-white: #f1f1f1;
+$color-title: #176981;
+
+// //defining breakpoint
+// $bp-phone: 50rem;
+// $bp-tablets: 70rem;
+// $bp-desktop: 90rem;
+// $bp-large-desktop: 120rem;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; //   1rem = 10px
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 56.25%; //  1rem = 9px
+  }
+  @media only screen and (max-width: 700px) {
+    font-size: 50%; // 1rem = 8px
+  }
+  @media only screen and (max-width: 700px) {
+    font-size: 43.75%; // 1rem = 7px
+  }
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+input:focus {
+  outline: none;
+}
+
+.container {
+  width: 85%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+//all mixins

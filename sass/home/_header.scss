@@ -1,0 +1,130 @@
+// .header__top--bar {
+//   height: 0.4rem;
+//   background: $color-primary;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+// }
+
+//header notice area start
+.header__notice--area {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background: $color-primary;
+  color: #fff;
+}
+
+.header__notice--area--inner {
+  // margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+
+  .notice__btn {
+    background-color: rgba(255, 6, 6, 0.8);
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    margin-right: 2rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0.6rem;
+      right: -2rem;
+      height: 2rem;
+      width: 2rem;
+      background: rgba(255, 6, 6, 0.8);
+      content: "";
+      clip-path: polygon(40% 50%, 0 0, 0 100%);
+    }
+  }
+  .notice__seperator--start {
+    height: 2rem;
+    width: 0.2rem;
+    background: rgba(255, 6, 6, 0.8);
+    margin-right: 1rem;
+  }
+  .notice__seperator--end {
+    height: 2rem;
+    width: 0.2rem;
+    background: rgba(255, 6, 6, 0.8);
+    margin-left: 1rem;
+  }
+
+  .notice__text {
+    font-size: 1.4rem;
+  }
+}
+//notice area end
+
+//header area start
+.header {
+  position: relative;
+
+  .header__area--top {
+    display: flex;
+    justify-content: space-between;
+
+    .header__logo--left {
+      height: 15rem;
+      width: 15rem;
+    }
+    .header__logo--middle {
+      height: 12rem;
+      width: auto;
+    }
+    .header__area--info {
+      text-align: right;
+      margin-top: 2rem;
+
+      p {
+        font-size: 1.6rem;
+        color: #000;
+        font-weight: 400;
+        line-height: 2.6rem;
+      }
+
+      .header__area--info--icon {
+        color: $color-secondary;
+        font-size: 1.6rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .menu__area {
+    position: relative;
+    padding: 1.5rem 0;
+    margin-top: -3.5rem;
+
+    .mainmenu {
+      text-align: center;
+
+      a {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #000;
+        text-transform: uppercase;
+        margin: 0 2rem;
+        transition: all 0.2s;
+
+        &.active {
+          color: $color-secondary;
+        }
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+    }
+
+    .mainmenu__login--btn {
+      @include btn__orange;
+      position: absolute;
+      top: 0.7rem;
+      right: 0;
+    }
+  }
+}
+//header area end

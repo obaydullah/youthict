@@ -1,0 +1,103 @@
+.youthict__about {
+  margin: 10rem 0;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    top: -20rem;
+    left: 0;
+    height: 200%;
+    width: 10rem;
+    content: "";
+    background-image: url(../../img/aboutusbg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &::after {
+    position: absolute;
+    top: -20rem;
+    right: 0;
+    height: 200%;
+    width: 10rem;
+    content: "";
+    background-image: url(../../img/aboutusbg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &--inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--info {
+    width: 50%;
+
+    h2 {
+      font-size: 4rem;
+      font-weight: bold;
+
+      span {
+        color: $color-secondary;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2rem;
+      margin: 1rem 0;
+    }
+
+    .youthict__start--learning--btn {
+      @include btn__orange;
+      margin-top: 2rem;
+    }
+  }
+
+  .youthict__course--infobox {
+    display: flex;
+    gap: 4rem;
+
+    p {
+      display: flex;
+      align-items: center;
+      font-size: 1.7rem;
+      font-weight: 400;
+
+      .youthict__course--infobox--icon {
+        color: #33c6a2;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .youthict__about--img {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .img__left {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .small {
+      height: 17rem;
+      width: 17rem;
+      border-radius: 1rem;
+    }
+
+    .large {
+      width: 17rem;
+      height: 30rem;
+      border-radius: 1rem;
+    }
+  }
+}
