@@ -1,0 +1,852 @@
+.course__details--body {
+  background-color: #ebf1f8;
+}
+
+.advertisement__img {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// course details header start
+.course__details--header {
+  .header__bg--img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .course__details--header--inner {
+    padding: 3rem 0;
+
+    .course__title {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .course__header--info {
+      font-size: 1.4rem;
+    }
+    .ratings {
+      display: flex;
+      align-items: center;
+
+      .ratings__icon {
+        margin-right: 1rem;
+
+        svg {
+          color: $hover;
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+      .total__ratings {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+//course details header end
+
+// Instructor Area start
+.instructor {
+  padding: 2rem 0;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black-2;
+    margin-bottom: 2rem;
+  }
+
+  &__info--box {
+    display: flex;
+    background-color: $bg-2;
+    padding: 2rem;
+    gap: 3rem;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .instructor__info {
+      h3 {
+        font-size: 2.2rem;
+        font-weight: normal;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+// Instructor Area end
+
+//What you will learn area start
+.what__you--learn {
+  background-color: $bg-2;
+  margin: 3rem 0;
+  padding: 2rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black-2;
+    margin-bottom: 2rem;
+  }
+  .what__you--learn--info {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    padding: 2rem;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    .info__left {
+      width: 48%;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+    .info__right {
+      width: 48%;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+
+      .fa {
+        color: $primary-color;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+//What you will learn area end
+
+.accordion-button:not(.collapsed) {
+  color: $black-2;
+  background-color: $white;
+}
+
+//about course area start
+.about__course {
+  padding: 2rem 0;
+
+  .accordion-header {
+    padding: 1rem 0;
+  }
+
+  &--title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black-2;
+    margin-bottom: 2rem;
+  }
+
+  .accordion-button {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .accordion-body {
+    .about__course {
+      margin: 0;
+      padding: 0;
+      p {
+        font-size: 1.3rem;
+        font-weight: normal;
+        opacity: 0.9;
+      }
+    }
+    .who__isthis--coursefor {
+      ul {
+        li {
+          list-style-type: square;
+          font-size: 1.3rem;
+          margin-bottom: 0.5rem;
+          color: $black-2;
+          opacity: 0.9;
+
+          span {
+            font-weight: bold;
+          }
+        }
+        li::marker {
+          color: $hover;
+        }
+      }
+    }
+    .what__will--yougetwith--course {
+      ul {
+        li {
+          list-style-type: square;
+          font-size: 1.3rem;
+          margin-bottom: 0.5rem;
+          color: $black-2;
+          opacity: 0.9;
+
+          span {
+            font-weight: bold;
+          }
+        }
+        li::marker {
+          color: $hover;
+        }
+      }
+    }
+  }
+}
+//about course area end
+
+// course content area start
+.course__content {
+  padding: 2rem 0;
+
+  .accordion-header {
+    padding: 1rem 0;
+  }
+
+  &--title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black-2;
+    margin-bottom: 2rem;
+  }
+  .accordion-button {
+    font-size: 1.4rem;
+    color: $black-2;
+  }
+
+  //accordion body
+  .course__content--btn {
+    position: relative;
+  }
+  .course__content--btn span {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    font-weight: normal;
+
+    svg {
+      transform: rotate(90deg);
+      width: 1.8rem;
+      height: 1.8rem;
+      margin-right: 0.8rem;
+    }
+  }
+  .accordion-button {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $black-2;
+  }
+
+  .topics,
+  .skills__you--learn {
+    h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    ul {
+      list-style-type: square;
+    }
+    ul li {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      svg {
+        height: 2rem;
+        width: 2rem;
+        margin-left: 1rem;
+      }
+
+      &.free {
+        color: $hover;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .list__inner {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    ul li::marker {
+      color: $hover;
+    }
+  }
+  .skills__you--learn {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .topics__title--icon {
+      background-color: $primary-color;
+      border-radius: 50%;
+      color: $white;
+      height: 2rem;
+      width: 2rem;
+      margin-right: 0.8rem;
+    }
+
+    ul li::marker {
+      color: $black-2;
+    }
+  }
+}
+// course content area end
+
+// what you need to class
+.what__need--todoclass {
+  padding: 2rem 0;
+
+  .title {
+    font-size: 2rem;
+    color: $black-2;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  &--info {
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    background-color: $white;
+
+    p {
+      font-size: 1.6rem;
+
+      .fa {
+        color: $primary-color;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+// what you need to class
+
+// payment
+.payment {
+  padding: 2rem 0;
+
+  .title {
+    font-size: 2rem;
+    color: $black-2;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  a {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    color: $primary-color;
+    font-weight: bold;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    background-color: $white;
+  }
+}
+// payment
+
+// certificate
+.certificate {
+  padding: 2rem 0;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black-2;
+    margin-bottom: 2rem;
+  }
+  .certificate__inner {
+    padding: 3rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+
+    .course__completion--text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1.4rem;
+    }
+    .list {
+      font-size: 1.4rem;
+      font-weight: normal;
+
+      .fa {
+        margin-right: 0.5rem;
+        color: $primary-color;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+  }
+}
+// certificate
+
+//student testemonial
+.student__testemonial {
+  padding: 2rem 0;
+  transform: scale(1);
+
+  &--slider {
+    position: relative;
+    overflow: hidden;
+  }
+  .student__testemonial__arrow--left {
+    position: absolute;
+    top: 55%;
+    z-index: 999;
+    left: -3rem;
+    transform: translateY(-50%);
+    height: 3rem;
+    width: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+  }
+  .student__testemonial__arrow--right {
+    position: absolute;
+    top: 55%;
+    z-index: 999;
+    right: -3rem;
+    transform: translateY(-50%);
+    height: 3rem;
+    width: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+  }
+
+  .slick-track {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &--title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black-2;
+    margin-bottom: 2rem;
+  }
+
+  &--single {
+    background-color: $white;
+    color: $black-2;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+
+    .quote {
+      color: $primary-color;
+      font-size: 3.5rem;
+    }
+    .text {
+      font-size: 1.4rem;
+      font-weight: normal;
+      margin-top: 2rem;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      img {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 1px solid $hover;
+      }
+      .info {
+        .name {
+          font-size: 1.8rem;
+          margin-bottom: 0;
+        }
+        .designation {
+          font-size: 1.4rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+//student testemonial
+
+// frequently asked question
+.frequently__asked--question {
+  padding: 2rem 0;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black-2;
+    margin-bottom: 1.5rem;
+  }
+
+  .accordion-button {
+    font-size: 1.4rem;
+    padding: 1.2rem 1rem;
+    font-weight: bold;
+  }
+  .accordion-body {
+    font-size: 1.4rem;
+    opacity: 0.8;
+  }
+  .accordion-button:not(.collapsed) {
+    color: $black-2;
+    background-color: $white;
+  }
+}
+// frequently asked question
+
+// course details card
+
+.course__details--card {
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin: 3rem 0;
+  border-radius: 1rem;
+  position: relative;
+  background-color: $white;
+
+  .course__enroll--btn {
+    background-color: $hover;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    padding: 0.8rem 1rem;
+    color: $white;
+    margin-bottom: 2rem;
+  }
+
+  .course__details--img--box {
+    position: relative;
+
+    .video-play--icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 8rem;
+      width: 8rem;
+      cursor: pointer;
+      color: $white;
+      opacity: 1;
+      border-radius: 50%;
+      padding: 0.5rem;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .course__content {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 2.5rem;
+      color: $black-2;
+      font-weight: bold;
+      margin: 1.5rem 0;
+      margin-top: 0.5rem;
+    }
+    p {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        svg {
+          margin-right: 1rem;
+          height: 1.5rem;
+          width: 1.5rem;
+
+          color: $hover;
+        }
+      }
+      .lavel {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+//modal style start
+.video__area--inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.modal__form {
+  width: 30rem;
+
+  @include desktop {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+.modal__area {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  // background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 1;
+
+  &--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+  }
+
+  .modal__close--icon {
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    color: white;
+    cursor: pointer;
+  }
+  .modal__form {
+    text-align: center;
+    background: $white;
+    padding: 2rem;
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: bold;
+
+      @include desktop {
+        font-size: 1.6rem;
+      }
+    }
+    img {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      border: 1px solid $hover;
+      margin: 0.5rem 0;
+    }
+    .question {
+      font-size: 1.2rem;
+
+      @include desktop {
+        font-size: 1.1rem;
+      }
+    }
+    .phone {
+      font-size: 1.6rem;
+      color: $black;
+      font-weight: bold;
+      opacity: 0.9;
+      margin: 0;
+
+      @include desktop {
+        font-size: 1.4rem;
+      }
+    }
+    .or {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+    .request__callback {
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
+    .modal__submit--form {
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        font-size: 1.3rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        border: none;
+        padding: 0.5rem;
+        width: 100%;
+        background-color: $hover;
+        color: $white;
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+//modal style end
+
+.career__counceling {
+  background-color: $white;
+  border-radius: 1rem;
+
+  @include tablet {
+    display: none;
+  }
+
+  .header {
+    padding: 1.5rem;
+    background-color: $primary-color;
+    color: $white;
+    text-align: center;
+    border-radius: 1rem;
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    p {
+      font-weight: normal;
+      font-size: 1.2rem;
+    }
+  }
+  .body {
+    padding: 1.5rem;
+
+    .form__group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      width: 100%;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 0.3rem;
+    }
+    input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.3rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    .note {
+      color: $black-2;
+      font-size: 1.2rem;
+      opacity: 0.8;
+
+      span {
+        font-weight: bold;
+      }
+    }
+    button {
+      border: none;
+      width: 100%;
+      color: $white;
+      background-color: $primary-color;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 0.5rem;
+    }
+  }
+}
+// course details card
+
+//course details enrollment form
+.course__details--enrollment--form {
+  padding: 2rem 0;
+  margin-bottom: 15rem;
+
+  &--inner {
+    background-color: $white;
+    padding: 2rem;
+    width: 100%;
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $primary-color;
+
+      margin-bottom: 1rem;
+    }
+    .form__group {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: flex-end;
+
+      @include tablet {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .form__field {
+        flex-grow: 2;
+
+        @include tablet {
+          width: 100%;
+        }
+
+        label {
+          font-size: 1.2rem;
+          font-weight: normal;
+        }
+
+        input {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+      button {
+        font-size: 1.4rem;
+        background-color: $primary-color;
+        padding: 1rem 3rem;
+        color: $white;
+      }
+    }
+  }
+}
+//course details enrollment form

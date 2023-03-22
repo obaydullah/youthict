@@ -1,0 +1,19 @@
+{
+  "name": "master_academy",
+  "version": "1.0.0",
+  "description": "master academy html template using gulp 4 and gulp sass",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.58.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rubel",
+  "license": "ISC"
+}
