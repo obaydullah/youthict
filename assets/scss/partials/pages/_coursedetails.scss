@@ -608,11 +608,21 @@
 //modal style start
 .video__area--inner {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  width: 61%;
+  margin: 0 auto;
+}
+.video--area {
+  display: flex;
+  align-items: center;
 }
 .modal__form {
   width: 30rem;
+
+  @media only screen and (max-width: 1300px) {
+    display: none;
+  }
 
   @include desktop {
     display: none;

@@ -673,192 +673,228 @@
     </div>
     <!-- Start Side Vav -->
 
+    <!-- branch apply header -->
+    <section class="branchapply__header">
+      <div class="container">
+        <img
+          class="shape-1 shape"
+          src="./assets/images/gallery/shape-13.png"
+          alt=""
+        />
+        <img
+          src="./assets/images/gallery/shape-15.png"
+          alt=""
+          class="shape-2 shape"
+        />
+        <img
+          src="./assets/images/gallery/shape-25.png"
+          alt=""
+          class="shape-3 shape"
+        />
+
+        <div class="row justify-content-center">
+          <div class="col-lg-5 align-self-center">
+            <div class="branchapply__header--inner">
+              <h2>Apply for Branch</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- branch apply header -->
+
     <!-- branchapply  start  -->
     <section class="branch__apply">
       <div class="container">
         <div class="row g-0">
           <div class="col-lg-12">
-            <div class="branch__header">
-              <h2 class="branch__title">Apply for banch</h2>
-            </div>
-
             <div class="row">
               <div class="col-lg-6">
-                <form id="branchapplyform" class="branch__apply--form">
-                  <!-- <div class="tab">
+                <form id="regForm">
+                  <div class="tab">
                     <h2>Institute Information</h2>
-                    <label for="institutename">Institute Name</label>
+
                     <p>
+                      <label for="iname">Name</label>
                       <input
                         placeholder="Institute Name"
-                        name="institutename"
-                        id="institutename"
-                      />
-                    </p>
-                    <label for="instituteage">Institute Age</label>
-                    <p>
-                      <input
-                        placeholder="Institute Age"
-                        name="instituteage"
-                        id="instituteage"
-                      />
-                    </p>
-                    <label for="institutephone">Institute Phone Number</label>
-                    <p>
-                      <input
-                        placeholder="Institute Phone Number"
-                        name="institutephone"
-                        id="phone"
-                      />
-                    </p>
-                    <label for="tradelicense">Institute Trade License</label>
-                    <p>
-                      <input
-                        type="file"
-                        class="upload__box"
-                        name="tradelicense"
-                        id="tradelicense"
+                        oninput="this.className = ''"
+                        name="iname"
+                        id="iname"
+                        type="text"
                         required
                       />
                     </p>
-
-                    <div class="form__input">
-                      <label for="experience"
-                        >Experience with any Govt. Institution</label
-                      >
-                      <div class="form__input--radio">
-                        <div class="form__input--radio--group">
-                          <input
-                            type="radio"
-                            name="experience"
-                            id="yes"
-                            value="Yes"
-                            required
-                          />
-                          <label for="yes">Yes</label>
-                        </div>
-                        <div class="form__input--radio--group">
-                          <input
-                            type="radio"
-                            name="experience"
-                            id="no"
-                            value="No"
-                            required
-                          />
-                          <label for="no">No</label>
-                        </div>
+                    <p>
+                      <label for="iage">Institute Age</label>
+                      <input
+                        placeholder="Institute Age"
+                        oninput="this.className = ''"
+                        name="iage"
+                        id="iage"
+                        type="number"
+                        required
+                      />
+                    </p>
+                    <p>
+                      <label for="icomputer">Institute Computer Number</label>
+                      <input
+                        placeholder="Institute Computer Number"
+                        oninput="this.className = ''"
+                        name="icomputer"
+                        id="icomputer"
+                        type="number"
+                        required
+                      />
+                    </p>
+                    <p>
+                      <label for="imobile">Institute Mobile Number</label>
+                      <input
+                        placeholder="Institute Mobile Number"
+                        oninput="this.className = ''"
+                        name="imobile"
+                        id="imobile"
+                        type="number"
+                        required
+                      />
+                    </p>
+                    <p>
+                      <label for="tradelicense">Institute Trade License</label>
+                      <input
+                        type="file"
+                        name="tradelicense"
+                        id="tradelicense"
+                        oninput="this.className = ''"
+                      />
+                    </p>
+                    <p class="radio__label">
+                      Experience with any govt. Institution
+                    </p>
+                    <div class="radio__group">
+                      <div class="radio__field">
+                        <label for="yes">Yes</label>
+                        <input
+                          type="radio"
+                          name="experience"
+                          id="yes"
+                          value="Yes"
+                        />
+                      </div>
+                      <div class="radio__field">
+                        <label for="no">No</label>
+                        <input
+                          type="radio"
+                          name="experience"
+                          id="no"
+                          value="No"
+                        />
                       </div>
                     </div>
                   </div>
                   <div class="tab">
-                    <h2>Proprietor Information</h2>
-                    <label for="proprietorname">Proprietor Name</label>
+                    <h2>Institute Propritor Information</h2>
+
                     <p>
+                      <label for="pname">Proprietor Name</label>
                       <input
                         placeholder="Proprietor Name"
-                        name="proprietorname"
-                        id="proprietorname"
-                        requied
+                        oninput="this.className = ''"
+                        name="pname"
+                        id="pname"
+                        type="text"
+                        required
                       />
                     </p>
-
-                    <label for="proprietoremail"
-                      >Proprietor Email Address</label
-                    >
                     <p>
+                      <label for="pemail">Proprietor Email</label>
                       <input
                         placeholder="Proprietor Email"
-                        name="proprietoremail"
-                        id="proprietoremail"
-                        requied
+                        oninput="this.className = ''"
+                        name="pemail"
+                        id="pemail"
+                        type="email"
+                        required
                       />
                     </p>
-                    <label for="proprietoremail">Proprietor Phone</label>
                     <p>
+                      <label for="pphone">Institute Computer Number</label>
                       <input
-                        placeholder="Proprietor Phone"
-                        name="proprietorphone"
-                        id="proprietorphone"
-                        requied
+                        placeholder="Proprietor Phone Number"
+                        oninput="this.className = ''"
+                        name="pphone"
+                        id="pphone"
+                        type="number"
+                        required
                       />
                     </p>
 
-                    <label for="proprietorpicture"
-                      >Proprietor Profile Picture
-                    </label>
                     <p>
+                      <label for="ppicture">Proprietor Profile Picture</label>
                       <input
                         type="file"
-                        class="upload__box"
-                        name="proprietorpicture"
-                        id="proprietorpicture"
-                        required
+                        name="ppicture"
+                        id="ppicture"
+                        oninput="this.className = ''"
                       />
                     </p>
-                    <label for="proprietornid">Proprietor NID Card </label>
                     <p>
+                      <label for="pnid">Proprietor NID</label>
                       <input
                         type="file"
-                        class="upload__box"
-                        name="proprietornid"
-                        id="proprietornid"
-                        required
+                        name="pnid"
+                        id="pnid"
+                        oninput="this.className = ''"
                       />
                     </p>
-                  </div> -->
+                  </div>
                   <div class="tab">
-                    <h2>Location & Address</h2>
-                    <div class="form__input">
-                      <label for="division">Division</label>
-                      <select name="division" id="division">
-                        <option value="0">Select Division</option>
-                        <option value="Dhaka">Dhaka</option>
-                        <option value="Rangpur">Rangpur</option>
-                        <option value="Sylhet">Sylhet</option>
-                      </select>
-                    </div>
+                    <h2>Institute Address and Location</h2>
 
-                    <div class="form__input">
+                    <p>
                       <label for="district">District</label>
-                      <select name="district" id="district" required>
-                        <option value="0">Select district</option>
-                        <option value="Dhaka">Dhaka</option>
-                        <option value="Rangpur">Rangpur</option>
-                        <option value="Sylhet">Sylhet</option>
-                      </select>
-                    </div>
-
-                    <div class="form__input">
-                      <label for="thana">Thana</label>
-                      <select name="thana" id="thana" required>
-                        <option value="0">Select Thana</option>
-                        <option value="Dhaka">Dhaka</option>
-                        <option value="Rangpur">Rangpur</option>
-                        <option value="Sylhet">Sylhet</option>
-                      </select>
-                    </div>
-
-                    <label for="additionalinfo"></label>
+                      <input
+                        placeholder="District"
+                        oninput="this.className = ''"
+                        name="district"
+                        id="district"
+                        type="text"
+                        required
+                      />
+                    </p>
+                    <p>
+                      <label for="thana">Upazila / Thana</label>
+                      <input
+                        placeholder="Thana"
+                        oninput="this.className = ''"
+                        name="thana"
+                        id="thana"
+                        type="text"
+                        required
+                      />
+                    </p>
                     <textarea
                       name="additionalinfo"
                       id="additionalinfo"
-                      cols="30"
-                      rows="5"
+                      cols="10"
+                      rows="10"
                     ></textarea>
                   </div>
 
                   <div style="overflow: auto">
                     <div style="float: right">
-                      <button type="button" class="previous">Previous</button>
-                      <button type="button" class="next">Next</button>
-                      <button type="button" class="submit">Submit</button>
+                      <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                        Previous
+                      </button>
+                      <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                        Next
+                      </button>
                     </div>
                   </div>
-
+                  <!-- Circles which indicates the steps of the form: -->
                   <div style="text-align: center; margin-top: 40px">
-                    <span class="step">1</span>
-                    <span class="step">2</span>
-                    <span class="step">3</span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
                   </div>
                 </form>
               </div>
@@ -1214,157 +1250,83 @@
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/main.js"></script>
 
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $.validator.addMethod(
-          "date",
-          function (value, element, param) {
-            return value != 0 && value <= 31 && value == parseInt(value, 10);
-          },
-          "Please enter a valid date!"
-        );
-        $.validator.addMethod(
-          "month",
-          function (value, element, param) {
-            return value != 0 && value <= 12 && value == parseInt(value, 10);
-          },
-          "Please enter a valid month!"
-        );
-        $.validator.addMethod(
-          "year",
-          function (value, element, param) {
-            return value != 0 && value >= 1900 && value == parseInt(value, 10);
-          },
-          "Please enter a valid year not less than 1900!"
-        );
-        $.validator.addMethod(
-          "username",
-          function (value, element, param) {
-            var nameRegex = /^[a-zA-Z0-9]+$/;
-            return value.match(nameRegex);
-          },
-          "Only a-z, A-Z, 0-9 characters are allowed"
-        );
-        $.validator.addMethod(
-          "selectdivision",
-          function (value, element, param) {
-            return value !== "0";
-          },
-          "Division is required"
-        );
-        $.validator.addMethod(
-          "selectdistrict",
-          function (value, element, param) {
-            return value !== "0";
-          },
-          "District is required"
-        );
-        $.validator.addMethod(
-          "selectthana",
-          function (value, element, param) {
-            return value !== "0";
-          },
-          "Thana is required"
-        );
+    <script>
+      //Branch apply multi step form start
 
-        var val = {
-          // Specify validation rules
-          rules: {
-            institutename: {
-              required: true,
-            },
-            instituteage: {
-              required: true,
-              digits: true,
-            },
-            institutephone: {
-              required: true,
-              minlength: 11,
-              maxlength: 11,
-              digits: true,
-            },
-            experience: {
-              required: true,
-            },
-            proprietorname: {
-              required: true,
-            },
-            fathersname: {
-              required: true,
-            },
-            mothersname: {
-              required: true,
-            },
-            proprietoremail: {
-              required: true,
-              email: true,
-            },
-            proprietorphone: {
-              required: true,
-              minlength: 11,
-              maxlength: 11,
-              digits: true,
-            },
-            proprietorpicture: {
-              required: true,
-            },
-            proprietornid: {
-              required: true,
-            },
-            division: {
-              required: true,
-              selectdivision: true,
-            },
-            district: {
-              required: true,
-              selectdistrict: true,
-            },
-            thana: {
-              required: true,
-              selectthana: true,
-            },
-          },
-          // Specify validation error messages
-          messages: {
-            institutename: "Institute Name is required",
-            instituteage: "Institute Age is required",
-            institutephone: {
-              required: "Phone number is requied",
-              minlength: "Please enter 11 digit mobile number",
-              maxlength: "Please enter 11 digit mobile number",
-              digits: "Only numbers are allowed in this field",
-            },
-            tradelicense: "Trade License is required",
-            experience: "Select experience",
-            proprietorname: "Proprietor Name is required",
-            fathersname: "Fathers Name is required",
-            mothersname: "Mothers Name is required",
-            proprietoremail: {
-              required: "Email is required",
-              email: "Please enter a valid e-mail",
-            },
-            proprietorphone: {
-              required: "Phone number is requied",
-              minlength: "Please enter 11 digit mobile number",
-              maxlength: "Please enter 11 digit mobile number",
-              digits: "Only numbers are allowed in this field",
-            },
-            proprietorpicture: "Proprietor Picture is required",
-            proprietornid: "Proprietor NID is required",
-          },
-        };
+      var currentTab = 0;
+      showTab(currentTab);
 
-        $("#branchapplyform")
-          .multiStepForm({
-            beforeSubmit: function (form, submit) {
-              console.log("called before submiting the form");
-              console.log(form);
-              console.log(submit);
-            },
-            validations: val,
-          })
-          .navigateTo(0);
-      });
+      function showTab(n) {
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        if (n == 0) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == x.length - 1) {
+          document.getElementById("nextBtn").innerHTML = "Submit";
+        } else {
+          document.getElementById("nextBtn").innerHTML = "Next";
+        }
+        fixStepIndicator(n);
+      }
+
+      function nextPrev(n) {
+        var x = document.getElementsByClassName("tab");
+        if (n == 1 && !validateForm()) return false;
+        x[currentTab].style.display = "none";
+        currentTab = currentTab + n;
+        if (currentTab >= x.length) {
+          document.getElementById("regForm").submit();
+          return false;
+        }
+        showTab(currentTab);
+      }
+
+      function validateForm() {
+        var x,
+          y,
+          i,
+          valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        for (i = 0; i < y.length; i++) {
+          if (y[i].value == "") {
+            y[i].className += " invalid";
+            valid = false;
+            return false;
+          }
+        }
+        let radioBtn = document.getElementsByName("experience");
+        let radioLabel = document.querySelector(".radio__label");
+        radioBtn.forEach((radio) => {
+          if (!radio.checked) {
+            radioLabel.style.color = "red";
+            valid = false;
+          } else {
+            radioLabel.style.color = "black";
+            valid = true;
+          }
+        });
+
+        if (valid) {
+          document.getElementsByClassName("step")[currentTab].className +=
+            " finish";
+        }
+        return valid;
+      }
+
+      function fixStepIndicator(n) {
+        var i,
+          x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        x[n].className += " active";
+      }
+
+      //Branch apply multi step form end
     </script>
   </body>
 </html>

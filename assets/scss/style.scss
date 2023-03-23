@@ -81,6 +81,7 @@ CSS Index
 /*****************************
    1. header
 *********************************/
+
 .rbt-category-menu-wrapper
   .category-dropdown-menu
   .category-menu-item
@@ -368,10 +369,11 @@ CSS Index
   z-index: -1;
 }
 .banner_text {
-  max-width: 469px;
+  max-width: 600px;
+  margin-bottom: 4rem;
 }
 .banner_text h5 {
-  font-size: 17px;
+  font-size: 14px;
   font-family: $default_font;
   opacity: 0.9;
 }
@@ -383,6 +385,12 @@ CSS Index
   padding: 1rem 0;
   position: relative;
   font-family: $default_font;
+  color: $hover-2;
+}
+.banner_img {
+  @media only screen and (max-width: 800px) {
+    margin-top: 4rem;
+  }
 }
 .banner_img .banner_img_overly .overly_text h4,
 .banner_text > p,
@@ -2556,12 +2564,13 @@ header .menu_cart .check_out:hover {
 .banner-three {
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.8) 30%,
-      rgba(0, 0, 0, 0.8) 20%
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0.6) 20%
     ),
     url("../images/bg-img-5.jpg");
   background-size: cover;
   background-position: left;
+
   position: relative;
   padding: 150px 0px;
   padding-top: 120px;
@@ -4269,7 +4278,7 @@ select.chosen-select {
     .number {
       margin-top: 1rem;
       font-size: 4rem;
-      font-weight: bold;
+      font-weight: 900;
     }
     .text {
       font-size: 1.4rem;
@@ -6918,7 +6927,10 @@ select.chosen-select {
   color: #fff;
 }
 #rs-footer .footer-top .mc4wp-form {
-  padding-top: 4px;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  margin: 0;
 }
 #rs-footer .footer-top .mc4wp-form-fields {
   position: relative;
@@ -7349,6 +7361,11 @@ select.chosen-select {
     .certificate-thumb img {
       filter: brightness(0.7);
     }
+
+    .certificate-content {
+      background-color: $card-bg-4;
+      color: $white;
+    }
   }
 }
 
@@ -7365,6 +7382,12 @@ select.chosen-select {
     justify-content: space-between;
     gap: 2rem;
     margin-top: 2rem;
+    color: $black-2;
+    opacity: 0.8;
+
+    p {
+      font-size: 1.4rem;
+    }
   }
 }
 .certificate .certificate-content h5 {
@@ -7376,14 +7399,17 @@ select.chosen-select {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 10px;
   font-family: $default_font;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: left;
+  font-weight: bold;
+  color: $black-2;
 }
 .certificate .certificate-content p {
   margin-bottom: 0;
-  color: #003e59;
+  color: $black-2;
   text-align: center;
   text-align: left;
+  transition: all 0.3s;
 }
 .certificate-button {
   text-align: center;

@@ -1,31 +1,65 @@
+.branch__body {
+  background-color: $branch-bg;
+}
+
+//branch header start
+.branch__header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  background-color: $gallery-bg;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: $default_font;
+
+  .shape-1 {
+    position: absolute;
+    top: 20%;
+    left: 10rem;
+  }
+  .shape-2 {
+    position: absolute;
+    top: 50%;
+    right: 30rem;
+    opacity: 0.5;
+  }
+  .shape-3 {
+    position: absolute;
+    top: -5rem;
+    right: -8rem;
+  }
+  .shape {
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.branch__header--inner h2 {
+  font-size: 5rem;
+  color: $hover;
+  font-weight: bold;
+}
+
+// branch header end
+
 // search header start
 .search__header {
   padding: 5rem 0;
-
-  .header__title {
-    font-size: 3rem;
-    color: $hover;
-    text-transform: uppercase;
-    font-weight: bold;
-
-    @include tablet {
-      font-size: 2.7rem;
-    }
-  }
+  font-family: $default_font;
 
   &--inner {
-    background-color: $primary-color;
     padding: 3rem 1rem;
     border-radius: 1rem;
-    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 0 auto;
 
     .search__header--form {
       display: flex;
-      gap: 2rem;
+      background-color: $white;
 
-      // @include desktop {
-      //   flex-wrap: wrap;
-      // }
       @include tablet {
         flex-wrap: wrap;
       }
@@ -36,6 +70,7 @@
       height: 100%;
       padding: 1rem;
       height: 100%;
+      border: none;
 
       @include tablet {
         font-size: 1.2rem;
@@ -50,7 +85,6 @@
       border: none;
       background-color: $hover-2;
       color: $white;
-      border-radius: 1rem;
       padding: 1rem 2rem;
 
       @include tablet {
@@ -65,16 +99,6 @@
 // search result start
 .search__result {
   margin-bottom: 20rem;
-
-  .container {
-    background-color: $branch-bg;
-    padding: 2rem;
-    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1);
-
-    @include tablet {
-      padding: 1rem;
-    }
-  }
 }
 .search__result .card {
   all: unset;
@@ -83,93 +107,71 @@
   gap: 3rem;
   background-color: $white;
   color: $black-2;
-  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
   transition: all 0.3s;
   position: relative;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-light;
+    color: $white;
+
+    .card__info {
+      color: $white;
+    }
+    .card__image--box img {
+      transform: scale(1.1);
+      filter: brightness(0.8);
+    }
+  }
 
   @include tablet {
     gap: 2rem;
   }
-
-  &:hover {
-    box-shadow: 0 8px 5px 2px rgba(0, 0, 0, 0.4);
-
-    &::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 5rem;
-      height: 100%;
-      content: "";
-      background: linear-gradient(to right, $primary-color 50%, $primary-light);
-      opacity: 0.2;
-
-      @include tablet {
-        width: 3rem;
-      }
-    }
-  }
-
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    content: "";
-    background: linear-gradient(to right, $primary-color 50%, $primary-light);
-    opacity: 0.2;
-    transition: all 0.5s;
-  }
-
-  .card__image--box {
-    background: linear-gradient(to right, $primary-color 50%, $primary-light);
-    padding: 4rem;
-
-    @include tablet {
-      padding: 2.5rem;
-    }
-  }
 }
-
+.card__image--box {
+  height: 20rem;
+  width: 20rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+}
 .card__image--box img {
-  border-radius: 50%;
-  height: 12rem;
-  width: 12rem;
-
-  border: double 4px transparent;
-  background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, $hover, $primary-light);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-
-  @include tablet {
-    height: 10rem;
-    width: 10rem;
-  }
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+  filter: brightness(0.9);
 }
 
 .card__info {
+  font-family: $default_font;
+  color: $black-3;
+
   .branch__code {
-    font-size: 1.7rem;
+    font-size: 2rem;
+    transition: all 0.3s;
     @include tablet {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
   }
   .name {
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: $hover;
+    transition: all 0.3s;
     @include tablet {
       font-size: 2.1rem;
     }
   }
   .designation {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    transition: all 0.3s;
 
     @include tablet {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 }

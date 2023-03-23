@@ -44,7 +44,7 @@ span.bnm_dn {
 /* 02. TICKER WITH STICKY HEADER */
 /***********************************************************************************************/
 .bwl_header_ticker_wrapper {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background: #ffffff;
   color: #262626;
   border-bottom: 3px solid;
@@ -68,7 +68,7 @@ span.bnm_dn {
   clear: both;
 }
 .bwl_header_ticker_wrapper .bwl_header_ticker_content span.ticker_title {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   display: block;
   float: left;
   font-size: 18px;
@@ -118,14 +118,18 @@ span.bnm_dn {
   -o-transition: 0.3s 0.2s ease-out;
   transition: 0.3s 0.2s ease-out;
 }
-.bwl_header_ticker_wrapper .bwl_header_ticker_content .bwl_news_lists li a:hover {
+.bwl_header_ticker_wrapper
+  .bwl_header_ticker_content
+  .bwl_news_lists
+  li
+  a:hover {
   color: #000000;
 }
 /***********************************************************************************************/
 /* 03. TICKER WITH STICKY FOOTER  */
 /***********************************************************************************************/
 .bwl_footer_ticker_wrapper {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background: #ffffff;
   color: #262626;
   border-top: 3px solid #ff512e;
@@ -145,7 +149,7 @@ span.bnm_dn {
   clear: both;
 }
 .bwl_footer_ticker_wrapper .bwl_footer_ticker_content span.ticker_title {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   display: block;
   float: left;
   font-size: 18px;
@@ -207,14 +211,18 @@ span.bnm_dn {
   -o-transition: 0.3s 0.2s ease-out;
   transition: 0.3s 0.2s ease-out;
 }
-.bwl_footer_ticker_wrapper .bwl_footer_ticker_content .bwl_news_lists li a:hover {
+.bwl_footer_ticker_wrapper
+  .bwl_footer_ticker_content
+  .bwl_news_lists
+  li
+  a:hover {
   color: #000000;
 }
 /***********************************************************************************************/
 /* 04. INLINE TICKER */
 /***********************************************************************************************/
 .bwl_inline_ticker_wrapper {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background: #ffffff;
   color: #262626;
   border: 1px solid #2c2c2c;
@@ -233,7 +241,7 @@ span.bnm_dn {
   position: relative;
 }
 .bwl_inline_ticker_wrapper .bwl_inline_ticker_content span.ticker_title {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   display: block;
   float: left;
   font-size: 18px;
@@ -295,7 +303,11 @@ span.bnm_dn {
   -o-transition: 0.3s 0.2s ease-out;
   transition: 0.3s 0.2s ease-out;
 }
-.bwl_inline_ticker_wrapper .bwl_inline_ticker_content .bwl_news_lists li a:hover {
+.bwl_inline_ticker_wrapper
+  .bwl_inline_ticker_content
+  .bwl_news_lists
+  li
+  a:hover {
   color: #000000;
 }
 /***********************************************************************************************/
@@ -489,7 +501,7 @@ span.bnt-triangle-right {
   height: 0;
   border-style: solid;
   border-width: 12px 0 12px 14px;
-  border-color: transparent transparent transparent #FFFFFF;
+  border-color: transparent transparent transparent #ffffff;
   position: absolute;
   top: 0;
   left: 0;
@@ -501,10 +513,11 @@ span.bnt-circle-right {
   border-radius: 0 90px 90px 0;
   -moz-border-radius: 0 90px 90px 0;
   -webkit-border-radius: 0 90px 90px 0;
-  background: #FFFFFF;
+  background: #ffffff;
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 /***********************************************************************************************/
 /* 06. RTL STYLING */
