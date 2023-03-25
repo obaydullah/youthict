@@ -78,6 +78,7 @@ CSS Index
     }
   }
 }
+
 /*****************************
    1. header
 *********************************/
@@ -371,11 +372,12 @@ CSS Index
 .banner_text {
   max-width: 600px;
   margin-bottom: 4rem;
+  font-family: $bangla_font;
 }
 .banner_text h5 {
-  font-size: 14px;
-  font-family: $default_font;
+  font-size: 16px;
   opacity: 0.9;
+  font-family: $bangla_font !important;
 }
 .banner_text h1 {
   font-size: 42px;
@@ -384,7 +386,6 @@ CSS Index
   letter-spacing: 0.20000000298023224px;
   padding: 1rem 0;
   position: relative;
-  font-family: $default_font;
   color: $hover-2;
   text-align: left;
 }
@@ -399,7 +400,7 @@ CSS Index
 .blog_item .blog_text p,
 .course_free_facilities_item a,
 .course_free_facilities_item p {
-  font-family: $default_font;
+  font-family: $bangla_font;
   letter-spacing: 0.20000000298023224px;
 }
 .banner_text .dot_shape_banner {
@@ -429,7 +430,7 @@ CSS Index
   padding-bottom: 22px;
 }
 .banner_text a {
-  font-family: $default_font;
+  font-family: $bangla_font !important;
   color: $white;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -4255,7 +4256,7 @@ select.chosen-select {
       background-color: $card-bg-2;
       color: $card-bg-2-dark;
 
-      .icon-1 {
+      .icon-2 {
         color: inherit;
       }
     }
@@ -4263,7 +4264,7 @@ select.chosen-select {
       background-color: $card-bg-3;
       color: $card-bg-3-dark;
 
-      .icon-1 {
+      .icon-3 {
         color: inherit;
       }
     }
@@ -4271,7 +4272,7 @@ select.chosen-select {
       background-color: $card-bg-4;
       color: $card-bg-4-dark;
 
-      .icon-1 {
+      .icon-4 {
         color: inherit;
       }
     }
@@ -7400,7 +7401,7 @@ select.chosen-select {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 10px;
   font-family: $default_font;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   text-align: left;
   font-weight: bold;
   color: $black-2;
@@ -9180,6 +9181,12 @@ canvas {
   margin-top: 0 !important;
 }
 //counter style
+
+//notice text
+.bwl_header_ticker_wrapper .bwl_header_ticker_content span.ticker_title {
+  font-size: 1.6rem !important;
+}
+//notice text
 
 // importing pages style
 @import "./partials/pages/about"; // importing pages end

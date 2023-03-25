@@ -161,7 +161,7 @@
 
     // Header Ticker Example Scripts.
     $("#header_sticky_ticker").bwlJqueryNewsTicker({
-      interval: 10000,
+      interval: 99999999,
       animation: "faderight",
       title: "Notice",
       theme: "purple",

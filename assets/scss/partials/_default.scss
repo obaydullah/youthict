@@ -11,6 +11,24 @@
   src: url("../ruposhi-bangla/RuposhiBanglaUnicode.ttf");
 }
 
+@font-face {
+  font-family: "potro_sans";
+  src: url("../webfonts/potro_sans_bangla_regular-webfont.woff2")
+      format("woff2"),
+    url("../webfonts/potro_sans_bangla_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: "Li Fazlay Munnisha Matra Unicod";
+//   src: url("../webfonts/LiFazlayMunnishaMatraUnicod.woff2") format("woff2"),
+//     url("../webfonts/LiFazlayMunnishaMatraUnicod.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
 /*************************** start common css **************************************/
 body,
 html {

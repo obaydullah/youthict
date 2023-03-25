@@ -46,7 +46,8 @@
 
 // search result header start
 .search__result--card--inner {
-  background-color: $branch-bg;
+  background-color: $white;
+  box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
 }
 
@@ -89,67 +90,128 @@
 
 //search result card start
 .search__result--card {
-  padding: 5rem 0;
-  padding-top: 0;
+  margin-bottom: 3rem;
+}
+.card__header {
+  background-color: $card-bg-1;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: $white;
+  border-radius: 1rem;
 
-  &--inner {
-    background-color: $white;
-    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
-    border-radius: 0;
+  @include desktop {
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
   }
-  .header {
-    background-color: $hover;
-    color: $white;
-    text-align: center;
-    padding: 2rem;
+  @include tablet {
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
+  }
 
-    h2 {
-      font-size: 2rem;
-      font-weight: normal;
-    }
+  img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 2px solid $hover;
   }
-  .print__certificate--btn {
-    background: $hover-2;
-    color: $white;
-    font-size: 1.4rem;
-    padding: 0.8rem;
-  }
+
   .info {
-    padding: 2rem;
-    display: flex;
-    gap: 4rem;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: 2rem;
+    color: $black-2;
 
-    .img__box {
-      height: 15rem;
-      width: 15rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+    h3 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+      font-weight: bold;
 
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+      @include desktop {
+        font-size: 2.2rem;
       }
     }
-
-    .info__text {
-      display: flex;
-      gap: 6rem;
+    .reg__no {
       font-size: 1.6rem;
-
-      .right {
-        font-weight: 600;
-        color: $hover;
-      }
+      font-weight: normal;
+      font-weight: bold;
+      font-family: $default_font;
+      margin-top: 0.5rem;
+    }
+    .grade {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: $hover-2;
     }
   }
+  .card__header--btn {
+    border: none;
+    font-size: 1.4rem;
+    background-color: $hover-2;
+    color: $white;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
 
-  h2,
-  p,
-  button {
-    font-family: $default_font;
+    @include desktop {
+      margin-left: auto;
+      margin-bottom: 3rem;
+    }
+    @include tablet {
+      margin-left: auto;
+      margin-bottom: 3rem;
+    }
   }
+}
+
+.program__name {
+  background-color: $primary-light;
+  color: $white;
+  text-align: center;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  margin-top: -2.2rem;
+  font-weight: bold;
+}
+
+.search__result--card .card__info {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.property p {
+  font-size: 1.8rem;
+}
+
+.value p {
+  font-size: 1.8rem;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  width: 6rem;
+  height: 6rem;
+  opacity: 0.3;
+}
+.circle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 15rem;
+  width: auto;
+  opacity: 0.1;
 }
 //search result card end
 
