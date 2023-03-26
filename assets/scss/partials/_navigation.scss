@@ -19,6 +19,7 @@ ul.rbt-dropdown-menu li .sub-menu {
   opacity: 0;
   transition: opacity 0.4s linear, clip 0.6s linear, visibility 0s 0.4s;
   transform: translateZ(0);
+  background: $dropdown_bg;
 }
 
 .rbt-header .mainmenu-nav .mainmenu > li .submenu > li:hover > .submenu,
@@ -557,8 +558,7 @@ ul.rbt-dropdown-menu li.has-child-menu {
   position: relative;
 }
 ul.rbt-dropdown-menu li .sub-menu {
-  border-top: 1px solid $black_2;
-  background: $white;
+  background: $dropdown_bg;
   box-shadow: rgba($black, 0.1);
   padding: 12px 0;
   margin: 0;
@@ -576,7 +576,6 @@ ul.rbt-dropdown-menu li .sub-menu li a {
   margin: 2px 10px;
   padding: 4px 12px;
   background: $white;
-  border-radius: 5px;
   display: flex;
   align-items: center;
   font-size: 15px;
@@ -588,7 +587,7 @@ ul.rbt-dropdown-menu li .sub-menu li a:hover {
   background: rgba($black, 0.1);
 }
 ul.rbt-dropdown-menu li:hover > a .right-icon {
-  transform: rotate(180deg);
+  transform: rotate(0);
   margin-top: 2px;
 }
 ul.rbt-dropdown-menu.currency-menu li .sub-menu {
@@ -976,9 +975,9 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   color: $white;
   font-size: 16px;
   font-weight: 500;
-  background: $hover_2;
   padding: 10px 20px;
-  border-radius: 500px;
+  border-radius: 1rem;
+  @include btn__gradiant;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-category-btn {
@@ -1024,8 +1023,10 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   flex-direction: column;
 }
 .rbt-category-menu-wrapper .category-dropdown-menu .category-menu-item {
-  display: flex;
-  padding: 20px;
+  background-color: $dropdown_bg;
+  color: $black-2;
+  font-size: 1.6rem;
+  padding-right: 0;
 }
 .rbt-category-menu-wrapper
   .category-dropdown-menu
@@ -1061,11 +1062,12 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   a {
   font-weight: 500;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 16px;
   display: block;
   color: $default_color;
   margin: 0;
   border-radius: 3px;
+  color: $black-2;
 }
 .rbt-category-menu-wrapper
   .category-dropdown-menu
@@ -1079,8 +1081,8 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   .rbt-vertical-nav-list-wrapper
   li.active
   a {
-  color: $hover;
-  background: rgba($black, 0.1);
+  color: $white;
+  @include dropdown__gradiant;
 }
 .rbt-category-menu-wrapper
   .category-dropdown-menu
@@ -2100,16 +2102,16 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   transition: 0.3s;
 }
 .rbt-header .mainmenu-nav .mainmenu > li > a.active {
-  color: $hover;
+  color: $hover-2;
 }
 .rbt-header .mainmenu-nav .mainmenu > li:hover > a,
 .rbt-header .mainmenu-nav .mainmenu > li.active > a {
-  color: $hover !important;
+  color: $hover-2 !important;
 }
 .rbt-header .mainmenu-nav .mainmenu > li:hover > a i,
 .rbt-header .mainmenu-nav .mainmenu > li.active > a i {
-  transform: rotate(180deg);
-  margin-top: 2px;
+  // transform: rotate(180deg);
+  // margin-top: 2px;
 }
 .rbt-header .mainmenu-nav .mainmenu li {
   margin-top: 0;
@@ -2127,13 +2129,12 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   height: auto;
   z-index: 90;
   text-align: left;
-  padding: 12px 0;
   border-radius: 0 0 10px 10px;
-  background-color: $white;
+  background-color: $dropdown_bg;
   box-shadow: rgba($black, 0.1);
   display: flex;
   flex-direction: column;
-  border-top: 1px solid $black_2;
+  padding: 0;
 }
 .rbt-header .mainmenu-nav .mainmenu li.has-dropdown .submenu li {
   position: relative;
@@ -2141,15 +2142,16 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 .rbt-header .mainmenu-nav .mainmenu li.has-dropdown .submenu li a {
   font-weight: 500;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 16px;
   display: block;
   color: $default_color;
-  margin: 0 10px;
   border-radius: 3px;
+  font-weight: 500;
 }
 .rbt-header .mainmenu-nav .mainmenu li.has-dropdown .submenu li a:hover {
-  color: $hover !important;
+  color: $white !important;
   background: rgba($black, 0.1);
+  @include dropdown__gradiant;
 }
 .rbt-header .mainmenu-nav .mainmenu li.has-dropdown .submenu li a.active {
   color: $hover !important;

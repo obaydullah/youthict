@@ -161,8 +161,8 @@
 
     // Header Ticker Example Scripts.
     $("#header_sticky_ticker").bwlJqueryNewsTicker({
-      interval: 99999999,
-      animation: "faderight",
+      interval: 3000,
+      animation: "fadeleft",
       title: "Notice",
       theme: "purple",
       btn_show: false,
@@ -280,6 +280,20 @@
       { breakpoint: 768, settings: { slidesToShow: 1 } },
       { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
+  });
+
+  $(".banner__animation--slide").slick({
+    autoplay: true,
+    slidesToShow: 1,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: false,
+    fade: true,
+    speed: 3000,
+    infinite: true,
+    loop: true,
+    pauseOnHover: false,
+    cssEase: "ease-in-out",
   });
 
   $(".add__popup--venubox").venobox();

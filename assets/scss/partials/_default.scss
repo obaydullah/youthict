@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 @import "./media_query";
 
@@ -20,6 +20,42 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../webfonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-ExtraBold.woff2") format("woff2"),
+    url("../webfonts/OpenSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../webfonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Light.woff2") format("woff2"),
+    url("../webfonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 // @font-face {
 //   font-family: "Li Fazlay Munnisha Matra Unicod";
 //   src: url("../webfonts/LiFazlayMunnishaMatraUnicod.woff2") format("woff2"),
@@ -34,7 +70,7 @@ body,
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
 
   a {
@@ -87,4 +123,5 @@ ul {
 .my45 {
   margin-bottom: 45px !important;
 }
+
 /*************************** end common css **************************************/
