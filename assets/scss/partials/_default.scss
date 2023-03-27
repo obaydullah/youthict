@@ -66,12 +66,16 @@
 // }
 
 /*************************** start common css **************************************/
-body,
+
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; //10px
+  overflow-x: hidden;
+}
+body {
   overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
+  font-size: 1rem;
 
   a {
     text-decoration: none;

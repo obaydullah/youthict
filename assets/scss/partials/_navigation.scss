@@ -661,6 +661,10 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 .rbt-header-sec .rbt-header-left .rbt-header-content {
   justify-content: flex-start;
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    width: 200%;
+  }
 }
 .rbt-header-sec .rbt-header-right {
   text-align: right;
@@ -1852,6 +1856,15 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 .rbt-header .logo a img {
   max-height: 100px;
   object-fit: cover;
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    max-width: 80px;
+    height: auto;
+  }
+  @media only screen and (max-width: 768px) {
+    max-width: 60px;
+    height: auto;
+  }
 }
 @media only screen and (max-width: 575px) {
   .rbt-header .logo a {
@@ -1865,20 +1878,20 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-header .rbt-header-wrapper {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rbt-header .rbt-header-wrapper {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media only screen and (max-width: 767px) {
   .rbt-header .rbt-header-wrapper {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .rbt-header .rbt-header-wrapper.header-transparent {

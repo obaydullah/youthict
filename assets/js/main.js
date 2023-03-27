@@ -297,6 +297,7 @@
   });
 
   $(".add__popup--venubox").venobox();
+  $(".select__course").select2();
 })(jQuery);
 
 //manuipulate stick header logo when user scroll

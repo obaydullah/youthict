@@ -665,17 +665,17 @@ div.purple_bwl_footer_ticker_wrapper {
 }
 div.purple_bwl_header_ticker_wrapper span.purple_ticker_title,
 div.purple_bwl_inline_ticker_wrapper span.purple_ticker_title,
-div.purple_bwl_footer_ticker_wrapper span.purple_ticker_title {
-  background: #ff512e !important;
-}
 div.purple_bwl_header_ticker_wrapper div.ticker_btn_wrapper .bwl_prev_btn,
 div.purple_bwl_inline_ticker_wrapper div.ticker_btn_wrapper .bwl_prev_btn,
 div.purple_bwl_footer_ticker_wrapper div.ticker_btn_wrapper .bwl_prev_btn,
 div.purple_bwl_header_ticker_wrapper div.ticker_btn_wrapper .bwl_next_btn,
 div.purple_bwl_inline_ticker_wrapper div.ticker_btn_wrapper .bwl_next_btn,
 div.purple_bwl_footer_ticker_wrapper div.ticker_btn_wrapper .bwl_next_btn {
-  background: #003e59 !important;
-  border-color: #003e59 !important;
+  background: linear-gradient(
+    214.38deg,
+    #fb908a -2.24%,
+    #ff1e1e 59.38%
+  ) !important;
 }
 div.purple_ticker_header_toggle_wrapper .bwl_header_toggle_btn,
 div.purple_ticker_footer_toggle_wrapper .bwl_header_toggle_btn,
