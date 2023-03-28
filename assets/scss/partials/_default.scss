@@ -56,15 +56,6 @@
   font-display: swap;
 }
 
-// @font-face {
-//   font-family: "Li Fazlay Munnisha Matra Unicod";
-//   src: url("../webfonts/LiFazlayMunnishaMatraUnicod.woff2") format("woff2"),
-//     url("../webfonts/LiFazlayMunnishaMatraUnicod.woff") format("woff");
-//   font-weight: normal;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
 /*************************** start common css **************************************/
 
 html {
@@ -72,7 +63,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 1rem;
