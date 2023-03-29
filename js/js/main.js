@@ -298,23 +298,6 @@
 
   $(".add__popup--venubox").venobox();
   $(".select__course").select2();
-
-  $(".job__getters--card--slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    autoplay: false,
-    autoplaySpeed: 4000,
-    prevArrow: '<i class="fa fa-angle-left jobGettersPrevArrow"></i>',
-    nextArrow: '<i class="fa fa-angle-right jobGettersNextArrow"></i>',
-
-    responsive: [
-      { breakpoint: 1200, settings: { arrows: !0, slidesToShow: 2 } },
-      { breakpoint: 770, settings: { arrows: !0, slidesToShow: 1 } },
-      { breakpoint: 576, settings: { arrows: !0, slidesToShow: 1 } },
-    ],
-  });
 })(jQuery);
 
 //manuipulate stick header logo when user scroll

@@ -1025,7 +1025,6 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   box-shadow: rgba($black, 0.1);
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 0 10px 1px rgba(0, 0, 0, 0.1);
 }
 .rbt-category-menu-wrapper .category-dropdown-menu .category-menu-item {
   background-color: $dropdown_bg;
@@ -1049,7 +1048,6 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   margin: 0;
   list-style: none;
   padding: 0;
-  box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.1);
 }
 .rbt-category-menu-wrapper
   .category-dropdown-menu
@@ -2133,7 +2131,6 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   margin-top: 0;
   margin-bottom: 0;
   position: relative;
-  padding: 0.8rem 0;
 }
 .rbt-header .mainmenu-nav .mainmenu li:first-child a {
   padding-left: 0;
@@ -2146,16 +2143,15 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   height: auto;
   z-index: 90;
   text-align: left;
+  border-radius: 0 0 10px 10px;
   background-color: $dropdown_bg;
   box-shadow: rgba($black, 0.1);
   display: flex;
   flex-direction: column;
   padding: 0;
-  box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.1);
 }
 .rbt-header .mainmenu-nav .mainmenu li.has-dropdown .submenu li {
   position: relative;
-  padding: 0;
 }
 .rbt-header .mainmenu-nav .mainmenu li.has-dropdown .submenu li a {
   font-weight: 500;
@@ -2365,7 +2361,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   opacity: 1;
 }
 .rbt-header .rbt-category-menu-wrapper {
-  height: 98px;
+  height: 80px;
   display: flex;
   align-items: center;
 }
