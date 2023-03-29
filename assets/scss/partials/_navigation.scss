@@ -516,7 +516,7 @@ Custom Row
   margin-left: 4px;
 }
 .rbt-information-list li a:hover {
-  color: $hover;
+  color: $dark;
 }
 .bg-color-darker {
   background: $hover_2;
@@ -1073,7 +1073,6 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   color: $default_color;
   margin: 0;
   border-radius: 3px;
-  color: $black-2;
 }
 .rbt-category-menu-wrapper
   .category-dropdown-menu
@@ -2735,10 +2734,15 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   opacity: 0;
   left: -150px;
   transition: all 0.5s ease-out;
-  padding: 60px 50px;
+  padding: 4rem;
   height: 100%;
   position: relative;
   overflow-y: auto;
+  background-image: linear-gradient(
+    to right top,
+    rgb(251, 240, 242),
+    rgb(251, 240, 242)
+  );
 }
 @media only screen and (max-width: 767px) {
   .popup-mobile-menu .inner-wrapper {
@@ -2817,12 +2821,16 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 .popup-mobile-menu .mainmenu li {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .popup-mobile-menu .mainmenu li a {
   padding: 8px 0;
   display: block;
   font-size: 16px;
   font-weight: 500;
+  color: $black-2;
 }
 .popup-mobile-menu .mainmenu li a.active {
   color: $hover !important;
@@ -2911,15 +2919,31 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 .popup-mobile-menu .nav-quick-access {
   display: block;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 20px;
   margin-left: -20px;
   padding: 6px 17px;
   overflow: hidden;
+  background: transparent !important;
 }
 .popup-mobile-menu .nav-quick-access li a {
   display: flex;
-  font-size: 14px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: $default_font;
+  color: $black_4;
+
+  &.browse_btn {
+    font-family: $bangla_font !important;
+    color: $white;
+    border-radius: 10px;
+    padding: 1.6rem 3rem;
+    transition: 0.3s linear;
+    text-align: center;
+    margin-right: 0 !important;
+    margin-top: 2rem;
+    @include btn__gradiant;
+  }
 }
 .popup-mobile-menu .nav-quick-access li a i {
   display: flex;

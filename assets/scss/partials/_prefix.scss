@@ -40,3 +40,12 @@
 @mixin dropdown__gradiant {
   background: linear-gradient(214.38deg, #fab8b5 -2.24%, #ff512e 59.38%);
 }
+
+//Box shadow
+@mixin btn__shadow {
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2) !important;
+  opacity: 0.85 !important;
+}
+@mixin card__shadow {
+  box-shadow: 2px 0 5px 1px rgba(0, 0, 0, 0.1) !important;
+}

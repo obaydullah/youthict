@@ -65,7 +65,7 @@ CSS Index
     -o-transition: 0.3s linear;
   }
   &:hover {
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    @include btn__shadow;
 
     span {
       opacity: 0;
@@ -375,23 +375,58 @@ CSS Index
 }
 
 .header-right {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
   .login__btn {
     all: unset;
     font-size: 1.6rem;
     border: 1px solid $hover-2;
-    color: red;
+    color: $hover-2;
     border-radius: 1rem;
     padding: 1rem 3rem;
     cursor: pointer;
     transition: all 0.3s;
     font-weight: bold;
-    margin-right: 4rem;
+    order: 2;
 
     &:hover {
-      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.09);
+      @include btn__gradiant;
+      color: $white;
+    }
+  }
+  .mobile-menu-bar {
+    display: none;
+    order: 1;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    .mobile-menu-bar {
+      display: block;
+      order: 2;
+    }
+    .login__btn {
+      display: block;
+      order: 1;
     }
   }
 }
+
+//mobile menu start
+.rbt-btn-close {
+  text-align: right;
+
+  button {
+    background: transparent;
+    color: $black_4;
+
+    i {
+      font-size: 3rem;
+    }
+  }
+}
+//mobile menu end
 
 /*********************
  2 Slider Style
@@ -532,7 +567,7 @@ CSS Index
   @include btn__gradiant;
 }
 .banner_text a:hover {
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  @include btn__shadow;
 }
 .banner_text a:hover span {
   margin-right: 0;
@@ -796,14 +831,8 @@ CSS Index
   }
 }
 
-.course_body_slider:hover .nextarrow,
-.course_body_slider:hover .prevarrow {
-  opacity: 1;
-}
-
 .course_slider_top .course_slider_item {
   background: $white;
-  height: 157px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -814,9 +843,14 @@ CSS Index
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.06);
   margin: 25px 12px;
   transition: all 0.3s;
+  padding: 4rem 0;
 
   &:hover {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    @include card__shadow;
+
+    .couse_icon img {
+      filter: grayscale(0);
+    }
   }
 }
 .course_slider_top .topNextarrow,
@@ -842,7 +876,12 @@ CSS Index
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-top: 25px;
+}
+.couse_icon img {
+  width: 12rem;
+  height: auto;
+  filter: grayscale(1);
+  transition: all 0.3s;
 }
 .course_single_item .course_text h6,
 .student_feedback_item ul li {
@@ -932,10 +971,16 @@ CSS Index
 #courseslide {
   overflow: hidden;
   padding-top: 12rem;
+
+  & > .row {
+  }
 }
 .populer_courses {
   .slick-slide {
     padding: 0 15px;
+  }
+  .slick-track {
+    padding: 1rem 0 !important;
   }
   .default_btn {
     margin: 0 auto;
@@ -943,7 +988,7 @@ CSS Index
     transition: all 0.3s;
 
     &:hover {
-      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+      @include btn__shadow;
     }
   }
 }
@@ -1044,9 +1089,15 @@ CSS Index
   position: relative;
   background: $white;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  border-radius: 1rem;
   overflow: hidden;
+  transition: all 0.3s;
+
+  &:hover {
+    @include card__shadow;
+  }
 }
+
 .nextarrow,
 .prevarrow {
   width: 39px;
@@ -1130,9 +1181,6 @@ CSS Index
   font-size: 18px;
   line-height: 26px;
 }
-// .course_category_slider {
-//   overflow: hidden;
-// }
 .prevarrow {
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1183,7 +1231,7 @@ CSS Index
   background-color: $hover;
 }
 .course_catagory_item .prevarrow {
-  left: 0;
+  left: -1.4rem;
   font-size: 4rem;
   height: 6rem;
   width: 6rem;
@@ -1191,9 +1239,12 @@ CSS Index
   text-align: center;
   line-height: 5.5rem;
   opacity: 0.5;
+  background: transparent;
+  border: 1px solid $primary_bg;
+  color: $primary_bg !important;
 }
 .course_catagory_item .nextarrow {
-  right: 0;
+  right: -1.4rem;
   font-size: 4rem;
   height: 6rem;
   width: 6rem;
@@ -1201,6 +1252,15 @@ CSS Index
   text-align: center;
   line-height: 5.5rem;
   opacity: 0.5;
+  background: transparent;
+  border: 1px solid $primary_bg;
+  color: $primary_bg !important;
+}
+.course_body_slider:hover .nextarrow,
+.course_body_slider:hover .prevarrow {
+  opacity: 0.8;
+  background-color: $primary_bg;
+  color: $white !important;
 }
 .course_catagory_item.slick-slide.slick-current.slick-active,
 .extra_facilities_item .extra_facilities_text:hover .hover_play_video {
@@ -4567,7 +4627,6 @@ select.chosen-select {
     }
 
     .default_btn {
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1) !important;
       @include btn__gradiant;
       font-size: 1.4rem;
       margin-top: 1rem;
@@ -7800,6 +7859,10 @@ ul#menu-footer-menu {
   transition: all 0.3s;
   font-size: 1.6rem;
   line-height: 2.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .certificate-button {
   text-align: center;
@@ -9049,15 +9112,16 @@ canvas {
   &:hover {
     .jobGettersPrevArrow,
     .jobGettersNextArrow {
-      opacity: 0.7;
-      background: $hover-2;
+      color: $white;
+      opacity: 0.8;
+      background: $primary_bg;
     }
   }
 
   .jobGettersPrevArrow {
     position: absolute;
     top: 50%;
-    left: -2rem;
+    left: -1rem;
     transform: translateY(-50%);
     font-size: 4rem;
     height: 6rem;
@@ -9067,15 +9131,16 @@ canvas {
     z-index: 99;
     text-align: center;
     line-height: 5.5rem;
-    border: 1px solid $hover-2;
+    border: 1px solid $primary_bg;
     color: $black_4;
     opacity: 0.5;
     transition: all 0.3s;
+    z-index: 9999;
   }
   .jobGettersNextArrow {
     position: absolute;
     top: 50%;
-    right: -2rem;
+    right: -1rem;
     transform: translateY(-50%);
     font-size: 4rem;
     height: 6rem;
@@ -9085,10 +9150,11 @@ canvas {
     z-index: 99;
     text-align: center;
     line-height: 5.5rem;
-    border: 1px solid $hover-2;
+    border: 1px solid $primary_bg;
     color: $black_4;
     opacity: 0.5;
     transition: all 0.3s;
+    z-index: 9999;
   }
 
   .slick-track {
@@ -9119,9 +9185,9 @@ canvas {
   img {
     border-radius: 50%;
     display: block;
-    height: 77px;
+    height: 9rem;
     margin-bottom: 27px;
-    width: 77px;
+    width: 9rem;
   }
   h3 {
     font-family: $default_font;
@@ -9134,6 +9200,7 @@ canvas {
     display: block;
     font-weight: 600;
     margin-bottom: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
   }
   p {
     font-size: 1.6rem;
