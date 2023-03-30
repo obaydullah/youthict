@@ -30,6 +30,9 @@
     right: -8rem;
   }
   .shape {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
     @include tablet {
       display: none;
     }
@@ -53,6 +56,7 @@
 
 .result__search--box {
   padding: 5rem 0;
+  font-family: $default_font;
 
   .search__header--form {
     display: flex;
@@ -83,6 +87,7 @@
       padding: 0 2rem;
       border: none;
       font-size: 1.6rem;
+      font-family: $default_font;
     }
   }
 }
@@ -99,7 +104,7 @@
   justify-content: space-between;
   align-items: flex-start;
   color: $white;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 
   @include desktop {
     flex-wrap: wrap;
@@ -181,7 +186,7 @@
   display: flex;
   justify-content: center;
   padding: 4rem;
-  gap: 4rem;
+  gap: 6rem;
   position: relative;
   z-index: 1;
 }
@@ -228,8 +233,6 @@
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
   padding: 2rem;
   margin-bottom: 20rem;
-
-  cursor: pointer;
 
   &:hover {
     background-color: $primary-light;

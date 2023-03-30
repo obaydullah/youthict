@@ -650,8 +650,8 @@ CSS Index
 }
 .banner_img .dot_4 {
   position: absolute;
-  right: -130px;
-  top: -200px;
+  right: -110px;
+  top: -150px;
   opacity: 0.2;
 }
 .banner_img .banner_img_overly {
@@ -883,24 +883,11 @@ CSS Index
   filter: grayscale(1);
   transition: all 0.3s;
 }
-.course_single_item .course_text h6,
-.student_feedback_item ul li {
-  -webkit-box-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-}
+
 .course_text ul {
   padding: 0;
 }
-.course_slider_top .course_slider_item a .couse_text h3 {
-  color: $black_2;
-  font-family: Hind Siliguri;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 23px;
-  text-align: center;
-  padding-top: 16px;
-}
+
 .course_slider_top .slick-arrow svg {
   vertical-align: middle;
 }
@@ -1096,6 +1083,55 @@ CSS Index
   &:hover {
     @include card__shadow;
   }
+
+  .course_text {
+    h6 {
+      font-family: $bangla_font;
+      font-size: 14px;
+      line-height: 23px;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      letter-spacing: 0.2px;
+      color: $hover-2;
+    }
+    h3 {
+      color: $black-2;
+      font-family: $bangla_font;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 32px;
+      letter-spacing: 0.200000003px;
+    }
+    p {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: $black-2;
+    }
+
+    ul li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .reviews {
+      margin-right: auto;
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+    }
+    span {
+      svg {
+        color: $semi_hover;
+        margin: -4px;
+        padding: 0;
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
 }
 
 .nextarrow,
@@ -1142,45 +1178,7 @@ CSS Index
   letter-spacing: 0.2px;
   color: #df6812;
 }
-.course_single_item .course_text h3 {
-  color: $black_2;
-  font-family: Hind Siliguri;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 32px;
-  letter-spacing: 0.20000000298023224px;
-}
-.counte_item h4,
-.course_single_item .course_text p {
-  font-family: "Noto Sans Bengali", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.20000000298023224px;
-}
 
-.course_single_item .course_text ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  color: #787a82;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  margin-bottom: 25px;
-  font-family: "Noto Sans Bengali", sans-serif;
-}
-.course_single_item .course_text ul li svg {
-  color: #ffae4f;
-}
-.course_single_item .course_text p {
-  color: $black_2;
-  font-size: 18px;
-  line-height: 26px;
-}
 .prevarrow {
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -7025,6 +7023,14 @@ select.chosen-select {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include desktop {
+    padding: 0 2rem;
+  }
+
+  @include tablet {
+    padding: 0 1rem;
+  }
 }
 #rs-footer::after {
   position: absolute;
@@ -9160,53 +9166,55 @@ canvas {
   .slick-track {
     display: flex !important;
   }
+
+  .job__getters--single {
+    background-color: $primary-color;
+    padding: 5.5rem 4rem;
+    color: $white;
+    margin: 0 2rem;
+    height: inherit !important;
+  
+    &.br-right-top {
+      border-radius: 0.5rem 10rem 0.5rem 0.5rem;
+    }
+    &.br-right-bottom {
+      border-radius: 0.5rem 0.5rem 10rem 0.5rem;
+    }
+    &.br-left-top {
+      border-radius: 10rem 0.5rem 0.5rem 0.5rem;
+    }
+    &.br-bottom-left {
+      border-radius: 0.5rem 0.5rem 0.5rem 10rem;
+    }
+  
+    img {
+      border-radius: 50%;
+      display: block;
+      height: 9rem;
+      margin-bottom: 27px;
+      width: 9rem;
+    }
+    h3 {
+      font-family: $default_font;
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.375rem;
+      margin-bottom: 10px;
+    }
+    b {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
 }
 
-.job__getters--single {
-  background-color: $primary-color;
-  padding: 5.5rem 4rem;
-  color: $white;
-  margin: 0 2rem;
-  height: inherit !important;
 
-  &.br-right-top {
-    border-radius: 0.5rem 10rem 0.5rem 0.5rem;
-  }
-  &.br-right-bottom {
-    border-radius: 0.5rem 0.5rem 10rem 0.5rem;
-  }
-  &.br-left-top {
-    border-radius: 10rem 0.5rem 0.5rem 0.5rem;
-  }
-  &.br-bottom-left {
-    border-radius: 0.5rem 0.5rem 0.5rem 10rem;
-  }
-
-  img {
-    border-radius: 50%;
-    display: block;
-    height: 9rem;
-    margin-bottom: 27px;
-    width: 9rem;
-  }
-  h3 {
-    font-family: $default_font;
-    font-size: 2.2rem;
-    font-weight: 600;
-    line-height: 1.375rem;
-    margin-bottom: 10px;
-  }
-  b {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 1.4rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  p {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-  }
-}
 //Job getters styles
 
 //counter style
@@ -9235,3 +9243,4 @@ marquee {
 @import "./partials/pages/branchapply";
 @import "./partials/pages/studentsapply";
 @import "./partials/pages/coursedetails";
+@import "./partials/pages/govjobgetters";

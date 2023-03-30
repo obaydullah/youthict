@@ -1,0 +1,157 @@
+//branch apply header start
+.jobgetters__header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  background-color: $gallery-bg;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .shape-1 {
+    position: absolute;
+    top: 20%;
+    left: 10rem;
+  }
+  .shape-2 {
+    position: absolute;
+    top: 50%;
+    right: 30rem;
+    opacity: 0.5;
+  }
+  .shape-3 {
+    position: absolute;
+    top: -5rem;
+    right: -8rem;
+  }
+  .shape {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+}
+.job__getters--header {
+  padding: 10rem 0;
+}
+
+.jobgetters__header--inner {
+  h2 {
+    font-size: 5rem;
+    color: $hover;
+    font-weight: bold;
+
+    @include desktop {
+      font-size: 4rem;
+    }
+    @include tablet {
+      font-size: 3.5rem;
+    }
+  }
+  .breadcrumb {
+    justify-content: center;
+  }
+  .breadcrumb__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    .breadcrumb__item {
+      font-size: 2rem;
+      font-weight: normal;
+      font-family: $default_font;
+      color: $black_3;
+    }
+    .seperator {
+      margin: 0 1rem;
+
+      svg {
+        height: 1.6rem;
+        width: auto;
+      }
+    }
+    .active {
+      color: $black;
+    }
+  }
+}
+
+// job getters header end
+
+// job getters card start
+.job__getters--card {
+  padding: 10rem 0;
+  padding-bottom: 15rem;
+
+  &--inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  .job__getters--single {
+    background-color: $primary-color;
+    padding: 5.5rem 4rem;
+    color: $white;
+    height: inherit !important;
+    width: 30%;
+    margin-bottom: 2rem;
+
+    @include desktop {
+      width: 47%;
+    }
+
+    @include tablet {
+      width: 90%;
+    }
+
+    &.br-right-top {
+      border-radius: 0.5rem 10rem 0.5rem 0.5rem;
+    }
+    &.br-right-bottom {
+      border-radius: 0.5rem 0.5rem 10rem 0.5rem;
+    }
+    &.br-left-top {
+      border-radius: 10rem 0.5rem 0.5rem 0.5rem;
+    }
+    &.br-bottom-left {
+      border-radius: 0.5rem 0.5rem 0.5rem 10rem;
+    }
+
+    img {
+      border-radius: 50%;
+      display: block;
+      height: 9rem;
+      margin-bottom: 27px;
+      width: 9rem;
+    }
+    h3 {
+      font-family: $default_font;
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.375rem;
+      margin-bottom: 10px;
+    }
+    b {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+}
+// job getters card end

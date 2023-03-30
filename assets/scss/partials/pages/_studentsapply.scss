@@ -26,6 +26,9 @@
     right: -8rem;
   }
   .shape {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
     @include tablet {
       display: none;
     }
@@ -45,14 +48,33 @@
   margin: 5rem 0;
   margin-bottom: 15rem;
 
+  @include desktop {
+    margin-bottom: 10rem;
+  }
+  @include tablet {
+    margin-bottom: 8rem;
+  }
+
   .container {
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.08);
     padding: 0;
   }
 
   .student__apply--image {
     width: 100%;
     height: 100%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      content: "";
+      background-color: $hover-2;
+      opacity: 0.4;
+    }
 
     img {
       width: 100%;
@@ -109,8 +131,7 @@
   }
   .bkash__number {
     font-weight: normal;
-    font-size: 1.8rem;
-    font-style: italic;
+    font-size: 1.6rem;
     opacity: 0.9;
 
     span {

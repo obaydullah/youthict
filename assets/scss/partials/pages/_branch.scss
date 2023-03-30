@@ -31,6 +31,9 @@
     right: -8rem;
   }
   .shape {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
     @include tablet {
       display: none;
     }
@@ -41,6 +44,13 @@
   font-size: 5rem;
   color: $hover;
   font-weight: bold;
+
+  @include desktop {
+    font-size: 4rem;
+  }
+  @include tablet {
+    font-size: 3.5rem;
+  }
 }
 
 // branch header end
@@ -58,20 +68,26 @@
 
     .search__header--form {
       display: flex;
-      background-color: $white;
 
       @include tablet {
         flex-wrap: wrap;
+        gap: 0.2rem;
+        justify-content: center;
       }
     }
 
-    .form-select {
+    .select__elem {
       font-size: 1.8rem;
       height: 100%;
       padding: 1rem;
-      height: 100%;
+      width: 100%;
       border: none;
       font-family: $default_font;
+      background: $white;
+
+      &:focus {
+        outline: none;
+      }
 
       @include tablet {
         font-size: 1.2rem;
@@ -92,6 +108,7 @@
       @include tablet {
         font-size: 1.4rem;
         padding: 0.8rem 1.5rem;
+        width: 100%;
       }
     }
   }
@@ -101,6 +118,22 @@
 // search result start
 .search__result {
   margin-bottom: 20rem;
+
+  div[class^="col-"] {
+    margin-top: 0;
+  }
+
+  .search__result--info {
+    font-size: 1.2srem;
+    font-weight: normal;
+    text-align: center;
+    color: $black_4;
+    margin-bottom: 3.5rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
 }
 .search__result .card {
   all: unset;
@@ -113,8 +146,8 @@
   position: relative;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
   padding: 2rem;
-
-  cursor: pointer;
+  border-radius: 0.5rem;
+  margin-bottom: 3rem;
 
   &:hover {
     background-color: $primary-light;
@@ -179,3 +212,90 @@
 }
 
 // search result end
+
+//latest course start
+.latest__course--title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $black-3;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.latest__course--item {
+  &--single {
+    position: relative;
+    background: $white;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s;
+    margin-bottom: 3rem !important;
+
+    &:hover {
+      @include card__shadow;
+    }
+
+    .course_image {
+      border-radius: 25px 25px 0 0;
+      -webkit-border-radius: 25px 25px 0 0;
+      -moz-border-radius: 25px 25px 0 0;
+      -ms-border-radius: 25px 25px 0 0;
+      -o-border-radius: 25px 25px 0 0;
+    }
+    .course_text {
+      padding: 20px 14px 28px 17px;
+      border-radius: 0 0 25px 25px;
+    }
+    .course_text {
+      h6 {
+        font-family: $bangla_font;
+        font-size: 14px;
+        line-height: 23px;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        letter-spacing: 0.2px;
+        color: $hover-2;
+      }
+      h3 {
+        color: $black-2;
+        font-family: $bangla_font;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0.200000003px;
+      }
+      p {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $black-2;
+      }
+
+      ul li {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .reviews {
+        margin-right: auto;
+        margin-left: 1rem;
+        margin-top: 0.3rem;
+      }
+      span {
+        svg {
+          color: $semi_hover;
+          margin: -4px;
+          padding: 0;
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// latest course end

@@ -26,31 +26,70 @@
     right: -8rem;
   }
   .shape {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
     @include tablet {
       display: none;
     }
   }
 }
-
-.branchapply__header--inner h2 {
-  font-size: 5rem;
-  color: $hover;
-  font-weight: bold;
-}
-
 .branch__apply--header {
   padding: 10rem 0;
+}
+
+.branchapply__header--inner {
+  h2 {
+    font-size: 5rem;
+    color: $hover;
+    font-weight: bold;
+
+    @include desktop {
+      font-size: 4rem;
+    }
+    @include tablet {
+      font-size: 3.5rem;
+    }
+  }
+  .breadcrumb {
+    justify-content: center;
+  }
+  .breadcrumb__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    .breadcrumb__item {
+      font-size: 2rem;
+      font-weight: normal;
+      font-family: $default_font;
+      color: $black_3;
+    }
+    .seperator {
+      margin: 0 1rem;
+
+      svg {
+        height: 1.6rem;
+        width: auto;
+      }
+    }
+    .active {
+      color: $black;
+    }
+  }
 }
 
 // branch apply header end
 
 // branchapply form start
 .branch__apply {
-  margin: 5rem 0;
+  margin: 4rem 0;
   margin-bottom: 15rem;
 
   .container {
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.09);
     padding: 0;
   }
 
@@ -98,6 +137,18 @@
   .branch__apply--image {
     width: 100%;
     height: 100%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $hover-2;
+      opacity: 0.5;
+      content: "";
+    }
 
     img {
       width: 100%;
@@ -117,6 +168,13 @@
   margin-top: 0;
   padding-bottom: 0 !important;
   margin-bottom: 0;
+
+  #prevBtn {
+    padding: 1rem 2.5rem !important;
+  }
+  #nextBtn {
+    padding: 1rem 2.5rem !important;
+  }
 
   .tab {
     h2,
@@ -179,7 +237,6 @@
     }
     label {
       font-size: 1.4rem;
-      font-weight: normal;
       font-weight: bold;
     }
 
@@ -205,7 +262,7 @@ input.invalid {
 /* Hide all steps by default: */
 .tab {
   display: none;
-  margin-bottom: 10rem;
+  margin-bottom: 18rem;
 }
 
 button {
