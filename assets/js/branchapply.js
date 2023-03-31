@@ -46,17 +46,28 @@ function validateForm() {
       return false;
     }
   }
-  let radioBtn = document.getElementsByName("experience");
+
+  const radioGroup = document.querySelectorAll('input[name="experience"]');
+  let selectedValue = "";
   let radioLabel = document.querySelector(".radio__label");
-  radioBtn.forEach((radio) => {
-    if (!radio.checked) {
-      radioLabel.style.color = "red";
-      valid = false;
-    } else {
-      radioLabel.style.color = "black";
-      valid = true;
+
+  for (const radioButton of radioGroup) {
+    if (radioButton.checked) {
+      selectedValue = radioButton.value;
+      break;
     }
-  });
+  }
+
+  if (selectedValue === "Yes") {
+    radioLabel.style.color = "black";
+    valid = true;
+  } else if (selectedValue === "No") {
+    radioLabel.style.color = "black";
+    valid = true;
+  } else {
+    radioLabel.style.color = "red";
+    valid = false;
+  }
 
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";

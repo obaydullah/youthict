@@ -21,6 +21,14 @@ CSS Index
 /**********************************
 0. Global Style
 ***********************************/
+.container {
+  @include desktop {
+    padding: 0 1rem;
+  }
+  @include tablet {
+    padding: 0 2rem;
+  }
+}
 
 .section-ptb {
   padding-top: 80px;
@@ -4536,7 +4544,7 @@ select.chosen-select {
       font-weight: 900;
     }
     .text {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       text-transform: uppercase;
       opacity: 0.9;
     }
@@ -9173,7 +9181,7 @@ canvas {
     color: $white;
     margin: 0 2rem;
     height: inherit !important;
-  
+
     &.br-right-top {
       border-radius: 0.5rem 10rem 0.5rem 0.5rem;
     }
@@ -9186,7 +9194,7 @@ canvas {
     &.br-bottom-left {
       border-radius: 0.5rem 0.5rem 0.5rem 10rem;
     }
-  
+
     img {
       border-radius: 50%;
       display: block;
@@ -9213,7 +9221,6 @@ canvas {
     }
   }
 }
-
 
 //Job getters styles
 
@@ -9244,3 +9251,5 @@ marquee {
 @import "./partials/pages/studentsapply";
 @import "./partials/pages/coursedetails";
 @import "./partials/pages/govjobgetters";
+@import "./partials/pages/login"; 
+ @import "./partials/pages/course";

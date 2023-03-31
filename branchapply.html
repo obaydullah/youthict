@@ -275,156 +275,158 @@
   </div>
   <!-- Start Side Vav -->
 
-  <!-- branch apply header -->
-  <section class="branchapply__header">
-    <div class="container">
-      <img class="shape-1 shape" src="./assets/images/gallery/shape-13.png" alt="" />
-      <img src="./assets/images/gallery/shape-15.png" alt="" class="shape-2 shape" />
-      <img src="./assets/images/gallery/shape-25.png" alt="" class="shape-3 shape" />
+  <main>
+    <!-- branch apply header -->
+    <section class="branchapply__header">
+      <div class="container">
+        <img class="shape-1 shape" src="./assets/images/gallery/shape-13.png" alt="" />
+        <img src="./assets/images/gallery/shape-15.png" alt="" class="shape-2 shape" />
+        <img src="./assets/images/gallery/shape-25.png" alt="" class="shape-3 shape" />
 
-      <div class="row justify-content-center">
-        <div class="col-md-7 col-lg-8 align-self-center">
-          <div class="branchapply__header--inner">
-            <h2>Apply for Branch</h2>
-            <div class="breadcrumb">
-              <ul class="breadcrumb__inner">
-                <li class="breadcrumb__item"><a href="index.html">Home</a></li>
-                <li class="seperator"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10l-10 10Z" />
-                  </svg></li>
-                <li class="breadcrumb__item active">Branch apply</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- branch apply header -->
-
-  <!-- branchapply  start  -->
-  <section class="branch__apply">
-    <div class="container">
-      <div class="row g-0">
-        <div class="col-lg-12">
-          <div class="row g-0">
-            <div class="col-lg-6">
-              <form id="regForm">
-                <div class="tab">
-                  <h2>Institute Information</h2>
-
-                  <p>
-                    <label for="iname">Name</label>
-                    <input placeholder="Institute Name" oninput="this.className = ''" name="iname" id="iname"
-                      type="text" required />
-                  </p>
-                  <p>
-                    <label for="iage">Institute Age</label>
-                    <input placeholder="Institute Age" oninput="this.className = ''" name="iage" id="iage" type="number"
-                      required />
-                  </p>
-                  <p>
-                    <label for="icomputer">Institute Computer Number</label>
-                    <input placeholder="Institute Computer Number" oninput="this.className = ''" name="icomputer"
-                      id="icomputer" type="number" required />
-                  </p>
-                  <p>
-                    <label for="imobile">Institute Mobile Number</label>
-                    <input placeholder="Institute Mobile Number" oninput="this.className = ''" name="imobile"
-                      id="imobile" type="number" required />
-                  </p>
-                  <p>
-                    <label for="tradelicense">Institute Trade License</label>
-                    <input type="file" name="tradelicense" id="tradelicense" oninput="this.className = ''" />
-                  </p>
-                  <p class="radio__label">
-                    Experience with any govt. Institution
-                  </p>
-                  <div class="radio__group">
-                    <div class="radio__field">
-                      <label for="yes">Yes</label>
-                      <input type="radio" name="experience" id="yes" value="Yes" />
-                    </div>
-                    <div class="radio__field">
-                      <label for="no">No</label>
-                      <input type="radio" name="experience" id="no" value="No" />
-                    </div>
-                  </div>
-                </div>
-                <div class="tab">
-                  <h2>Institute Propritor Information</h2>
-
-                  <p>
-                    <label for="pname">Proprietor Name</label>
-                    <input placeholder="Proprietor Name" oninput="this.className = ''" name="pname" id="pname"
-                      type="text" required />
-                  </p>
-                  <p>
-                    <label for="pemail">Proprietor Email</label>
-                    <input placeholder="Proprietor Email" oninput="this.className = ''" name="pemail" id="pemail"
-                      type="email" required />
-                  </p>
-                  <p>
-                    <label for="pphone">Institute Computer Number</label>
-                    <input placeholder="Proprietor Phone Number" oninput="this.className = ''" name="pphone" id="pphone"
-                      type="number" required />
-                  </p>
-
-                  <p>
-                    <label for="ppicture">Proprietor Profile Picture</label>
-                    <input type="file" name="ppicture" id="ppicture" oninput="this.className = ''" />
-                  </p>
-                  <p>
-                    <label for="pnid">Proprietor NID</label>
-                    <input type="file" name="pnid" id="pnid" oninput="this.className = ''" />
-                  </p>
-                </div>
-                <div class="tab">
-                  <h2>Institute Address and Location</h2>
-
-                  <p>
-                    <label for="district">District</label>
-                    <input placeholder="District" oninput="this.className = ''" name="district" id="district"
-                      type="text" required />
-                  </p>
-                  <p>
-                    <label for="thana">Upazila / Thana</label>
-                    <input placeholder="Thana" oninput="this.className = ''" name="thana" id="thana" type="text"
-                      required />
-                  </p>
-                  <textarea name="additionalinfo" id="additionalinfo" cols="10" rows="10"></textarea>
-                </div>
-
-                <div style="overflow: auto">
-                  <div style="float: right">
-                    <button type="button" id="prevBtn" class="default_btn" onclick="nextPrev(-1)">
-                      Previous
-                    </button>
-                    <button type="button" id="nextBtn" class="default_btn" onclick="nextPrev(1)">
-                      Next
-                    </button>
-                  </div>
-                </div>
-                <!-- Circles which indicates the steps of the form: -->
-                <div style="text-align: center; margin-top: 40px; margin-bottom: -100px;">
-                  <span class="step"></span>
-                  <span class="step"></span>
-                  <span class="step"></span>
-                </div>
-              </form>
-            </div>
-            <div class="col-lg-6 d-none d-lg-block">
-              <div class="branch__apply--image">
-                <img src="./assets/images/branchapply/branchapply.jpg" alt="" />
+        <div class="row justify-content-center">
+          <div class="col-md-7 col-lg-8 align-self-center">
+            <div class="branchapply__header--inner">
+              <h2>Apply for Branch</h2>
+              <div class="breadcrumb">
+                <ul class="breadcrumb__inner">
+                  <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                  <li class="seperator"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                      viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10l-10 10Z" />
+                    </svg></li>
+                  <li class="breadcrumb__item active">Branch apply</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- branchapply  end  -->
+    </section>
+    <!-- branch apply header -->
+
+    <!-- branchapply  start  -->
+    <section class="branch__apply">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-lg-12">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <form id="regForm">
+                  <div class="tab">
+                    <h2>Institute Information</h2>
+
+                    <p>
+                      <label for="iname">Name</label>
+                      <input placeholder="Institute Name" oninput="this.className = ''" name="iname" id="iname"
+                        type="text" required />
+                    </p>
+                    <p>
+                      <label for="iage">Institute Age</label>
+                      <input placeholder="Institute Age" oninput="this.className = ''" name="iage" id="iage"
+                        type="number" required />
+                    </p>
+                    <p>
+                      <label for="icomputer">Institute Computer Number</label>
+                      <input placeholder="Institute Computer Number" oninput="this.className = ''" name="icomputer"
+                        id="icomputer" type="number" required />
+                    </p>
+                    <p>
+                      <label for="imobile">Institute Mobile Number</label>
+                      <input placeholder="Institute Mobile Number" oninput="this.className = ''" name="imobile"
+                        id="imobile" type="number" required />
+                    </p>
+                    <p>
+                      <label for="tradelicense">Institute Trade License</label>
+                      <input type="file" name="tradelicense" id="tradelicense" oninput="this.className = ''" />
+                    </p>
+                    <p class="radio__label">
+                      Experience with any govt. Institution
+                    </p>
+                    <div class="radio__group">
+                      <div class="radio__field">
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="experience" id="yes" value="Yes" />
+                      </div>
+                      <div class="radio__field">
+                        <label for="no">No</label>
+                        <input type="radio" name="experience" id="no" value="No" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <h2>Institute Propritor Information</h2>
+
+                    <p>
+                      <label for="pname">Proprietor Name</label>
+                      <input placeholder="Proprietor Name" oninput="this.className = ''" name="pname" id="pname"
+                        type="text" required />
+                    </p>
+                    <p>
+                      <label for="pemail">Proprietor Email</label>
+                      <input placeholder="Proprietor Email" oninput="this.className = ''" name="pemail" id="pemail"
+                        type="email" required />
+                    </p>
+                    <p>
+                      <label for="pphone">Institute Computer Number</label>
+                      <input placeholder="Proprietor Phone Number" oninput="this.className = ''" name="pphone"
+                        id="pphone" type="number" required />
+                    </p>
+
+                    <p>
+                      <label for="ppicture">Proprietor Profile Picture</label>
+                      <input type="file" name="ppicture" id="ppicture" oninput="this.className = ''" />
+                    </p>
+                    <p>
+                      <label for="pnid">Proprietor NID</label>
+                      <input type="file" name="pnid" id="pnid" oninput="this.className = ''" />
+                    </p>
+                  </div>
+                  <div class="tab">
+                    <h2>Institute Address and Location</h2>
+
+                    <p>
+                      <label for="district">District</label>
+                      <input placeholder="District" oninput="this.className = ''" name="district" id="district"
+                        type="text" required />
+                    </p>
+                    <p>
+                      <label for="thana">Upazila / Thana</label>
+                      <input placeholder="Thana" oninput="this.className = ''" name="thana" id="thana" type="text"
+                        required />
+                    </p>
+                    <textarea name="additionalinfo" id="additionalinfo" cols="10" rows="10"></textarea>
+                  </div>
+
+                  <div style="overflow: auto">
+                    <div style="float: right">
+                      <button type="button" id="prevBtn" class="default_btn" onclick="nextPrev(-1)">
+                        Previous
+                      </button>
+                      <button type="button" id="nextBtn" class="default_btn" onclick="nextPrev(1)">
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Circles which indicates the steps of the form: -->
+                  <div style="text-align: center; margin-top: 40px; margin-bottom: -100px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-6 d-none d-lg-block">
+                <div class="branch__apply--image">
+                  <img src="./assets/images/branchapply/branchapply.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- branchapply  end  -->
+  </main>
 
   <!-- Start Footer -->
   <footer id="rs-footer" class="rs-footer footer-style-1 has-footer-contact pt-5">

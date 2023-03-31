@@ -1,0 +1,134 @@
+//Login header start
+.login__header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  background-color: $gallery-bg;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .breadcrumb__inner {
+    padding-left: 0 !important;
+  }
+
+  .shape-1 {
+    position: absolute;
+    top: 20%;
+    left: 10rem;
+  }
+  .shape-2 {
+    position: absolute;
+    top: 50%;
+    right: 30rem;
+    opacity: 0.5;
+  }
+  .shape-3 {
+    position: absolute;
+    top: -5rem;
+    right: -8rem;
+  }
+  .shape {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+// Login header end
+
+.login {
+  margin: 5rem 0;
+  margin-bottom: 15rem;
+
+  .form__inner {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  form {
+    background-color: $white;
+    padding: 3rem;
+    border-radius: 1rem 0 0 1rem;
+
+    h2 {
+      color: $hover-2;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: $default_font;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    input,
+    select {
+      background-color: $white;
+      transition: all 0.3s;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 1rem 1.5rem;
+      font-size: 1.6rem;
+      width: 100%;
+      border-radius: 5px;
+      color: $black_2;
+
+      &::placeholder {
+        font-size: 1.4rem;
+        font-family: $default_font;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+    }
+    label {
+      width: 100%;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: $black_4;
+    }
+
+    .default_btn {
+      @include btn__gradiant;
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      padding: 1.1rem 2.5rem;
+    }
+    .error {
+      color: red;
+      font-size: 1.2rem;
+    }
+  }
+
+  .img__box {
+    height: 40rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem 0 0 1rem;
+    z-index: 1;
+
+    // &::after {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: $hover-2;
+    //   opacity: 1;
+    //   content: "";
+    //   z-index: -1;
+    // }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
