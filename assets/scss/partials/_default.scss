@@ -56,6 +56,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Medium.ttf") format("true format"),
+    url("../webfonts/OpenSans-Medium.ttf") format("true format");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*************************** start common css **************************************/
 
 html {

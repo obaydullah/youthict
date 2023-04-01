@@ -1,37 +1,41 @@
+$border-color: rgb(219, 225, 235);
+.course__details--body {
+  color: #111827;
+}
 //global style start
 
-.accordion-button {
-  border: none;
-  outline: none;
-}
-.accordion-button:focus {
-  outline: none;
-  border-color: transparent;
-  box-shadow: none;
-}
-.accordion-button:not(.collapsed) {
-  box-shadow: none;
-  color: $black-2;
-  background-color: $white;
-}
+// .accordion-button {
+//   border: none;
+//   outline: none;
+// }
+// .accordion-button:focus {
+//   outline: none;
+//   border-color: transparent;
+//   box-shadow: none;
+// }
+// .accordion-button:not(.collapsed) {
+//   box-shadow: none;
+//   color: $black-2;
+//   background-color: $white;
+// }
 
-button.accordion-button {
-  font-size: 1.6rem !important;
-  font-family: $default_font;
-  font-weight: normal;
-  padding: 2rem !important;
-}
-.accordion-body {
-  padding: 2rem !important;
+// button.accordion-button {
+//   font-size: 1.6rem !important;
+//   font-family: $default_font;
+//   font-weight: normal;
+//   padding: 2rem !important;
+// }
+// .accordion-body {
+//   padding: 2rem !important;
 
-  p {
-    font-size: 1.6rem !important;
-    line-height: 2.5rem;
-  }
-}
-.accordion-header {
-  padding: 0;
-}
+//   p {
+//     font-size: 1.6rem !important;
+//     line-height: 2.5rem;
+//   }
+// }
+// .accordion-header {
+//   padding: 0;
+// }
 
 //global style end
 
@@ -57,13 +61,15 @@ button.accordion-button {
 
   .course__details--header--inner {
     padding: 3rem 0;
+    padding-bottom: 2rem;
 
     .course__title {
-      font-size: 3rem;
+      font-size: 3.6rem;
       font-weight: bold;
     }
     .course__header--info {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
+      width: 95%;
     }
     .ratings {
       display: flex;
@@ -94,34 +100,35 @@ button.accordion-button {
 
   .title {
     font-size: 2rem;
-    font-weight: bold;
-    color: $black-2;
+    font-weight: 600;
     margin-bottom: 2rem;
   }
 
   &__info--box {
     display: flex;
+    align-items: center;
     padding: 2rem;
-    gap: 3rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
 
     img {
-      width: 10rem;
-      height: 10rem;
+      width: 7.3rem;
+      height: 7.3rem;
       border-radius: 50%;
-      box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .instructor__info {
       h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: normal;
-        font-weight: bold;
       }
 
       p {
         margin: 0;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        font-weight: normal;
       }
     }
   }
@@ -134,8 +141,7 @@ button.accordion-button {
 
   h2 {
     font-size: 2rem;
-    font-weight: bold;
-    color: $black-2;
+    font-weight: 600;
     margin-bottom: 2rem;
   }
   .what__you--learn--info {
@@ -143,7 +149,8 @@ button.accordion-button {
     justify-content: space-between;
     background-color: $white;
     padding: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
 
     @include tablet {
       flex-direction: column;
@@ -168,12 +175,14 @@ button.accordion-button {
       font-size: 1.6rem;
       margin-bottom: 2rem;
       display: flex;
-      gap: 1rem;
-      align-items: flex-start;
+      gap: 1.5rem;
+      font-weight: 400;
+      line-height: 2.4rem;
 
-      .fa {
-        color: $primary-color;
-        margin-top: 0.5rem;
+      iconify-icon {
+        color: rgb(98, 148, 248);
+        font-size: 2rem;
+        margin-top: 0.2rem;
       }
     }
   }
@@ -186,51 +195,8 @@ button.accordion-button {
 
   &--title {
     font-size: 2rem;
-    font-weight: bold;
-    color: $black-2;
+    font-weight: 600;
     margin-bottom: 2rem;
-  }
-
-  .accordion-button {
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
-  .accordion-body {
-    .about__course {
-      margin: 0;
-      padding: 0;
-      p {
-        font-size: 1.3rem;
-        font-weight: normal;
-        opacity: 0.9;
-      }
-    }
-    ul {
-      li {
-        list-style-type: square;
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
-        color: $black-2;
-        opacity: 0.9;
-        list-style: none;
-        position: relative;
-
-        &::before {
-          position: absolute;
-          top: 7px;
-          left: -20px;
-          content: "";
-          background-color: $black_3;
-          width: 0.5rem;
-          height: 0.5rem;
-          border-radius: 50%;
-        }
-
-        span {
-          font-weight: bold;
-        }
-      }
-    }
   }
 }
 //about course area end
@@ -241,38 +207,13 @@ button.accordion-button {
 
   &--title {
     font-size: 2rem;
-    font-weight: bold;
-    color: $black-2;
+    font-weight: 600;
     margin-bottom: 2rem;
-  }
-  .accordion-button {
-    font-size: 1.4rem;
-    color: $black-2;
   }
 
   //accordion body
   .course__content--btn {
     position: relative;
-  }
-  .course__content--btn span {
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.8;
-    font-weight: normal;
-
-    svg {
-      transform: rotate(90deg);
-      width: 1.8rem;
-      height: 1.8rem;
-      margin-right: 0.8rem;
-    }
-  }
-  .accordion-button {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: $black-2;
   }
 
   .topics,
@@ -300,12 +241,6 @@ button.accordion-button {
         width: 0.5rem;
         height: 0.5rem;
         border-radius: 50%;
-      }
-
-      svg {
-        height: 2rem;
-        width: 2rem;
-        margin-left: 1rem;
       }
 
       &.free {
@@ -346,15 +281,15 @@ button.accordion-button {
 
   .title {
     font-size: 2rem;
-    color: $black-2;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 1.5rem;
   }
 
   &--info {
     padding: 1.5rem;
     background-color: $white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
 
     p {
       font-size: 1.6rem;
@@ -374,19 +309,19 @@ button.accordion-button {
 
   .title {
     font-size: 2rem;
-    color: $black-2;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 1.5rem;
   }
-  a {
+  p {
     font-size: 1.6rem;
-    display: flex;
-    justify-content: space-between;
-    color: $primary-color;
-    font-weight: bold;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid $border-color;
     padding: 1.5rem;
-    background-color: $white;
+    cursor: pointer;
+
+    span {
+      text-decoration: underline;
+      color: $primary-color;
+    }
   }
 }
 // payment
@@ -397,8 +332,7 @@ button.accordion-button {
 
   .title {
     font-size: 2rem;
-    font-weight: bold;
-    color: $black-2;
+    font-weight: 600;
     margin-bottom: 2rem;
   }
   .certificate__inner {
@@ -407,17 +341,20 @@ button.accordion-button {
     background-color: $white;
 
     .course__completion--text {
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 1.6rem;
+      font-weight: 500;
       margin-bottom: 1.4rem;
     }
     .list {
-      font-size: 1.4rem;
-      font-weight: normal;
+      font-size: 1.6rem;
+      font-weight: 400;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
 
-      .fa {
-        margin-right: 0.5rem;
-        color: $primary-color;
+      iconify-icon {
+        color: rgb(98, 148, 248);
+        font-size: 1.8rem;
       }
     }
 
@@ -455,25 +392,39 @@ button.accordion-button {
     z-index: 999;
     left: -3rem;
     transform: translateY(-50%);
-    height: 3rem;
-    width: 3rem;
-    font-size: 3rem;
+    height: 4rem;
+    width: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     border-radius: 50%;
     position: fixed;
+    background: gray;
+    opacity: 0.6;
+
+    &::before {
+      margin-top: 0.2rem;
+      margin-left: -0.2rem;
+    }
   }
   .student__testemonial__arrow--right {
     position: absolute;
     top: 55%;
     z-index: 999;
-    right: -3rem;
+    right: -4rem;
     transform: translateY(-50%);
-    height: 3rem;
-    width: 3rem;
-    font-size: 3rem;
+    height: 4rem;
+    width: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     border-radius: 50%;
     position: fixed;
+    background: gray;
+    opacity: 0.6;
+
+    &::before {
+      margin-top: 0.2rem;
+      margin-right: -0.2rem;
+    }
   }
 
   .slick-track {
@@ -483,16 +434,16 @@ button.accordion-button {
 
   &--title {
     font-size: 2rem;
-    font-weight: bold;
-    color: $black-2;
+    font-weight: 600;
     margin-bottom: 2rem;
   }
 
   &--single {
-    background-color: $white;
+    background-color: #f3f4f6;
     color: $black-2;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    border-radius: 1rem;
 
     .quote {
       color: $primary-color;
@@ -523,6 +474,7 @@ button.accordion-button {
         .designation {
           font-size: 1.4rem;
           margin-bottom: 0;
+          opacity: 0.8;
         }
       }
     }
@@ -536,23 +488,8 @@ button.accordion-button {
 
   .title {
     font-size: 2rem;
-    font-weight: bold;
-    color: $black-2;
+    font-weight: 600;
     margin-bottom: 1.5rem;
-  }
-
-  .accordion-button {
-    font-size: 1.4rem;
-    padding: 1.2rem 1rem;
-    font-weight: bold;
-  }
-  .accordion-body {
-    font-size: 1.4rem;
-    opacity: 0.8;
-  }
-  .accordion-button:not(.collapsed) {
-    color: $black-2;
-    background-color: $white;
   }
 }
 // frequently asked question
@@ -580,6 +517,7 @@ button.accordion-button {
 
   .course__details--img--box {
     position: relative;
+    cursor: pointer;
 
     .video-play--icon {
       position: absolute;
@@ -606,7 +544,6 @@ button.accordion-button {
 
     h2 {
       font-size: 2.5rem;
-      color: $black-2;
       font-weight: bold;
       margin: 1.5rem 0;
       margin-top: 0.5rem;
@@ -642,6 +579,7 @@ button.accordion-button {
 .career__counceling {
   background-color: $white;
   border-radius: 1rem;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
 
   @include tablet {
     display: none;
@@ -652,7 +590,7 @@ button.accordion-button {
     background-color: $primary-color;
     color: $white;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
 
     h4 {
       font-size: 1.8rem;
@@ -693,14 +631,11 @@ button.accordion-button {
         font-weight: bold;
       }
     }
+
     button {
-      border: none;
       width: 100%;
-      color: $white;
-      background-color: $primary-color;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 0.5rem;
+      font-size: 1.4rem;
+      background: $primary-color;
     }
   }
 }
@@ -739,6 +674,7 @@ button.accordion-button {
     }
     .form__group {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: 2rem;
       align-items: flex-end;
@@ -762,8 +698,8 @@ button.accordion-button {
 
         input {
           width: 100%;
-          padding: 1rem;
-          font-size: 1.4rem;
+          padding: 0.8rem 1rem;
+          font-size: 1.6rem;
 
           &:focus {
             outline: none;
@@ -771,7 +707,8 @@ button.accordion-button {
         }
       }
       .default_btn {
-        padding: 1rem 2.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.6rem !important;
       }
     }
   }
@@ -835,6 +772,7 @@ button.accordion-button {
       color: $white;
       font-size: 2rem;
       opacity: 0.8;
+      cursor: pointer;
     }
 
     .video__area {
@@ -854,12 +792,17 @@ button.accordion-button {
       flex-grow: 1;
       height: 100%;
 
+      @media only screen and (max-width: 1000px) {
+        display: none;
+      }
+
       .title {
         font-size: 2rem;
         font-weight: 600;
 
         @include desktop {
           font-size: 1.6rem;
+          display: none;
         }
       }
       img {
@@ -924,3 +867,107 @@ button.accordion-button {
 }
 
 //modal style end
+
+// custom accordion start
+.accordion {
+  max-width: 100% !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: $default_font;
+  background: $white;
+}
+
+.accordion__label,
+.accordion__content {
+  padding: 14px 20px;
+}
+
+.accordion__label {
+  display: block;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.1s;
+  color: $black-2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .label__icon {
+    margin-right: 7rem;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 10rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.accordion__label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 15px;
+  height: 9px;
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMTInIGhlaWdodD0nOCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMi4xMiA2LjcxIDYgMi44M2wzLjg4IDMuODhhLjk5Ny45OTcgMCAxIDAgMS40MS0xLjQxTDYuNy43MWEuOTk2Ljk5NiAwIDAgMC0xLjQxIDBMLjcgNS4zYS45OTYuOTk2IDAgMCAwIDAgMS40MWMuMzkuMzggMS4wMy4zOSAxLjQyIDBaJyBmaWxsPScjMDAwJy8+PC9zdmc+");
+  background-size: contain;
+  transition: transform 0.4s;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.accordion__content {
+  background: #ffffff;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  display: none;
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__input:checked ~ .accordion__content {
+  display: block;
+}
+
+.accordion__input:checked ~ .accordion__label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+
+.accordion-body {
+  ul {
+    li {
+      list-style-type: square;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      color: $black_3;
+      opacity: 0.9;
+      list-style: none;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        content: "";
+        background-color: $black_4;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+      }
+
+      span {
+        font-weight: normal;
+      }
+    }
+  }
+}
+// custom accordion end
