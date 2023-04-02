@@ -17,23 +17,22 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body class="body-container rbt-header-sticky">
-
+<body class="courselisting__body body-container rbt-header-sticky">
 
 
   <main>
-
     <!-- course list view start  -->
     <div class="course__list">
       <div class="container">
         <div class="row">
-          <div class="col-lg-9">
+          <div class="col-sm 12 co-md- 12 col-lg-9">
             <section class="header">
-              <h2 class="result">43 Courses for <span>"Golang"</span></h2>
+              <h2 class="result">43 Courses for <span id="open-modal">"Golang"</span></h2>
 
               <div class="filterby">
                 <h3 class="filterby">Filter by</h3>
-                <select name="jobrole" id="">
+                <span class="new__filter">NEW FILTER</span>
+                <select name="jobrole" id="" class="job__role">
                   <option value="">Job Role</option>
                   <option value="Web Developer">Web Developer</option>
                   <option value="Graphics Designer">Graphics Designer</option>
@@ -74,6 +73,14 @@
             </section>
 
 
+            <section class="filter__token">
+              <ul>
+                <li><span>Live</span><iconify-icon icon="ic:outline-close"></iconify-icon></li>
+              </ul>
+
+              <button>Clear all</button>
+            </section>
+
             <section class="job__role--token">
               <a href="#">All Result</a>
               <a href="#">View course for Data Scientist Role (5)</a>
@@ -84,22 +91,47 @@
 
 
               <!-- single course  -->
-              <a href="#" class="course__single">
+              <a href="#" class="course__single masters__programe">
                 <div class="img__box">
                   <img src="./assets/images/course/pythonmasters.svg" alt="">
                 </div>
                 <div class="course__info">
                   <h3 class="title">Python Master Program <span>Masters Program</span></h3>
-                  <div class="sub__title">
-                    <span> <iconify-icon icon="mdi:user"></iconify-icon> 43k Learners</span>
-                    <span> <iconify-icon icon="mdi:calendar-weekend"></iconify-icon>Weekend</span>
-                    <span> <iconify-icon icon="material-symbols:live-tv-sharp"></iconify-icon>Live Class</span>
-                  </div>
+
                   <ul>
                     <li>Python Certification Training Course</li>
                     <li>Python Machine Learning Certification Training</li>
                     <li>Natural Language Processing with Python</li>
                   </ul>
+
+                  <div class="course__details--info">
+                    <div class="course__details--info--single">
+                      <h6>Course</h6>
+                      <h2 class="count">7</h2>
+                    </div>
+                    <div class="course__details--info--single">
+                      <h6>Hours</h6>
+                      <h2 class="count">200</h2>
+                    </div>
+                    <div class="course__details--info--single">
+                      <h6>Learners</h6>
+                      <h2 class="count">8k</h2>
+                    </div>
+
+                  </div>
+
+                  <p class="more__courses">4 more courses under the masters programe</p>
+
+                  <div class="ratings">
+                    <div class="icon">
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                    </div>
+                    <h3>4.5 <span>(3200)</span></h3>
+                  </div>
 
                 </div>
 
@@ -136,6 +168,13 @@
                     <button>View Details</button>
                   </div>
                 </div>
+
+                <div class="course__tooltip">
+                  <p class="normal">86% course completion rate <iconify-icon
+                      icon="clarity:success-standard-solid"></iconify-icon></p>
+                  <p class="small">Next Batch</p>
+                  <p class="normal">In 22 days - 22 April</p>
+                </div>
               </a>
 
 
@@ -155,6 +194,17 @@
                     <li>Python Machine Learning Certification Training</li>
                     <li>Natural Language Processing with Python</li>
                   </ul>
+
+                  <div class="ratings">
+                    <div class="icon">
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                      <iconify-icon icon="ic:round-star"></iconify-icon>
+                    </div>
+                    <h3>4.5 <span>(3200)</span></h3>
+                  </div>
 
                 </div>
 
@@ -186,6 +236,20 @@
     </div>
     <!-- course list view end  -->
 
+    <!-- <button id="open-modal">Open Modal</button> -->
+
+    <div id="overlay">
+      <div id="modal">
+        <button id="close-modal">X</button>
+        <h2>Search Form</h2>
+        <form>
+          <label for="search-input">Search:</label>
+          <input type="text" id="search-input" name="search">
+          <input type="submit" value="Search">
+        </form>
+      </div>
+    </div>
+
   </main>
 
 
@@ -200,6 +264,7 @@
 
   <script>
 
+    //dropdown button start 
     var dropdownBtn = document.querySelector(".dropdown__others--filter");
     let dropContent = document.querySelector(".dropdown-content");
 
@@ -219,8 +284,29 @@
         dropContent.style.display = "none";
       }
     });
+    // dropdown button end
 
 
+    const openModalBtn = document.getElementById("open-modal");
+    const closeModalBtn = document.getElementById("close-modal");
+    const overlay = document.getElementById("overlay");
+    const modal = document.getElementById("modal");
+
+    openModalBtn.addEventListener("click", function () {
+      overlay.style.display = "block";
+    });
+
+    closeModalBtn.addEventListener("click", function () {
+      overlay.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+
+    overlay.addEventListener("click", function () {
+      overlay.style.display = "none";
+    });
 
 
 
