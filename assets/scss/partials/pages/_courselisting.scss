@@ -329,6 +329,15 @@
       background-color: $couse_listing_bg;
       padding: 2rem;
 
+      @include desktop {
+        padding: 2rem 0;
+        background-color: transparent;
+      }
+      @include tablet {
+        padding: 2rem 0;
+        background-color: transparent;
+      }
+
       .course__info {
         width: 50%;
 
@@ -344,6 +353,9 @@
         display: block;
 
         @include desktop {
+          display: none;
+        }
+        @include tablet {
           display: none;
         }
       }
@@ -655,6 +667,13 @@
       padding: 2rem;
       padding-bottom: 3rem;
       display: none;
+
+      @include desktop {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
 
       &::before {
         content: "";
