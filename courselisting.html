@@ -31,39 +31,46 @@
 
               <div class="filterby">
                 <h3 class="filterby">Filter by</h3>
-                <span class="new__filter">NEW FILTER</span>
-                <select name="jobrole" id="" class="job__role">
-                  <option value="">Job Role</option>
-                  <option value="Web Developer">Web Developer</option>
-                  <option value="Graphics Designer">Graphics Designer</option>
 
-                </select>
+
+                <div class="job__role--select">
+                  <span class="new__filter">NEW FILTER</span>
+
+                  <select name="jobrole" id="" class="job__role">
+                    <option value="">Job Role</option>
+                    <option value="Web Developer">Web Developer</option>
+                    <option value="Graphics Designer">Graphics Designer</option>
+
+                  </select>
+                </div>
 
                 <div class="dropdown">
                   <button class="dropdown__others--filter">Other Filter <iconify-icon
                       icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon></button>
                   <div class="dropdown-content">
-                    <div class="type">
-                      <p>Training Type</p>
-                      <input type="checkbox" id="masters" name="masters" value="Masters Programe">
-                      <label for="masters"> Masters Programe</label><br>
-                      <input type="checkbox" id="liveclass" name="liveclass" value="Car">
-                      <label for="liveclass"> Live Class</label><br>
-                      <input type="checkbox" id="selfpaced" name="selfpaced" value="Car">
-                      <label for="selfpaced"> Self Paced</label><br>
-                    </div>
+                    <div class="dropdown__content--item">
+                      <div class="type">
+                        <p>Training Type</p>
+                        <input type="checkbox" id="masters" name="masters" value="Masters Programe">
+                        <label for="masters"> Masters Programe</label><br>
+                        <input type="checkbox" id="liveclass" name="liveclass" value="Car">
+                        <label for="liveclass"> Live Class</label><br>
+                        <input type="checkbox" id="selfpaced" name="selfpaced" value="Car">
+                        <label for="selfpaced"> Self Paced</label><br>
+                      </div>
 
-                    <div class="type">
-                      <p>Batch Type</p>
-                      <input type="checkbox" id="weekend" name="weekend" value="Weekend">
-                      <label for="weekend"> Weekend</label><br>
-                      <input type="checkbox" id="weekday" name="weekday" value="Weekday">
-                      <label for="weekday"> Weekday</label><br>
-                    </div>
+                      <div class="type">
+                        <p>Batch Type</p>
+                        <input type="checkbox" id="weekend" name="weekend" value="Weekend">
+                        <label for="weekend"> Weekend</label><br>
+                        <input type="checkbox" id="weekday" name="weekday" value="Weekday">
+                        <label for="weekday"> Weekday</label><br>
+                      </div>
 
-                    <div class="button__box">
-                      <button class="apply">Apply</button>
-                      <button class="clear">Clear all</button>
+                      <div class="button__box">
+                        <button class="apply">Apply</button>
+                        <button class="clear">Clear all</button>
+                      </div>
                     </div>
 
                   </div>
@@ -225,6 +232,13 @@
                     <button>View Details</button>
                   </div>
                 </div>
+
+                <div class="course__tooltip">
+                  <p class="normal">86% course completion rate <iconify-icon
+                      icon="clarity:success-standard-solid"></iconify-icon></p>
+                  <p class="small">Next Batch</p>
+                  <p class="normal">In 22 days - 22 April</p>
+                </div>
               </a>
 
 
@@ -243,9 +257,21 @@
         <button id="close-modal">X</button>
         <h2>Search Form</h2>
         <form>
-          <label for="search-input">Search:</label>
-          <input type="text" id="search-input" name="search">
-          <input type="submit" value="Search">
+          <label for="input1">Input 1:</label>
+          <input type="text" id="input1" name="input1" placeholder="Enter value for input 1">
+
+          <label for="input2">Input 2:</label>
+          <input type="text" id="input2" name="input2" placeholder="Enter value for input 2">
+
+          <label for="select1">Select 1:</label>
+          <select id="select1" name="select1">
+            <option value="">-- Select an option --</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
