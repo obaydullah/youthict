@@ -149,9 +149,8 @@
 
 .form__area {
   &--inner {
-    background-color: $branch-bg;
-    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
-    padding: 6rem 3rem;
+    padding: 0;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
   }
 }
 

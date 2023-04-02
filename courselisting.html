@@ -27,7 +27,7 @@
         <div class="row">
           <div class="col-sm 12 co-md- 12 col-lg-9">
             <section class="header">
-              <h2 class="result">43 Courses for <span id="open-modal">"Golang"</span></h2>
+              <h2 class="result">43 Courses for <span id="open-modal" class="open__modal">"Golang"</span></h2>
 
               <div class="filterby">
                 <h3 class="filterby">Filter by</h3>
@@ -252,32 +252,68 @@
 
     <!-- <button id="open-modal">Open Modal</button> -->
 
-    <div id="overlay">
-      <div id="modal">
-        <button id="close-modal">X</button>
-        <h2>Search Form</h2>
-        <form>
-          <label for="input1">Input 1:</label>
-          <input type="text" id="input1" name="input1" placeholder="Enter value for input 1">
+  </main>
 
-          <label for="input2">Input 2:</label>
-          <input type="text" id="input2" name="input2" placeholder="Enter value for input 2">
 
-          <label for="select1">Select 1:</label>
-          <select id="select1" name="select1">
-            <option value="">-- Select an option --</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
 
-          <button type="submit">Submit</button>
-        </form>
+
+
+
+  <div class="listing__modal">
+
+    <div class="video__modal--area">
+
+
+      <div class="modal__area--overlay"></div>
+      <div class="container">
+        <div class="video__area--inner">
+
+          <div class="row justify-content-center align-items-center">
+
+            <div class="modal__form">
+              <iconify-icon class="modal__close--btn" icon="ic:outline-close"></iconify-icon>
+
+              <h4 class="title">Lets get started</h4>
+
+              <form action="" class="modal__submit--form">
+                <div class="form__group">
+                  <label for="phone">Phone</label>
+                  <input type="number" name="phone" id="phone" placeholder="Enter your phone number" />
+                </div>
+
+                <div class="form__group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" placeholder="Enter your email" />
+
+                </div>
+
+                <div class="form__group">
+                  <label for="course">Course</label>
+                  <input type="text" name="course" id="course" placeholder="type your course name" />
+                </div>
+
+                <div class="form__group">
+                  <label for="favcourse">Select your favourite course</label>
+                  <select name="favcourse" id="favcourse">
+                    <option value="">Favourite course</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="Web Development">Web Development</option>
+                  </select>
+                </div>
+
+
+
+
+                <button type="submit">Search</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
 
-  </main>
-
+  </div>
 
 
   <script src="./assets/js/jquery-3.6.3.min.js"></script>
@@ -313,34 +349,38 @@
     // dropdown button end
 
 
-    const openModalBtn = document.getElementById("open-modal");
-    const closeModalBtn = document.getElementById("close-modal");
-    const overlay = document.getElementById("overlay");
-    const modal = document.getElementById("modal");
+    let courseImage = document.querySelector(".open__modal");
+    let modalArea = document.querySelector(".listing__modal");
+    let modalClose = document.querySelector(".modal__area--overlay");
+    let modalCloseBtn = document.querySelector(".modal__close--btn");
 
-    openModalBtn.addEventListener("click", function () {
-      overlay.style.display = "block";
+    courseImage.addEventListener("click", function () {
+      modalArea.style.opacity = "1";
+      modalArea.style.visibility = "visible";
+
     });
 
-    closeModalBtn.addEventListener("click", function () {
-      overlay.style.display = "none";
+    modalClose.addEventListener("click", function () {
+      modalArea.style.opacity = "0";
+      modalArea.style.visibility = "hidden";
     });
 
-    modal.addEventListener("click", function (event) {
-      event.stopPropagation();
+    modalCloseBtn.addEventListener("click", function () {
+      modalArea.style.opacity = "0";
+      modalArea.style.visibility = "hidden";
     });
-
-    overlay.addEventListener("click", function () {
-      overlay.style.display = "none";
-    });
-
-
-
 
 
 
 
   </script>
+
+
+
+
+
+
+
 
 
 </body>

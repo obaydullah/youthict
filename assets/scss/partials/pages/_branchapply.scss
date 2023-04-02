@@ -1,3 +1,7 @@
+.branchapply__body {
+  background-color: $white;
+}
+
 //branch apply header start
 .branchapply__header {
   background-size: cover;
@@ -205,17 +209,18 @@
     }
 
     ::-webkit-file-upload-button {
-      background-color: $hover-2;
+      background-color: $primary-color;
       color: $white;
       padding: 0.8rem;
       border: none;
       margin-right: 1rem;
+      border-radius: 4px;
     }
 
     .radio__group {
       display: flex;
       gap: 3rem;
-      padding: 0 1rem;
+      padding: 0;
     }
 
     .radio__field {
@@ -223,6 +228,14 @@
       align-items: center;
       gap: 1rem;
       font-size: 1.6rem;
+
+      input {
+        accent-color: $hover-2;
+
+        input[type="radio"]:focus {
+          outline: none;
+        }
+      }
 
       label {
         font-size: 1.6rem;
@@ -247,9 +260,18 @@
       width: 100%;
     }
   }
-  button#nextBtn,
+  // button#nextBtn {
+  //   background-color: $hover-2;
+  // }
   button#prevBtn {
-    background-color: $hover-2;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: $black_4;
+
+    &:hover {
+      box-shadow: none !important;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: $black_3;
+    }
   }
 }
 

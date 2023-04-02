@@ -48,11 +48,7 @@ CSS Index
   max-width: 469px;
   font-family: $default_font;
   color: $white;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 4px;
   padding: 13px 22px;
   margin-right: 22px;
   transition: 0.3s linear;
@@ -559,11 +555,7 @@ CSS Index
 .banner_text a {
   font-family: $bangla_font !important;
   color: $white;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 4px;
   padding: 16px 22px;
   margin-right: 22px;
   transition: 0.3s linear;
@@ -9218,6 +9210,7 @@ canvas {
     p {
       font-size: 1.6rem;
       line-height: 2.4rem;
+      opacity: 0.8;
     }
   }
 }

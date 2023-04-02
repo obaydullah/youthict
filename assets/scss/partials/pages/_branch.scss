@@ -1,7 +1,3 @@
-.branch__body {
-  background-color: $branch-bg;
-}
-
 //branch header start
 .branch__header {
   background-size: cover;
@@ -68,6 +64,7 @@
 
     .search__header--form {
       display: flex;
+      border: 1px solid rgba(0, 0, 0, 0.1);
 
       @include tablet {
         flex-wrap: wrap;
