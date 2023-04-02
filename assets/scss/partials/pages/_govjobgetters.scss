@@ -100,7 +100,12 @@
   }
 
   .job__getters--single {
-    background-color: $primary-color;
+    // background-color: $primary-color;
+    background-image: linear-gradient(
+      to top,
+      #11586d 37%,
+      rgba(255, 255, 255, 0.5) 200%
+    );
     padding: 5.5rem 4rem;
     color: $white;
     height: inherit !important;

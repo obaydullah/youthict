@@ -17,11 +17,12 @@
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 1rem;
+    gap: 1rem;
     align-items: center;
 
     @include tablet {
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 2rem;
     }
 
     .result {
@@ -38,6 +39,9 @@
       font-size: 1.4rem;
 
       @include tablet {
+        width: 40%;
+      }
+      @media screen and (max-width: 500px) {
         width: 100%;
       }
 
@@ -56,6 +60,10 @@
         font-size: 1.6rem;
         font-weight: bold;
         color: $black_4;
+
+        @include tablet {
+          font-size: 1.2rem;
+        }
       }
 
       .dropdown {
@@ -95,6 +103,21 @@
           font-family: $default_font;
           color: $black_4;
           margin-top: 0.8rem;
+          left: 0;
+
+          @include desktop {
+            left: -12rem;
+          }
+
+          @include tablet {
+            left: -16rem;
+          }
+          @media screen and (max-width: 485px) {
+            left: -14rem;
+          }
+          @media screen and (max-width: 376px) {
+            left: -16rem;
+          }
 
           .dropdown__content--item {
             position: relative;
@@ -111,12 +134,21 @@
               border-color: rgba(230, 230, 230, 0);
               border-bottom-color: $white;
               border-width: 7px;
-              margin-left: 28px;
+              margin-left: -92px;
               top: -33px;
+
+              @include desktop {
+                left: 235px;
+              }
+
+              @include tablet {
+                display: none;
+              }
             }
 
             .type {
               margin-bottom: 3rem;
+              text-align: left;
 
               p {
                 font-style: italic;
@@ -248,6 +280,7 @@
       font-family: $default_font;
       font-size: 1.4rem;
       cursor: pointer;
+      border: none;
 
       &:hover {
         background-color: transparent !important;
@@ -265,6 +298,10 @@
     gap: 1rem;
     align-items: center;
 
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+
     a {
       font-size: 1.4rem;
       padding: 1rem 1.5rem;
@@ -272,13 +309,13 @@
       box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 
       @include tablet {
+        border-radius: 1rem;
+      }
+
+      @include tablet {
         padding: 1rem 2rem;
         font-size: 1.2rem;
       }
-    }
-
-    @include tablet {
-      flex-wrap: wrap;
     }
   }
   // job role token area end
@@ -832,3 +869,54 @@
   }
 }
 //modal style end
+
+//pagination style
+.pagination__area {
+  text-align: center;
+}
+.pagination {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: row;
+}
+
+.pagination a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.4rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination a.active {
+  background-color: $primary-color;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination .prev,
+.pagination .next {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: $primary-color;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.pagination .page-number {
+  border: 1px solid #ddd;
+}
+
+//pagination style

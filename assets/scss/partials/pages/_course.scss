@@ -125,10 +125,6 @@
     transition: all 0.3s;
     margin-bottom: 3rem !important;
 
-    .stu {
-      width: 100%;
-    }
-
     &:hover {
       @include card__shadow;
     }
@@ -176,12 +172,32 @@
         justify-content: space-between;
         align-items: center;
       }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        button {
+          font-size: 1.4rem;
+          font-weight: normal;
+          border: 1px solid $hover-2;
+          padding: 0.5rem;
+          background-color: transparent;
+          height: 4rem;
+          width: 15rem;
+          font-weight: bold;
+          color: $hover-2;
+        }
+      }
 
       .reviews {
         margin-right: auto;
         margin-left: 1rem;
         margin-top: 0.3rem;
+        font-size: 1.4rem;
       }
+
       span {
         svg {
           color: $semi_hover;
