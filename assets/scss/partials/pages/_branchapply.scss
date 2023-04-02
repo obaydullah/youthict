@@ -151,7 +151,7 @@
       width: 100%;
       height: 100%;
       background-color: $hover-2;
-      opacity: 0.5;
+      opacity: 0.3;
       content: "";
     }
 
@@ -176,7 +176,18 @@
 
   #prevBtn {
     padding: 1rem 2.5rem !important;
+    background-color: $semi_white !important;
   }
+  #prevBtn {
+    background: $dark !important;
+    color: $black_4 !important;
+
+    &:hover {
+      box-shadow: none !important;
+      color: $black;
+    }
+  }
+
   #nextBtn {
     padding: 1rem 2.5rem !important;
   }
@@ -260,19 +271,6 @@
       width: 100%;
     }
   }
-  // button#nextBtn {
-  //   background-color: $hover-2;
-  // }
-  button#prevBtn {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: $black_4;
-
-    &:hover {
-      box-shadow: none !important;
-      background-color: rgba(0, 0, 0, 0.2);
-      color: $black_3;
-    }
-  }
 }
 
 h1 {
@@ -302,10 +300,6 @@ button {
 
 button:hover {
   opacity: 0.8;
-}
-
-#prevBtn {
-  background-color: #bbbbbb;
 }
 
 /* Make circles that indicate the steps of the form: */

@@ -4,7 +4,7 @@ $border-color: rgb(219, 225, 235);
 }
 
 .advertisement__img {
-  background-color: #a22a2b;
+  background-color: #a2e3f2;
 
   img {
     width: 100%;
@@ -338,6 +338,13 @@ $border-color: rgb(219, 225, 235);
   padding: 2rem 0;
   transform: scale(1);
 
+  &:hover {
+    .student__testemonial__arrow--left,
+    .student__testemonial__arrow--right {
+      opacity: 0.5;
+    }
+  }
+
   .student__testemonial--slider {
     overflow: visible !important;
   }
@@ -364,6 +371,9 @@ $border-color: rgb(219, 225, 235);
     position: fixed;
     background: gray;
     opacity: 0.6;
+    border: 1px solid gray;
+    opacity: 0.2;
+    transition: all 0.3s;
 
     &::before {
       margin-top: 0.2rem;
@@ -374,7 +384,7 @@ $border-color: rgb(219, 225, 235);
     position: absolute;
     top: 55%;
     z-index: 999;
-    right: -4rem;
+    right: -3rem;
     transform: translateY(-50%);
     height: 4rem;
     width: 4rem;
@@ -384,6 +394,9 @@ $border-color: rgb(219, 225, 235);
     position: fixed;
     background: gray;
     opacity: 0.6;
+    border: 1px solid gray;
+    transition: all 0.3s;
+    opacity: 0.2;
 
     &::before {
       margin-top: 0.2rem;
@@ -583,9 +596,12 @@ $border-color: rgb(219, 225, 235);
       width: 100%;
       padding: 1rem;
       font-size: 1.3rem;
+      border: 1px solid transparent;
+      transition: all 0.3s;
 
       &:focus {
         outline: none;
+        border: 1px solid $primary-color;
       }
     }
     .note {
@@ -666,9 +682,12 @@ $border-color: rgb(219, 225, 235);
           width: 100%;
           padding: 0.8rem 1rem;
           font-size: 1.6rem;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          transition: all 0.3s;
 
           &:focus {
             outline: none;
+            border: 1px solid $primary-color;
           }
         }
       }

@@ -34,7 +34,10 @@
 }
 
 @mixin btn__gradiant {
-  background: linear-gradient(214.38deg, #fb908a -2.24%, #ff512e 59.38%);
+  background: linear-gradient(214.38deg, #fb908a 2%, #ff512e 30.38%);
+}
+@mixin btn__gradiant__dark {
+  background: linear-gradient(214.38deg, #fb908a 2%, #f7411c 30.38%);
 }
 
 @mixin dropdown__gradiant {
@@ -44,8 +47,8 @@
 //Box shadow
 @mixin btn__shadow {
   box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2) !important;
-  opacity: 0.85 !important;
+  opacity: 0.95 !important;
 }
 @mixin card__shadow {
-  box-shadow: 2px 0 5px 1px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 2px 0 5px 1px rgba(0, 0, 0, 0.05) !important;
 }
