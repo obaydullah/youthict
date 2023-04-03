@@ -560,6 +560,10 @@ CSS Index
 .course_free_facilities_item p {
   font-family: $bangla_font;
   letter-spacing: 0.20000000298023224px;
+
+  @include mobile {
+    line-height: 2.2rem !important;
+  }
 }
 .banner_text .dot_shape_banner {
   position: absolute;
@@ -747,6 +751,11 @@ CSS Index
     font-size: 2.8rem;
     font-family: $bangla_font;
     font-weight: bold;
+
+    @include tablet {
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
   }
   p {
     margin-top: 1rem !important;

@@ -97,8 +97,8 @@
       prevArrow: '<i class="fa fa-angle-left prevarrow"></i>',
       nextArrow: '<i class="fa fa-angle-right nextarrow"></i>',
       responsive: [
-        { breakpoint: 992, settings: { arrows: !0, slidesToShow: 3 } },
-        { breakpoint: 767, settings: { arrows: !0, slidesToShow: 2 } },
+        { breakpoint: 992, settings: { arrows: !0, slidesToShow: 2 } },
+        { breakpoint: 767, settings: { arrows: !0, slidesToShow: 1 } },
         { breakpoint: 576, settings: { arrows: !0, slidesToShow: 1 } },
       ],
     });
