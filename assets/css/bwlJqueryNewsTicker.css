@@ -661,7 +661,7 @@ div.pink_ticker_footer_toggle_wrapper .bwl_footer_toggle_btn {
 div.purple_bwl_header_ticker_wrapper,
 div.purple_bwl_inline_ticker_wrapper,
 div.purple_bwl_footer_ticker_wrapper {
-  border-color: #ff512e !important;
+  border-color: #f37021 !important;
 }
 div.purple_bwl_header_ticker_wrapper span.purple_ticker_title,
 div.purple_bwl_inline_ticker_wrapper span.purple_ticker_title,
@@ -674,7 +674,7 @@ div.purple_bwl_footer_ticker_wrapper div.ticker_btn_wrapper .bwl_next_btn {
   background: linear-gradient(
     214.38deg,
     #fb908a -2.24%,
-    #ff512e 59.38%
+    #f37021 59.38%
   ) !important;
 }
 div.purple_ticker_header_toggle_wrapper .bwl_header_toggle_btn,

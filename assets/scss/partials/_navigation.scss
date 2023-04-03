@@ -980,7 +980,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   font-size: 16px;
   font-weight: 500;
   padding: 10px 20px;
-  border-radius: 1rem;
+  border-radius: 4px;
   @include btn__gradiant;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2812,6 +2812,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   opacity: 1;
   left: 0;
   overflow-y: auto;
+  width: 100vw;
 }
 .popup-mobile-menu .mainmenu {
   list-style: none;

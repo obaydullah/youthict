@@ -27,8 +27,8 @@
       slidesToScroll: 1,
       dots: !1,
       arrows: !1,
-      prevArrow: '<i class="fa fa-angle-left prevarrow"></i>',
-      nextArrow: '<i class="fa fa-angle-right nextarrow"></i>',
+      prevArrow: '<i class="fa fa-angle-left prevarrow mix_btn"></i>',
+      nextArrow: '<i class="fa fa-angle-right nextarrow mix_btn"></i>',
       asNavFor: ".course_body_slider",
       responsive: [
         {
