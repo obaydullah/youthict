@@ -315,6 +315,46 @@
       { breakpoint: 576, settings: { arrows: !0, slidesToShow: 1 } },
     ],
   });
+
+  $(".aboutus__testemonial--slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: !0,
+    arrows: !0,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    loop: true,
+    dots: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
+  });
+
+  $(".testemonial__videopopup").venobox({
+    bgcolor: "#000",
+    border: "0",
+    autoplay: true,
+    showCloseButton: true,
+    overlayClose: true,
+    spinner: "wave",
+  });
 })(jQuery);
 
 //manuipulate stick header logo when user scroll

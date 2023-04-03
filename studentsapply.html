@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
   <link rel="stylesheet" href="assets/css/bwlJqueryNewsTicker.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="./assets/css/select2.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -344,42 +345,28 @@
                     <label for="email">Email</label>
                     <input placeholder="Email" oninput="this.className = ''" name="email" id="email" type="email" />
                   </p>
-                  <p>
-                    <label for="division">Division</label>
-                    <select name="division" id="division" oninput="this.className = ''">
-                      <option value="">Division</option>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Sylhet">Sylhet</option>
-                      <option value="Barisal">Barisal</option>
-                    </select>
-                  </p>
-                  <p>
-                    <label for="district">District</label>
-                    <select name="district" id="district" oninput="this.className = ''">
-                      <option value="">District</option>
-                      <option value="Narayanganj">Narayanganj</option>
-                      <option value="Bancarampur">Bancarampur</option>
-                      <option value="Narsingdi">Narsingdi</option>
-                    </select>
-                  </p>
+
                   <p>
                     <label for="thana">Thana</label>
-                    <select name="thana" id="thana" oninput="this.className = ''">
+                    <select id="thana" name="state">
                       <option value="">Thana</option>
                       <option value="Araihazar">Araihazar</option>
                       <option value="Bisnondi">Bisnondi</option>
-                      <option value="Narsingdi">Narsingdi</option>
+                      <option value="Koritola">Koritola</option>
                     </select>
                   </p>
                   <p>
-                    <label for="subject">Select Subject</label>
-                    <select name="subject" id="subject" oninput="this.className = ''">
-                      <option value="">Subject</option>
-                      <option value="Web design">Web design</option>
-                      <option value="golang">golang</option>
-                      <option value="Node JS">Node JS</option>
+                    <label for="course">Course</label>
+                    <select id="course" name="state">
+                      <option value="">Course</option>
+                      <option value="Araihazar">Web Design</option>
+                      <option value="Bisnondi">Web Development</option>
                     </select>
                   </p>
+
+
+
+
 
                   <p class="bkash__number">
                     To finalize your payment, transfer the require fees to the
@@ -575,72 +562,13 @@
   <script src="./assets/js/slick.min.js"></script>
   <script src="./assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/bwlJqueryNewsTicker.min.js"></script>
+  <script src="./assets/js/studentapply.js"></script>
+  <script src="./assets/js/select2.min.js"></script>
   <script src="./assets/js/main.js"></script>
 
-  <script>
-    let form = document.querySelector(".studentapply__form");
-    let inputElem = document.querySelectorAll(".studentapply__form input");
 
-    form.addEventListener("submit", function (event) {
-      if (!validForm()) {
-        event.preventDefault();
-        return false;
-      }
 
-      alert("Form submitted successfully");
-    });
 
-    function validForm() {
-      let division = document.getElementById("division").value;
-      let district = document.getElementById("district").value;
-      let thana = document.getElementById("thana").value;
-      let subject = document.getElementById("subject").value;
-      let valid = true;
-
-      for (i of inputElem) {
-        if (i.value == "") {
-          i.setAttribute("class", "invalid");
-          valid = false;
-        } else if (i.name == "phone") {
-          let isPhoneValid = /^(?:\+?88|0088)?01[15-9]\d{8}$/;
-          if (!i.value.match(isPhoneValid)) {
-            i.setAttribute("class", "invalid");
-            valid = false;
-          }
-        } else if (i.name == "email") {
-          let isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-          if (!i.value.match(isValidEmail)) {
-            i.setAttribute("class", "invalid");
-            valid = false;
-          }
-        }
-      }
-
-      if (division == "") {
-        document.getElementById("division").setAttribute("class", "invalid");
-        valid = false;
-      }
-
-      if (district == "") {
-        document.getElementById("district").setAttribute("class", "invalid");
-        valid = false;
-      }
-
-      if (thana == "") {
-        document.getElementById("thana").setAttribute("class", "invalid");
-        valid = false;
-      }
-
-      if (subject == "") {
-        document.getElementById("subject").setAttribute("class", "invalid");
-        valid = false;
-      }
-
-      return valid;
-    }
-
-      //Branch apply multi step form end
-  </script>
 </body>
 
 </html>

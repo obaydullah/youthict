@@ -21,6 +21,14 @@ CSS Index
 /**********************************
 0. Global Style
 ***********************************/
+.section__padding--default {
+  padding: 5rem 0;
+
+  @include mobile {
+    padding: 2rem 0;
+  }
+}
+
 .container {
   @include desktop {
     padding: 0 1rem;
@@ -692,6 +700,13 @@ CSS Index
   right: -110px;
   top: -150px;
   opacity: 0.2;
+
+  @include desktop {
+    display: none !important;
+  }
+  @include tablet {
+    display: none !important;
+  }
 }
 .banner_img .banner_img_overly {
   position: absolute;
@@ -1006,6 +1021,7 @@ CSS Index
 #courseslide {
   overflow: hidden;
   padding-top: 12rem;
+  padding-bottom: 5rem;
 
   & > .row {
   }
@@ -4394,6 +4410,11 @@ select.chosen-select {
 
 /*  13  - Prime Minister
 ----------------------------------------------*/
+.minister {
+  @include mobile {
+    margin-bottom: 3rem;
+  }
+}
 .minister__content {
   background-color: $gallery-bg;
   position: relative;
@@ -4541,6 +4562,7 @@ select.chosen-select {
 .counter__home {
   margin-top: -15rem;
   padding-bottom: 5rem;
+  padding-top: 0 !important;
 
   &--single {
     background-color: $white;
@@ -4635,6 +4657,8 @@ select.chosen-select {
   }
 }
 .students__apply {
+  padding: 4rem 0;
+
   .form__inner {
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.09);
     overflow: hidden;
@@ -7850,10 +7874,7 @@ ul#menu-footer-menu {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-
-  .row {
-    overflow: hidden;
-  }
+  padding-top: 10rem;
 
   [class*="col-"] {
     margin-bottom: -99999px;
@@ -7873,6 +7894,13 @@ ul#menu-footer-menu {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
   border: 1px solid rgba($hover, 0.1);
   transition: all 0.3s;
+
+  @include desktop {
+    margin-top: 1.5rem;
+  }
+  @include mobile {
+    margin-top: 2rem;
+  }
 
   &:hover {
     transform: translateY(-1rem);
@@ -9330,6 +9358,12 @@ marquee {
   font-size: 1.4rem;
 }
 //notice text
+
+// home testemonial start
+.home__testemonial {
+  padding-bottom: 0 !important;
+}
+// home testemonial end
 
 // importing pages style
 @import "./partials/pages/about"; // importing pages end

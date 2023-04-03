@@ -1,3 +1,6 @@
+$(document).ready(function () {
+  $(".branchapply__thana").select2();
+});
 //Branch apply multi step form start
 
 var currentTab = 0;

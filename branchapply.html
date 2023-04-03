@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/bwlJqueryNewsTicker.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="./assets/css/multi-form.css" />
+  <link rel="stylesheet" href="./assets/css/select2.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -326,41 +327,12 @@
                       <input placeholder="Institute Name" oninput="this.className = ''" name="iname" id="iname"
                         type="text" required />
                     </p>
-                    <p>
-                      <label for="iage">Institute Age</label>
-                      <input placeholder="Institute Age" oninput="this.className = ''" name="iage" id="iage"
-                        type="number" required />
-                    </p>
-                    <p>
-                      <label for="icomputer">Institute Computer Number</label>
-                      <input placeholder="Institute Computer Number" oninput="this.className = ''" name="icomputer"
-                        id="icomputer" type="number" required />
-                    </p>
+
                     <p>
                       <label for="imobile">Institute Mobile Number</label>
                       <input placeholder="Institute Mobile Number" oninput="this.className = ''" name="imobile"
                         id="imobile" type="number" required />
                     </p>
-                    <p>
-                      <label for="tradelicense">Institute Trade License</label>
-                      <input type="file" name="tradelicense" id="tradelicense" oninput="this.className = ''" />
-                    </p>
-                    <p class="radio__label">
-                      Experience with any govt. Institution
-                    </p>
-                    <div class="radio__group">
-                      <div class="radio__field">
-                        <label for="yes">Yes</label>
-                        <input type="radio" name="experience" id="yes" value="Yes" />
-                      </div>
-                      <div class="radio__field">
-                        <label for="no">No</label>
-                        <input type="radio" name="experience" id="no" value="No" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab">
-                    <h2>Institute Propritor Information</h2>
 
                     <p>
                       <label for="pname">Proprietor Name</label>
@@ -373,10 +345,29 @@
                         type="email" required />
                     </p>
                     <p>
-                      <label for="pphone">Institute Computer Number</label>
+                      <label for="pphone">Proprietor Phone number</label>
                       <input placeholder="Proprietor Phone Number" oninput="this.className = ''" name="pphone"
                         id="pphone" type="number" required />
                     </p>
+
+                    <p class="radio__label">
+                      Experience with any govt. Institution
+                    </p>
+                    <div class="radio__group">
+                      <div class="radio__field">
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="experience" id="yes" value="Yes" />
+                      </div>
+
+                      <div class="radio__field">
+                        <label for="no">No</label>
+                        <input type="radio" name="experience" id="no" value="No" />
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab">
+                    <h2>Institute Propritor Information</h2>
 
                     <p>
                       <label for="ppicture">Proprietor Profile Picture</label>
@@ -386,22 +377,26 @@
                       <label for="pnid">Proprietor NID</label>
                       <input type="file" name="pnid" id="pnid" oninput="this.className = ''" />
                     </p>
-                  </div>
-                  <div class="tab">
-                    <h2>Institute Address and Location</h2>
 
                     <p>
-                      <label for="district">District</label>
-                      <input placeholder="District" oninput="this.className = ''" name="district" id="district"
-                        type="text" required />
+                      <label for="tradelicense">Institute Trade License</label>
+                      <input type="file" name="tradelicense" id="tradelicense" oninput="this.className = ''" />
                     </p>
+
                     <p>
-                      <label for="thana">Upazila / Thana</label>
-                      <input placeholder="Thana" oninput="this.className = ''" name="thana" id="thana" type="text"
-                        required />
+                      <label for="thana">Thana</label>
+                      <select name="thana" id="thana" class="branchapply__thana" name="state">
+                        <option value="">Thana</option>
+                        <option value="Araihazar">Araihazar</option>
+                        <option value="Bisnondi">Bisnondi</option>
+                        <option value="Koritola">Koritola</option>
+                      </select>
                     </p>
-                    <textarea name="additionalinfo" id="additionalinfo" cols="10" rows="10"></textarea>
+                    <textarea placeholder="additional info" name="additionalinfo" id="additionalinfo" cols="3"
+                      rows="3"></textarea>
+
                   </div>
+
 
                   <div style="overflow: auto">
                     <div style="float: right">
@@ -415,7 +410,6 @@
                   </div>
                   <!-- Circles which indicates the steps of the form: -->
                   <div style="text-align: center; margin-top: 40px; margin-bottom: -100px;">
-                    <span class="step"></span>
                     <span class="step"></span>
                     <span class="step"></span>
                   </div>
@@ -605,6 +599,7 @@
   <script src="./assets/js/multi-form.js"></script>
   <script src="./assets/js/jquery.validate.min.js"></script>
   <script src="./assets/js/branchapply.js"></script>
+  <script src="./assets/js/select2.min.js"></script>
   <script src="./assets/js/main.js"></script>
 
 
