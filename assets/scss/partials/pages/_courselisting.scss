@@ -820,32 +820,45 @@
   .modal__form {
     text-align: center;
     background: $white;
-    padding: 4rem;
     flex-grow: 1;
     height: 100%;
     position: relative;
-    border-radius: 1rem;
 
     iconify-icon {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
       font-size: 3rem;
       opacity: 0.5;
       cursor: pointer;
-    }
-
-    .title {
-      font-size: 2.5rem;
-      font-weight: 600;
-
-      @include desktop {
-        font-size: 2rem;
-        display: none;
-      }
+      padding-right: 1rem;
     }
 
     .modal__submit--form {
+      .title {
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        @include desktop {
+          font-size: 2rem;
+          display: none;
+        }
+      }
+
+      .title__area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #e5e5e5;
+        border-bottom: 1px solid $primary-color;
+
+        h4 {
+          padding: 1rem 2rem;
+        }
+      }
+
+      .content {
+        padding: 2rem 0;
+        padding: 1rem 2rem;
+      }
+
       p {
         margin-bottom: 1rem;
       }
@@ -870,10 +883,16 @@
         }
       }
 
+      .button__box {
+        text-align: right;
+        margin-top: 1rem;
+        border: 1px solid $primary-color;
+        padding: 1rem 2rem;
+      }
+
       button {
         border: none;
-        padding: 1rem;
-        width: 100%;
+        padding: 1rem 3rem;
         background-color: $hover;
         color: $white;
         margin-top: 0.5rem;

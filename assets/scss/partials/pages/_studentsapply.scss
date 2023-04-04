@@ -190,11 +190,10 @@
     font-size: 1.6rem;
 
     input[type="radio"]:checked {
-      background-color: red;
+      accent-color: red;
+      opacity: 0.5;
     }
-    input[type="radio"]:checked::before {
-      background-color: red;
-    }
+
     input[type="radio"]:focus {
       outline: none !important;
       box-shadow: none !important;
