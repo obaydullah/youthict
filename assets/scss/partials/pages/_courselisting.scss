@@ -849,6 +849,10 @@
         background: #e5e5e5;
         border-bottom: 1px solid $primary-color;
 
+        .title {
+          color: $black_4;
+        }
+
         h4 {
           padding: 1rem 2rem;
         }
@@ -886,18 +890,24 @@
       .button__box {
         text-align: right;
         margin-top: 1rem;
-        border: 1px solid $primary-color;
+        border-top: 1px solid $primary-color;
         padding: 1rem 2rem;
       }
 
       button {
         border: none;
         padding: 1rem 3rem;
-        background-color: $hover;
+        background-color: #01628c;
         color: $white;
         margin-top: 0.5rem;
         font-size: 1.4rem;
         font-family: $default_font;
+        border-radius: 0.2rem;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $hover;
+        }
       }
     }
   }
@@ -984,4 +994,8 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     outline: none;
   }
+}
+
+span.select2-dropdown.select2-dropdown--above {
+  border: none;
 }
