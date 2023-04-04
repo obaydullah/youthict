@@ -2827,18 +2827,16 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   left: 0;
   overflow-y: auto;
   width: 100vw;
+  background: $white;
+  padding: 0;
 }
 .popup-mobile-menu .mainmenu {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding: 15px 0px;
 }
 .popup-mobile-menu .mainmenu li {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .popup-mobile-menu .mainmenu li a {
   padding: 8px 0;
@@ -2940,6 +2938,33 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   padding: 6px 17px;
   overflow: hidden;
   background: transparent !important;
+  padding: 0.8rem 3.5rem;
+  margin-bottom: 2rem;
+}
+.popup-mobile-menu .nav-quick-access li button {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: $default_font;
+  color: $black_4;
+  border: none;
+  background: none;
+  padding-left: 0;
+  transition: all 0.3s;
+}
+.popup-mobile-menu .nav-quick-access li .button__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+
+  iconify-icon {
+    font-size: 2.5rem;
+    color: $black_4;
+  }
+}
+.popup-mobile-menu .nav-quick-access li .dropdown.hide {
+  height: 0;
+  overflow: hidden;
 }
 .popup-mobile-menu .nav-quick-access li a {
   display: flex;
@@ -2947,8 +2972,9 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   font-weight: 600;
   font-family: $default_font;
   color: $black_4;
-
-  &.browse_btn {
+}
+.popup-mobile-menu .nav-quick-access .footer__btn {
+  .browse_btn {
     font-family: $bangla_font !important;
     color: $white;
     border-radius: 10px;
@@ -2958,6 +2984,21 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
     margin-right: 0 !important;
     margin-top: 2rem;
     @include btn__gradiant;
+    justify-content: center;
+    border-bottom: none;
+  }
+  .offcanvas__login--btn {
+    font-family: $default_font;
+    color: $white;
+    border-radius: 10px;
+    padding: 1.6rem 3rem;
+    transition: 0.3s linear;
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    color: $primary-color;
   }
 }
 .popup-mobile-menu .nav-quick-access li a i {

@@ -369,3 +369,11 @@ window.onscroll = function () {
     logoImg.setAttribute("src", "assets/images/logo.png");
   }
 };
+
+// mobile menu dropdown
+function toggleDropdown(dropdownId) {
+  var dropdown = document.getElementById(dropdownId);
+  dropdown.classList.toggle("hide");
+}
+
+// mobile menu dropdown

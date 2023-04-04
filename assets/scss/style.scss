@@ -449,12 +449,6 @@ CSS Index
     color: $white !important;
   }
 }
-.offcanvas__login--btn {
-  padding: 1.5rem 2.5rem !important;
-  margin-top: 2rem !important;
-  margin: 0 auto;
-  width: 7rem;
-}
 
 //mobile menu start
 .rbt-btn-close {
@@ -463,9 +457,11 @@ CSS Index
   button {
     background: transparent;
     color: $black_4;
+    border: none;
 
     i {
       font-size: 3rem;
+      margin-right: 2.2rem;
     }
   }
 }
@@ -1948,6 +1944,18 @@ header .header-top .right.lang {
 ----------------------------------------------*/
 .popup-mobile-menu.active {
   z-index: 999999 !important;
+}
+.popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 1rem;
+
+  .popup__logo {
+    height: 6rem;
+    width: auto;
+  }
 }
 
 .header-fixed {
