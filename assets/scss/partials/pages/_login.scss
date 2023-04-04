@@ -1,55 +1,21 @@
-//Login header start
-.login__header {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 6rem 0;
-  background-color: $gallery-bg;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-
-  .breadcrumb__inner {
-    padding-left: 0 !important;
-  }
-
-  .shape-1 {
-    position: absolute;
-    top: 20%;
-    left: 10rem;
-  }
-  .shape-2 {
-    position: absolute;
-    top: 50%;
-    right: 30rem;
-    opacity: 0.5;
-  }
-  .shape-3 {
-    position: absolute;
-    top: -5rem;
-    right: -8rem;
-  }
-  .shape {
-    @media screen and (max-width: 1200px) {
-      display: none;
-    }
-    @include tablet {
-      display: none;
-    }
-  }
+.login__container {
+  margin-top: 0 !important;
+}
+.login__footer {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-// Login header end
-
 .login {
-  margin: 5rem 0;
-  margin-bottom: 15rem;
+  position: relative;
+  height: 90vh;
 
   .form__inner {
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.09);
-    overflow: hidden;
-    border-radius: 0.5rem;
-    margin-top: 2rem;
+    height: 90vh;
+
+    .row {
+      height: 90vh;
+    }
   }
 
   form {
@@ -58,12 +24,20 @@
     border-radius: 1rem 0 0 1rem;
 
     h2 {
-      color: $hover-2;
-      font-size: 3rem;
+      color: $black_4;
+      font-size: 3.5rem;
       font-weight: bold;
       font-family: $default_font;
-      margin-bottom: 2rem;
-      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+    .back__to--login {
+      font-size: 1.4rem;
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
     }
 
     input,
@@ -72,13 +46,13 @@
       transition: all 0.3s;
       border: 1px solid rgba(0, 0, 0, 0.1);
       padding: 1rem 1.5rem;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       width: 100%;
       border-radius: 5px;
       color: $black_2;
 
       &::placeholder {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-family: $default_font;
       }
 
@@ -87,55 +61,45 @@
         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
       }
     }
-    label {
-      width: 100%;
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: $black_4;
-    }
 
     .default_btn {
       @include btn__gradiant;
       font-size: 1.4rem;
+      margin-top: 1rem;
       padding: 1.1rem 2.5rem;
-    }
-    .error {
-      color: red;
-      font-size: 1.2rem;
+      width: 100%;
+      margin-right: 0;
+      max-width: 100%;
     }
 
-    .button__box {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 1.5rem;
+    .password__area {
+      position: relative;
 
-      .forgot__password {
-        font-size: 1.3rem;
-        color: $black_4;
+      a {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.6rem;
       }
+    }
+
+    .dont__have--account {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      color: $black_4;
     }
   }
 
   .img__box {
-    height: 40rem;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 1rem 0 0 1rem;
-    z-index: 1;
-
-    // &::after {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   background-color: $hover-2;
-    //   opacity: 1;
-    //   content: "";
-    //   z-index: -1;
-    // }
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 
     img {
       width: 100%;

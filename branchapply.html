@@ -155,7 +155,7 @@
             <nav class="mainmenu-nav">
               <ul class="mainmenu">
                 <li>
-                  <a href="#">Home</a>
+                  <a href="index.html">Home</a>
                 </li>
 
                 <li class="has-dropdown has-menu-child-item">
@@ -213,9 +213,9 @@
         </div>
       </div>
     </div>
-
   </header>
   <!-- Mobile Menu Section -->
+
   <div class="popup-mobile-menu">
     <div class="inner-wrapper">
       <div class="rbt-btn-close">
@@ -266,8 +266,6 @@
 
                   <a class="login__btn offcanvas__login--btn" href="login.html">Login</a>
                 </ul>
-
-
               </div>
             </div>
             <!-- End Mega Menu  -->
@@ -282,7 +280,6 @@
     <!-- branch apply header -->
     <section class="page__header">
       <div class="container">
-
         <img class="shape-1 shape" src="./assets/images/gallery/shape-13.png" alt="" />
         <img src="./assets/images/gallery/shape-15.png" alt="" class="shape-2 shape" />
         <img src="./assets/images/gallery/shape-25.png" alt="" class="shape-3 shape" />
@@ -291,22 +288,19 @@
           <div class="col-md-6 col-lg-6">
             <div class="page__header--info">
               <h2>Our Courses</h2>
-              <p>We offer various type of coure. Pick up your favourite course from here and build your career as a
-                professional. </p>
-
+              <p>
+                We offer various type of coure. Pick up your favourite course
+                from here and build your career as a professional.
+              </p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
             <div class="img__box">
-
-              <img src="./assets/images/course/course__header.jpeg" alt="">
-
-
+              <img src="./assets/images/course/course__header.jpeg" alt="" />
             </div>
           </div>
         </div>
-
       </div>
     </section>
     <!-- branch apply header -->
@@ -320,11 +314,17 @@
               <div class="col-lg-6">
                 <form id="regForm">
                   <div class="tab">
-                    <h2>Institute Information</h2>
+                    <h2>Institute and Proprietor's Information</h2>
 
                     <p>
-                      <label for="iname">Name</label>
+                      <label for="iname">Institute Name</label>
                       <input placeholder="Institute Name" oninput="this.className = ''" name="iname" id="iname"
+                        type="text" required />
+                    </p>
+
+                    <p>
+                      <label for="iname">Institute Email</label>
+                      <input placeholder="Institute Email" oninput="this.className = ''" name="iemail" id="email"
                         type="text" required />
                     </p>
 
@@ -335,52 +335,9 @@
                     </p>
 
                     <p>
-                      <label for="pname">Proprietor Name</label>
-                      <input placeholder="Proprietor Name" oninput="this.className = ''" name="pname" id="pname"
-                        type="text" required />
-                    </p>
-                    <p>
-                      <label for="pemail">Proprietor Email</label>
-                      <input placeholder="Proprietor Email" oninput="this.className = ''" name="pemail" id="pemail"
-                        type="email" required />
-                    </p>
-                    <p>
-                      <label for="pphone">Proprietor Phone number</label>
-                      <input placeholder="Proprietor Phone Number" oninput="this.className = ''" name="pphone"
-                        id="pphone" type="number" required />
-                    </p>
-
-                    <p class="radio__label">
-                      Experience with any govt. Institution
-                    </p>
-                    <div class="radio__group">
-                      <div class="radio__field">
-                        <label for="yes">Yes</label>
-                        <input type="radio" name="experience" id="yes" value="Yes" />
-                      </div>
-
-                      <div class="radio__field">
-                        <label for="no">No</label>
-                        <input type="radio" name="experience" id="no" value="No" />
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="tab">
-                    <h2>Institute Propritor Information</h2>
-
-                    <p>
-                      <label for="ppicture">Proprietor Profile Picture</label>
-                      <input type="file" name="ppicture" id="ppicture" oninput="this.className = ''" />
-                    </p>
-                    <p>
-                      <label for="pnid">Proprietor NID</label>
-                      <input type="file" name="pnid" id="pnid" oninput="this.className = ''" />
-                    </p>
-
-                    <p>
-                      <label for="tradelicense">Institute Trade License</label>
-                      <input type="file" name="tradelicense" id="tradelicense" oninput="this.className = ''" />
+                      <label for="iaddress">Institute Address</label>
+                      <textarea name="iaddress" id="iaddress" cols="3" rows="3"
+                        placeholder="Institute Address"></textarea>
                     </p>
 
                     <p>
@@ -392,16 +349,42 @@
                         <option value="Koritola">Koritola</option>
                       </select>
                     </p>
+
+
+                  </div>
+                  <div class="tab">
+                    <h2>Institute and Propritor Information</h2>
+
                     <p>
-                      <label for="additionalinfo">Additional Info</label>
-                      <textarea placeholder="additional info" name="additionalinfo" id="additionalinfo" cols="3"
-                        rows="3"></textarea>
+                      <label for="pname">Proprietor Name</label>
+                      <input placeholder="Proprietor Name" oninput="this.className = ''" name="pname" id="pname"
+                        type="text" required />
+                    </p>
+
+                    <p>
+                      <label for="pphone">Proprietor Phone number</label>
+                      <input placeholder="Proprietor Phone Number" oninput="this.className = ''" name="pphone"
+                        id="pphone" type="number" required />
+                    </p>
+
+                    <p>
+                      <label for="ppicture">Proprietor Profile Picture</label>
+                      <input type="file" name="ppicture" id="ppicture" oninput="this.className = ''" />
+                    </p>
+
+                    <p>
+                      <label for="pnid">Proprietor Signature</label>
+                      <input type="file" name="psignature" id="psignature" oninput="this.className = ''" />
                     </p>
 
 
 
-                  </div>
+                    <p>
+                      <label for="tradelicense">Institute Trade License</label>
+                      <input type="file" name="tradelicense" id="tradelicense" oninput="this.className = ''" />
+                    </p>
 
+                  </div>
 
                   <div style="overflow: auto">
                     <div style="float: right">
@@ -414,7 +397,11 @@
                     </div>
                   </div>
                   <!-- Circles which indicates the steps of the form: -->
-                  <div style="text-align: center; margin-top: 40px; margin-bottom: -100px;">
+                  <div style="
+                        text-align: center;
+                        margin-top: 40px;
+                        margin-bottom: -100px;
+                      ">
                     <span class="step"></span>
                     <span class="step"></span>
                   </div>
@@ -606,8 +593,6 @@
   <script src="./assets/js/branchapply.js"></script>
   <script src="./assets/js/select2.min.js"></script>
   <script src="./assets/js/main.js"></script>
-
-
 </body>
 
 </html>

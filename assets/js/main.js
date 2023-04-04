@@ -223,7 +223,7 @@
             headerConainer = $(".rbt-header-wrapper"),
             headerConainerH = headerConainer.outerHeight(),
             topHeaderH = $(".rbt-header-top").outerHeight() || 0,
-            targrtScroll = topHeaderH + 200;
+            targrtScroll = topHeaderH + 0;
           if ($(window).scrollTop() > targrtScroll) {
             headerConainer.addClass("rbt-sticky");
             stickyPlaceHolder.height(headerConainerH);

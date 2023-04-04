@@ -16,28 +16,13 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body class="body-container rbt-header-sticky"">
+<body class="login__container body-container rbt-header-sticky"">
 
-  <!-- Start Header -->
+   <!-- Start Header -->
   <!-- Start Header Area -->
   <header class=" rbt-header rbt-header-10">
   <div class="rbt-sticky-placeholder"></div>
   <!-- Start BWL Sticky Animated News Ticker -->
-
-  <div id="header_sticky_ticker">
-    <div class="container">
-      <ul class="bwl_news_lists">
-        <a title="" href="#">
-          <marquee behavior="scroll" direction="left" onMouseOver="this.stop()" onMouseOut="this.start()">
-            পরীক্ষার নোটিশঃ সকল আঞ্চলিক পরিচালকবৃন্দকে অবহিত করা যাচ্ছে যে,
-            জুলাই-ডিসেম্বর ২০২২ এবং অক্টোবর-ডিসেম্বর ২০২২ সেশনে ছয় মাস ও তিন
-            মাস মেয়াদী বেসিক
-          </marquee>
-        </a>
-      </ul>
-    </div>
-    <!--  End .bwl_news_lists  -->
-  </div>
   <!-- Start Header Top  -->
   <div
     class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation">
@@ -100,7 +85,7 @@
     </div>
   </div>
   <!-- End Header Top  -->
-  <div class="rbt-header-wrapper header-space-betwween header-sticky">
+  <div class="rbt-header-wrapper header-space-betwween header-sticky login__header">
     <div class="container">
       <div class="mainbar-row rbt-navigation-center align-items-center">
         <div class="header-left rbt-header-content">
@@ -152,7 +137,7 @@
           <nav class="mainmenu-nav">
             <ul class="mainmenu">
               <li>
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
               </li>
 
               <li class="has-dropdown has-menu-child-item">
@@ -275,80 +260,37 @@
   </div>
   <!-- Start Side Vav -->
 
-
-
-
   <main>
-    <!-- login header start  -->
-    <section class="page__header">
-      <div class="container">
 
-        <img class="shape-1 shape" src="./assets/images/gallery/shape-13.png" alt="" />
-        <img src="./assets/images/gallery/shape-15.png" alt="" class="shape-2 shape" />
-        <img src="./assets/images/gallery/shape-25.png" alt="" class="shape-3 shape" />
-
-        <div class="row justify-content-between align-items-center">
-          <div class="col-lg-6 col-md-6">
-            <div class="page__header--info">
-              <h2>Our Courses</h2>
-              <p>We offer various type of coure. Pick up your favourite course from here and build your career as a
-                professional. </p>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="img__box">
-
-              <img src="./assets/images/course/course__header.jpeg" alt="">
-
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- login header end -->
-
-    <!-- Login form start  -->
+    <!-- Start LoginSection -->
     <div class="login">
       <div class="container">
-        <div class="row g-0">
+        <div class="row">
           <div class="col-lg-12">
             <div class="form__inner">
-              <div class="row g-0 align-items-center">
+              <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                  <form>
+                    <h2>Login</h2>
+                    <div class="mb-3">
+                      <input type="email" id="email" name="email" placeholder="Email Address" required />
+                    </div>
+                    <div class="password__area">
+                      <input type="password" id="password" name="password" placeholder="Password" required />
 
+                      <a href="forgot.html">Forgot</a>
+                    </div>
 
-                <div class="d-none d-lg-block col-lg-6" style="overflow: hidden">
-                  <div class="img__box">
-                    <img src="./assets/images/login.png" class="img-fluid" alt="Image" />
-                  </div>
+                    <button type="submit" class="default_btn">Login</button>
+
+                    <a href="#" class="dont__have--account">Don't have an account yet ? </a>
+                  </form>
                 </div>
 
-                <div class="col-lg-6">
-                  <form>
-                    <h2>User Login</h2>
-
-                    <div class=" mb-3">
-                      <label for="email" class="form-label">Email address</label>
-                      <input type="email" id="email" name="email" placeholder="Email" required />
-                    </div>
-
-                    <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" id="password" name="password" placeholder="Password" required />
-                    </div>
-
-                    <p class="error">Email or Password doesn't match</p>
-
-
-                    <div class="button__box">
-                      <button type="submit" class="default_btn">Login</button>
-                      <a href="#" class="forgot__password">Forget Password ? </a>
-                    </div>
-
-                  </form>
+                <div class="d-none d-lg-block col-lg-6">
+                  <div class="img__box">
+                    <img src="./assets/images/home/student.jpg" class="img-fluid" alt="Image" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -356,157 +298,15 @@
         </div>
       </div>
     </div>
-    <!-- Login form end -->
+    <!-- End Login Section -->
 
   </main>
 
   <!-- Start Footer -->
-  <footer id="rs-footer" class="rs-footer footer-style-1 has-footer-contact pt-5">
-    <!-- adding footer widget -->
-    <div class="container contact-container">
-      <div class="footer-contact-desc">
-        <div class="row">
-          <div class="col-md-4">
-            <section id="text-15" class="widget widget_text">
-              <div class="textwidget">
-                <div class="contact-inner">
-                  <h3 class="contact-title address-icon">Address:</h3>
-                  <p class="contact-desc">
-                    Head Office <br />
-                    House# 01, Road# 02 <br />
-                    Dhanmondi, Dhaka
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="col-md-4">
-            <section id="text-16" class="widget widget_text">
-              <div class="textwidget">
-                <div class="contact-inner">
-                  <h3 class="contact-title phone-icon">Phone Number</h3>
-                  <p class="contact-desc">01771599533</p>
-                  <p class="contact-desc">01977500800</p>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="col-md-4">
-            <section id="text-17" class="widget widget_text">
-              <div class="textwidget">
-                <div class="contact-inner">
-                  <h3 class="contact-title mail-icon">Web Address</h3>
-                  <p class="contact-desc">
-                    Email: <a href="#">youthictbd@gmail.com</a><br />
-                    Web: <a href="https://youthict.org">www.youthict.org</a>
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer top start here -->
-    <div class="footer-top">
-      <div class="container">
-        <div class="row g-5 justify-content-center">
-          <div class="col-sm-12 col-md-3 col-lg-4">
-            <div class="about-widget">
-              <a href="#"><img class="img-fluid" src="assets/images/home/footerlogo.png" alt="Home" /></a>
-              <div class="footer-share">
-                <ul>
-                  <li>
-                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="# " target="_blank"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="# " target="_blank"><i class="fa fa-pinterest-p"></i></a>
-                  </li>
-                  <li>
-                    <a href="# " target="_blank"><i class="fa fa-google-plus-square"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col col-sm-4 col-md-3 col-lg-3">
-            <section id="nav_menu-7" class="widget widget_nav_menu">
-              <h3 class="footer-title">Quick Links</h3>
-              <div class="menu-footer-menu-container">
-                <ul id="menu-footer-menu" class="menu">
-                  <li class="menu-item">
-                    <a href="/">Career</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Join as a Teacher</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Privacy Polity</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Affiliate</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Refund Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          <div class="col col-sm-4 col-md-3 col-lg-3">
-            <section id="nav_menu-7" class="widget widget_nav_menu">
-              <h3 class="footer-title">Course</h3>
-              <div class="menu-footer-menu-container">
-                <ul id="menu-footer-menu" class="menu">
-                  <li class="menu-item">
-                    <a href="/"> Web development</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Graphics Design</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Diploma</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Digital Marketing</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Wordpress Development</a>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          <div class="col-sm-4 col-md-3 col-lg-2">
-            <section id="nav_menu-7" class="widget widget_nav_menu">
-              <h3 class="footer-title">Others</h3>
-              <div class="menu-footer-menu-container">
-                <ul id="menu-footer-menu" class="menu">
-                  <li class="menu-item">
-                    <a href="/"> About us </a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Contact us </a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Privacy Policy</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/">Refund Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer top start here -->
+  <footer id="rs-footer" class="rs-footer footer-style-1 has-footer-contact ">
 
-    <div class="footer-bottom">
+
+    <div class="footer-bottom login__footer">
       <div class="container">
         <div class="footer-bottom-inner">
           <div class="copyright">

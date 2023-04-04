@@ -1,8 +1,8 @@
 $(document).ready(function () {
   $(".branchapply__thana").select2();
 });
-//Branch apply multi step form start
 
+//Branch apply multi step form start
 var currentTab = 0;
 showTab(currentTab);
 
@@ -45,31 +45,10 @@ function validateForm() {
   for (i = 0; i < y.length; i++) {
     if (y[i].value == "") {
       y[i].className += " invalid";
-      valid = false;
-      return false;
+      // valid = false;
+      // return false;
+      return true;
     }
-  }
-
-  const radioGroup = document.querySelectorAll('input[name="experience"]');
-  let selectedValue = "";
-  let radioLabel = document.querySelector(".radio__label");
-
-  for (const radioButton of radioGroup) {
-    if (radioButton.checked) {
-      selectedValue = radioButton.value;
-      break;
-    }
-  }
-
-  if (selectedValue === "Yes") {
-    radioLabel.style.color = "black";
-    valid = true;
-  } else if (selectedValue === "No") {
-    radioLabel.style.color = "black";
-    valid = true;
-  } else {
-    radioLabel.style.color = "red";
-    valid = false;
   }
 
   if (valid) {

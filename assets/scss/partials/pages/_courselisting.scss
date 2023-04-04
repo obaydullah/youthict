@@ -134,15 +134,15 @@
               border-color: rgba(230, 230, 230, 0);
               border-bottom-color: $white;
               border-width: 7px;
-              margin-left: -92px;
+              margin-left: 36px;
               top: -33px;
 
               @include desktop {
-                left: 235px;
+                margin-left: 150px !important;
               }
 
               @include tablet {
-                display: none;
+                margin-left: 180px !important;
               }
             }
 
@@ -155,48 +155,88 @@
                 font-size: 1.4rem;
               }
 
-              input,
-              label {
+              .form-group {
+                display: block;
+                margin-bottom: 1rem;
+              }
+
+              .form-group input {
+                padding: 0;
+                height: initial;
+                width: initial;
+                margin-bottom: 0;
+                display: none;
                 cursor: pointer;
               }
-            }
 
-            .button__box {
-              display: flex;
-              justify-content: space-between;
-
-              .apply {
-                color: $white;
-                padding: 0.8rem 2rem;
-                font-family: $default_font;
+              .form-group label {
+                position: relative;
+                cursor: pointer;
                 font-size: 1.4rem;
-                border-radius: 0.2rem;
-                border: 1px solid transparent;
-                transition: all 0.3s;
-                @include primary__color--gradiant;
-
-                &:hover {
-                  background: transparent;
-                  border: 1px solid rgba(0, 0, 0, 0.2);
-                  color: $black_3;
-                }
+                display: flex;
+                align-items: center;
               }
 
-              .clear {
-                color: $black_3;
-                padding: 0.8rem 2rem;
-                font-family: $default_font;
-                font-size: 1.4rem;
-                border-radius: 0.2rem;
-                border: 1px solid transparent;
-                transition: all 0.3s;
-                background: transparent;
+              .form-group label:before {
+                content: "";
+                background-color: transparent;
                 border: 1px solid rgba(0, 0, 0, 0.2);
 
-                &:hover {
-                  @include primary__color--gradiant;
-                  color: $white !important;
-                }
+                padding: 0.6rem;
+                display: inline-block;
+                position: relative;
+                margin-right: 1rem;
+              }
+              .form-group input:checked + label:before {
+                border: 1px solid transparent;
+              }
+
+              .form-group input:checked + label:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 2px;
+                left: 6px;
+                width: 6px;
+                height: 14px;
+                border: solid $primary-color;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+              }
+            }
+          }
+
+          .button__box {
+            display: flex;
+            justify-content: space-between;
+
+            .apply {
+              color: $white;
+              padding: 0.8rem 2rem;
+              font-family: $default_font;
+              font-size: 1.4rem;
+              border-radius: 0.2rem;
+              transition: all 0.3s;
+              background: $primary-light;
+              border: 1px solid transparent;
+
+              &:hover {
+                background-color: $primary-color !important;
+                color: $white !important;
+              }
+            }
+            .clear {
+              color: $black_4;
+              padding: 0.8rem 2rem;
+              font-family: $default_font;
+              font-size: 1.4rem;
+              border-radius: 0.2rem;
+              transition: all 0.3s;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              background: transparent !important;
+
+              &:hover {
+                color: $primary_bg !important;
               }
             }
           }
@@ -288,22 +328,22 @@
         iconify-icon {
           cursor: pointer;
         }
-      }
-    }
 
-    a {
-      background: transparent;
-      color: $primary-color;
-      font-style: italic;
-      font-family: $default_font;
-      font-size: 1.4rem;
-      cursor: pointer;
-      border: none;
+        a {
+          background: transparent;
+          color: $primary-color;
+          font-style: italic;
+          font-family: $default_font;
+          font-size: 1.4rem;
+          cursor: pointer;
+          border: none;
 
-      &:hover {
-        background-color: transparent !important;
-        color: inherit !important;
-        text-decoration: none !important;
+          &:hover {
+            background-color: transparent !important;
+            color: inherit !important;
+            text-decoration: none !important;
+          }
+        }
       }
     }
   }
@@ -385,7 +425,7 @@
       padding: 2rem;
 
       .course__tooltip {
-        right: -237px;
+        right: -250px;
         opacity: 1;
         visibility: visible;
       }
@@ -722,7 +762,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: -249px;
+      right: -260px;
       background-color: $white;
       box-shadow: -4px 0 10px 1px rgba(0, 0, 0, 0.1);
       padding: 2rem;
@@ -771,7 +811,7 @@
       .small {
         font-size: 1.2rem;
         color: $black_4;
-        margin: 0.5rem 0;
+        margin-top: 1rem;
       }
     }
   }
@@ -833,11 +873,11 @@
 
     .modal__submit--form {
       .title {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 600;
 
         @include desktop {
-          font-size: 2rem;
+          font-size: 1.8rem;
           display: none;
         }
       }
@@ -851,6 +891,9 @@
 
         .title {
           color: $black_4;
+          line-height: 3.5rem;
+          font-weight: 550;
+          display: block;
         }
 
         h4 {
@@ -892,21 +935,20 @@
         margin-top: 1rem;
         border-top: 1px solid $primary-color;
         padding: 1rem 2rem;
-      }
 
-      button {
-        border: none;
-        padding: 1rem 3rem;
-        background-color: #01628c;
-        color: $white;
-        margin-top: 0.5rem;
-        font-size: 1.4rem;
-        font-family: $default_font;
-        border-radius: 0.2rem;
-        transition: all 0.3s;
+        button {
+          border: none;
+          padding: 1rem 3rem;
+          background-color: $primary-light;
+          color: $white;
+          font-size: 1.4rem;
+          font-family: $default_font;
+          border-radius: 0.2rem;
+          transition: all 0.3s;
 
-        &:hover {
-          background-color: $hover;
+          &:hover {
+            background-color: $hover;
+          }
         }
       }
     }
@@ -996,6 +1038,4 @@
   }
 }
 
-span.select2-dropdown.select2-dropdown--above {
-  border: none;
-}
+/* This css is for normalizing styles. You can skip this. */

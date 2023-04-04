@@ -1915,6 +1915,20 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   z-index: 99;
   box-shadow: rgba($black, 0.1);
 }
+.rbt-header .rbt-header-wrapper.login__header {
+  padding: 0;
+}
+.rbt-header .rbt-header-wrapper.rbt-sticky.login__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  width: 100%;
+  animation: stickySlideDown 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
+  z-index: 99;
+  box-shadow: rgba($black, 0.1);
+  padding: 0;
+}
 .rbt-header
   .rbt-header-wrapper.color-white-variation
   .mainmenu-nav

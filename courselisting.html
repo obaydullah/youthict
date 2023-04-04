@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="assets/css/bwlJqueryNewsTicker.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="./assets/css/select2.min.css">
+  <link rel="stylesheet" href="./assets/css/toastify.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -51,26 +52,39 @@
                       icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon></button>
                   <div class="dropdown-content">
                     <div class="dropdown__content--item">
-                      <div class="type">
-                        <p>Training Type</p>
-                        <input type="checkbox" id="masters" name="masters" value="Masters Programe">
-                        <label for="masters"> Masters Programe</label><br>
-                        <input type="checkbox" id="liveclass" name="liveclass" value="Car">
-                        <label for="liveclass"> Live Class</label><br>
-                        <input type="checkbox" id="selfpaced" name="selfpaced" value="Car">
-                        <label for="selfpaced"> Self Paced</label><br>
-                      </div>
 
-                      <div class="type">
-                        <p>Batch Type</p>
-                        <input type="checkbox" id="weekend" name="weekend" value="Weekend">
-                        <label for="weekend"> Weekend</label><br>
-                        <input type="checkbox" id="weekday" name="weekday" value="Weekday">
-                        <label for="weekday"> Weekday</label><br>
-                      </div>
+                      <form>
+                        <div class="type">
+                          <p>Training Type</p>
+                          <div class="form-group">
+                            <input type="checkbox" id="masters">
+                            <label for="masters">Masters Programe</label>
+                          </div>
+                          <div class="form-group">
+                            <input type="checkbox" id="liveclass">
+                            <label for="liveclass">Live Class</label>
+                          </div>
+                          <div class="form-group">
+                            <input type="checkbox" id="selfpaced">
+                            <label for="selfpaced">Self Paced</label>
+                          </div>
+                        </div>
+                        <div class="type">
+                          <p>Batch Type</p>
+                          <div class="form-group">
+                            <input type="checkbox" id="weekend">
+                            <label for="weekend">Weekend</label>
+                          </div>
+                          <div class="form-group">
+                            <input type="checkbox" id="weekday">
+                            <label for="weekday">Weekday</label>
+                          </div>
+                        </div>
+                      </form>
+
 
                       <div class="button__box">
-                        <button class="apply">Apply</button>
+                        <button class="apply" type="submit">Apply</button>
                         <button class="clear">Clear all</button>
                       </div>
                     </div>
@@ -263,30 +277,25 @@
             </div>
           </div>
         </div>
-
-
-
-
       </div>
+
+
+
+
     </div>
     <!-- course list view end  -->
 
-    <!-- <button id="open-modal">Open Modal</button> -->
+
   </main>
 
 
   <div class="listing__modal">
-
     <div class="modal__area--overlay"></div>
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-6">
 
           <div class="modal__form">
-
-
-
-
             <form action="" class="modal__submit--form">
 
 
@@ -332,14 +341,19 @@
             </form>
           </div>
 
-
-
         </div>
       </div>
     </div>
-
-
   </div>
+
+  <!-- //toastify -->
+  <div class="container" style="margin-bottom: 10rem;">
+    <button onclick="toast('top','left', 'This is a dynamic toast', 3000)">top left</button>
+    <button onclick="toast('top', 'right', 'This is a dynamic toast', 5000)">top right</button>
+    <button onclick="toast('bottom', 'left', 'This is dynamic toast', 2000)">bottom left</button>
+    <button onclick="toast('bottom', 'right', 'this is dynamic toast', 1000)">bottom right</button>
+  </div>
+  <!-- //toastify -->
 
 
   <script src="./assets/js/jquery-3.6.3.min.js"></script>
@@ -348,61 +362,11 @@
   <script src="assets/js/bwlJqueryNewsTicker.min.js"></script>
   <script src="./assets/js/iconify-icon.min.js"></script>
   <script src="./assets/js/select2.min.js"></script>
+  <script src="./assets/js/toastify-js.js"></script>
+  <script src="./assets/js/courselisting.js"></script>
   <script src="./assets/js/main.js"></script>
 
 
-  <script>
-
-    $(document).ready(function () {
-      $(".fav__courese").select2()
-    })
-
-    //dropdown button start 
-    var dropdownBtn = document.querySelector(".dropdown__others--filter");
-    let dropContent = document.querySelector(".dropdown-content");
-
-    dropdownBtn.addEventListener("click", function () {
-      var dropdownContent = this.nextElementSibling;
-
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-
-      } else {
-        dropdownContent.style.display = "block";
-      }
-    });
-
-    document.addEventListener("click", function (event) {
-      if (!dropdownBtn.contains(event.target) && !dropContent.contains(event.target)) {
-        dropContent.style.display = "none";
-      }
-    });
-    // dropdown button end
-
-
-    let courseImage = document.querySelector(".open__modal");
-    let modalArea = document.querySelector(".listing__modal");
-    let modalClose = document.querySelector(".modal__area--overlay");
-    let modalCloseBtn = document.querySelector(".modal__close--btn");
-
-    courseImage.addEventListener("click", function () {
-      modalArea.style.opacity = "1";
-      modalArea.style.visibility = "visible";
-
-    });
-
-    modalClose.addEventListener("click", function () {
-      modalArea.style.opacity = "0";
-      modalArea.style.visibility = "hidden";
-    });
-
-    modalCloseBtn.addEventListener("click", function () {
-      modalArea.style.opacity = "0";
-      modalArea.style.visibility = "hidden";
-    });
-
-
-  </script>
 
 
 </body>
