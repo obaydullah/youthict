@@ -7279,7 +7279,7 @@ select.chosen-select {
 }
 
 #rs-footer .footer-top .about-widget img {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #rs-footer .widget {
   text-align: left;
@@ -7465,13 +7465,9 @@ ul#menu-footer-menu {
 }
 #rs-footer .footer-share {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 0;
   position: relative;
   z-index: 1;
-
-  @include tablet {
-    order: 2;
-  }
 }
 .footer-share ul {
   margin-left: 0;
@@ -7495,24 +7491,24 @@ ul#menu-footer-menu {
   background: rgb(255, 81, 46);
 
   @include desktop {
-    font-size: 14px;
+    font-size: 12px;
     display: block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
   }
   @include tablet {
-    font-size: 14px;
+    font-size: 20px;
     display: block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
   }
   @include mobile {
-    font-size: 14px;
+    font-size: 8px;
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 16px;
+    height: 16px;
     line-height: 30px;
   }
 }
@@ -7527,12 +7523,25 @@ ul#menu-footer-menu {
   z-index: 1;
   margin-top: 4rem;
 
+  @include mobile {
+    margin-top: 12rem;
+    padding: 0;
+    padding: 0;
+  }
+
   &-inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-around;
     align-items: center;
+    padding: 1rem 0;
+
+    @include mobile {
+      padding: 1.5rem 0;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &-logo {
     max-height: 8rem;
@@ -7561,7 +7570,11 @@ ul#menu-footer-menu {
     order: 3;
     text-align: center;
     display: block;
-    margin-top: 2rem;
+    margin-top: 0;
+  }
+
+  @include mobile {
+    margin-top: 0;
   }
 }
 #rs-footer .footer-bottom .copyright p {
@@ -7573,8 +7586,11 @@ ul#menu-footer-menu {
   @include desktop {
     font-size: 12px;
   }
+  @include tablet {
+    font-size: 12px;
+  }
   @include mobile {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 .footer-bottom .copyright p a {

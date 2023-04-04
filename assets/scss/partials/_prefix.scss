@@ -39,6 +39,12 @@
 @mixin btn__gradiant__dark {
   background: linear-gradient(214.38deg, #fb908a 2%, #f37021 30.38%);
 }
+@mixin primary__color--gradiant {
+  background: linear-gradient(98deg, #11586d 2%, #003e59 0.38%);
+}
+@mixin primary__color--gradiant--hover {
+  background: linear-gradient(98deg, #f3f3f3 2%, #f3f3f3 0.38%);
+}
 
 @mixin dropdown__gradiant {
   background: linear-gradient(214.38deg, #fab8b5 -2.24%, #f37021 59.38%);

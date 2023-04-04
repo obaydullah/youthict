@@ -12,8 +12,10 @@
   <link rel="stylesheet" href="assets/css/feather.css" />
   <link rel="stylesheet" href="./assets/css/slick.css" />
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets/css/">
   <link rel="stylesheet" href="assets/css/bwlJqueryNewsTicker.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="./assets/css/select2.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -82,10 +84,11 @@
 
             <section class="filter__token">
               <ul>
-                <li><span>Live</span><iconify-icon icon="ic:outline-close"></iconify-icon></li>
+                <li><span>Live</span><iconify-icon icon="ic:outline-close"></iconify-icon>
+                </li>
               </ul>
 
-              <button>Clear all</button>
+              <a href="#">Clear all</a>
             </section>
 
             <section class="job__role--token">
@@ -94,8 +97,7 @@
               <a href="#">View course for Software Developer Role (8) </a>
             </section>
 
-            <section class="course__list--area">
-
+            <section class="table__list--area">
 
               <!-- single course  -->
               <a href="#" class="course__single masters__programe">
@@ -248,11 +250,15 @@
 
             <div class="pagination__area">
               <div class="pagination">
-                <a href="#" class="prev">&laquo;</a>
+                <a href="#" class="prev"><span>
+                    &laquo;
+                  </span></a>
                 <a href="#" class="page-number active">1</a>
                 <a href="#" class="page-number">2</a>
                 <a href="#" class="page-number">3</a>
-                <a href="#" class="next">&raquo;</a>
+                <a href="#" class="next"> <span>
+                    &raquo;
+                  </span></a>
               </div>
             </div>
           </div>
@@ -266,67 +272,61 @@
     <!-- course list view end  -->
 
     <!-- <button id="open-modal">Open Modal</button> -->
-
   </main>
-
-
-
-
 
 
   <div class="listing__modal">
 
-    <div class="video__modal--area">
+    <div class="modal__area--overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6">
+
+          <div class="modal__form">
+            <iconify-icon icon="ic:outline-close" class="modal__close--btn"></iconify-icon>
+
+            <h4 class="title">Lets get started</h4>
+
+            <form action="" class="modal__submit--form">
+              <p>
+                <label for="phone">Phone</label>
+                <input type="number" name="phone" id="phone" placeholder="Enter your phone number" />
+              </p>
+
+              <p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" />
+
+              </p>
+
+              <p>
+                <label for="course">Course</label>
+                <input type="text" name="course" id="course" placeholder="type your course name" />
+              </p>
 
 
-      <div class="modal__area--overlay"></div>
-      <div class="container">
-        <div class="video__area--inner">
-
-          <div class="row justify-content-center align-items-center">
-
-            <div class="modal__form">
-              <iconify-icon class="modal__close--btn" icon="ic:outline-close"></iconify-icon>
-
-              <h4 class="title">Lets get started</h4>
-
-              <form action="" class="modal__submit--form">
-                <div class="form__group">
-                  <label for="phone">Phone</label>
-                  <input type="number" name="phone" id="phone" placeholder="Enter your phone number" />
-                </div>
-
-                <div class="form__group">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" placeholder="Enter your email" />
-
-                </div>
-
-                <div class="form__group">
-                  <label for="course">Course</label>
-                  <input type="text" name="course" id="course" placeholder="type your course name" />
-                </div>
-
-                <div class="form__group">
-                  <label for="favcourse">Select your favourite course</label>
-                  <select name="favcourse" id="favcourse">
-                    <option value="">Favourite course</option>
-                    <option value="Web Design">Web Design</option>
-                    <option value="Web Development">Web Development</option>
-                  </select>
-                </div>
+              <p>
+                <label for="favcourse">Select your favourite course</label>
+                <select name="state" id="favcourse" class="fav__courese">
+                  <option value="">Favourite course</option>
+                  <option value="Web Design">Web Design</option>
+                  <option value="Web Development">Web Development</option>
+                </select>
+              </p>
 
 
 
 
-                <button type="submit">Search</button>
-              </form>
-            </div>
-
+              <button type="submit">Search</button>
+            </form>
           </div>
+
+
+
         </div>
       </div>
     </div>
+
 
   </div>
 
@@ -336,10 +336,15 @@
   <script src="./assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/bwlJqueryNewsTicker.min.js"></script>
   <script src="./assets/js/iconify-icon.min.js"></script>
+  <script src="./assets/js/select2.min.js"></script>
   <script src="./assets/js/main.js"></script>
 
 
   <script>
+
+    $(document).ready(function () {
+      $(".fav__courese").select2()
+    })
 
     //dropdown button start 
     var dropdownBtn = document.querySelector(".dropdown__others--filter");
@@ -386,16 +391,7 @@
     });
 
 
-
-
   </script>
-
-
-
-
-
-
-
 
 
 </body>

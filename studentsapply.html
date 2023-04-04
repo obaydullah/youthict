@@ -364,20 +364,34 @@
                     </select>
                   </p>
 
-
-
-
-
-                  <p class="bkash__number">
-                    To finalize your payment, transfer the require fees to the
-                    bkash personal number <span>01300776870</span>
+                  <p class="radio__label">
+                    Course Type
                   </p>
+                  <div class="radio__group">
+                    <div class="radio__field">
+                      <label for="online">Online</label>
+                      <input type="radio" name="coursetype" id="online" value="Online" />
+                    </div>
 
-                  <p>
-                    <label for="bkash">Bkash Transaction ID </label>
-                    <input placeholder="Bkash Transaction ID" oninput="this.className = ''" name="bkash" id="bkash"
-                      type="text" />
-                  </p>
+                    <div class="radio__field">
+                      <label for="offline">Offline</label>
+                      <input type="radio" name="coursetype" id="offline" value="Offline" />
+                    </div>
+                  </div>
+
+                  <div class="bkash">
+                    <p class="bkash__number">
+                      To finalize your payment, transfer the require fees to the
+                      bkash personal number <span>01300776870</span>
+                    </p>
+
+                    <p>
+                      <label for="bkash">Bkash Transaction ID </label>
+                      <input placeholder="Bkash Transaction ID" oninput="this.className = ''" name="bkash" id="bkash"
+                        type="text" />
+                    </p>
+                  </div>
+
 
                   <button type="submit" class="default_btn">Submit</button>
                 </form>
@@ -449,6 +463,22 @@
           <div class="col-sm-12 col-md-3 col-lg-4">
             <div class="about-widget">
               <a href="#"><img class="img-fluid" src="assets/images/home/footerlogo.png" alt="Home" /></a>
+              <div class="footer-share">
+                <ul>
+                  <li>
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="# " target="_blank"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="# " target="_blank"><i class="fa fa-pinterest-p"></i></a>
+                  </li>
+                  <li>
+                    <a href="# " target="_blank"><i class="fa fa-google-plus-square"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="col col-sm-4 col-md-3 col-lg-3">
@@ -528,30 +558,14 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-inner">
-          <img src="./assets/images/logo.png" alt="" class="footer-bottom-logo" />
           <div class="copyright">
             <p>
               &copy; 2023. All Rights Reserved By: youthict.org || Developed
               By:
-              <a href="http://www.mateors.com">Mateors</a>
+              <a href="http://www.mateors.com">MATEORS DOT COM </a>
             </p>
           </div>
-          <div class="footer-share">
-            <ul>
-              <li>
-                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="# " target="_blank"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="# " target="_blank"><i class="fa fa-pinterest-p"></i></a>
-              </li>
-              <li>
-                <a href="# " target="_blank"><i class="fa fa-google-plus-square"></i></a>
-              </li>
-            </ul>
-          </div>
+
         </div>
       </div>
     </div>

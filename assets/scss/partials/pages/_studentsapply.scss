@@ -153,10 +153,12 @@
     color: $black_4;
     width: 100%;
   }
+  .bkash {
+    display: none;
+  }
   .bkash__number {
     font-weight: normal;
     font-size: 1.6rem;
-    opacity: 0.9;
 
     span {
       color: $hover-2;
@@ -172,6 +174,51 @@
     font-size: 17px;
     font-family: $default_font;
     cursor: pointer;
+  }
+
+  .radio__group {
+    display: flex;
+    gap: 3rem;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .radio__field {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+
+    input[type="radio"]:checked {
+      background-color: red;
+    }
+    input[type="radio"]:checked::before {
+      background-color: red;
+    }
+    input[type="radio"]:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+    }
+
+    label {
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+  }
+  .input__label {
+    opacity: 0.9;
+  }
+  .radio__label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $black_4;
+  }
+  label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $black_4;
+    width: 100%;
   }
 }
 

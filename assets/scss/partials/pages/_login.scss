@@ -97,12 +97,23 @@
     .default_btn {
       @include btn__gradiant;
       font-size: 1.4rem;
-      margin-top: 1rem;
       padding: 1.1rem 2.5rem;
     }
     .error {
       color: red;
       font-size: 1.2rem;
+    }
+
+    .button__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+
+      .forgot__password {
+        font-size: 1.3rem;
+        color: $black_4;
+      }
     }
   }
 

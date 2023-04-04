@@ -165,20 +165,38 @@
               display: flex;
               justify-content: space-between;
 
-              button {
-                background: linear-gradient(98deg, $primary-color, $primary_bg);
+              .apply {
                 color: $white;
                 padding: 0.8rem 2rem;
                 font-family: $default_font;
                 font-size: 1.4rem;
                 border-radius: 0.2rem;
+                border: 1px solid transparent;
+                transition: all 0.3s;
+                @include primary__color--gradiant;
+
+                &:hover {
+                  background: transparent;
+                  border: 1px solid rgba(0, 0, 0, 0.2);
+                  color: $black_3;
+                }
               }
 
               .clear {
+                color: $black_3;
+                padding: 0.8rem 2rem;
+                font-family: $default_font;
+                font-size: 1.4rem;
+                border-radius: 0.2rem;
+                border: 1px solid transparent;
+                transition: all 0.3s;
                 background: transparent;
-                color: $primary-color;
-                font-style: italic;
-                font-weight: 600;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+
+                &:hover {
+                  @include primary__color--gradiant;
+                  color: $white !important;
+                }
               }
             }
           }
@@ -273,7 +291,7 @@
       }
     }
 
-    button {
+    a {
       background: transparent;
       color: $primary-color;
       font-style: italic;
@@ -320,14 +338,6 @@
   }
   // job role token area end
 
-  .course__list--area {
-    margin-top: 4rem;
-
-    & > a {
-      display: flex;
-    }
-  }
-
   // single course area start
   .masters__programe {
     .course__info {
@@ -355,6 +365,14 @@
     }
   }
 
+  .table__list--area {
+    margin-top: 3rem;
+
+    & > a {
+      display: flex;
+    }
+  }
+
   .course__single {
     display: flex;
     gap: 2rem;
@@ -365,6 +383,12 @@
     &:hover {
       background-color: $couse_listing_bg;
       padding: 2rem;
+
+      .course__tooltip {
+        right: -237px;
+        opacity: 1;
+        visibility: visible;
+      }
 
       @include desktop {
         padding: 2rem 0;
@@ -703,7 +727,9 @@
       box-shadow: -4px 0 10px 1px rgba(0, 0, 0, 0.1);
       padding: 2rem;
       padding-bottom: 3rem;
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
 
       @include desktop {
         display: none;
@@ -745,7 +771,7 @@
       .small {
         font-size: 1.2rem;
         color: $black_4;
-        margin-bottom: 0.5rem;
+        margin: 0.5rem 0;
       }
     }
   }
@@ -767,6 +793,10 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  .row {
+    height: 100vh;
+  }
+
   .modal__area--overlay {
     position: absolute;
     top: 0;
@@ -785,85 +815,70 @@
     left: 0;
     display: flex;
     align-items: center;
-
-    .container {
-      position: relative;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 419px;
-      width: 600px;
-    }
   }
 
-  .video__area--inner {
+  .modal__form {
+    text-align: center;
+    background: $white;
+    padding: 4rem;
+    flex-grow: 1;
     height: 100%;
-    width: 100%;
     position: relative;
-    z-index: 99999;
-    width: 600px;
+    border-radius: 1rem;
 
-    .modal__form {
-      text-align: center;
-      background: $white;
-      padding: 4rem;
-      flex-grow: 1;
-      height: 100%;
-      position: relative;
-      border-radius: 1rem;
+    iconify-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 3rem;
+      opacity: 0.5;
+      cursor: pointer;
+    }
 
-      iconify-icon {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 3rem;
-        opacity: 0.5;
-        cursor: pointer;
+    .title {
+      font-size: 2.5rem;
+      font-weight: 600;
+
+      @include desktop {
+        font-size: 2rem;
+        display: none;
+      }
+    }
+
+    .modal__submit--form {
+      p {
+        margin-bottom: 1rem;
+      }
+      label {
+        width: 100%;
+        text-align: left;
+        font-size: 1.4rem;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.6rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        text-align: left;
+        transition: all 0.3s;
+        border-radius: 4px;
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 2px 2px rgba(194, 242, 251, 1);
+        }
       }
 
-      .title {
-        font-size: 2.5rem;
-        font-weight: 600;
-
-        @include desktop {
-          font-size: 2rem;
-          display: none;
-        }
-      }
-
-      .modal__submit--form {
-        .form__group {
-          margin-bottom: 1rem;
-        }
-
-        label {
-          width: 100%;
-          text-align: left;
-          font-size: 1.4rem;
-        }
-        input,
-        select {
-          width: 100%;
-          padding: 1rem;
-          font-size: 1.6rem;
-          border: 1px solid rgba(0, 0, 0, 0.2);
-
-          &:focus {
-            outline: none;
-          }
-        }
-
-        button {
-          border: none;
-          padding: 1rem;
-          width: 100%;
-          background-color: $hover;
-          color: $white;
-          margin-top: 0.5rem;
-          font-size: 1.4rem;
-          font-family: $default_font;
-        }
+      button {
+        border: none;
+        padding: 1rem;
+        width: 100%;
+        background-color: $hover;
+        color: $white;
+        margin-top: 0.5rem;
+        font-size: 1.4rem;
+        font-family: $default_font;
       }
     }
   }
@@ -886,9 +901,9 @@
 .pagination a {
   color: black;
   text-decoration: none;
-  font-size: 1.4rem;
-  height: 3rem;
-  width: 3rem;
+  font-size: 1.7rem;
+  height: 3.5rem;
+  width: 3.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -910,6 +925,10 @@
   color: $primary-color;
   transition: all 0.3s;
 
+  span {
+    margin-top: -0.5rem;
+  }
+
   &:hover {
     background-color: rgba(0, 0, 0, 0.3);
   }
@@ -920,3 +939,30 @@
 }
 
 //pagination style
+
+//select 2 style
+.select2-container {
+  padding: 1rem !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  width: 100% !important;
+  z-index: 999999;
+}
+.select2-container--default .select2-selection--single {
+  background-color: #fff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  text-align: left;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 45px !important;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  padding: 1rem !important;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+  }
+}

@@ -1,6 +1,7 @@
 //Course header start
 .page__header {
   background: linear-gradient(to right, $primary_bg 50%, $primary_color 100%);
+  overflow: hidden;
   // background: linear-gradient(
   //   to right,
   //   $primary_bg 50%,
@@ -19,7 +20,7 @@
   .shape {
     position: absolute;
     @include mobile {
-      opacity: 0.1;
+      display: none;
     }
   }
   .shape-1 {
@@ -43,11 +44,32 @@
     h2 {
       font-size: 3.5rem;
       font-weight: 500;
+
+      @include desktop {
+        font-size: 3.2rem;
+      }
+      @include tablet {
+        font-size: 3rem;
+      }
+      @include mobile {
+        font-size: 2.7rem;
+      }
     }
     p {
       font-size: 1.8rem;
       font-weight: normal;
       padding-bottom: 2rem;
+
+      @include desktop {
+        font-size: 1.6rem;
+      }
+      @include tablet {
+        font-size: 1.4rem;
+      }
+      @include mobile {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
     }
     .default_btn {
       border-radius: 0.5rem !important;

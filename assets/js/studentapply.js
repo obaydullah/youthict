@@ -53,3 +53,22 @@ $(document).ready(function () {
 // }
 
 //Branch apply multi step form end
+
+// display bkash info if course is online
+const radioGroup = document.querySelectorAll('input[name="coursetype"]');
+let selectedValue = "";
+let bkashInfo = document.querySelector(".bkash");
+
+for (const radioButton of radioGroup) {
+  radioButton.addEventListener("click", function () {
+    if (radioButton.checked) {
+      selectedValue = radioButton.value;
+
+      if (selectedValue === "Online") {
+        bkashInfo.style.display = "block";
+      } else {
+        bkashInfo.style.display = "none";
+      }
+    }
+  });
+}
