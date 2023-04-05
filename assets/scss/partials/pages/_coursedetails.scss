@@ -35,11 +35,11 @@ $border-color: rgb(219, 225, 235);
     padding-bottom: 2rem;
 
     .course__title {
-      font-size: 3.6rem;
+      font-size: 3.3rem;
       font-weight: bold;
     }
     .course__header--info {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       width: 95%;
     }
     .ratings {
@@ -75,13 +75,32 @@ $border-color: rgb(219, 225, 235);
     margin-bottom: 2rem;
   }
 
+  &__info--box--area {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+
+    @include desktop {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+  }
+
   &__info--box {
     display: flex;
     align-items: center;
     padding: 2rem;
     gap: 2rem;
-    border: 1px solid $border-color;
-    border-radius: 0.5rem;
 
     img {
       width: 7.3rem;
@@ -93,12 +112,12 @@ $border-color: rgb(219, 225, 235);
     .instructor__info {
       h3 {
         font-size: 1.8rem;
-        font-weight: normal;
+        font-weight: 600;
       }
 
       p {
         margin: 0;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: normal;
       }
     }
@@ -151,7 +170,7 @@ $border-color: rgb(219, 225, 235);
       line-height: 2.4rem;
 
       iconify-icon {
-        color: rgb(98, 148, 248);
+        color: $primary-color;
         font-size: 2rem;
         margin-top: 0.2rem;
       }
@@ -509,8 +528,8 @@ $border-color: rgb(219, 225, 235);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      height: 4.5rem;
-      width: 4.5rem;
+      height: 3.5rem;
+      width: 3.5rem;
       cursor: pointer;
       background: rgba(255, 0, 0, 0.7);
       border-radius: 50%;
@@ -518,10 +537,15 @@ $border-color: rgb(219, 225, 235);
       justify-content: center;
       align-items: center;
       color: white;
-      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.6);
+      animation: 2s infinite pulse;
 
       i {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
+      }
+      .fa-play:before {
+        content: "\f04b";
+        margin-left: 2px;
       }
     }
 
@@ -549,29 +573,30 @@ $border-color: rgb(219, 225, 235);
     padding: 1.5rem;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
       margin: 1.5rem 0;
       margin-top: 0.5rem;
       display: flex;
       align-items: center;
+      color: $black_3;
 
       svg {
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 2rem;
+        width: 2rem;
       }
     }
     p {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       display: flex;
       align-items: center;
 
       .icon {
         svg {
           margin-right: 1rem;
-          height: 1.7rem;
-          width: 1.7rem;
-          margin-top: -0.5rem;
+          height: 1.5rem;
+          width: 1.5rem;
+          margin-top: -0.3rem;
 
           color: $hover;
         }

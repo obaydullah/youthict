@@ -216,6 +216,14 @@
       font-size: 1.6rem;
       width: 100%;
     }
+    input[type="file"] {
+      transition: all 0.3s;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 1.6rem;
+      padding: 0 !important;
+      width: 100%;
+    }
+
     input:focus,
     select:focus {
       box-shadow: 0 0 2px 2px rgba(194, 242, 251, 1);
@@ -248,12 +256,15 @@
     }
 
     ::-webkit-file-upload-button {
-      background-color: $primary-color;
+      background-color: $black_5;
       color: $white;
       padding: 0.8rem;
       border: none;
       margin-right: 1rem;
       border-radius: 4px;
+      transition: all 0.3s;
+      cursor: pointer;
+      padding: 1rem;
     }
 
     textarea {

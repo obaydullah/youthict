@@ -113,7 +113,7 @@
   }
 
   ::-webkit-file-upload-button {
-    background-color: $primary-light;
+    background-color: $black_5;
     color: $white;
     padding: 0.8rem;
     border: none;
@@ -122,11 +122,6 @@
     transition: all 0.3s;
     cursor: pointer;
     padding: 1rem;
-
-    &:hover {
-      background-color: $primary-color;
-      color: $white;
-    }
   }
 
   input,
