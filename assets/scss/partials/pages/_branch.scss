@@ -317,13 +317,13 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        background: $black_5;
+        background: $black_6;
         padding: 1rem 2rem;
         border-radius: 4rem;
         transition: all 0.3s;
 
         &:hover {
-          background: $black_6;
+          background: $black_5;
           color: $black;
         }
 
