@@ -218,10 +218,13 @@
   <!-- Mobile Menu Section -->
   <div class="popup-mobile-menu">
     <div class="inner-wrapper">
-      <div class="rbt-btn-close">
-        <button class="close-button rbt-round-btn">
-          <i class="feather-x"></i>
-        </button>
+      <div class="popup__header">
+        <img src="./assets/images/logo.png" alt="" class="popup__logo">
+        <div class="rbt-btn-close">
+          <button class="close-button rbt-round-btn">
+            <i class="feather-x"></i>
+          </button>
+        </div>
       </div>
       <nav class="mainmenu-nav">
         <ul class="mainmenu">
@@ -233,18 +236,41 @@
                   <li>
                     <a href="index.html"> Home</a>
                   </li>
+
                   <li>
-                    <a href="branchapply.html"> Apply for Branch</a>
+                    <div class="button__box" onclick="toggleDropdown('branch-dropdown')">
+                      <button>Branch
+                      </button>
+
+                      <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
+                    </div>
+
+                    <ul id="branch-dropdown" class="dropdown hide">
+                      <a href="branchapply.html">Apply for Branch</a>
+                      <a href="branch.html">Search Branch</a>
+                    </ul>
+
                   </li>
+
                   <li>
-                    <a href="branch.html"> Search for Branch</a>
+
+                    <div class="button__box" onclick="toggleDropdown('student-dropdown')">
+                      <button>Student
+                      </button>
+                      <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
+                    </div>
+
+
+                    <ul id="student-dropdown" class="dropdown hide">
+                      <a href="branchapply.html">Apply for Student</a>
+                      <a href="branch.html">Student Result</a>
+                    </ul>
+
                   </li>
-                  <li>
-                    <a href="studentsapply.html"> Apply for student</a>
-                  </li>
-                  <li>
-                    <a href="results.html"> Result</a>
-                  </li>
+
+
+
+
                   <li>
                     <a href="govjobgetters.html"> Govt. Job getters</a>
                   </li>
@@ -258,13 +284,16 @@
                     <a href="contact.html"> Contact us</a>
                   </li>
 
-                  <li>
+                  <div class="footer__btn">
                     <a href="course.html" class="browse_btn">
                       ব্রাউজ কোর্স
                     </a>
-                  </li>
 
-                  <a class="login__btn offcanvas__login--btn" href="login.html">Login</a>
+                    <a class="offcanvas__login--btn" href="login.html">Login</a>
+                  </div>
+
+
+
                 </ul>
 
 
@@ -571,6 +600,7 @@
   <script src="assets/js/bwlJqueryNewsTicker.min.js"></script>
   <script src="./assets/js/multi-form.js"></script>
   <script src="./assets/js/jquery.validate.min.js"></script>
+  <script src="./assets/js/iconify-icon.min.js"></script>
   <script src="./assets/js/branchapply.js"></script>
   <script src="./assets/js/main.js"></script>
 

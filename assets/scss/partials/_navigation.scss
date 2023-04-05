@@ -1840,6 +1840,17 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   margin: 0 30px;
   justify-content: center;
 }
+.mainbar-row .login-navigation {
+  flex: 1;
+  display: flex;
+  margin-right: 0;
+  justify-content: center;
+
+  .mainmenu {
+    justify-content: end !important;
+  }
+}
+
 .mainbar-row.rbt-navigation-end .rbt-main-navigation {
   justify-content: end;
 }
@@ -1959,6 +1970,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   align-items: center;
   justify-content: flex-end;
 }
+
 @media only screen and (max-width: 767px) {
   .rbt-header .rbt-header-wrapper .header-right {
     justify-content: flex-end;
@@ -1968,6 +1980,11 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 @media only screen and (max-width: 767px) {
   .rbt-header .rbt-header-wrapper .header-left {
     flex-basis: 40%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rbt-header .rbt-header-wrapper .header-right {
+    display: none;
   }
 }
 .rbt-header .rbt-header-wrapper .container-fluid,

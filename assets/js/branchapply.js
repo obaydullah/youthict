@@ -44,7 +44,7 @@ function validateForm() {
   y = x[currentTab].getElementsByTagName("input");
   for (i = 0; i < y.length; i++) {
     if (y[i].value == "") {
-      y[i].className += " invalid";
+      // y[i].className += " invalid";
       // valid = false;
       // return false;
       return true;

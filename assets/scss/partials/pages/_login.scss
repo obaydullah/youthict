@@ -10,11 +10,44 @@
   position: relative;
   height: calc(100vh - 185px);
 
+  @media screen and (max-width: 992px) {
+    height: calc(100vh - 160px);
+  }
+
+  @include tablet {
+    height: calc(100vh - 140px);
+  }
+  @include mobile {
+    height: calc(100vh - 140px);
+  }
+
   .form__inner {
-    height: calc(100vh - 185px);
+    height: calc(100vh - 175px);
+
+    @media screen and (max-width: 992px) {
+      height: calc(100vh - 160px);
+    }
+
+    @include tablet {
+      height: calc(100vh - 140px);
+    }
+    @include mobile {
+      height: calc(100vh - 150px);
+    }
 
     .row {
-      height: calc(100vh - 185px);
+      height: calc(100vh - 140px);
+
+      @media screen and (max-width: 992px) {
+        height: calc(100vh - 160px);
+      }
+
+      @include tablet {
+        height: calc(100vh - 140px);
+      }
+      @include mobile {
+        height: calc(100vh - 500px);
+      }
     }
   }
 
@@ -29,9 +62,18 @@
       font-weight: bold;
       font-family: $default_font;
       margin-bottom: 3rem;
+
+      @include mobile {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
     }
     p {
       font-size: 1.6rem;
+
+      @include mobile {
+        font-size: 1.2rem;
+      }
     }
     .back__to--login {
       font-size: 1.4rem;
@@ -100,6 +142,10 @@
     right: 0;
     top: 0;
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+
+    @media screen and (max-width: 992px) {
+      width: 40%;
+    }
 
     img {
       width: 100%;
