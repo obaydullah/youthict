@@ -323,7 +323,8 @@
         transition: all 0.3s;
 
         &:hover {
-          background: $black_4;
+          background: $black_6;
+          color: $black;
         }
 
         iconify-icon {
@@ -451,6 +452,7 @@
         }
       }
     }
+
     .course__info {
       width: 50%;
 
