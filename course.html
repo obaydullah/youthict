@@ -595,7 +595,7 @@
               <iconify-icon icon="ic:outline-close" class="modal__close--btn"></iconify-icon>
 
               <div class="title__area">
-                <h4 class="title">অফারটি সম্পর্কে জানতে নিম্নে প্রদত্ত ফর্মটি এখনই পূরণ করুন,
+                <h4 class="title">অফারটি সম্পর্কে জানতে নিম্নে প্রদত্ত ফর্মটি এখনই পূরণ করুন, <br>
                   আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেঃ</h4>
 
                 <p class="sub__title">
@@ -606,22 +606,51 @@
 
 
               <div class="content">
-                <div class="form__group">
-                  <label for="name">Phone</label>
-                  <input type="text" name="name" id="name" placeholder="আপনার নাম" />
+
+                <div class="input-container">
+                  <input type="text" id="name" required class="modal-input">
+                  <label for="name" class="input-label">আপনার নাম</label>
                 </div>
-                <div class="form__group">
-                  <label for="name">Phone</label>
-                  <input type="text" name="name" id="name" placeholder="আপনার নাম" />
+
+                <div class="input-double">
+                  <div class="input-container">
+                    <input type="number" id="phone" required class="modal-input">
+                    <label for="phone" class="input-label">আপনার ফোন</label>
+                  </div>
+
+                  <div class="input-container">
+                    <input type="text" id="profession" required class="modal-input">
+                    <label for="profession" class="input-label">আপনার প্রফেশন</label>
+                  </div>
                 </div>
+                <div class="input-double">
+                  <div class="input-container">
+                    <input type="text" id="location" required class="modal-input">
+                    <label for="location" class="input-label">আপনার লোকেশন</label>
+                  </div>
+
+                  <div class="input-container">
+                    <select name="course" id="course">
+                      <option value="">select course</option>
+                      <option value="">Web Design</option>
+                      <option value="">Web Development</option>
+                      <option value="">Graphics Design</option>
+                    </select>
+                    <label for="course" class="input-label course-label">কোর্সের নাম</label>
+                  </div>
+                </div>
+
 
               </div>
-
 
 
               <div class="button__box">
-                <button>Ok</button>
+                <button>সাবমিট করুন</button>
               </div>
+
+              <p class="contact"><span>প্রয়োজনেঃ</span> 01624888444, 01624666000, 01777308777, 01966177177,
+                01990779900, 01625555444
+              </p>
             </form>
           </div>
 
@@ -842,7 +871,28 @@
       modalArea.style.opacity = "0";
       modalArea.style.visibility = "hidden";
     });
-//modal area
+    //modal area
+
+
+    // modal input style with js
+    const inputs = document.querySelectorAll('.modal-input');
+    const labels = document.querySelectorAll('.input-label');
+
+    inputs.forEach((input, index) => {
+      input.addEventListener('focus', () => {
+        labels[index].classList.add('active');
+      });
+
+      input.addEventListener('blur', () => {
+        if (input.value === '') {
+          labels[index].classList.remove('active');
+        }
+      });
+    });
+
+
+
+
 
 
 
