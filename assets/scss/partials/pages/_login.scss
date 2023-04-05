@@ -55,11 +55,21 @@
     background-color: $white;
     padding: 3rem;
     border-radius: 1rem 0 0 1rem;
-    margin-top: -5rem;
+    margin-top: -8rem;
+
+    @include desktop {
+      margin-top: 2rem;
+      padding: 0;
+    }
+
+    @include tablet {
+      padding: 0;
+      margin-top: -5rem;
+    }
 
     @include mobile {
-      margin-top: 0;
-      padding: 2rem;
+      margin-top: 6rem;
+      padding: 0;
     }
 
     h2 {
