@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body class="body-container rbt-header-sticky branch__body">
+<body class="body-container branch__body rbt-header-sticky branch__body">
   <!-- Start Header -->
   <!-- Start Header Area -->
   <header class="rbt-header rbt-header-10">
@@ -307,7 +307,8 @@
   <!-- Start Side Vav -->
 
   <main>
-    <!-- branch header start  -->
+
+    <!-- branch header start -->
     <section class="page__header">
       <div class="container">
 
@@ -339,92 +340,250 @@
     </section>
     <!-- branch header end -->
 
-    <!-- search header start  -->
-    <section class="search__header">
+    <!-- branch list area start  -->
+    <div class="branch__list">
       <div class="container">
-        <div class="search__header--inner">
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-12 col-lg-9">
-              <form class="search__header--form">
-                <select class="select__elem" aria-label="Select category">
-                  <option selected>Division</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
+        <div class="row justify-content-center">
+          <div class="col-sm-12 co-md-12 col-lg-9">
+            <section class="header">
+              <h2 class="result">43 Branch for <span id="open-modal" class="open__modal">"Narayanganj"</span></h2>
 
-                <select class="select__elem" aria-label="Select location">
-                  <option selected>District</option>
-                  <option value="1">Location 1</option>
-                  <option value="2">Location 2</option>
-                  <option value="3">Location 3</option>
-                </select>
+              <div class="filterby">
+                <h3 class="filterby">Filter by</h3>
 
-                <button type="submit" class="search__header--btn">
-                  Search
-                </button>
-              </form>
+
+                <div class="value__select">
+                  <span class="new__filter">NEW FILTER</span>
+
+                  <select name="jobrole" id="" class="job__role">
+                    <option value="">District</option>
+                    <option value="Web Developer">Narayanganj</option>
+                    <option value="Graphics Designer">Narsingdi</option>
+
+                  </select>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropdown__others--filter">Other Filter <iconify-icon
+                      icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon></button>
+                  <div class="dropdown-content">
+                    <div class="dropdown__content--item">
+
+                      <form>
+                        <div class="type">
+                          <p>Training Type</p>
+                          <div class="form-group">
+                            <input type="checkbox" id="masters">
+                            <label for="masters">Masters Programe</label>
+                          </div>
+                          <div class="form-group">
+                            <input type="checkbox" id="liveclass">
+                            <label for="liveclass">Live Class</label>
+                          </div>
+                          <div class="form-group">
+                            <input type="checkbox" id="selfpaced">
+                            <label for="selfpaced">Self Paced</label>
+                          </div>
+                        </div>
+                        <div class="type">
+                          <p>Batch Type</p>
+                          <div class="form-group">
+                            <input type="checkbox" id="weekend">
+                            <label for="weekend">Weekend</label>
+                          </div>
+                          <div class="form-group">
+                            <input type="checkbox" id="weekday">
+                            <label for="weekday">Weekday</label>
+                          </div>
+                        </div>
+                      </form>
+
+
+                      <div class="button__box">
+                        <button class="apply" type="submit">Apply</button>
+                        <button class="clear">Clear all</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+
+            <section class="filter__token">
+              <ul>
+                <li><span>Narayanganj</span><iconify-icon icon="ic:outline-close"></iconify-icon>
+                </li>
+              </ul>
+
+              <a href="#">Clear all</a>
+            </section>
+
+            <section class="branch__token">
+              <a href="#">All Result</a>
+              <a href="#">View branches for Narayanganj (5)</a>
+              <a href="#">View branches for Narsingdi (8) </a>
+            </section>
+
+            <section class="table__list--area">
+
+              <!-- single course  -->
+              <a href="#" class="course__single masters__programe">
+                <div class="img__box">
+                  <img src="./assets/images/jobgetters/3.jpeg" alt="">
+                </div>
+                <div class="course__info">
+                  <h3 class="name">Porag D'Rozario</h3>
+                  <p class="code">Branch Code : 313</p>
+                  <p class="designation">Regional Director</p>
+
+                </div>
+
+                <div class="course__details">
+                  <div class="course__details--info">
+                    <div class="course__details--info--single">
+                      <h6>Course</h6>
+                      <h2 class="count">7</h2>
+                    </div>
+                    <div class="course__details--info--single">
+                      <h6>Hours</h6>
+                      <h2 class="count">200</h2>
+                    </div>
+                    <div class="course__details--info--single">
+                      <h6>Learners</h6>
+                      <h2 class="count">8k</h2>
+                    </div>
+                  </div>
+
+                  <div class="button__area">
+                    <!-- <iconify-icon icon="mdi:cards-heart"></iconify-icon> -->
+                    <button>View Details</button>
+                  </div>
+                </div>
+              </a>
+
+              <!-- single course  -->
+              <a href="#" class="course__single masters__programe">
+                <div class="img__box">
+                  <img src="./assets/images/jobgetters/6.jpeg" alt="">
+                </div>
+                <div class="course__info">
+                  <h3 class="name">Porag D'Rozario</h3>
+                  <p class="code">Branch Code : 313</p>
+                  <p class="designation">Regional Director</p>
+
+                </div>
+
+                <div class="course__details">
+                  <div class="course__details--info">
+                    <div class="course__details--info--single">
+                      <h6>Course</h6>
+                      <h2 class="count">7</h2>
+                    </div>
+                    <div class="course__details--info--single">
+                      <h6>Hours</h6>
+                      <h2 class="count">200</h2>
+                    </div>
+                    <div class="course__details--info--single">
+                      <h6>Learners</h6>
+                      <h2 class="count">8k</h2>
+                    </div>
+                  </div>
+
+                  <div class="button__area">
+                    <!-- <iconify-icon icon="mdi:cards-heart"></iconify-icon> -->
+                    <button>View Details</button>
+                  </div>
+                </div>
+
+              </a>
+
+
+
+
+
+            </section>
+
+
+            <div class="branch__pagination--area">
+              <div class="pagination">
+                <a href="#" class="prev"><span>
+                    &laquo;
+                  </span></a>
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <a href="#" class="next"> <span>
+                    &raquo;
+                  </span></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- search header end  -->
-
-    <!-- search result area start  -->
-    <section class="search__result">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-8">
-            <p class="search__result--info">Displying <span>4 out of 50</span> branch</p>
-            <div class="card">
-              <div class="card__image--box">
-                <img src="./assets/images/branchapply/course-13.jpg" alt="" />
-              </div>
-              <div class="card__info">
-                <h3 class="branch__code">Branch code 313</h3>
-                <h2 class="name">Porag D'Rozario</h2>
-                <p class="designation">Regional Director</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__image--box">
-                <img src="./assets/images/branchapply/course-13.jpg" alt="" />
-              </div>
-              <div class="card__info">
-                <h3 class="branch__code">Branch code 313</h3>
-                <h2 class="name">Porag D'Rozario</h2>
-                <p class="designation">Regional Director</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__image--box">
-                <img src="./assets/images/branchapply/course-13.jpg" alt="" />
-              </div>
-              <div class="card__info">
-                <h3 class="branch__code">Branch code 313</h3>
-                <h2 class="name">Porag D'Rozario</h2>
-                <p class="designation">Regional Director</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__image--box">
-                <img src="./assets/images/branchapply/course-13.jpg" alt="" />
-              </div>
-              <div class="card__info">
-                <h3 class="branch__code">Branch code 313</h3>
-                <h2 class="name">Porag D'Rozario</h2>
-                <p class="designation">Regional Director</p>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </section>
-    <!-- search result area end  -->
+    </div>
+    <!-- branch list area end  -->
   </main>
+
+  <div class="branch__modal">
+    <div class="modal__area--overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6">
+
+          <div class="modal__form">
+            <form action="" class="modal__submit--form">
+
+
+              <div class="title__area">
+                <h4 class="title">Lets get started</h4>
+                <iconify-icon icon="ic:outline-close" class="modal__close--btn"></iconify-icon>
+              </div>
+
+
+              <div class="content">
+                <p>
+                  <label for="phone">Phone</label>
+                  <input type="number" name="phone" id="phone" placeholder="Enter your phone number" />
+                </p>
+
+                <p>
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" placeholder="Enter your email" />
+
+                </p>
+
+                <p>
+                  <label for="course">Course</label>
+                  <input type="text" name="course" id="course" placeholder="type your course name" />
+                </p>
+
+
+                <p>
+                  <label for="favcourse">Select your favourite course</label>
+                  <select name="state" id="favcourse" class="fav__courese">
+                    <option value="">Favourite course</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="Web Development">Web Development</option>
+                  </select>
+                </p>
+              </div>
+
+
+
+              <div class="button__box">
+                <button>Ok</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Start Footer -->
   <footer id="rs-footer" class="rs-footer footer-style-1 has-footer-contact pt-5">
@@ -594,6 +753,7 @@
   <script src="./assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/bwlJqueryNewsTicker.min.js"></script>
   <script src="assets/js/iconify-icon.min.js"></script>
+  <script src="./assets/js/branch.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 

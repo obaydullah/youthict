@@ -1,211 +1,900 @@
-//branch header start
-.branch__header {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 6rem 0;
-  background-color: $gallery-bg;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  font-family: $default_font;
-
-  .shape-1 {
-    position: absolute;
-    top: 20%;
-    left: 10rem;
-  }
-  .shape-2 {
-    position: absolute;
-    top: 50%;
-    right: 30rem;
-    opacity: 0.5;
-  }
-  .shape-3 {
-    position: absolute;
-    top: -5rem;
-    right: -8rem;
-  }
-  .shape {
-    @media screen and (max-width: 1200px) {
-      display: none;
-    }
-    @include tablet {
-      display: none;
-    }
-  }
-}
-
-.branch__header--inner h2 {
-  font-size: 5rem;
-  color: $hover;
-  font-weight: bold;
-
-  @include desktop {
-    font-size: 4rem;
-  }
-  @include tablet {
-    font-size: 3.5rem;
-  }
-}
-
 // branch header end
+.branch__body {
+  .container {
+    @include tablet {
+      padding: 0 2rem !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+    }
+  }
+}
 
-// search header start
-.search__header {
-  padding: 5rem 0;
-  font-family: $default_font;
+.branch__list {
+  padding: 8rem 0;
 
-  &--inner {
-    padding: 3rem 1rem;
-    border-radius: 1rem;
-    width: 80%;
-    margin: 0 auto;
+  // header style start
+  .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
+    gap: 1rem;
+    align-items: center;
 
-    .search__header--form {
-      display: flex;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-
-      @include tablet {
-        flex-wrap: wrap;
-        gap: 0.2rem;
-        justify-content: center;
-      }
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 2rem;
     }
 
-    .select__elem {
-      font-size: 1.8rem;
-      height: 100%;
-      padding: 1rem;
-      width: 100%;
-      border: none;
-      font-family: $default_font;
-      background: $white;
-
-      &:focus {
-        outline: none;
-      }
-
-      @include tablet {
-        font-size: 1.2rem;
-      }
+    .result {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 16px;
+      font-weight: 400;
+      color: $black_4;
+      display: inline-block;
+      width: 30%;
+      margin: 0;
+      line-height: 22px;
+      font-size: 1.4rem;
 
       @include tablet {
-        margin-bottom: 1rem;
+        width: 40%;
       }
-    }
-    .search__header--btn {
-      font-size: 1.8rem;
-      border: none;
-      background-color: $hover-2;
-      color: $white;
-      padding: 1rem 2rem;
-      font-family: $default_font;
-
-      @include tablet {
-        font-size: 1.4rem;
-        padding: 0.8rem 1.5rem;
+      @media screen and (max-width: 500px) {
         width: 100%;
       }
+
+      span {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+
+    .filterby {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      h3 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $black_4;
+
+        @include tablet {
+          font-size: 1.2rem;
+        }
+      }
+
+      .dropdown {
+        button:hover {
+          background-color: inherit !important;
+          color: inherit !important;
+          text-decoration: none !important;
+        }
+
+        .dropdown__others--filter {
+          color: $black_4 !important;
+          background: transparent;
+          cursor: pointer;
+          font-size: 1.4rem;
+          padding: 0.5rem 0.5rem;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 0.2rem;
+          font-family: $default_font;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.2rem;
+
+          iconify-icon {
+            font-size: 2rem;
+          }
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          z-index: 1;
+          background: $white;
+          padding: 2rem;
+          box-shadow: 0 -2px 10px 4px rgba(0, 0, 0, 0.05);
+          width: 28rem;
+          font-family: $default_font;
+          color: $black_4;
+          margin-top: 0.8rem;
+          left: 0;
+
+          @include desktop {
+            left: -12rem;
+          }
+
+          @include tablet {
+            left: -16rem;
+          }
+          @media screen and (max-width: 485px) {
+            left: -14rem;
+          }
+          @media screen and (max-width: 376px) {
+            left: -16rem;
+          }
+
+          .dropdown__content--item {
+            position: relative;
+
+            &::before {
+              bottom: 100%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+
+              border-color: rgba(230, 230, 230, 0);
+              border-bottom-color: $white;
+              border-width: 7px;
+              margin-left: 36px;
+              top: -33px;
+
+              @include desktop {
+                margin-left: 150px !important;
+              }
+
+              @include tablet {
+                margin-left: 180px !important;
+              }
+            }
+
+            .type {
+              margin-bottom: 3rem;
+              text-align: left;
+
+              p {
+                font-style: italic;
+                font-size: 1.4rem;
+              }
+
+              .form-group {
+                display: block;
+                margin-bottom: 1rem;
+              }
+
+              .form-group input {
+                padding: 0;
+                height: initial;
+                width: initial;
+                margin-bottom: 0;
+                display: none;
+                cursor: pointer;
+              }
+
+              .form-group label {
+                position: relative;
+                cursor: pointer;
+                font-size: 1.4rem;
+                display: flex;
+                align-items: center;
+              }
+
+              .form-group label:before {
+                content: "";
+                background-color: transparent;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+
+                padding: 0.6rem;
+                display: inline-block;
+                position: relative;
+                margin-right: 1rem;
+              }
+              .form-group input:checked + label:before {
+                border: 1px solid transparent;
+              }
+
+              .form-group input:checked + label:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 2px;
+                left: 6px;
+                width: 6px;
+                height: 14px;
+                border: solid $primary-color;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+              }
+            }
+          }
+
+          .button__box {
+            display: flex;
+            justify-content: space-between;
+
+            .apply {
+              color: $white;
+              padding: 0.8rem 2rem;
+              font-family: $default_font;
+              font-size: 1.4rem;
+              border-radius: 0.2rem;
+              transition: all 0.3s;
+              background: $primary-light;
+              border: 1px solid transparent;
+
+              &:hover {
+                background-color: $primary-color !important;
+                color: $white !important;
+              }
+            }
+            .clear {
+              color: $black_4;
+              padding: 0.8rem 2rem;
+              font-family: $default_font;
+              font-size: 1.4rem;
+              border-radius: 0.2rem;
+              transition: all 0.3s;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              background: transparent !important;
+
+              &:hover {
+                color: $primary_bg !important;
+              }
+            }
+          }
+        }
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+      }
+
+      .value__select {
+        position: relative;
+      }
+
+      select {
+        font-size: 1.4rem;
+        padding: 0.5rem 0.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.2rem;
+        -webkit-appearance: none;
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="currentColor" fill-opacity="0.5" d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z"%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-size: 45px 22px;
+        background-position: calc(100% - -5px) center;
+        transition: transform 0.3s ease-in-out;
+        padding-right: 40px;
+        color: $black_4;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .new__filter {
+      position: absolute;
+      top: -18px;
+      left: 0;
+      font-size: 1rem;
+      padding: 0.2rem 0.5rem;
+      color: white;
+      background: linear-gradient(100deg, $primary-color, $primary_bg);
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: $primary_bg;
+        clip-path: polygon(90% 0, 87% 100%, 100% 100%);
+      }
+    }
+  }
+  //header style end
+
+  // filter token style start
+  .filter__token {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: $couse_listing_bg;
+        padding: 1rem 2rem;
+        border-radius: 4rem;
+        transition: all 0.3s;
+
+        &:hover {
+          background: linear-gradient(100deg, #2591b2, #003e59);
+          color: $white;
+        }
+
+        iconify-icon {
+          cursor: pointer;
+        }
+
+        a {
+          background: transparent;
+          color: $primary-color;
+          font-style: italic;
+          font-family: $default_font;
+          font-size: 1.4rem;
+          cursor: pointer;
+          border: none;
+
+          &:hover {
+            background-color: transparent !important;
+            color: inherit !important;
+            text-decoration: none !important;
+          }
+        }
+      }
+    }
+  }
+  // filter token style end
+
+  // job role token area start
+  .branch__token {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+
+    a {
+      font-size: 1.4rem;
+      padding: 1rem 1.5rem;
+      border-radius: 4rem;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+
+      @include tablet {
+        border-radius: 1rem;
+      }
+
+      @include tablet {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  // job role token area end
+
+  // single course area start
+  .masters__programe {
+    .course__info {
+      ul {
+        @include tablet {
+          display: none;
+        }
+      }
+
+      & > .course__details--info {
+        display: none;
+
+        @include tablet {
+          display: flex;
+          gap: 2rem;
+        }
+
+        .course__details--info--single {
+          &:not(:last-child) {
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            padding-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .table__list--area {
+    margin-top: 3rem;
+
+    & > a {
+      display: flex;
+    }
+  }
+
+  .course__single {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    transition: padding 0.5s;
+    position: relative;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.05);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $couse_listing_bg;
+    }
+
+    .img__box {
+      height: 12rem;
+      width: 12rem;
+
+      @include tablet {
+        width: 9rem;
+        height: 9rem;
+      }
+
+      img {
+        object-fit: cover;
+        height: 12rem;
+        width: 12rem;
+
+        @include tablet {
+          width: 9rem;
+          height: 9rem;
+        }
+      }
+    }
+    .course__info {
+      width: 50%;
+
+      .name {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $black_4;
+
+        @include tablet {
+          font-size: 1.2rem;
+          gap: 1rem;
+        }
+      }
+
+      .code,
+      .designation {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .code {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+      .sub__title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        @include tablet {
+          display: none;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          color: #333;
+          opacity: 0.8;
+
+          iconify-icon {
+            color: $black_4;
+            margin-right: 0.2rem;
+          }
+        }
+      }
+
+      .more__courses {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: $black_4;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      .ratings {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: flex-end;
+        display: none;
+
+        @include tablet {
+          display: flex;
+          justify-content: flex-start;
+          gap: 2rem;
+        }
+
+        .icon {
+          display: flex;
+          align-items: center;
+
+          iconify-icon {
+            font-size: 1.8rem;
+            color: $hover-2;
+
+            @include tablet {
+              font-size: 1.4rem;
+              margin-right: -2px;
+              opacity: 0.8;
+            }
+          }
+        }
+
+        h3 {
+          margin-bottom: 0;
+          font-size: 1.4rem;
+          color: $black_3;
+          font-weight: bold;
+
+          @include tablet {
+            font-size: 1.2rem;
+          }
+
+          span {
+            color: $black_4;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    .course__details {
+      margin-left: auto;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .ratings {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include tablet {
+          display: none;
+        }
+
+        .icon {
+          display: flex;
+          align-items: center;
+
+          iconify-icon {
+            font-size: 1.8rem;
+            color: $hover-2;
+          }
+        }
+
+        h3 {
+          margin-bottom: 0;
+          font-size: 1.4rem;
+          color: $black_3;
+          font-weight: bold;
+
+          span {
+            color: $black_4;
+            font-weight: normal;
+          }
+        }
+      }
+
+      .course__details--info {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+
+        @include tablet {
+          display: none;
+        }
+
+        &--single {
+          text-align: center;
+
+          &:not(:last-child) {
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            padding-right: 2rem;
+          }
+
+          h6 {
+            font-size: 1rem;
+            font-style: italic;
+          }
+
+          h2 {
+            font-size: 2.4rem;
+            color: $black_4;
+          }
+        }
+      }
+
+      .button__area {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        justify-content: flex-end;
+
+        button {
+          font-size: 1.1rem;
+          font-weight: normal;
+          padding: 0.5rem 1rem;
+          color: $primary-color;
+          text-transform: uppercase;
+          background: none;
+          border: 1px solid $primary-color;
+          font-weight: bold;
+          font-family: $default_font;
+
+          @include tablet {
+            font-size: 0.8rem;
+          }
+
+          &:hover {
+            a {
+              color: $primary-color;
+            }
+          }
+        }
+
+        iconify-icon {
+          background-color: $white;
+          height: 3.5rem;
+          width: 3.5rem;
+          border-radius: 50%;
+          box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.09);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+          color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+  //single course area end
+}
+
+/* The Modal (background) */
+/* The Modal (background) */
+
+//modal style start
+.branch__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999 !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  .row {
+    height: 100vh;
+  }
+
+  .modal__area--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    opacity: 0.8;
+  }
+
+  .video__modal--area {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .modal__form {
+    text-align: center;
+    background: $white;
+    flex-grow: 1;
+    height: 100%;
+    position: relative;
+
+    iconify-icon {
+      font-size: 3rem;
+      opacity: 0.5;
+      cursor: pointer;
+      padding-right: 1rem;
+    }
+
+    .modal__submit--form {
+      .title {
+        font-size: 2rem;
+        font-weight: 600;
+
+        @include desktop {
+          font-size: 1.8rem;
+          display: none;
+        }
+      }
+
+      .title__area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #e5e5e5;
+        border-bottom: 1px solid $primary-color;
+
+        .title {
+          color: $black_4;
+          line-height: 3.5rem;
+          font-weight: 550;
+          display: block;
+        }
+
+        h4 {
+          padding: 1rem 2rem;
+        }
+      }
+
+      .content {
+        padding: 2rem 0;
+        padding: 1rem 2rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+      label {
+        width: 100%;
+        text-align: left;
+        font-size: 1.4rem;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.6rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        text-align: left;
+        transition: all 0.3s;
+        border-radius: 4px;
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 2px 2px rgba(194, 242, 251, 1);
+        }
+      }
+
+      .button__box {
+        text-align: right;
+        margin-top: 1rem;
+        border-top: 1px solid $primary-color;
+        padding: 1rem 2rem;
+
+        button {
+          border: none;
+          padding: 1rem 3rem;
+          background-color: $primary-light;
+          color: $white;
+          font-size: 1.4rem;
+          font-family: $default_font;
+          border-radius: 0.2rem;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $hover;
+          }
+        }
+      }
     }
   }
 }
-// search header end
+//modal style end
 
-// search result start
-.search__result {
-  margin-bottom: 20rem;
+//pagination style
+.branch__pagination--area {
+  text-align: center;
 
-  div[class^="col-"] {
-    margin-top: 0;
+  .pagination {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: row;
   }
 
-  .search__result--info {
-    font-size: 1.2srem;
-    font-weight: normal;
-    text-align: center;
-    color: $black_4;
-    margin-bottom: 3.5rem;
+  .pagination a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.7rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pagination a.active {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+  .pagination .prev,
+  .pagination .next {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: $primary-color;
+    transition: all 0.3s;
 
     span {
-      font-weight: bold;
+      margin-top: -0.5rem;
     }
-  }
-}
-.search__result .card {
-  all: unset;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  background-color: $white;
-  color: $black-2;
-  transition: all 0.3s;
-  position: relative;
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  margin-bottom: 3rem;
 
-  &:hover {
-    background-color: $primary-light;
-    color: $white;
-
-    .card__info {
-      color: $white;
-    }
-    .card__image--box img {
-      transform: scale(1.1);
-      filter: brightness(0.8);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
 
-  @include tablet {
-    gap: 2rem;
-  }
-}
-.card__image--box {
-  height: 20rem;
-  width: 20rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-}
-.card__image--box img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  transition: all 0.3s;
-  filter: brightness(0.9);
-}
-
-.card__info {
-  font-family: $default_font;
-  color: $black-3;
-
-  .branch__code {
-    font-size: 2rem;
-    transition: all 0.3s;
-    @include tablet {
-      font-size: 1.8rem;
-    }
-  }
-  .name {
-    font-size: 3rem;
-    font-weight: bold;
-    transition: all 0.3s;
-    @include tablet {
-      font-size: 2.1rem;
-    }
-  }
-  .designation {
-    font-size: 1.6rem;
-    transition: all 0.3s;
-
-    @include tablet {
-      font-size: 1.4rem;
-    }
+  .pagination .page-number {
+    border: 1px solid #ddd;
   }
 }
 
-// search result end
+//pagination style
+
+//select 2 style
+.select2-container {
+  padding: 1rem !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  width: 100% !important;
+  z-index: 999999;
+}
+.select2-container--default .select2-selection--single {
+  background-color: #fff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  text-align: left;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 45px !important;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  padding: 1rem !important;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+  }
+}
+
+/* This css is for normalizing styles. You can skip this. */
