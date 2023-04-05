@@ -150,7 +150,7 @@
               </div>
             </div>
           </div>
-          <div class="rbt-main-navigation d-none d-xl-block">
+          <div class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block">
             <nav class="mainmenu-nav">
               <ul class="mainmenu">
                 <li>
@@ -198,9 +198,9 @@
           </div>
 
           <div class="header-right">
-            <a class="login__btn" href="login.html">Login</a>
+            <a class="login__btn d-none d-lg-block d-xl-block d-xxl-block" href="login.html">Login</a>
             <!-- Start Mobile-Menu-Bar -->
-            <div class="mobile-menu-bar">
+            <div class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none">
               <div class="hamberger">
                 <button class="hamberger-button rbt-round-btn">
                   <i class="feather-menu"></i>
@@ -314,7 +314,9 @@
     <!-- advertisement image  -->
     <div class="advertisement__img">
       <div class="container">
-        <img src="./assets/images/coursedetails/add.jpg" alt="" />
+        <div class="advertisement__img--inner">
+          <img src="./assets/images/coursedetails/add.jpg" alt="" />
+        </div>
       </div>
     </div>
     <!-- advertisement image  -->
@@ -910,8 +912,10 @@
           <!-- course details card -->
           <div class="course__details--card">
             <div class="course__details--img--box course__modal">
-              <img src="./assets/images/coursedetails/amazon.webp" alt="" />
-              <img src="./assets/images/coursedetails/video-play-icon.svg" alt="" class="video-play--icon" />
+              <img src="./assets/images/course/advance-wordpress.jpg" alt="" />
+              <div class="video-play--icon">
+                <i class="fa fa-play video-play--icon" aria-hidden="true"></i>
+              </div>
             </div>
 
             <div class="course__content">
@@ -1208,6 +1212,7 @@
   <script src="./assets/js/jquery-3.6.3.min.js"></script>
   <script src="./assets/js/slick.min.js"></script>
   <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
   <script src="assets/js/bwlJqueryNewsTicker.min.js"></script>
   <script src="./assets/js/iconify-icon.min.js"></script>
   <script src="./assets/js/courseDetails.js"></script>
