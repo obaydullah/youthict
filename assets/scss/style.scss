@@ -94,7 +94,6 @@ CSS Index
   h2 {
     @include tablet {
       font-size: 3rem !important;
-      margin-top: 0 !important;
     }
   }
   p {
@@ -153,24 +152,32 @@ CSS Index
 /*****************************
    1. header
 *********************************/
-
-.header-info.small__logo {
-  .logo__small {
-    font-size: 1.4rem;
-    font-family: $default_font;
-    display: flex;
-    color: $white;
-    text-transform: uppercase;
-    border-radius: 1px;
-    overflow: hidden;
-    font-weight: 600;
+@include mobile {
+  .logo__img {
+    display: none;
   }
+}
+.small__logo {
+  font-size: 1.8rem;
+  font-family: $default_font;
+  display: flex;
+  color: $white;
+  text-transform: uppercase;
+  border-radius: 1px;
+  overflow: hidden;
+  font-weight: 600;
+  display: none;
+
+  @include mobile {
+    display: flex;
+  }
+
   .left {
-    padding: 0.5rem 0.7rem;
+    padding: 0.7rem 1.3rem;
     background: $hover-2;
   }
   .right {
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 1rem;
     background: $primary-color;
   }
 }
