@@ -152,36 +152,6 @@ CSS Index
 /*****************************
    1. header
 *********************************/
-.logo {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.small__logo {
-  font-size: 1.6rem;
-  font-family: $default_font;
-  display: flex;
-  color: $white;
-  text-transform: uppercase;
-  border-radius: 1px;
-  overflow: hidden;
-  font-weight: 600;
-  display: none;
-
-  @include mobile {
-    display: flex;
-  }
-
-  .left {
-    padding: 0.7rem 1.3rem;
-    background: $hover-2;
-  }
-  .right {
-    padding: 0.5rem 1rem;
-    background: $primary-color;
-  }
-}
 
 .bwl_news_lists {
   marquee {
