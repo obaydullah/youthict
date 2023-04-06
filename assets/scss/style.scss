@@ -94,6 +94,7 @@ CSS Index
   h2 {
     @include tablet {
       font-size: 3rem !important;
+      margin-top: 0 !important;
     }
   }
   p {
@@ -152,6 +153,28 @@ CSS Index
 /*****************************
    1. header
 *********************************/
+
+.header-info.small__logo {
+  .logo__small {
+    font-size: 1.4rem;
+    font-family: $default_font;
+    display: flex;
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 1px;
+    overflow: hidden;
+    font-weight: 600;
+  }
+  .left {
+    padding: 0.5rem 0.7rem;
+    background: $hover-2;
+  }
+  .right {
+    padding: 0.5rem 0.8rem;
+    background: $primary-color;
+  }
+}
+
 .bwl_news_lists {
   marquee {
     font-family: $default_font;
@@ -2497,17 +2520,7 @@ header .menu_cart .check_out:hover {
 .header-five .main-menu ul li:last-child a {
   border-right: none;
 }
-/* .header-five .main-menu ul li a::after {
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  content: "";
-  width: 1px;
-  height: 50px;
-  background: #ffffff91;
-  z-index: 1;
-  transform: translateY(-50%);
-} */
+
 .header-five .main-menu ul li:last-child a::after {
   display: none;
 }
@@ -4685,6 +4698,10 @@ select.chosen-select {
       font-weight: bold;
       font-family: $default_font;
       margin-bottom: 2rem;
+
+      @include mobile {
+        font-size: 2.5rem;
+      }
     }
 
     input,
