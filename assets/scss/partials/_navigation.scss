@@ -2987,11 +2987,11 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   color: $black_4;
 }
 .popup-mobile-menu .nav-quick-access .footer__btn {
-  .browse_btn {
+  .offcanvas__login--btn {
     font-family: $bangla_font !important;
     color: $white;
     border-radius: 10px;
-    padding: 1.6rem 3rem;
+    padding: 1.6rem 2.5rem;
     transition: 0.3s linear;
     text-align: center;
     margin-right: 0 !important;
@@ -2999,19 +2999,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
     @include btn__gradiant;
     justify-content: center;
     border-bottom: none;
-  }
-  .offcanvas__login--btn {
-    font-family: $default_font;
-    color: $white;
-    border-radius: 10px;
-    padding: 1.6rem 3rem;
-    transition: 0.3s linear;
-    display: block;
-    text-align: center;
-    margin-top: 2rem;
-    background: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    color: $primary-color;
+    font-size: 1.8rem !important;
   }
 }
 .popup-mobile-menu .nav-quick-access li a i {
