@@ -328,22 +328,22 @@
         iconify-icon {
           cursor: pointer;
         }
+      }
+    }
 
-        a {
-          background: transparent;
-          color: $primary-color;
-          font-style: italic;
-          font-family: $default_font;
-          font-size: 1.4rem;
-          cursor: pointer;
-          border: none;
+    .clear {
+      background: transparent;
+      color: $black_3;
+      font-style: italic;
+      font-family: $default_font;
+      font-size: 1.4rem;
+      cursor: pointer;
+      border: none;
 
-          &:hover {
-            background-color: transparent !important;
-            color: inherit !important;
-            text-decoration: none !important;
-          }
-        }
+      &:hover {
+        background-color: transparent !important;
+        color: $primary-color !important;
+        text-decoration: none !important;
       }
     }
   }
@@ -1012,29 +1012,39 @@
 //pagination style
 
 //select 2 style
-.select2-container {
-  padding: 1rem !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  width: 100% !important;
-  z-index: 999999;
-}
-.select2-container--default .select2-selection--single {
-  background-color: #fff !important;
-  border: none !important;
-  border-radius: 5px !important;
-  text-align: left;
-}
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__arrow {
-  height: 45px !important;
-}
-.select2-container--default .select2-search--dropdown .select2-search__field {
-  padding: 1rem !important;
 
-  &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    outline: none;
+.courselisting__body {
+  .select2-container {
+    padding: 1rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    width: 100% !important;
+    z-index: 999999;
+    padding: 1.5px !important;
+  }
+  .select2-container--default .select2-selection--single {
+    background-color: #fff !important;
+    border: none !important;
+    border-radius: 5px !important;
+    text-align: left;
+  }
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: 45px !important;
+  }
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    padding: 1rem !important;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      outline: none;
+    }
+  }
+  span.select2-selection.select2-selection--single {
+    width: 16rem;
+  }
+  .course__list {
+    border-width: 0 2px 2px 0;
   }
 }
 

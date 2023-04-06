@@ -8,10 +8,20 @@
     }
   }
 }
+.left-column {
+  padding-right: 5rem;
+}
+.right-columm {
+  padding-left: 3rem;
+}
 
 .branch__list {
-  padding: 8rem 0;
+  padding: 6rem 0;
   padding-bottom: 12rem;
+
+  @include mobile {
+    padding: 3rem 0;
+  }
 
   // header style start
   .header {
@@ -309,6 +319,10 @@
       flex-wrap: wrap;
     }
 
+    @include mobile {
+      justify-content: center;
+    }
+
     ul {
       display: flex;
       align-items: center;
@@ -331,22 +345,21 @@
         iconify-icon {
           cursor: pointer;
         }
+      }
+    }
+    .clear {
+      background: transparent;
+      color: $black_3;
+      font-style: italic;
+      font-family: $default_font;
+      font-size: 1.4rem;
+      cursor: pointer;
+      border: none;
 
-        a {
-          background: transparent;
-          color: $primary-color;
-          font-style: italic;
-          font-family: $default_font;
-          font-size: 1.4rem;
-          cursor: pointer;
-          border: none;
-
-          &:hover {
-            background-color: transparent !important;
-            color: inherit !important;
-            text-decoration: none !important;
-          }
-        }
+      &:hover {
+        background-color: transparent !important;
+        color: $primary-color !important;
+        text-decoration: none !important;
       }
     }
   }
@@ -416,7 +429,7 @@
     }
   }
 
-  .course__single {
+  .branch__single {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -429,28 +442,36 @@
     margin-bottom: 2rem;
     transition: all 0.3s;
 
+    @include mobile {
+      gap: 1rem;
+      padding: 1rem;
+    }
+
     &:hover {
       background-color: $couse_listing_bg;
     }
 
+    .img__box.rounded {
+      border-radius: 50% !important;
+    }
     .img__box {
       height: 12rem;
       width: 12rem;
+      overflow: hidden;
 
       @include tablet {
         width: 9rem;
         height: 9rem;
       }
+      @include mobile {
+        width: 7rem;
+        height: 7rem;
+      }
 
       img {
         object-fit: cover;
-        height: 12rem;
-        width: 12rem;
-
-        @include tablet {
-          width: 9rem;
-          height: 9rem;
-        }
+        height: 100%;
+        width: 100%;
       }
     }
 
@@ -463,7 +484,7 @@
         color: $black_4;
 
         @include tablet {
-          font-size: 1.2rem;
+          font-size: 1.8rem;
           gap: 1rem;
         }
       }
@@ -473,88 +494,14 @@
         margin-bottom: 0;
         font-size: 1.5rem;
         font-weight: 600;
+
+        @include mobile {
+          font-size: 1.4rem;
+        }
       }
       .code {
-        font-size: 1.4rem;
-        font-weight: 500;
-      }
-      .sub__title {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        @include tablet {
-          display: none;
-        }
-
-        span {
-          display: flex;
-          align-items: center;
-          font-size: 1.2rem;
-          color: #333;
-          opacity: 0.8;
-
-          iconify-icon {
-            color: $black_4;
-            margin-right: 0.2rem;
-          }
-        }
-      }
-
-      .more__courses {
         font-size: 1.2rem;
-        font-style: italic;
-        color: $black_4;
-
-        @include tablet {
-          display: none;
-        }
-      }
-
-      .ratings {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-        justify-content: flex-end;
-        display: none;
-
-        @include tablet {
-          display: flex;
-          justify-content: flex-start;
-          gap: 2rem;
-        }
-
-        .icon {
-          display: flex;
-          align-items: center;
-
-          iconify-icon {
-            font-size: 1.8rem;
-            color: $hover-2;
-
-            @include tablet {
-              font-size: 1.4rem;
-              margin-right: -2px;
-              opacity: 0.8;
-            }
-          }
-        }
-
-        h3 {
-          margin-bottom: 0;
-          font-size: 1.4rem;
-          color: $black_3;
-          font-weight: bold;
-
-          @include tablet {
-            font-size: 1.2rem;
-          }
-
-          span {
-            color: $black_4;
-            font-weight: normal;
-          }
-        }
+        font-weight: 500;
       }
     }
     .course__details {
@@ -884,6 +831,11 @@
     .select2-selection--single
     .select2-selection__arrow {
     height: 38px !important;
+  }
+  span#select2--container {
+    margin-right: 5rem;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 

@@ -1890,6 +1890,19 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
     line-height: initial;
   }
 }
+.rbt-information-list .black-text {
+  color: $black_3;
+}
+.header-gradiant {
+  background: linear-gradient(to right, transparent 10%, #f37021 90%);
+}
+.login__white {
+  background: $white !important;
+  border: 1px solid $white;
+}
+.header-top-gradiant {
+  background: linear-gradient(to right, transparent 10%, #f37021 90%);
+}
 
 .rbt-header .rbt-header-wrapper {
   background-color: $white;
