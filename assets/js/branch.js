@@ -1,4 +1,4 @@
-// $(document).ready(function () {
-//   $(".fav__courese").select2();
-// });
-
+$(document).ready(function () {
+  $(".branch__district").select2();
+  $(".branch__division").select2();
+});
