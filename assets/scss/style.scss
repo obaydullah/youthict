@@ -152,13 +152,14 @@ CSS Index
 /*****************************
    1. header
 *********************************/
-@include mobile {
-  .logo__img {
-    display: none;
-  }
+.logo {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
+
 .small__logo {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: $default_font;
   display: flex;
   color: $white;
