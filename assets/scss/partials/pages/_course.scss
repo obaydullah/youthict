@@ -80,7 +80,7 @@
   }
 
   .img__box {
-    height: 16rem;
+    height: 14rem;
     width: 100%;
     overflow: hidden;
     border-radius: 1rem;
@@ -88,6 +88,11 @@
     z-index: 1;
     text-align: right;
     margin-left: auto;
+    margin-top: -8px;
+
+    @include desktop {
+      display: none;
+    }
 
     @include mobile {
       display: none;
