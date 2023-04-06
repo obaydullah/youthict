@@ -982,6 +982,12 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   padding: 10px 20px;
   border-radius: 4px;
   @include btn__gradiant;
+
+  iconify-icon {
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    margin-right: -0.5rem;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-category-btn {
