@@ -342,7 +342,7 @@
     <div class="result__search--box">
       <div class="container">
         <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-sm-11 col-md-10 col-lg-7">
+          <div class="col-sm-11 col-md-10 col-lg-8">
             <form>
               <div class="form__field">
                 <input type="number" name="registration" placeholder="Registration ID" class="search__input" />
@@ -359,16 +359,19 @@
     <div class="search__result--card">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-sm-11 col-md-10 col-lg-7">
+          <div class="col-sm-11 col-md-10 col-lg-8">
             <div class="search__result--card--inner">
               <div class="card__header">
-                <img src="./assets/images/results/result.png" alt="" />
+                <div class="card__header--img--box">
+                  <img src="./assets/images/results/result.png" alt="" />
+                </div>
                 <div class="info">
                   <h3 class="name">Tasnim Rahman</h3>
                   <p class="reg__no">Reg : 2012</p>
                   <p class="grade">A+</p>
                 </div>
-                <button class="card__header--btn default_btn">Print Certificate</button>
+                <button class="card__header--btn"><iconify-icon
+                    icon="material-symbols:print-rounded"></iconify-icon></button>
               </div>
 
               <h2 class="program__name">Advance Office Application Program</h2>
@@ -397,26 +400,64 @@
     </div>
     <!-- search result card end  -->
 
-    <!-- search result area start  -->
-    <section class="result__branch--card">
+
+    <!-- branch card start  -->
+    <div class="result__branch--card">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-sm-11 col-md-10 col-lg-7">
-            <div class="card">
-              <div class="card__image--box">
-                <img src="./assets/images/branchapply/course-13.jpg" alt="" />
-              </div>
-              <div class="card__info">
-                <h3 class="branch__code">Branch code 313</h3>
-                <h2 class="name">Porag D'Rozario</h2>
-                <p class="designation">Regional Director</p>
-              </div>
-            </div>
+          <div class="col-sm-12 co-md-12 col-lg-8">
+
+
+            <section class="table__list--area">
+
+              <!-- single Branch  -->
+              <a href="#" class="branch__card">
+
+                <!-- add rounded class in with img__box class for rounded image  -->
+                <div class="img__box rounded">
+                  <img src="./assets/images/jobgetters/3.jpeg" alt="">
+                </div>
+                <div class="course__info">
+                  <h3 class="name">Porag D'Rozario</h3>
+                  <p class="code">Branch Code : 313</p>
+                  <p class="designation">Regional Director</p>
+
+                </div>
+
+                <div class="course__details">
+                  <div class="course__details--info">
+                    <div class="course__details--info--single">
+                      <h6>Course</h6>
+                      <h2 class="count">7</h2>
+                    </div>
+                    <div class="course__details--info--single">
+                      <h6>Hours</h6>
+                      <h2 class="count">200</h2>
+                    </div>
+                    <div class="course__details--info--single">
+                      <h6>Learners</h6>
+                      <h2 class="count">8k</h2>
+                    </div>
+                  </div>
+
+                  <div class="button__area">
+                    <!-- <iconify-icon icon="mdi:cards-heart"></iconify-icon> -->
+                    <button>View Details</button>
+                  </div>
+                </div>
+              </a>
+
+
+
+            </section>
+
+
           </div>
         </div>
       </div>
-    </section>
-    <!-- search result area end  -->
+    </div>
+    <!-- branch card end -->
+
   </main>
 
   <!-- Start Footer -->
