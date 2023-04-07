@@ -323,7 +323,7 @@
     h2 {
       font-size: 3.5rem;
       font-weight: bold;
-      color: $hover-2;
+      color: $card-bg-3-dark;
       margin-bottom: 1rem;
     }
     p {
@@ -358,7 +358,7 @@
     h2 {
       font-size: 3.5rem;
       font-weight: bold;
-      color: $hover-2;
+      color: $card-bg-2-dark;
       margin-bottom: 1rem;
     }
     p {
@@ -599,8 +599,8 @@
     .instructor__arrow--left {
       position: absolute;
       top: 42%;
-      left: 0;
-      font-size: 4rem;
+      left: 3px;
+      font-size: 3rem;
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
@@ -616,6 +616,12 @@
       z-index: 999;
       opacity: 0.2;
 
+      &::before {
+        content: "\f105";
+        margin-left: 2px;
+        margin-top: -3px;
+      }
+
       @include mobile {
         left: 2rem;
       }
@@ -623,8 +629,8 @@
     .instructor__arrow--right {
       position: absolute;
       top: 42%;
-      right: 0;
-      font-size: 4rem;
+      right: 3px;
+      font-size: 3rem;
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
@@ -639,6 +645,12 @@
       align-items: center;
       opacity: 0.2;
 
+      &::before {
+        content: "\f105";
+        margin-left: 2px;
+        margin-top: -3px;
+      }
+
       @include mobile {
         right: 2rem;
       }
@@ -648,6 +660,8 @@
   .instructor__single {
     position: relative;
     margin: 0 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
 
     .overlay {
       position: absolute;
@@ -655,7 +669,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba(238, 74, 98, 0.5);
+      background-color: $semi_hover;
       z-index: 1;
       opacity: 0;
       visibility: hidden;
