@@ -49,6 +49,81 @@ modalCloseBtn.addEventListener("click", function () {
 });
 //modal area
 
+//warning Modal start
+let warningModal = document.querySelector(".warning__modal");
+let warningModalOpen = document.getElementById("warning__open");
+let warningCloseBtn = document.querySelector(".warning__close--btn");
+let warningOverlay = document.querySelector(
+  ".warning__modal .modal__area--overlay"
+);
+
+warningModalOpen.addEventListener("click", function () {
+  warningModal.style.opacity = "1";
+  warningModal.style.visibility = "visible";
+});
+
+warningCloseBtn.addEventListener("click", function () {
+  warningModal.style.opacity = "0";
+  warningModal.style.visibility = "hidden";
+});
+
+warningOverlay.addEventListener("click", function () {
+  warningModal.style.opacity = "0";
+  warningModal.style.visibility = "hidden";
+});
+
+//warning Modal end
+
+//Success Modal start
+let successModal = document.querySelector(".success__modal");
+let successModalOpen = document.getElementById("success__open");
+let successCloseBtn = document.querySelector(".success__close--btn");
+let successOverlay = document.querySelector(
+  ".success__modal .modal__area--overlay"
+);
+
+successModalOpen.addEventListener("click", function () {
+  successModal.style.opacity = "1";
+  successModal.style.visibility = "visible";
+});
+
+successCloseBtn.addEventListener("click", function () {
+  successModal.style.opacity = "0";
+  successModal.style.visibility = "hidden";
+});
+
+successOverlay.addEventListener("click", function () {
+  successModal.style.opacity = "0";
+  successModal.style.visibility = "hidden";
+});
+
+//warning Modal end
+
+//alert Modal start
+let alertModal = document.querySelector(".alert__modal");
+let alertModalOpen = document.getElementById("alert__open");
+let alertCloseBtn = document.querySelector(".alert__close--btn");
+let alertOverlay = document.querySelector(
+  ".alert__modal .modal__area--overlay"
+);
+
+alertModalOpen.addEventListener("click", function () {
+  alertModal.style.opacity = "1";
+  alertModal.style.visibility = "visible";
+});
+
+alertCloseBtn.addEventListener("click", function () {
+  alertModal.style.opacity = "0";
+  alertModal.style.visibility = "hidden";
+});
+
+alertOverlay.addEventListener("click", function () {
+  alertModal.style.opacity = "0";
+  alertModal.style.visibility = "hidden";
+});
+
+//warning Modal end
+
 // toastify area
 
 function toast(

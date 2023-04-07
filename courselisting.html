@@ -287,7 +287,7 @@
 
   </main>
 
-
+  <!-- Listing modal start  -->
   <div class="listing__modal">
     <div class="modal__area--overlay"></div>
     <div class="container">
@@ -344,6 +344,112 @@
       </div>
     </div>
   </div>
+  <!-- Listing modal end  -->
+
+  <!--  warning modal start  -->
+  <div class="warning__modal">
+    <div class="modal__area--overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-4">
+
+          <div class="modal__form">
+            <form action="" class="modal__submit--form">
+
+
+              <div class="title__area">
+                <h4 class="title">Warning Modal</h4>
+                <iconify-icon icon="ic:outline-close" class="warning__close--btn"></iconify-icon>
+              </div>
+
+
+              <div class="content">
+                <p> "Deleting this data will remove it from your account and it will no longer be accessible."</p>
+              </div>
+
+
+
+              <div class="button__box">
+                <button>Ok</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Listing modal end  -->
+
+  <!--  Success modal start  -->
+  <div class="success__modal">
+    <div class="modal__area--overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-4">
+
+          <div class="modal__form">
+            <form action="" class="modal__submit--form">
+
+
+              <div class="title__area">
+                <h4 class="title">Success Modal</h4>
+                <iconify-icon icon="ic:outline-close" class="success__close--btn"></iconify-icon>
+              </div>
+
+
+              <div class="content">
+                <p>"Congratulations! Your password has been reset successfully."</p>
+              </div>
+
+
+
+              <div class="button__box">
+                <button>Ok</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Success modal start  -->
+
+  <!--  Alert modal start  -->
+  <div class="alert__modal">
+    <div class="modal__area--overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-4">
+
+          <div class="modal__form">
+            <form action="" class="modal__submit--form">
+
+
+              <div class="title__area">
+                <h4 class="title">Alert Modal</h4>
+                <iconify-icon icon="ic:outline-close" class="alert__close--btn"></iconify-icon>
+              </div>
+
+
+              <div class="content">
+                <p>"Warning: Your session is about to expire. Please save your work and log in again."</p>
+              </div>
+
+
+
+              <div class="button__box">
+                <button>Ok</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Alert modal start  -->
 
   <!-- //toastify -->
   <div class="container" style="margin-bottom: 10rem;">
@@ -351,6 +457,12 @@
     <button onclick="toast('top', 'right', 'This is a dynamic toast', 5000)">top right</button>
     <button onclick="toast('bottom', 'left', 'This is dynamic toast', 2000)">bottom left</button>
     <button onclick="toast('bottom', 'right', 'this is dynamic toast', 1000)">bottom right</button>
+  </div>
+
+  <div class="container">
+    <button type="button" id="warning__open">Warning Modal</button>
+    <button type="button" id="success__open">Success Modal</button>
+    <button type="button" id="alert__open">Alert Modal</button>
   </div>
   <!-- //toastify -->
 
