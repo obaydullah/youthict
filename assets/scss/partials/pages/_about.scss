@@ -903,9 +903,19 @@
         align-items: center;
         opacity: 0.6;
 
+        @include mobile {
+          height: 5rem;
+          width: 5rem;
+          margin-top: -1.5rem;
+        }
+
         .fa {
           font-size: 3rem;
           color: $white;
+
+          @include mobile {
+            font-size: 2rem;
+          }
         }
       }
     }
