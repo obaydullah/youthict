@@ -11,15 +11,14 @@
   <link rel="icon" href="assets/images/favicon.png" type="image/png" alt="Youth ICT | Favicon" />
 
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/feather.css" />
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/feather.min.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/css/slick.min.css" />
   <link rel="stylesheet" href="assets/css/venobox.min.css" />
-  <link rel="stylesheet" href="assets/css/bwlJqueryNewsTicker.css" />
-  <link rel="stylesheet" href="assets/css/animate.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/select2.min.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/style.min.css" />
+  <link rel="stylesheet" href="assets/css/responsive.min.css" />
 </head>
 
 <body class="body-container rbt-header-sticky">
@@ -29,21 +28,20 @@
     <div class="rbt-sticky-placeholder"></div>
     <!-- Start BWL Sticky Animated News Ticker -->
 
-    <div id="header_sticky_ticker">
+
+    <!-- Start Header Top   -->
+    <div class="notice__area">
       <div class="container">
-        <ul class="bwl_news_lists">
-          <a title="" href="#">
-            <marquee behavior="scroll" direction="left" onMouseOver="this.stop()" onMouseOut="this.start()">
-              পরীক্ষার নোটিশঃ সকল আঞ্চলিক পরিচালকবৃন্দকে অবহিত করা যাচ্ছে যে,
-              জুলাই-ডিসেম্বর ২০২২ এবং অক্টোবর-ডিসেম্বর ২০২২ সেশনে ছয় মাস ও তিন
-              মাস মেয়াদী বেসিক
-            </marquee>
-          </a>
-        </ul>
+        <div class="notice__area--inner">
+          <h2>Notice</h2>
+          <marquee behavior="scroll" direction="left" onMouseOver="this.stop()" onMouseOut="this.start()">
+            পরীক্ষার নোটিশঃ সকল আঞ্চলিক পরিচালকবৃন্দকে অবহিত করা যাচ্ছে যে,
+            জুলাই-ডিসেম্বর ২০২২ এবং অক্টোবর-ডিসেম্বর ২০২২ সেশনে ছয় মাস ও তিন
+            মাস মেয়াদী বেসিক
+          </marquee>
+        </div>
       </div>
-      <!--  End .bwl_news_lists  -->
     </div>
-    <!-- Start Header Top  -->
 
     <!-- add header-top-gradiant class to add gradiant -->
     <div
@@ -118,7 +116,7 @@
             <div class="header-info">
               <div class="logo">
                 <a href="#">
-                  <img src="assets/images/logo.png" alt="Youth ICT" class="logo__img" />
+                  <img src="assets/images/logo.webp" alt="Youth ICT" class="logo__img" />
                 </a>
 
               </div>
@@ -233,7 +231,7 @@
   <div class="popup-mobile-menu">
     <div class="inner-wrapper">
       <div class="popup__header">
-        <img src="./assets/images/logo.png" alt="" class="popup__logo">
+        <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo">
         <div class="rbt-btn-close">
           <button class="close-button rbt-round-btn">
             <i class="feather-x"></i>
@@ -360,9 +358,8 @@
           <div class="col-lg-7">
             <div class="banner_img">
               <a class="venobox vbox-item" data-autoplay="true" data-vbtype="video" href="https://youtu.be/GogcDtMpgMc">
-                <img class="img-fluid homebanner-thumb video_thumb sal-animate" src="assets/images/top_banner.jpg"
-                  alt="Home Banner| Icon" data-sal="zoom-in" data-sal-delay="200" data-sal-duration="700"
-                  data-sal-easing="ease" />
+                <img class="img-fluid homebanner-thumb video_thumb sal-animate" src="assets/images/top_banner.webp"
+                  alt="Home Banner| Icon" />
                 <div class="banner_img_overly">
                   <div class="overly_icon">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play"
@@ -477,7 +474,7 @@
                     <div class="course_single_item">
                       <div class="course_image">
                         <img class="img-fluid w-100" src="./assets/images/course/graphicsdesign.jpg"
-                          alt="প্রফেশনাল গ্রাফিক ডিজাইন" loading="lazy" />
+                          alt="প্রফেশনাল গ্রাফিক ডিজাইন" />
                       </div>
                       <div class="course_text">
                         <h6>সকল কোর্স</h6>
@@ -520,7 +517,7 @@
                     <div class="course_single_item">
                       <div class="course_image">
                         <img class="img-fluid w-100" src="./assets/images/course/computer-hardware.jpg"
-                          alt="মোশন গ্রাফিক্স" loading="lazy" />
+                          alt="মোশন গ্রাফিক্স" />
                       </div>
                       <div class="course_text">
                         <h6>সকল কোর্স</h6>
@@ -562,8 +559,8 @@
                   <a class="course_slider_item" href="coursedetails.html">
                     <div class="course_single_item">
                       <div class="course_image">
-                        <img class="img-fluid w-100" src="./assets/images/course/graphicsdesign.jpg" alt="UX/UI ডিজাইন"
-                          loading="lazy" />
+                        <img class="img-fluid w-100" src="./assets/images/course/graphicsdesign.jpg"
+                          alt="UX/UI ডিজাইন" />
                       </div>
                       <div class="course_text">
                         <h6>সকল কোর্স</h6>
@@ -612,7 +609,7 @@
                     <div class="course_single_item">
                       <div class="course_image">
                         <img class="img-fluid w-100" src="./assets/images/course/graphicsdesign.jpg"
-                          alt="প্রফেশনাল গ্রাফিক ডিজাইন" loading="lazy" />
+                          alt="প্রফেশনাল গ্রাফিক ডিজাইন" />
                       </div>
                       <div class="course_text">
                         <h6>সকল কোর্স</h6>
@@ -655,8 +652,8 @@
                   <a class="course_slider_item" href="./assets/images/course/icteducation.jpg">
                     <div class="course_single_item">
                       <div class="course_image">
-                        <img class="img-fluid w-100" src="./assets/images/course/icteducation.jpg" alt="মোশন গ্রাফিক্স"
-                          loading="lazy" />
+                        <img class="img-fluid w-100" src="./assets/images/course/icteducation.jpg"
+                          alt="মোশন গ্রাফিক্স" />
                       </div>
                       <div class="course_text">
                         <h6>আইসিটি এডুকেশন</h6>
@@ -704,8 +701,7 @@
                   <a class="course_slider_item" href="coursedetails.html">
                     <div class="course_single_item">
                       <div class="course_image">
-                        <img class="img-fluid w-100" src="./assets/images/course/web-design.jpg" alt="ওয়েব ডিজাইন"
-                          loading="lazy" />
+                        <img class="img-fluid w-100" src="./assets/images/course/web-design.jpg" alt="ওয়েব ডিজাইন" />
                       </div>
                       <div class="course_text">
                         <h6>সকল কোর্স</h6>
@@ -748,8 +744,8 @@
                   <a class="course_slider_item" href="coursedetails.html">
                     <div class="course_single_item">
                       <div class="course_image">
-                        <img class="img-fluid w-100" src="./assets/images/course/web-design.jpg" alt="ওয়েব ডেভেলপমেন্ট"
-                          loading="lazy" />
+                        <img class="img-fluid w-100" src="./assets/images/course/web-design.jpg"
+                          alt="ওয়েব ডেভেলপমেন্ট" />
                       </div>
                       <div class="course_text">
                         <h6>সকল কোর্স</h6>
@@ -933,7 +929,7 @@
 
                 <div class="d-none d-lg-block col-lg-6" style="overflow: hidden">
                   <div class="img__box">
-                    <img src="./assets/images/home/student.jpg" class="img-fluid" alt="Image" />
+                    <img src="./assets/images/home/student.webp" class="img-fluid" alt="Create Your Profile" />
                   </div>
                 </div>
               </div>
@@ -1135,7 +1131,7 @@
           <div class="row align-items-center">
             <div class="col-lg-6">
               <div class="img__box">
-                <img src="./assets/images/prime__minister.png" alt="" class="prime__minister--img" />
+                <img src="./assets/images/prime__minister.webp" alt="Sheikh Hasina" class="prime__minister--img" />
               </div>
             </div>
 
@@ -1179,7 +1175,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
             <div class="certificate-item h-100">
               <div class="certificate-thumb same-hover">
-                <img src="https://youthict.org/uploads/content/1548364355C.jpg" alt="certificate" />
+                <img src="assets/images/home/ceremony1.webp" alt="certificate giving ceremony" />
               </div>
               <div class="certificate-content">
                 <h5>Certificate Distribution Ceremony-2017</h5>
@@ -1199,7 +1195,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
             <div class="certificate-item h-100">
               <div class="certificate-thumb same-hover">
-                <img src="https://youthict.org/uploads/content/1548364380C.jpg" alt="certificate" />
+                <img src="assets/images/home/ceremony2.webp" alt="certificate giving ceremony" />
               </div>
               <div class="certificate-content">
                 <h5>Certificate Distribution Ceremony-2016</h5>
@@ -1218,7 +1214,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 mt-4 last__item">
             <div class="certificate-item h-100">
               <div class="certificate-thumb same-hover">
-                <img src="https://youthict.org/uploads/content/1548364380C.jpg" alt="certificate" />
+                <img src="assets/images/home/ceremony1.webp" alt="certificate giving ceremony" />
               </div>
               <div class="certificate-content">
                 <h5>Certificate Distribution Ceremony-2016</h5>
@@ -1245,12 +1241,12 @@
         <div class="advertisement__slider">
           <div class="advertisement__item">
             <a class="add__popup--venubox" data-vbtype="video" data-autoplay="true" href="https://youtu.be/g6Qa7gT0U5c">
-              <img src="./assets/images/ad-1.png" alt="" />
+              <img src="./assets/images/ad-1.webp" alt="Advertisement 1" />
             </a>
           </div>
           <div class="advertisement__item">
             <a href="#">
-              <img src="./assets/images/ad-2.png" alt="" />
+              <img src="./assets/images/ad-2.webp" alt="Advertisement 2" />
             </a>
           </div>
         </div>
@@ -1323,7 +1319,7 @@
     <section class="banner__animation">
       <div class="banner__animation--slide">
         <div class="slide__single">
-          <img src="./assets/images/1.jpg" alt="" />
+          <img src="./assets/images/1.webp" alt="Mr. Minho Kim - South Korea" />
           <div class="container">
             <div class="slide__content">
               <h2>Mr. Minho Kim - South Korea</h2>
@@ -1332,7 +1328,7 @@
           </div>
         </div>
         <div class="slide__single">
-          <img src="./assets/images/2.jpg" alt="" />
+          <img src="./assets/images/2.webp" alt="Mrs. Kim - South Korea" />
           <div class="container">
             <div class="slide__content">
               <h2>Mrs. Kim</h2>
@@ -1509,18 +1505,18 @@
   </footer>
   <!-- End Footer -->
 
+
   <script src="assets/js/jquery-3.6.3.min.js"></script>
-  <script src="assets/js/jquery-migrate-3.4.1.js"></script>
+  <script src="assets/js/jquery-migrate-3.4.1.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/slick.min.js"></script>
   <script src="assets/js/waypoints.min.js"></script>
   <script src="assets/js/counter-up.min.js"></script>
   <script src="assets/js/venobox.min.js"></script>
-  <script src="assets/js/bwlJqueryNewsTicker.min.js"></script>
   <script src="assets/js/select2.min.js"></script>
   <script src="assets/js/iconify-icon.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.min.js"></script>
 </body>
 
 </html>

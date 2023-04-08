@@ -153,6 +153,52 @@ CSS Index
    1. header
 *********************************/
 
+//notice
+.notice__area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  border-bottom: 3px solid $hover-2;
+  z-index: 99999;
+
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--inner {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    height: 100%;
+
+    h2 {
+      font-size: 1.6rem;
+      font-family: "Open Sans", sans-serif;
+      padding: 1.2rem 2rem;
+      @include btn__gradiant;
+      margin-bottom: 0;
+      color: white;
+
+      @include mobile {
+        display: none;
+      }
+    }
+    marquee {
+      font-weight: 600;
+      font-family: $bangla_font;
+      padding: 0.2rem;
+
+      @include mobile {
+        padding: 1.2rem;
+      }
+    }
+  }
+}
+//notice
+
 .bwl_news_lists {
   marquee {
     font-family: $default_font;

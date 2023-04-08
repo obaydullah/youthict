@@ -216,47 +216,7 @@
       );
     }
 
-    function headerSticky() {
-      $(window).on("scroll", function () {
-        if ($("body").hasClass("rbt-header-sticky")) {
-          var stickyPlaceHolder = $(".rbt-sticky-placeholder"),
-            headerConainer = $(".rbt-header-wrapper"),
-            headerConainerH = headerConainer.outerHeight(),
-            topHeaderH = $(".rbt-header-top").outerHeight() || 0,
-            targrtScroll = topHeaderH + 200;
-          if ($(window).scrollTop() > targrtScroll) {
-            headerConainer.addClass("rbt-sticky");
-            stickyPlaceHolder.height(headerConainerH);
-          } else {
-            headerConainer.removeClass("rbt-sticky");
-            stickyPlaceHolder.height(0);
-          }
-        }
-      });
-    }
-
-    function headerSticky() {
-      $(window).on("scroll", function () {
-        if ($("body").hasClass("rbt-header-sticky")) {
-          var stickyPlaceHolder = $(".rbt-sticky-placeholder"),
-            headerConainer = $(".rbt-header-wrapper"),
-            headerConainerH = headerConainer.outerHeight(),
-            topHeaderH = $(".rbt-header-top").outerHeight() || 0,
-            targrtScroll = topHeaderH + 200;
-          if ($(window).scrollTop() > targrtScroll) {
-            headerConainer.addClass("rbt-sticky");
-            stickyPlaceHolder.height(headerConainerH);
-          } else {
-            headerConainer.removeClass("rbt-sticky");
-            stickyPlaceHolder.height(0);
-          }
-        }
-      });
-    }
-
     popupMobileMenu();
-    headerSticky();
-    headerSticky();
     $(".venobox").venobox();
   });
 
@@ -312,3 +272,15 @@ window.onscroll = function () {
     logoImg.setAttribute("src", "assets/images/logo.png");
   }
 };
+//sticky header with js
+// const header = document.querySelector(".rbt-header-wrapper");
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY > 200) {
+//     // header.classList.add("rbt-sticky");
+//     alert("kire");
+//   } else {
+//     header.classList.remove("rbt-sticky");
+//   }
+// });
+
+alert("kire");
