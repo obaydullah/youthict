@@ -11,19 +11,34 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/feather.css" />
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/bwlJqueryNewsTicker.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body class="login__container body-container rbt-header-sticky"">
 
-   <!-- Start Header -->
+    <!-- Start Header -->
   <!-- Start Header Area -->
   <header class=" rbt-header rbt-header-10">
   <div class="rbt-sticky-placeholder"></div>
   <!-- Start BWL Sticky Animated News Ticker -->
-  <!-- Start Header Top  -->
+
+
+  <!-- Start Header Top   -->
+  <div class="notice__area">
+    <div class="container">
+      <div class="notice__area--inner">
+        <h2>Notice</h2>
+        <marquee behavior="scroll" direction="left" onMouseOver="this.stop()" onMouseOut="this.start()">
+          পরীক্ষার নোটিশঃ সকল আঞ্চলিক পরিচালকবৃন্দকে অবহিত করা যাচ্ছে যে,
+          জুলাই-ডিসেম্বর ২০২২ এবং অক্টোবর-ডিসেম্বর ২০২২ সেশনে ছয় মাস ও তিন
+          মাস মেয়াদী বেসিক
+        </marquee>
+      </div>
+    </div>
+  </div>
+
+  <!-- add header-top-gradiant class to add gradiant -->
   <div
     class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation">
     <div class="container">
@@ -35,6 +50,7 @@
               <div class="header-info">
                 <ul class="rbt-information-list">
                   <li class="phone">
+                    <!-- add black-text class to make black text  -->
                     <a href="#"><i class="feather-phone"></i>01771599533</a>
                   </li>
                   <li class="email">
@@ -85,17 +101,21 @@
     </div>
   </div>
   <!-- End Header Top  -->
-  <div class="rbt-header-wrapper header-space-betwween header-sticky login__header top-expended-activation">
+
+  <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
+  <div class="rbt-header-wrapper header-space-betwween header-sticky">
     <div class="container">
       <div class="mainbar-row rbt-navigation-center align-items-center">
         <div class="header-left rbt-header-content">
           <div class="header-info">
             <div class="logo">
               <a href="#">
-                <img src="assets/images/logo.png" alt="Youth ICT" class="logo__img" />
+                <img src="assets/images/logo.webp" alt="Youth ICT" class="logo__img" />
               </a>
+
             </div>
           </div>
+
           <div class="header-info">
             <div class="rbt-category-menu-wrapper">
               <div class="rbt-category-btn rbt-side-offcanvas-activation">
@@ -106,6 +126,7 @@
                   <i title="Category" class="feather-grid d-block d-xl-none"></i>
                 </div>
                 <span class="category-text d-none d-xl-block">Courses</span>
+                <iconify-icon icon="ic:twotone-keyboard-arrow-down"></iconify-icon>
               </div>
               <div class="category-dropdown-menu d-none d-xl-block">
                 <div class="category-menu-item">
@@ -132,8 +153,9 @@
               </div>
             </div>
           </div>
+
         </div>
-        <div class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block login-navigation">
+        <div class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block">
           <nav class="mainmenu-nav">
             <ul class="mainmenu">
               <li>
@@ -180,9 +202,12 @@
           </nav>
         </div>
 
+
         <div class="header-right">
+          <!-- add (login__white) class with login__btn for white button -->
+          <a class="login__btn d-none d-lg-block d-xl-block d-xxl-block" href="login.html">Login</a>
           <!-- Start Mobile-Menu-Bar -->
-          <div class="mobile-menu-bar d-lg-none">
+          <div class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none">
             <div class="hamberger">
               <button class="hamberger-button rbt-round-btn">
                 <i class="feather-menu"></i>
@@ -200,7 +225,7 @@
   <div class="popup-mobile-menu">
     <div class="inner-wrapper">
       <div class="popup__header">
-        <img src="./assets/images/logo.png" alt="" class="popup__logo">
+        <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo">
         <div class="rbt-btn-close">
           <button class="close-button rbt-round-btn">
             <i class="feather-x"></i>
@@ -216,6 +241,9 @@
                 <ul class="nav-quick-access">
                   <li>
                     <a href="index.html"> Home</a>
+                  </li>
+                  <li>
+                    <a href="course.html"> Browse Course</a>
                   </li>
 
                   <li>
@@ -266,10 +294,6 @@
                   </li>
 
                   <div class="footer__btn">
-                    <a href="course.html" class="browse_btn">
-                      ব্রাউজ কোর্স
-                    </a>
-
                     <a class="offcanvas__login--btn" href="login.html">Login</a>
                   </div>
 
@@ -317,7 +341,7 @@
 
                 <div class="d-none d-md-block col-lg-6">
                   <div class="img__box">
-                    <img src="./assets/images/home/student.jpg" class="img-fluid" alt="Image" />
+                    <img src="./assets/images/home/student.webp" class="img-fluid" alt="Image" />
                   </div>
                 </div>
               </div>
@@ -351,14 +375,16 @@
   </footer>
   <!-- End Footer -->
 
-
-  <script src="./assets/js/jquery-3.6.3.min.js"></script>
-  <script src="./assets/js/jquery-migrate-3.4.1.js"></script>
-  <script src="./assets/js/slick.min.js"></script>
-  <script src="./assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/bwlJqueryNewsTicker.min.js"></script>
-  <script src="./assets/js/iconify-icon.min.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="assets/js/jquery-3.6.3.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/counter-up.min.js"></script>
+  <script src="assets/js/venobox.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/iconify-icon.min.js"></script>
+  <script src="assets/js/header.js"></script>
 
 </body>
 

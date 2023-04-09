@@ -10,8 +10,6 @@ gulp.task("sass", function () {
     .src("./assets/scss/style.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(cleanCSS())
-    .pipe(rename("style.min.css"))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./assets/css/"));
 });
@@ -20,14 +18,6 @@ gulp.task("responsive", function () {
   return gulp
     .src("./assets/css/responsive.css")
     .pipe(rename("responsive.min.css"))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest("./assets/css/"));
-});
-
-gulp.task("newsticker", function () {
-  return gulp
-    .src("./assets/css/bwlJqueryNewsTicker.css")
-    .pipe(rename("bwlJqueryNewsTicker.min.css"))
     .pipe(cleanCSS())
     .pipe(gulp.dest("./assets/css/"));
 });
@@ -48,19 +38,22 @@ gulp.task("slick", function () {
     .pipe(gulp.dest("./assets/css/"));
 });
 
-gulp.task("mainjs", function () {
-  return gulp
-    .src("./assets/js/main.js")
-    .pipe(rename("main.min.js"))
-    .pipe(terser())
-    .pipe(gulp.dest("./assets/js/"));
-});
-
 // Watch Task
 gulp.task("watch", function () {
   gulp.watch("./assets/scss/**/*.scss", gulp.series("sass"));
-  gulp.watch("./assets/css/responsive.css", gulp.series("responsive"));
-  gulp.watch("./assets/css/feather.css", gulp.series("feather"));
-  gulp.watch("./assets/css/slick.css", gulp.series("slick"));
-  gulp.watch("./assets/js/main.js", gulp.series("mainjs"));
+  gulp.watch(
+    "./assets/css/responsive.css",
+    { debounceDelay: 500 },
+    gulp.series("responsive")
+  );
+  gulp.watch(
+    "./assets/css/feather.css",
+    { debounceDelay: 500 },
+    gulp.series("feather")
+  );
+  gulp.watch(
+    "./assets/css/slick.css",
+    { debounceDelay: 500 },
+    gulp.series("slick")
+  );
 });

@@ -21,6 +21,7 @@ CSS Index
 /**********************************
 0. Global Style
 ***********************************/
+
 .section__padding--default {
   padding: 5rem 0;
 
@@ -177,7 +178,7 @@ CSS Index
     h2 {
       font-size: 1.6rem;
       font-family: "Open Sans", sans-serif;
-      padding: 1.2rem 2rem;
+      padding: 1.3rem 2rem;
       @include btn__gradiant;
       margin-bottom: 0;
       color: white;
@@ -9444,3 +9445,4 @@ marquee {
 @import "./partials/pages/course";
 @import "./partials/pages/courselisting";
 @import "./partials/pages/login";
+@import "./partials/pages/adminpanel";
