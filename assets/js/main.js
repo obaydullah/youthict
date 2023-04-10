@@ -157,57 +157,46 @@ $(document).ready(function () {
     ],
   });
 
-  // Header Ticker Example Scripts.
-  $("#header_sticky_ticker").bwlJqueryNewsTicker({
-    interval: 3000,
-    animation: "fadeleft",
-    title: "Notice",
-    theme: "purple",
-    btn_show: false,
-    title_arrow: "circle",
+  $(".venobox").venobox();
+
+  $(".counter").counterUp({
+    delay: 10,
+    time: 1000,
   });
 
-  $(".venobox").venobox();
+  $(".advertisement__slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: !0,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    fade: true,
+    cssEase: "linear",
+
+    responsive: [
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
+    ],
+  });
+
+  $(".banner__animation--slide").slick({
+    autoplay: true,
+    slidesToShow: 1,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: false,
+    fade: true,
+    speed: 3000,
+    infinite: true,
+    loop: true,
+    pauseOnHover: false,
+    cssEase: "ease-in-out",
+  });
+
+  $(".add__popup--venubox").venobox();
 });
-
-$(".counter").counterUp({
-  delay: 10,
-  time: 1000,
-});
-
-$(".advertisement__slider").slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: !0,
-  dots: true,
-  autoplay: true,
-  autoplaySpeed: 4000,
-  arrows: false,
-  fade: true,
-  cssEase: "linear",
-
-  responsive: [
-    { breakpoint: 768, settings: { slidesToShow: 1 } },
-    { breakpoint: 480, settings: { slidesToShow: 1 } },
-  ],
-});
-
-$(".banner__animation--slide").slick({
-  autoplay: true,
-  slidesToShow: 1,
-  autoplaySpeed: 2000,
-  arrows: false,
-  dots: false,
-  fade: true,
-  speed: 3000,
-  infinite: true,
-  loop: true,
-  pauseOnHover: false,
-  cssEase: "ease-in-out",
-});
-
-$(".add__popup--venubox").venobox();
-$(".select__course").select2();
 
 $(".job__getters--card--slider").slick({
   slidesToShow: 3,

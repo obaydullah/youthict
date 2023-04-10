@@ -34,6 +34,7 @@ let modalForm = document.querySelector(".modal__form");
 let modalOpen = document.querySelector(".create__new--report");
 let html = document.querySelector("html");
 let modalClose = document.querySelector(".modal__close");
+
 modalOpen.addEventListener("click", function () {
   modal.style.opacity = 1;
   modal.style.visibility = "visible";

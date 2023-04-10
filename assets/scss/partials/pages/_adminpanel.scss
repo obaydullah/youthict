@@ -49,6 +49,9 @@
     }
     .new__view {
       border: 1px solid transparent;
+      @include mobile {
+        display: none;
+      }
 
       &:hover {
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -62,6 +65,12 @@
       display: flex;
       align-items: center;
       gap: 0.8rem;
+
+      span {
+        @include mobile {
+          display: none;
+        }
+      }
 
       &:hover {
         background: $primary-light;
@@ -145,6 +154,10 @@
     justify-content: space-between;
     font-family: $default_font;
     margin-top: 1.5rem;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
 
     p {
       margin-bottom: 0;
@@ -304,6 +317,12 @@
       //pagination style
       .adminpanel__pagination {
         text-align: center;
+
+        @include mobile {
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 1.5rem;
+        }
 
         .pagination {
           display: flex;
@@ -469,7 +488,7 @@
         font-weight: 600;
       }
       p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       }
 
       input[type="radio"] {
@@ -523,11 +542,16 @@
     align-items: center;
     justify-content: space-between;
 
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
     .cancel {
       color: $black_4;
       border: none;
       background: none;
       transform: all 0.3s;
+      margin-top: 1rem;
 
       &:hover {
         text-decoration: underline;
@@ -542,6 +566,7 @@
       transition: all 0.3s;
       box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.05);
       border-radius: 0.3rem;
+      margin-top: 1rem;
     }
 
     .submit__btn {

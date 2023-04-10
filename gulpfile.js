@@ -14,6 +14,15 @@ gulp.task("sass", function () {
     .pipe(gulp.dest("./assets/css/"));
 });
 
+// Task to rename and minify your CSS file
+gulp.task("minify-css", function () {
+  return gulp
+    .src("./assets/css/style.css")
+    .pipe(rename("style.min.css"))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest("./assets/css"));
+});
+
 gulp.task("responsive", function () {
   return gulp
     .src("./assets/css/responsive.css")
@@ -38,9 +47,35 @@ gulp.task("slick", function () {
     .pipe(gulp.dest("./assets/css/"));
 });
 
+gulp.task("minify-js", function () {
+  return gulp
+    .src("./assets/js/main.js")
+    .pipe(terser())
+    .pipe(rename("main.min.js"))
+    .pipe(gulp.dest("./assets/js/"));
+});
+
+//build task
+gulp.task(
+  "build",
+  gulp.parallel(
+    "sass",
+    "minify-css",
+    "responsive",
+    "feather",
+    "slick",
+    "minify-js"
+  )
+);
+
 // Watch Task
 gulp.task("watch", function () {
   gulp.watch("./assets/scss/**/*.scss", gulp.series("sass"));
+  gulp.watch(
+    "./assets/css/style.css",
+    { debounceDelay: 500 },
+    gulp.series("minify-css")
+  );
   gulp.watch(
     "./assets/css/responsive.css",
     { debounceDelay: 500 },
@@ -55,5 +90,10 @@ gulp.task("watch", function () {
     "./assets/css/slick.css",
     { debounceDelay: 500 },
     gulp.series("slick")
+  );
+  gulp.watch(
+    "./assets/js/main.js",
+    { debounceDelay: 500 },
+    gulp.series("minify-js")
   );
 });

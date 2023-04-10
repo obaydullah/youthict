@@ -10,14 +10,13 @@
   <link rel="canonical" href="https://youthict.org" />
   <link rel="icon" href="assets/images/favicon.png" type="image/png" alt="Youth ICT | Favicon" />
 
+  <link rel="preload" as="style" href="assets/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'"
+      />
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
   <link rel="stylesheet" href="assets/css/feather.min.css" />
-  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="assets/css/slick.min.css" />
   <link rel="stylesheet" href="assets/css/venobox.min.css" />
-  <link rel="stylesheet" href="assets/css/select2.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.min.css" />
   <link rel="stylesheet" href="assets/css/responsive.min.css" />
 </head>
 
@@ -215,7 +214,7 @@
             <!-- Start Mobile-Menu-Bar -->
             <div class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none">
               <div class="hamberger">
-                <button class="hamberger-button rbt-round-btn">
+                <button class="hamberger-button rbt-round-btn" type="button" aria-labelledby="hamberger button">
                   <i class="feather-menu"></i>
                 </button>
               </div>
@@ -326,12 +325,11 @@
         <div class="row align-items-center">
           <div class="col-lg-5">
             <div class="banner_text">
-              <h6 data-sal="slide-left" class="sal-animate">
+              <h6>
                 গণপ্রজাতন্ত্রী বাংলাদেশ সরকার কর্তৃক অনুমদিত
               </h6>
 
-              <h1 data-sal="zoom-in" data-sal-delay="200" data-sal-duration="700" data-sal-easing="ease"
-                class="sal-animate">
+              <h1>
                 যুব উন্নয়ন <br />
               </h1>
               <h5 class="sub__title">
@@ -349,8 +347,7 @@
                 ব্রাউজ কোর্স
                 <span class="ms-2 angle"><i class="fa fa-angle-down"></i></span>
               </a>
-              <a target="_blank" class="join_btn sal-animate" href="free-seminar.html" data-sal="slide-right"
-                data-sal-delay="300" data-sal-duration="800" data-sal-easing="ease">
+              <a target="_blank" class="join_btn" href="free-seminar.html">
                 জয়েন ফ্রি সেমিনার
               </a>
             </div>
@@ -358,7 +355,7 @@
           <div class="col-lg-7">
             <div class="banner_img">
               <a class="venobox vbox-item" data-autoplay="true" data-vbtype="video" href="https://youtu.be/GogcDtMpgMc">
-                <img class="img-fluid homebanner-thumb video_thumb sal-animate" src="assets/images/top_banner.webp"
+                <img class="img-fluid homebanner-thumb video_thumb" src="assets/images/top_banner.webp"
                   alt="Home Banner| Icon" />
                 <div class="banner_img_overly">
                   <div class="overly_icon">
@@ -793,7 +790,7 @@
         <div class="row">
           <div class="col-12 text-center mx-auto mt-5">
             <div class="text-center">
-              <a href="course.html" class="sal-animate default_btn">All Course</a>
+              <a href="course.html" class="default_btn">All Course</a>
             </div>
           </div>
         </div>
@@ -887,7 +884,7 @@
       <div class="row">
         <div class="col-12 text-center mx-auto">
           <div class="text-center" style="margin-top: 6rem">
-            <a href="./govjobgetters.html" class="sal-animate default_btn">View all job getters</a>
+            <a href="./govjobgetters.html" class="default_btn">View all job getters</a>
           </div>
         </div>
       </div>
@@ -1509,15 +1506,13 @@
   <script src="assets/js/jquery-3.6.3.min.js"></script>
   <script src="assets/js/jquery-migrate-3.4.1.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/slick.min.js" defer></script>
   <script src="assets/js/waypoints.min.js"></script>
   <script src="assets/js/counter-up.min.js"></script>
   <script src="assets/js/venobox.min.js"></script>
-  <script src="assets/js/select2.min.js"></script>
   <script src="assets/js/iconify-icon.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/header.js"></script>
+  <script src="assets/js/main.min.js" defer></script>
+  <script src="assets/js/header.js" defer></script>
 </body>
 
 </html>

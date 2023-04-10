@@ -717,6 +717,8 @@ CSS Index
 .banner_img .homebanner-thumb {
   border-radius: 35px;
   border: 10px solid $white;
+  width: 100%;
+  height: auto;
 }
 .banner_img .plus {
   position: absolute;
@@ -8042,7 +8044,7 @@ ul#menu-footer-menu {
 
   .advertisement__item img {
     width: 100%;
-    height: auto;
+    height: 40rem;
   }
 
   .slick-dots {
@@ -9429,6 +9431,7 @@ marquee {
 .home__testemonial {
   padding-bottom: 0 !important;
 }
+
 // home testemonial end
 
 // importing pages style
