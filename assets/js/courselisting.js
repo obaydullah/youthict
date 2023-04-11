@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".fav__courese").select2();
+  $(".job__role").select2();
   // $(".job__role").select2();
 });
 
