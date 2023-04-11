@@ -1,4 +1,6 @@
 .admin__panel--body {
+  margin-top: 0 !important;
+
   .container {
     @include tablet {
       padding: 0 2rem !important;
@@ -6,6 +8,9 @@
       max-width: 100% !important;
     }
   }
+}
+.rbt-header-wrapper.header-space-betwween.header-sticky.adminpanel-sticky.rbt-sticky {
+  top: 0 !important;
 }
 
 //global style
@@ -27,6 +32,11 @@
 //global style
 
 .admin__panel {
+  margin-top: 6rem;
+
+  @include mobile {
+    margin-top: 4rem;
+  }
   // header part
 
   &--header {
@@ -391,6 +401,7 @@
   visibility: hidden;
   transition: all 0.3s ease-in;
   backdrop-filter: blur(3px);
+  z-index: 999999;
 
   .modal__form {
     border-radius: 0.5rem;

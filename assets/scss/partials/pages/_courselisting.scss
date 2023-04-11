@@ -1,4 +1,6 @@
 .courselisting__body {
+  margin-top: 0 !important;
+
   .container {
     @include tablet {
       padding: 0 2rem !important;
@@ -7,9 +9,15 @@
     }
   }
 }
+.footer__admin {
+  margin-top: 4rem;
+}
+.rbt-header-wrapper.header-space-betwween.header-sticky.course-listing-sticky.rbt-sticky {
+  top: 0 !important;
+}
 
 .course__list {
-  margin: 10rem 0;
+  margin: 6rem 0;
 
   // header style start
   .header {

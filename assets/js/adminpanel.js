@@ -32,20 +32,18 @@ document.addEventListener("click", function (event) {
 let modal = document.querySelector(".create__modal");
 let modalForm = document.querySelector(".modal__form");
 let modalOpen = document.querySelector(".create__new--report");
-let html = document.querySelector("html");
+const scrollbar = document.documentElement.style;
 let modalClose = document.querySelector(".modal__close");
 
 modalOpen.addEventListener("click", function () {
   modal.style.opacity = 1;
   modal.style.visibility = "visible";
   modal.style.overflowY = "scroll";
-  html.style.overflow = "hidden";
 });
 
 modalClose.addEventListener("click", function () {
   modal.style.opacity = 0;
   modal.style.visibility = "hidden";
-  html.style.overflow = "scroll";
 });
 
 document.addEventListener("click", function (e) {
