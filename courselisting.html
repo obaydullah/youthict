@@ -1,85 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Listing</title>
+    <link rel="canonical" href="https://youthict.org" />
+    <link
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+      alt="Youth ICT | Favicon"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="assets/css/bootstrap.min.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href="assets/css/feather.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/" />
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/css/toastify.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Course Listing</title>
-  <link rel="canonical" href="https://youthict.org" />
-  <link rel="icon" href="assets/images/favicon.png" type="image/png" alt="Youth ICT | Favicon" />
-  <link rel="preload" as="style" href="assets/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'"
-      />
-  <link rel="stylesheet" href="assets/css/feather.css" />
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./assets/css/">
-  <link rel="stylesheet" href="./assets/css/select2.min.css">
-  <link rel="stylesheet" href="./assets/css/toastify.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  <body class="courselisting__body body-container rbt-header-sticky">
+    <!-- Start Header -->
+    <!-- Start Header Area -->
+    <header class="rbt-header rbt-header-10">
+      <div class="rbt-sticky-placeholder"></div>
 
-<body class="courselisting__body body-container rbt-header-sticky">
-
-  <!-- Start Header -->
-  <!-- Start Header Area -->
-  <header class="rbt-header rbt-header-10">
-    <div class="rbt-sticky-placeholder"></div>
-
-    <!-- add header-top-gradiant class to add gradiant -->
-    <div
-      class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation">
-      <div class="container">
-        <div class="top-expended-wrapper">
-          <div class="top-expended-inner rbt-header-sec align-items-center">
-            <div class="rbt-header-sec-col rbt-header-left">
-              <div class="rbt-header-content">
-                <!-- Start Header Information List  -->
-                <div class="header-info">
-                  <ul class="rbt-information-list">
-                    <li class="phone">
-                      <!-- add black-text class to make black text  -->
-                      <a href="#"><i class="feather-phone"></i>01771599533</a>
-                    </li>
-                    <li class="email">
-                      <a href="#"><i class="feather-mail"></i>youthictbd@gmail.com</a>
-                    </li>
-                    <li class="verify">
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
-                          viewBox="0 0 512 512">
-                          <path fill="currentColor"
-                            d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2l-45-46.2z" />
-                        </svg>Verify certificate</a>
-                    </li>
-                  </ul>
+      <!-- add header-top-gradiant class to add gradiant -->
+      <div
+        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation"
+      >
+        <div class="container">
+          <div class="top-expended-wrapper">
+            <div class="top-expended-inner rbt-header-sec align-items-center">
+              <div class="rbt-header-sec-col rbt-header-left">
+                <div class="rbt-header-content">
+                  <!-- Start Header Information List  -->
+                  <div class="header-info">
+                    <ul class="rbt-information-list">
+                      <li class="phone">
+                        <!-- add black-text class to make black text  -->
+                        <a href="#"><i class="feather-phone"></i>01771599533</a>
+                      </li>
+                      <li class="email">
+                        <a href="#"
+                          ><i class="feather-mail"></i>youthictbd@gmail.com</a
+                        >
+                      </li>
+                      <li class="verify">
+                        <a href="#"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="512"
+                            height="512"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2l-45-46.2z"
+                            /></svg
+                          >Verify certificate</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- End Header Information List  -->
                 </div>
-                <!-- End Header Information List  -->
               </div>
-            </div>
 
-            <div class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10">
-              <div class="rbt-header-content justify-content-start justify-content-lg-end">
-                <div class="header-info d-none d-xl-block">
-                  <ul class="social-share-transparent">
-                    <li>
-                      <a href="#"><i class="feather-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="feather-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="feather-linkedin"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="feather-instagram"></i></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="rbt-separator d-none d-xl-block"></div>
-                <div class="header-info d-none d-xl-block">
-                  <div class="language">
-                    <span class="en selected">En</span>
-                    <span class="divider">|</span>
-                    <span class="bn">বাং</span>
+              <div
+                class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10"
+              >
+                <div
+                  class="rbt-header-content justify-content-start justify-content-lg-end"
+                >
+                  <div class="header-info d-none d-xl-block">
+                    <ul class="social-share-transparent">
+                      <li>
+                        <a href="#"><i class="feather-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-twitter"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-linkedin"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-instagram"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rbt-separator d-none d-xl-block"></div>
+                  <div class="header-info d-none d-xl-block">
+                    <div class="language">
+                      <span class="en selected">En</span>
+                      <span class="divider">|</span>
+                      <span class="bn">বাং</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -87,699 +110,735 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- End Header Top  -->
+      <!-- End Header Top  -->
 
-    <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
-    <div class="rbt-header-wrapper header-space-betwween header-sticky course-listing-sticky">
-      <div class="container">
-        <div class="mainbar-row rbt-navigation-center align-items-center">
-          <div class="header-left rbt-header-content">
-            <div class="header-info">
-              <div class="logo">
-                <a href="#">
-                  <img src="assets/images/logo.webp" alt="Youth ICT" class="logo__img" />
-                </a>
+      <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
+      <div
+        class="rbt-header-wrapper header-space-betwween header-sticky course-listing-sticky"
+      >
+        <div class="container">
+          <div class="mainbar-row rbt-navigation-center align-items-center">
+            <div class="header-left rbt-header-content">
+              <div class="header-info">
+                <div class="logo">
+                  <a href="#">
+                    <img
+                      src="assets/images/logo.webp"
+                      alt="Youth ICT"
+                      class="logo__img"
+                    />
+                  </a>
+                </div>
+              </div>
 
+              <div class="header-info">
+                <div class="rbt-category-menu-wrapper">
+                  <div class="rbt-category-btn rbt-side-offcanvas-activation">
+                    <div class="rbt-offcanvas-trigger md-size icon">
+                      <span class="d-none d-xl-block">
+                        <i class="feather-grid"></i>
+                      </span>
+                      <i
+                        title="Category"
+                        class="feather-grid d-block d-xl-none"
+                      ></i>
+                    </div>
+                    <span class="category-text d-none d-xl-block">Courses</span>
+                    <iconify-icon
+                      icon="ic:twotone-keyboard-arrow-down"
+                    ></iconify-icon>
+                  </div>
+                  <div class="category-dropdown-menu d-none d-xl-block">
+                    <div class="category-menu-item">
+                      <div class="rbt-vertical-nav">
+                        <ul
+                          class="rbt-vertical-nav-list-wrapper vertical-nav-menu"
+                        >
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Offline</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Online </a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Govt. Job</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Diploma</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Shorthand</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <div
+              class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block"
+            >
+              <nav class="mainmenu-nav">
+                <ul class="mainmenu">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
 
-            <div class="header-info">
-              <div class="rbt-category-menu-wrapper">
-                <div class="rbt-category-btn rbt-side-offcanvas-activation">
-                  <div class="rbt-offcanvas-trigger md-size icon">
-                    <span class="d-none d-xl-block">
-                      <i class="feather-grid"></i>
-                    </span>
-                    <i title="Category" class="feather-grid d-block d-xl-none"></i>
-                  </div>
-                  <span class="category-text d-none d-xl-block">Courses</span>
-                  <iconify-icon icon="ic:twotone-keyboard-arrow-down"></iconify-icon>
+                  <li class="has-dropdown has-menu-child-item">
+                    <a href="#"
+                      >Branch
+                      <i class="feather-chevron-down"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li class="has-dropdown">
+                        <a href="branchapply.html">Apply for Branch</a>
+                        <a href="branch.html">Search for Branch</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="has-dropdown has-menu-child-item">
+                    <a href="#"
+                      >Student
+                      <i class="feather-chevron-down"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li class="has-dropdown">
+                        <a href="studentsapply.html">Apply for Student</a>
+                        <a href="results.html">Student Result</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="govjobgetters.html">Govt. Job getters</a>
+                  </li>
+                  <li>
+                    <a href="gallery.html">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="about.html">About us</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact us</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="header-right">
+              <!-- add (login__white) class with login__btn for white button -->
+              <a
+                class="login__btn d-none d-lg-block d-xl-block d-xxl-block"
+                href="login.html"
+                >Login</a
+              >
+              <!-- Start Mobile-Menu-Bar -->
+              <div
+                class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none"
+              >
+                <div class="hamberger">
+                  <button
+                    class="hamberger-button rbt-round-btn"
+                    type="button"
+                    aria-labelledby="hamberger button"
+                  >
+                    <i class="feather-menu"></i>
+                  </button>
                 </div>
-                <div class="category-dropdown-menu d-none d-xl-block">
-                  <div class="category-menu-item">
-                    <div class="rbt-vertical-nav">
-                      <ul class="rbt-vertical-nav-list-wrapper vertical-nav-menu">
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Offline</a>
-                        </li>
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Online </a>
-                        </li>
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Govt. Job</a>
-                        </li>
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Diploma</a>
-                        </li>
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Shorthand</a>
-                        </li>
+              </div>
+              <!-- End Mobile-Menu-Bar -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile Menu Section -->
+    <div class="popup-mobile-menu">
+      <div class="inner-wrapper">
+        <div class="popup__header">
+          <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo" />
+          <div class="rbt-btn-close">
+            <button class="close-button rbt-round-btn">
+              <i class="feather-x"></i>
+            </button>
+          </div>
+        </div>
+        <nav class="mainmenu-nav">
+          <ul class="mainmenu">
+            <li class="with-megamenu has-menu-child-item">
+              <!-- Start Mega Menu  -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nav-quick-access">
+                    <li>
+                      <a href="index.html"> Home</a>
+                    </li>
+                    <li>
+                      <a href="course.html"> Browse Course</a>
+                    </li>
+
+                    <li>
+                      <div
+                        class="button__box"
+                        onclick="toggleDropdown('branch-dropdown')"
+                      >
+                        <button>Branch</button>
+
+                        <iconify-icon
+                          icon="ic:twotone-keyboard-arrow-right"
+                        ></iconify-icon>
+                      </div>
+
+                      <ul id="branch-dropdown" class="dropdown hide">
+                        <a href="branchapply.html">Apply for Branch</a>
+                        <a href="branch.html">Search Branch</a>
                       </ul>
+                    </li>
+
+                    <li>
+                      <div
+                        class="button__box"
+                        onclick="toggleDropdown('student-dropdown')"
+                      >
+                        <button>Student</button>
+                        <iconify-icon
+                          icon="ic:twotone-keyboard-arrow-right"
+                        ></iconify-icon>
+                      </div>
+
+                      <ul id="student-dropdown" class="dropdown hide">
+                        <a href="branchapply.html">Apply for Student</a>
+                        <a href="branch.html">Student Result</a>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="govjobgetters.html"> Govt. Job getters</a>
+                    </li>
+                    <li>
+                      <a href="gallery.html"> Gallery</a>
+                    </li>
+                    <li>
+                      <a href="about.html"> About Us</a>
+                    </li>
+                    <li>
+                      <a href="contact.html"> Contact us</a>
+                    </li>
+
+                    <div class="footer__btn">
+                      <a class="offcanvas__login--btn" href="login.html"
+                        >Login</a
+                      >
+                    </div>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Mega Menu  -->
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Start Side Vav -->
+
+    <main>
+      <!-- course list view start  -->
+      <div class="course__list">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm 12 co-md- 12 col-lg-9">
+              <section class="header">
+                <h2 class="result">
+                  43 Courses for
+                  <span id="open-modal" class="open__modal">"Golang"</span>
+                </h2>
+
+                <div class="filterby">
+                  <h3 class="filterby">Filter by</h3>
+
+                  <div class="job__role--select">
+                    <span class="new__filter">NEW FILTER</span>
+
+                    <select name="jobrole" id="" class="job__role" name="state">
+                      <option value="">Job Role</option>
+                      <option value="Web Developer">Web Developer</option>
+                      <option value="Graphics Designer">
+                        Graphics Designer
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="dropdown">
+                    <button class="dropdown__others--filter">
+                      Other Filter
+                      <iconify-icon
+                        icon="material-symbols:keyboard-arrow-down-rounded"
+                      ></iconify-icon>
+                    </button>
+                    <div class="dropdown-content">
+                      <div class="dropdown__content--item">
+                        <form>
+                          <div class="type">
+                            <p>Training Type</p>
+                            <div class="form-group">
+                              <input type="checkbox" id="masters" />
+                              <label for="masters">Masters Programe</label>
+                            </div>
+                            <div class="form-group">
+                              <input type="checkbox" id="liveclass" />
+                              <label for="liveclass">Live Class</label>
+                            </div>
+                            <div class="form-group">
+                              <input type="checkbox" id="selfpaced" />
+                              <label for="selfpaced">Self Paced</label>
+                            </div>
+                          </div>
+                          <div class="type">
+                            <p>Batch Type</p>
+                            <div class="form-group">
+                              <input type="checkbox" id="weekend" />
+                              <label for="weekend">Weekend</label>
+                            </div>
+                            <div class="form-group">
+                              <input type="checkbox" id="weekday" />
+                              <label for="weekday">Weekday</label>
+                            </div>
+                          </div>
+                        </form>
+
+                        <div class="button__box">
+                          <button class="apply" type="submit">Apply</button>
+                          <button class="clear">Clear all</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </section>
 
-          </div>
-          <div class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block">
-            <nav class="mainmenu-nav">
-              <ul class="mainmenu">
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-
-                <li class="has-dropdown has-menu-child-item">
-                  <a href="#">Branch
-                    <i class="feather-chevron-down"></i>
-                  </a>
-                  <ul class="submenu">
-                    <li class="has-dropdown">
-                      <a href="branchapply.html">Apply for Branch</a>
-                      <a href="branch.html">Search for Branch</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="has-dropdown has-menu-child-item">
-                  <a href="#">Student
-                    <i class="feather-chevron-down"></i>
-                  </a>
-                  <ul class="submenu">
-                    <li class="has-dropdown">
-                      <a href="studentsapply.html">Apply for Student</a>
-                      <a href="results.html">Student Result</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="govjobgetters.html">Govt. Job getters</a>
-                </li>
-                <li>
-                  <a href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                  <a href="about.html">About us</a>
-                </li>
-                <li>
-                  <a href="contact.html">Contact us</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-
-          <div class="header-right">
-            <!-- add (login__white) class with login__btn for white button -->
-            <a class="login__btn d-none d-lg-block d-xl-block d-xxl-block" href="login.html">Login</a>
-            <!-- Start Mobile-Menu-Bar -->
-            <div class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none">
-              <div class="hamberger">
-                <button class="hamberger-button rbt-round-btn" type="button" aria-labelledby="hamberger button">
-                  <i class="feather-menu"></i>
-                </button>
-              </div>
-            </div>
-            <!-- End Mobile-Menu-Bar -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </header>
-  <!-- Mobile Menu Section -->
-  <div class="popup-mobile-menu">
-    <div class="inner-wrapper">
-      <div class="popup__header">
-        <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo">
-        <div class="rbt-btn-close">
-          <button class="close-button rbt-round-btn">
-            <i class="feather-x"></i>
-          </button>
-        </div>
-      </div>
-      <nav class="mainmenu-nav">
-        <ul class="mainmenu">
-          <li class="with-megamenu has-menu-child-item">
-            <!-- Start Mega Menu  -->
-            <div class="row">
-              <div class="col-lg-12">
-                <ul class="nav-quick-access">
+              <section class="filter__token">
+                <ul>
                   <li>
-                    <a href="index.html"> Home</a>
+                    <span>Live</span
+                    ><iconify-icon icon="ic:outline-close"></iconify-icon>
                   </li>
-                  <li>
-                    <a href="course.html"> Browse Course</a>
-                  </li>
-
-                  <li>
-                    <div class="button__box" onclick="toggleDropdown('branch-dropdown')">
-                      <button>Branch
-                      </button>
-
-                      <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
-                    </div>
-
-                    <ul id="branch-dropdown" class="dropdown hide">
-                      <a href="branchapply.html">Apply for Branch</a>
-                      <a href="branch.html">Search Branch</a>
-                    </ul>
-
-                  </li>
-
-                  <li>
-
-                    <div class="button__box" onclick="toggleDropdown('student-dropdown')">
-                      <button>Student
-                      </button>
-                      <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
-                    </div>
-
-
-                    <ul id="student-dropdown" class="dropdown hide">
-                      <a href="branchapply.html">Apply for Student</a>
-                      <a href="branch.html">Student Result</a>
-                    </ul>
-
-                  </li>
-
-
-
-
-                  <li>
-                    <a href="govjobgetters.html"> Govt. Job getters</a>
-                  </li>
-                  <li>
-                    <a href="gallery.html"> Gallery</a>
-                  </li>
-                  <li>
-                    <a href="about.html"> About Us</a>
-                  </li>
-                  <li>
-                    <a href="contact.html"> Contact us</a>
-                  </li>
-
-                  <div class="footer__btn">
-                    <a class="offcanvas__login--btn" href="login.html">Login</a>
-                  </div>
-
-
-
                 </ul>
 
+                <a href="#" class="clear">Clear all</a>
+              </section>
 
-              </div>
-            </div>
-            <!-- End Mega Menu  -->
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <!-- Start Side Vav -->
+              <section class="job__role--token">
+                <a href="#">All Result</a>
+                <a href="#">View course for Data Scientist Role (5)</a>
+                <a href="#">View course for Software Developer Role (8) </a>
+              </section>
 
+              <section class="table__list--area">
+                <!-- single course  -->
+                <a href="#" class="course__single masters__programe">
+                  <div class="img__box">
+                    <img
+                      src="./assets/images/course/pythonmasters.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="course__info">
+                    <h3 class="title">
+                      Python Master Program <span>Masters Program</span>
+                    </h3>
 
-  <main>
-    <!-- course list view start  -->
-    <div class="course__list">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm 12 co-md- 12 col-lg-9">
-            <section class="header">
-              <h2 class="result">43 Courses for <span id="open-modal" class="open__modal">"Golang"</span></h2>
+                    <ul>
+                      <li>Python Certification Training Course</li>
+                      <li>Python Machine Learning Certification Training</li>
+                      <li>Natural Language Processing with Python</li>
+                    </ul>
 
-              <div class="filterby">
-                <h3 class="filterby">Filter by</h3>
-
-
-                <div class="job__role--select">
-                  <span class="new__filter">NEW FILTER</span>
-
-                  <select name="jobrole" id="" class="job__role" name="state">
-                    <option value="">Job Role</option>
-                    <option value="Web Developer">Web Developer</option>
-                    <option value="Graphics Designer">Graphics Designer</option>
-
-                  </select>
-                </div>
-
-                <div class="dropdown">
-                  <button class="dropdown__others--filter">Other Filter <iconify-icon
-                      icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon></button>
-                  <div class="dropdown-content">
-                    <div class="dropdown__content--item">
-
-                      <form>
-                        <div class="type">
-                          <p>Training Type</p>
-                          <div class="form-group">
-                            <input type="checkbox" id="masters">
-                            <label for="masters">Masters Programe</label>
-                          </div>
-                          <div class="form-group">
-                            <input type="checkbox" id="liveclass">
-                            <label for="liveclass">Live Class</label>
-                          </div>
-                          <div class="form-group">
-                            <input type="checkbox" id="selfpaced">
-                            <label for="selfpaced">Self Paced</label>
-                          </div>
-                        </div>
-                        <div class="type">
-                          <p>Batch Type</p>
-                          <div class="form-group">
-                            <input type="checkbox" id="weekend">
-                            <label for="weekend">Weekend</label>
-                          </div>
-                          <div class="form-group">
-                            <input type="checkbox" id="weekday">
-                            <label for="weekday">Weekday</label>
-                          </div>
-                        </div>
-                      </form>
-
-
-                      <div class="button__box">
-                        <button class="apply" type="submit">Apply</button>
-                        <button class="clear">Clear all</button>
+                    <div class="course__details--info">
+                      <div class="course__details--info--single">
+                        <h6>Course</h6>
+                        <h2 class="count">7</h2>
+                      </div>
+                      <div class="course__details--info--single">
+                        <h6>Hours</h6>
+                        <h2 class="count">200</h2>
+                      </div>
+                      <div class="course__details--info--single">
+                        <h6>Learners</h6>
+                        <h2 class="count">8k</h2>
                       </div>
                     </div>
 
+                    <p class="more__courses">
+                      4 more courses under the masters programe
+                    </p>
+
+                    <div class="ratings">
+                      <div class="icon">
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                      </div>
+                      <h3>4.5 <span>(3200)</span></h3>
+                    </div>
                   </div>
+
+                  <div class="course__details">
+                    <div class="ratings">
+                      <div class="icon">
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                      </div>
+                      <h3>4.5 <span>(3200)</span></h3>
+                    </div>
+
+                    <div class="course__details--info">
+                      <div class="course__details--info--single">
+                        <h6>Course</h6>
+                        <h2 class="count">7</h2>
+                      </div>
+                      <div class="course__details--info--single">
+                        <h6>Hours</h6>
+                        <h2 class="count">200</h2>
+                      </div>
+                      <div class="course__details--info--single">
+                        <h6>Learners</h6>
+                        <h2 class="count">8k</h2>
+                      </div>
+                    </div>
+
+                    <div class="button__area">
+                      <iconify-icon icon="mdi:cards-heart"></iconify-icon>
+                      <button>View Details</button>
+                    </div>
+                  </div>
+
+                  <div class="course__tooltip">
+                    <p class="normal">
+                      86% course completion rate
+                      <iconify-icon
+                        icon="clarity:success-standard-solid"
+                      ></iconify-icon>
+                    </p>
+                    <p class="small">Next Batch</p>
+                    <p class="normal">In 22 days - 22 April</p>
+                  </div>
+                </a>
+
+                <a href="#" class="course__single">
+                  <div class="img__box">
+                    <img src="./assets/images/course/python.svg" alt="" />
+                  </div>
+                  <div class="course__info">
+                    <h3 class="title">Python Certified Training Course</h3>
+                    <div class="sub__title">
+                      <span>
+                        <iconify-icon icon="mdi:user"></iconify-icon> 43k
+                        Learners</span
+                      >
+                      <span>
+                        <iconify-icon icon="mdi:calendar-weekend"></iconify-icon
+                        >Weekend</span
+                      >
+                      <span>
+                        <iconify-icon
+                          icon="material-symbols:live-tv-sharp"
+                        ></iconify-icon
+                        >Live Class</span
+                      >
+                    </div>
+                    <ul>
+                      <li>Python Certification Training Course</li>
+                      <li>Python Machine Learning Certification Training</li>
+                      <li>Natural Language Processing with Python</li>
+                    </ul>
+
+                    <div class="ratings">
+                      <div class="icon">
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                      </div>
+                      <h3>4.5 <span>(3200)</span></h3>
+                    </div>
+                  </div>
+
+                  <div class="course__details">
+                    <div class="ratings">
+                      <div class="icon">
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                      </div>
+                      <h3>4.5 <span>(3200)</span></h3>
+                    </div>
+
+                    <div class="button__area">
+                      <iconify-icon icon="mdi:cards-heart"></iconify-icon>
+                      <button>View Details</button>
+                    </div>
+                  </div>
+
+                  <div class="course__tooltip">
+                    <p class="normal">
+                      86% course completion rate
+                      <iconify-icon
+                        icon="clarity:success-standard-solid"
+                      ></iconify-icon>
+                    </p>
+                    <p class="small">Next Batch</p>
+                    <p class="normal">In 22 days - 22 April</p>
+                  </div>
+                </a>
+              </section>
+
+              <div class="pagination__area">
+                <div class="pagination">
+                  <a href="#" class="prev"><span> &laquo; </span></a>
+                  <a href="#" class="page-number active">1</a>
+                  <a href="#" class="page-number">2</a>
+                  <a href="#" class="page-number">3</a>
+                  <a href="#" class="next"> <span> &raquo; </span></a>
                 </div>
-
-              </div>
-            </section>
-
-
-            <section class="filter__token">
-              <ul>
-                <li><span>Live</span><iconify-icon icon="ic:outline-close"></iconify-icon>
-                </li>
-              </ul>
-
-              <a href="#" class="clear">Clear all</a>
-            </section>
-
-            <section class="job__role--token">
-              <a href="#">All Result</a>
-              <a href="#">View course for Data Scientist Role (5)</a>
-              <a href="#">View course for Software Developer Role (8) </a>
-            </section>
-
-            <section class="table__list--area">
-
-              <!-- single course  -->
-              <a href="#" class="course__single masters__programe">
-                <div class="img__box">
-                  <img src="./assets/images/course/pythonmasters.svg" alt="">
-                </div>
-                <div class="course__info">
-                  <h3 class="title">Python Master Program <span>Masters Program</span></h3>
-
-                  <ul>
-                    <li>Python Certification Training Course</li>
-                    <li>Python Machine Learning Certification Training</li>
-                    <li>Natural Language Processing with Python</li>
-                  </ul>
-
-                  <div class="course__details--info">
-                    <div class="course__details--info--single">
-                      <h6>Course</h6>
-                      <h2 class="count">7</h2>
-                    </div>
-                    <div class="course__details--info--single">
-                      <h6>Hours</h6>
-                      <h2 class="count">200</h2>
-                    </div>
-                    <div class="course__details--info--single">
-                      <h6>Learners</h6>
-                      <h2 class="count">8k</h2>
-                    </div>
-
-                  </div>
-
-                  <p class="more__courses">4 more courses under the masters programe</p>
-
-                  <div class="ratings">
-                    <div class="icon">
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                    </div>
-                    <h3>4.5 <span>(3200)</span></h3>
-                  </div>
-
-                </div>
-
-                <div class="course__details">
-                  <div class="ratings">
-                    <div class="icon">
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                    </div>
-                    <h3>4.5 <span>(3200)</span></h3>
-                  </div>
-
-                  <div class="course__details--info">
-                    <div class="course__details--info--single">
-                      <h6>Course</h6>
-                      <h2 class="count">7</h2>
-                    </div>
-                    <div class="course__details--info--single">
-                      <h6>Hours</h6>
-                      <h2 class="count">200</h2>
-                    </div>
-                    <div class="course__details--info--single">
-                      <h6>Learners</h6>
-                      <h2 class="count">8k</h2>
-                    </div>
-
-                  </div>
-
-                  <div class="button__area">
-                    <iconify-icon icon="mdi:cards-heart"></iconify-icon>
-                    <button>View Details</button>
-                  </div>
-                </div>
-
-                <div class="course__tooltip">
-                  <p class="normal">86% course completion rate <iconify-icon
-                      icon="clarity:success-standard-solid"></iconify-icon></p>
-                  <p class="small">Next Batch</p>
-                  <p class="normal">In 22 days - 22 April</p>
-                </div>
-              </a>
-
-
-              <a href="#" class="course__single">
-                <div class="img__box">
-                  <img src="./assets/images/course/python.svg" alt="">
-                </div>
-                <div class="course__info">
-                  <h3 class="title">Python Certified Training Course</h3>
-                  <div class="sub__title">
-                    <span> <iconify-icon icon="mdi:user"></iconify-icon> 43k Learners</span>
-                    <span> <iconify-icon icon="mdi:calendar-weekend"></iconify-icon>Weekend</span>
-                    <span> <iconify-icon icon="material-symbols:live-tv-sharp"></iconify-icon>Live Class</span>
-                  </div>
-                  <ul>
-                    <li>Python Certification Training Course</li>
-                    <li>Python Machine Learning Certification Training</li>
-                    <li>Natural Language Processing with Python</li>
-                  </ul>
-
-                  <div class="ratings">
-                    <div class="icon">
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                    </div>
-                    <h3>4.5 <span>(3200)</span></h3>
-                  </div>
-
-                </div>
-
-                <div class="course__details">
-                  <div class="ratings">
-                    <div class="icon">
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                      <iconify-icon icon="ic:round-star"></iconify-icon>
-                    </div>
-                    <h3>4.5 <span>(3200)</span></h3>
-                  </div>
-
-                  <div class="button__area">
-                    <iconify-icon icon="mdi:cards-heart"></iconify-icon>
-                    <button>View Details</button>
-                  </div>
-                </div>
-
-                <div class="course__tooltip">
-                  <p class="normal">86% course completion rate <iconify-icon
-                      icon="clarity:success-standard-solid"></iconify-icon></p>
-                  <p class="small">Next Batch</p>
-                  <p class="normal">In 22 days - 22 April</p>
-                </div>
-              </a>
-
-
-
-            </section>
-
-
-            <div class="pagination__area">
-              <div class="pagination">
-                <a href="#" class="prev"><span>
-                    &laquo;
-                  </span></a>
-                <a href="#" class="page-number active">1</a>
-                <a href="#" class="page-number">2</a>
-                <a href="#" class="page-number">3</a>
-                <a href="#" class="next"> <span>
-                    &raquo;
-                  </span></a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- course list view end  -->
+    </main>
 
-
-
-
-    </div>
-    <!-- course list view end  -->
-
-
-  </main>
-
-  <!-- Listing modal start  -->
-  <div class="listing__modal">
-    <div class="modal__area--overlay"></div>
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-lg-6">
-
-          <div class="modal__form">
-            <form action="" class="modal__submit--form">
-
-
-              <div class="title__area">
-                <h4 class="title">Lets get started</h4>
-                <iconify-icon icon="ic:outline-close" class="modal__close--btn"></iconify-icon>
-              </div>
-
-
-              <div class="content">
-                <p>
-                  <label for="phone">Phone</label>
-                  <input type="number" name="phone" id="phone" placeholder="Enter your phone number" />
-                </p>
-
-                <p>
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" placeholder="Enter your email" />
-
-                </p>
-
-                <p>
-                  <label for="course">Course</label>
-                  <input type="text" name="course" id="course" placeholder="type your course name" />
-                </p>
-
-
-                <p>
-                  <label for="favcourse">Select your favourite course</label>
-                  <select name="state" id="favcourse" class="fav__courese">
-                    <option value="">Favourite course</option>
-                    <option value="Web Design">Web Design</option>
-                    <option value="Web Development">Web Development</option>
-                  </select>
-                </p>
-              </div>
-
-
-
-              <div class="button__box">
-                <button>Ok</button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Listing modal end  -->
-
-  <!--  warning modal start  -->
-  <div class="warning__modal">
-    <div class="modal__area--overlay"></div>
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-lg-4">
-
-          <div class="modal__form">
-            <form action="" class="modal__submit--form">
-
-
-              <div class="title__area">
-                <h4 class="title">Warning Modal</h4>
-                <iconify-icon icon="ic:outline-close" class="warning__close--btn"></iconify-icon>
-              </div>
-
-
-              <div class="content">
-                <p> "Deleting this data will remove it from your account and it will no longer be accessible."</p>
-              </div>
-
-
-
-              <div class="button__box">
-                <button>Ok</button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Listing modal end  -->
-
-  <!--  Success modal start  -->
-  <div class="success__modal">
-    <div class="modal__area--overlay"></div>
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-lg-4">
-
-          <div class="modal__form">
-            <form action="" class="modal__submit--form">
-
-
-              <div class="title__area">
-                <h4 class="title">Success Modal</h4>
-                <iconify-icon icon="ic:outline-close" class="success__close--btn"></iconify-icon>
-              </div>
-
-
-              <div class="content">
-                <p>"Congratulations! Your password has been reset successfully."</p>
-              </div>
-
-
-
-              <div class="button__box">
-                <button>Ok</button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Success modal start  -->
-
-  <!--  Alert modal start  -->
-  <div class="alert__modal">
-    <div class="modal__area--overlay"></div>
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-lg-4">
-
-          <div class="modal__form">
-            <form action="" class="modal__submit--form">
-
-
-              <div class="title__area">
-                <h4 class="title">Alert Modal</h4>
-                <iconify-icon icon="ic:outline-close" class="alert__close--btn"></iconify-icon>
-              </div>
-
-
-              <div class="content">
-                <p>"Warning: Your session is about to expire. Please save your work and log in again."</p>
-              </div>
-
-
-
-              <div class="button__box">
-                <button>Ok</button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Alert modal start  -->
-
-  <!-- //toastify -->
-  <div class="container" style="margin-bottom: 10rem;">
-    <button onclick="toast('top','left', 'This is a dynamic toast', 3000)">top left</button>
-    <button onclick="toast('top', 'right', 'This is a dynamic toast', 5000)">top right</button>
-    <button onclick="toast('bottom', 'left', 'This is dynamic toast', 2000)">bottom left</button>
-    <button onclick="toast('bottom', 'right', 'this is dynamic toast', 1000)">bottom right</button>
-  </div>
-
-  <div class="container">
-    <button type="button" id="warning__open">Warning Modal</button>
-    <button type="button" id="success__open">Success Modal</button>
-    <button type="button" id="alert__open">Alert Modal</button>
-  </div>
-  <!-- //toastify -->
-
-
-  <!-- Start Footer -->
-  <footer id="rs-footer" class="rs-footer footer-style-1 has-footer-contact footer__admin">
-
-
-    <div class="footer-bottom login__footer">
+    <!-- Listing modal start  -->
+    <div class="listing__modal">
+      <div class="modal__area--overlay"></div>
       <div class="container">
-        <div class="footer-bottom-inner">
-          <div class="copyright">
-            <p>
-              &copy; 2023. All Rights Reserved By: youthict.org || Developed
-              By:
-              <a href="http://www.mateors.com">MATEORS DOT COM </a>
-            </p>
-          </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-6">
+            <div class="modal__form">
+              <form action="" class="modal__submit--form">
+                <div class="title__area">
+                  <h4 class="title">Lets get started</h4>
+                  <iconify-icon
+                    icon="ic:outline-close"
+                    class="modal__close--btn"
+                  ></iconify-icon>
+                </div>
 
+                <div class="content">
+                  <p>
+                    <label for="phone">Phone</label>
+                    <input
+                      type="number"
+                      name="phone"
+                      id="phone"
+                      placeholder="Enter your phone number"
+                    />
+                  </p>
+
+                  <p>
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your email"
+                    />
+                  </p>
+
+                  <p>
+                    <label for="course">Course</label>
+                    <input
+                      type="text"
+                      name="course"
+                      id="course"
+                      placeholder="type your course name"
+                    />
+                  </p>
+
+                  <p>
+                    <label for="favcourse">Select your favourite course</label>
+                    <select name="state" id="favcourse" class="fav__courese">
+                      <option value="">Favourite course</option>
+                      <option value="Web Design">Web Design</option>
+                      <option value="Web Development">Web Development</option>
+                    </select>
+                  </p>
+                </div>
+
+                <div class="button__box">
+                  <button>Ok</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- End Footer -->
+    <!-- Listing modal end  -->
 
+    <!--  warning modal start  -->
+    <div class="warning__modal">
+      <div class="modal__area--overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-4">
+            <div class="modal__form">
+              <form action="" class="modal__submit--form">
+                <div class="title__area">
+                  <h4 class="title">Warning Modal</h4>
+                  <iconify-icon
+                    icon="ic:outline-close"
+                    class="warning__close--btn"
+                  ></iconify-icon>
+                </div>
 
-  <script src="./assets/js/jquery-3.6.3.min.js"></script>
-  <script src="./assets/js/slick.min.js"></script>
-  <script src="./assets/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/js/iconify-icon.min.js"></script>
-  <script src="./assets/js/select2.min.js"></script>
-  <script src="./assets/js/toastify-js.js"></script>
-  <script src="./assets/js/courselisting.js"></script>
-  <script src="./assets/js/header.js"></script>
+                <div class="content">
+                  <p>
+                    "Deleting this data will remove it from your account and it
+                    will no longer be accessible."
+                  </p>
+                </div>
 
+                <div class="button__box">
+                  <button>Ok</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Listing modal end  -->
 
+    <!--  Success modal start  -->
+    <div class="success__modal">
+      <div class="modal__area--overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-4">
+            <div class="modal__form">
+              <form action="" class="modal__submit--form">
+                <div class="title__area">
+                  <h4 class="title">Success Modal</h4>
+                  <iconify-icon
+                    icon="ic:outline-close"
+                    class="success__close--btn"
+                  ></iconify-icon>
+                </div>
 
+                <div class="content">
+                  <p>
+                    "Congratulations! Your password has been reset
+                    successfully."
+                  </p>
+                </div>
 
-</body>
+                <div class="button__box">
+                  <button>Ok</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Success modal start  -->
 
+    <!--  Alert modal start  -->
+    <div class="alert__modal">
+      <div class="modal__area--overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-4">
+            <div class="modal__form">
+              <form action="" class="modal__submit--form">
+                <div class="title__area">
+                  <h4 class="title">Alert Modal</h4>
+                  <iconify-icon
+                    icon="ic:outline-close"
+                    class="alert__close--btn"
+                  ></iconify-icon>
+                </div>
+
+                <div class="content">
+                  <p>
+                    "Warning: Your session is about to expire. Please save your
+                    work and log in again."
+                  </p>
+                </div>
+
+                <div class="button__box">
+                  <button>Ok</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Alert modal start  -->
+
+    <!-- //toastify -->
+    <div class="container" style="margin-bottom: 10rem">
+      <button onclick="toast('top','left', 'This is a dynamic toast', 3000)">
+        top left
+      </button>
+      <button onclick="toast('top', 'right', 'This is a dynamic toast', 5000)">
+        top right
+      </button>
+      <button onclick="toast('bottom', 'left', 'This is dynamic toast', 2000)">
+        bottom left
+      </button>
+      <button onclick="toast('bottom', 'right', 'this is dynamic toast', 1000)">
+        bottom right
+      </button>
+    </div>
+
+    <div class="container">
+      <button type="button" id="warning__open">Warning Modal</button>
+      <button type="button" id="success__open">Success Modal</button>
+      <button type="button" id="alert__open">Alert Modal</button>
+    </div>
+    <!-- //toastify -->
+
+    <!-- Start Footer -->
+    <footer
+      id="rs-footer"
+      class="rs-footer footer-style-1 has-footer-contact footer__admin"
+    >
+      <div class="footer-bottom login__footer">
+        <div class="container">
+          <div class="footer-bottom-inner">
+            <div class="copyright">
+              <p>
+                &copy; 2023. All Rights Reserved By: youthict.org || Developed
+                By:
+                <a href="http://www.mateors.com">MATEORS DOT COM </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/iconify-icon.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/toastify-js.js"></script>
+    <script src="assets/js/courselisting.js"></script>
+    <script src="assets/js/header.js"></script>
+  </body>
 </html>
