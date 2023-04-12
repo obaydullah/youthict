@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.Title}}</title>
+    <link rel="canonical" href="https://youthict.org" />
+    <link
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+      alt="Youth ICT | Favicon"
+    />
+
+    {{block "linkstyle" .}}
+        <link
+        rel="preload"
+        as="style"
+        href="assets/css/bootstrap.min.css"
+        onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <link rel="stylesheet" href="assets/css/feather.css" />
+        <link rel="stylesheet" href="assets/css/slick.css" />
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    {{end}}
+
+    {{block "style" .}}
+
+    {{end}}
+
+  </head>
+
+  <body class="course__details--body body-container rbt-header-sticky">
+
+    {{block "top_section" .}}
+        <!-- Start Header -->
+        <header class="rbt-header rbt-header-10">
+            <div class="rbt-sticky-placeholder"></div>
+
+            <!-- Start Header Top   -->
+            <div class="notice__area">
+            <div class="container">
+                <div class="notice__area--inner">
+                <h2>Notice</h2>
+                <marquee behavior="scroll" direction="left" onMouseOver="this.stop()" onMouseOut="this.start()">
+                    পরীক্ষার নোটিশঃ সকল আঞ্চলিক পরিচালকবৃন্দকে অবহিত করা যাচ্ছে যে,
+                    জুলাই-ডিসেম্বর ২০২২ এবং অক্টোবর-ডিসেম্বর ২০২২ সেশনে ছয় মাস ও তিন
+                    মাস মেয়াদী বেসিক
+                </marquee>
+                </div>
+            </div>
+            </div>
+
+            <!-- add header-top-gradiant class to add gradiant -->
+            <div
+            class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation">
+            <div class="container">
+                <div class="top-expended-wrapper">
+                <div class="top-expended-inner rbt-header-sec align-items-center">
+                    <div class="rbt-header-sec-col rbt-header-left">
+                    <div class="rbt-header-content">
+                        <!-- Start Header Information List  -->
+                        <div class="header-info">
+                        <ul class="rbt-information-list">
+                            <li class="phone">
+                            <!-- add black-text class to make black text  -->
+                            <a href="#"><i class="feather-phone"></i>01771599533</a>
+                            </li>
+                            <li class="email">
+                            <a href="#"><i class="feather-mail"></i>youthictbd@gmail.com</a>
+                            </li>
+                            <li class="verify">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2l-45-46.2z" />
+                                </svg>Verify certificate</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <!-- End Header Information List  -->
+                    </div>
+                    </div>
+
+                    <div class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10">
+                    <div class="rbt-header-content justify-content-start justify-content-lg-end">
+                        <div class="header-info d-none d-xl-block">
+                        <ul class="social-share-transparent">
+                            <li>
+                            <a href="#"><i class="feather-facebook"></i></a>
+                            </li>
+                            <li>
+                            <a href="#"><i class="feather-twitter"></i></a>
+                            </li>
+                            <li>
+                            <a href="#"><i class="feather-linkedin"></i></a>
+                            </li>
+                            <li>
+                            <a href="#"><i class="feather-instagram"></i></a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="rbt-separator d-none d-xl-block"></div>
+                        <div class="header-info d-none d-xl-block">
+                        <div class="language">
+                            <span class="en selected">En</span>
+                            <span class="divider">|</span>
+                            <span class="bn">বাং</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- End Header Top  -->
+
+            <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
+            <div class="rbt-header-wrapper header-space-betwween header-sticky">
+            <div class="container">
+                <div class="mainbar-row rbt-navigation-center align-items-center">
+                <div class="header-left rbt-header-content">
+                    <div class="header-info">
+                    <div class="logo">
+                        <a href="/">
+                        <img src="assets/images/logo.webp" alt="Youth ICT" class="logo__img" />
+                        </a>
+
+                    </div>
+                    </div>
+
+                    <div class="header-info">
+                    <div class="rbt-category-menu-wrapper">
+                        <div class="rbt-category-btn rbt-side-offcanvas-activation">
+                        <div class="rbt-offcanvas-trigger md-size icon">
+                            <span class="d-none d-xl-block">
+                            <i class="feather-grid"></i>
+                            </span>
+                            <i title="Category" class="feather-grid d-block d-xl-none"></i>
+                        </div>
+                        <span class="category-text d-none d-xl-block">Courses</span>
+                        <iconify-icon icon="ic:twotone-keyboard-arrow-down"></iconify-icon>
+                        </div>
+                        <div class="category-dropdown-menu d-none d-xl-block">
+                        <div class="category-menu-item">
+                            <div class="rbt-vertical-nav">
+                            <ul class="rbt-vertical-nav-list-wrapper vertical-nav-menu">
+                                <li class="vertical-nav-item">
+                                <a href="/course">Offline</a>
+                                </li>
+                                <li class="vertical-nav-item">
+                                <a href="/course">Online </a>
+                                </li>
+                                <li class="vertical-nav-item">
+                                <a href="/course">Diploma</a>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                <div class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block">
+                    <nav class="mainmenu-nav">
+                    <ul class="mainmenu">
+                        <li>
+                        <a href="/">Home</a>
+                        </li>
+
+                        <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Branch
+                            <i class="feather-chevron-down"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="has-dropdown">
+                            <a href="/branchapply">Apply for Branch</a>
+                            <a href="/searchbranch">Search for Branch</a>
+                            </li>
+                        </ul>
+                        </li>
+
+                        <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Student
+                            <i class="feather-chevron-down"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="has-dropdown">
+                            <a href="/studentapply">Apply for Student</a>
+                            <a href="/result">Student Result</a>
+                            </li>
+                        </ul>
+                        </li>
+
+                        <li>
+                        <a href="/jobgetters">Govt. Job getters</a>
+                        </li>
+                        <li>
+                        <a href="/gallery">Gallery</a>
+                        </li>
+                        <li>
+                        <a href="/aboutus">About us</a>
+                        </li>
+                        <li>
+                        <a href="/contactus">Contact us</a>
+                        </li>
+                    </ul>
+                    </nav>
+                </div>
+
+
+                <div class="header-right">
+                    <!-- add (login__white) class with login__btn for white button -->
+                    <a class="login__btn d-none d-lg-block d-xl-block d-xxl-block" href="/login">Login</a>
+                    <!-- Start Mobile-Menu-Bar -->
+                    <div class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none">
+                    <div class="hamberger">
+                        <button class="hamberger-button rbt-round-btn" type="button" aria-labelledby="hamberger button">
+                        <i class="feather-menu"></i>
+                        </button>
+                    </div>
+                    </div>
+                    <!-- End Mobile-Menu-Bar -->
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </header>
+        <!-- End Header --> 
+
+        <!-- Mobile Menu Section -->
+        <div class="popup-mobile-menu">
+            <div class="inner-wrapper">
+            <div class="popup__header">
+                <a href="/"> 
+                    <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo">
+                </a>
+                <div class="rbt-btn-close">
+                <button class="close-button rbt-round-btn">
+                    <i class="feather-x"></i>
+                </button>
+                </div>
+            </div>
+            <nav class="mainmenu-nav">
+                <ul class="mainmenu">
+                <li class="with-megamenu has-menu-child-item">
+                    <!-- Start Mega Menu  -->
+                    <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="nav-quick-access">
+                        <li>
+                            <a href="/"> Home</a>
+                        </li>
+                        <li>
+                            <a href="/course"> Browse Course</a>
+                        </li>
+
+                        <li>
+                            <div class="button__box" onclick="toggleDropdown('branch-dropdown')">
+                            <button>Branch
+                            </button>
+
+                            <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
+                            </div>
+
+                            <ul id="branch-dropdown" class="dropdown hide">
+                            <a href="/branchapply">Apply for Branch</a>
+                            <a href="/searchbranch">Search Branch</a>
+                            </ul>
+
+                        </li>
+
+                        <li>
+
+                            <div class="button__box" onclick="toggleDropdown('student-dropdown')">
+                            <button>Student
+                            </button>
+                            <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
+                            </div>
+
+
+                            <ul id="student-dropdown" class="dropdown hide">
+                            <a href="/studentapply">Apply for Student</a>
+                            <a href="/result">Student Result</a>
+                            </ul>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a href="/jobgetters"> Govt. Job getters</a>
+                        </li>
+                        <li>
+                            <a href="/gallery"> Gallery</a>
+                        </li>
+                        <li>
+                            <a href="/aboutus"> About Us</a>
+                        </li>
+                        <li>
+                            <a href="/contactus"> Contact us</a>
+                        </li>
+
+                        <div class="footer__btn">
+                            <a class="offcanvas__login--btn" href="/login">Login</a>
+                        </div>
+
+                        </ul>
+
+
+                    </div>
+                    </div>
+                    <!-- End Mega Menu  -->
+                </li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+        <!-- Mobile Menu Section end -->
+    {{end}}
+
+
+
+    <main>
+    {{block "section_coureAdvertisement" .}}
+        <!-- advertisement image  -->
+        <div class="advertisement__img">
+            <div class="container">
+            <div class="advertisement__img--inner">
+                <img src="./assets/images/coursedetails/add.jpg" alt="" />
+            </div>
+            </div>
+        </div>
+        <!-- advertisement image  -->
+    {{end}}
+
+      <div class="container">
+        <div class="row">
+          <div
+            class="left-column col-md-8 col-lg-8 order-2 order-sm-2 order-md-1 order-lg-1"
+          >
+          
+            {{block "section_courseDetailsHeader" .}}
+                <!-- course details header  -->
+                <section class="course__details--header">
+                <div class="course__details--header--inner">
+                    <h2 class="course__title">Advance Wordpress Development</h2>
+                    <p class="course__header--info">
+                    Web Design, Theme Development. WordPress is one of the most
+                    popular CMS right now. Start your learning with us and build
+                    your career as a Wordpress developer.
+                    </p>
+                </div>
+                </section>
+                <!-- course details header  -->
+            {{end}}
+
+            {{block "course_instructor" .}}
+                <!-- //course instructor -->
+                <section class="instructor">
+                <h2 class="title">Meet your Instructor</h2>
+                <div class="instructor__info--box--area">
+                    <div class="instructor__info--box">
+                    <img src="./assets/images/about/teams.jpg" alt="" />
+                    <div class="instructor__info">
+                        <h3>Mohammad Rizwan</h3>
+                        <p>MSc (English), University of Oxford (UK)</p>
+                        <p>BA, MA (English), University of Dhaka;</p>
+                        <p class="designation">Wordpress developer at Themium</p>
+                    </div>
+                    </div>
+
+                    <div class="instructor__info--box">
+                    <img src="./assets/images/about/teams.jpg" alt="" />
+                    <div class="instructor__info">
+                        <h3>Mohammad Rizwan</h3>
+                        <p>MSc (English), University of Oxford (UK)</p>
+                        <p>BA, MA (English), University of Dhaka;</p>
+                        <p class="designation">Wordpress developer at Themium</p>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <!-- //course instructor -->
+            {{end}}
+
+
+            {{block "section_whatYouLearn" .}}
+                <!-- what you learn  -->
+                <section class="what__you--learn">
+                <h2>What you will learn from this course</h2>
+
+                <div class="what__you--learn--info">
+                    <div class="info__left">
+                    <p>
+                        <iconify-icon icon="mdi:tick"></iconify-icon> Installing and
+                        configuring WordPress: This includes setting up a hosting
+                        account, installing WordPress, and configuring basic
+                        settings.
+                    </p>
+                    <p>
+                        <iconify-icon icon="mdi:tick"></iconify-icon>Customizing
+                        WordPress: This includes choosing and installing themes,
+                        customizing layouts and menus, and using widgets and
+                        plugins.
+                    </p>
+                    <p>
+                        <iconify-icon icon="mdi:tick"></iconify-icon> Creating and
+                        managing content: This includes creating and publishing
+                        posts and pages, adding images and media, and organizing
+                        content with categories and tags.
+                    </p>
+                    <p>
+                        <iconify-icon icon="mdi:tick"></iconify-icon>WordPress
+                        maintenance and security: This includes updating WordPress,
+                        plugins, and themes, backing up your site, and using
+                        security plugins to protect against hacks and malware.
+                    </p>
+                    </div>
+                    <div class="info__right">
+                    <p>
+                        <iconify-icon icon="mdi:tick"></iconify-icon>SEO for
+                        WordPress: This includes optimizing content for search
+                        engines, using plugins for SEO, and understanding key SEO
+                        concepts.
+                    </p>
+                    <p>
+                        <iconify-icon icon="mdi:tick"></iconify-icon>E-commerce with
+                        WordPress: This includes setting up an online store using
+                        WooCommerce or other e-commerce plugins, managing products
+                        and orders, and integrating payment gateways.
+                    </p>
+                    <p>
+                        <iconify-icon icon="mdi:tick"></iconify-icon>Understanding
+                        WordPress development: This includes learning basic HTML,
+                        CSS, and PHP, and understanding the WordPress template
+                        hierarchy, actions, and filters, which can help you create
+                        custom themes and plugins.
+                    </p>
+                    </div>
+                </div>
+                </section>
+                <!-- what you learn  -->
+            {{end}}
+
+            {{block "section_aboutCourse" .}}
+                <!-- about course start  -->
+                <section class="about__course">
+                <h2 class="about__course--title">About this course</h2>
+                <div class="accordion">
+                    <div>
+                    <input
+                        type="checkbox"
+                        name="example_accordion"
+                        id="section1"
+                        class="accordion__input"
+                    />
+                    <label for="section1" class="accordion__label"
+                        >About Wordpress development course</label
+                    >
+                    <div class="accordion__content">
+                        <p>
+                        WordPress Development Course is a comprehensive training
+                        program designed to teach individuals how to build and
+                        customize websites using WordPress, a popular content
+                        management system (CMS). The course covers topics such as
+                        installation and setup, theme development, plugin
+                        development, customization of templates and styles, and
+                        optimization of website performance. <br />
+                        <br />The course is suitable for beginners who want to
+                        learn WordPress development from scratch, as well as for
+                        experienced developers who want to enhance their skills
+                        and knowledge. By the end of the course, students will
+                        have the skills to create professional-quality websites
+                        using WordPress.
+                        </p>
+                    </div>
+                    </div>
+                    <div>
+                    <input
+                        type="checkbox"
+                        name="example_accordion"
+                        id="section2"
+                        class="accordion__input"
+                    />
+                    <label for="section2" class="accordion__label"
+                        >Who is this course for</label
+                    >
+                    <div class="accordion__content">
+                        <div class="accordion-body">
+                        <div class="who__isthis--coursefor">
+                            <ul>
+                            <li>
+                                <span>Anyone who wants to build a website: </span
+                                >WordPress is a popular CMS that powers over 40% of
+                                all websites on the internet. Learning how to use it
+                                can help individuals build their own websites or
+                                improve existing ones.
+                            </li>
+                            <li>
+                                <span>Web designers: </span>WordPress development
+                                skills can enhance a web designer's capabilities by
+                                allowing them to create custom WordPress themes and
+                                templates, and to implement more complex website
+                                features.
+                            </li>
+                            <li>
+                                <span> Developers and programmers:</span> Learning
+                                WordPress development can open up new opportunities
+                                for developers and programmers, as it is a
+                                widely-used platform with many job opportunities.
+                            </li>
+                            <li>
+                                <span> Business owners and entrepreneurs:</span>
+                                Having WordPress development skills can save
+                                business owners and entrepreneurs money by allowing
+                                them to build and maintain their own websites,
+                                rather than hiring someone else to do it.
+                            </li>
+                            <li>
+                                <span>Freelancers and digital nomads:</span>
+                                WordPress development is a popular freelance niche
+                                that can provide a steady stream of work, especially
+                                for those who enjoy building and customizing
+                                websites.
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div>
+                    <input
+                        type="checkbox"
+                        name="example_accordion"
+                        id="section3"
+                        class="accordion__input"
+                    />
+                    <label for="section3" class="accordion__label"
+                        >What you will get with this course</label
+                    >
+                    <div class="accordion__content">
+                        <div class="accordion-body">
+                        <div class="what__will--yougetwith--course">
+                            <ul>
+                            <li>
+                                <span> Interactive online platform:</span> The
+                                course will likely be delivered through an
+                                interactive online platform, which will allow you to
+                                learn at your own pace and ask questions to the
+                                instructor.
+                            </li>
+                            <li>
+                                <span>Access to learning materials: </span>You will
+                                likely have access to a variety of learning
+                                materials, including videos, tutorials, exercises,
+                                and quizzes.
+                            </li>
+                            <li>
+                                <span>Instructor support: </span>You can expect to
+                                receive support from the instructor throughout the
+                                course, who will be available to answer your
+                                questions and provide feedback on your work.
+                            </li>
+                            <li>
+                                <span>Community support:</span> Many courses have a
+                                community forum where students can interact with
+                                each other and share tips and advice.
+                            </li>
+                            <li>
+                                <span> Certificate of completion:</span> After
+                                completing the course, you will likely receive a
+                                certificate of completion, which can be added to
+                                your portfolio or resume to showcase your new
+                                skills.
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <!-- about course end -->
+            {{end}}
+
+
+            {{block "section_courseContent" .}}
+                <!-- course content start  -->
+                <section class="course__content">
+                <h2 class="about__course--title">Course Content Preview</h2>
+                <div class="accordion">
+                    <div>
+                    <input
+                        type="checkbox"
+                        name="example_accordion"
+                        id="about1"
+                        class="accordion__input"
+                    />
+                    <label for="about1" class="accordion__label"
+                        >Wordpress Basic
+
+                        <div class="label__icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="15"
+                            height="12"
+                            viewBox="0 0 15 12"
+                        >
+                            <g data-name="Group 10752">
+                            <g data-name="Group 10750">
+                                <path
+                                fill="#5a6484"
+                                data-name="Path 24560"
+                                d="M57.953,366.747h-15v2h15Z"
+                                transform="translate(-43 -367)"
+                                ></path>
+                                <path
+                                fill="#5a6484"
+                                data-name="Rectangle 3451"
+                                transform="translate(0 5)"
+                                d="M0 0H11V2H0z"
+                                ></path>
+                                <path
+                                fill="#5a6484"
+                                data-name="Rectangle 3452"
+                                transform="translate(0 10)"
+                                d="M0 0H9V2H0z"
+                                ></path>
+                            </g>
+                            </g>
+                        </svg>
+
+                        25 topics
+                        </div>
+                    </label>
+                    <div class="accordion__content">
+                        <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-lg-7">
+                            <div class="topics">
+                                <h4 class="topics__title">Topics</h4>
+                                <ul>
+                                <li>
+                                    <div class="list__inner">
+                                    Introduction to Wordpress
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list__inner">
+                                    Wordpress Dashboard Introduction
+                                    </div>
+                                </li>
+                                <li>Child theme</li>
+                                <li>Wordpress settings</li>
+                                <li>Wordpress widget</li>
+                                <li>Working with Wordpress Media</li>
+                                <li>How to Make a post in wordpress</li>
+                                </ul>
+                            </div>
+                            </div>
+
+                            <div class="col-lg-5">
+                            <div class="skills__you--learn">
+                                <h4 class="topics__title">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    class="topics__title--icon"
+                                >
+                                    <path
+                                    fill="currentColor"
+                                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9Z"
+                                    />
+                                </svg>
+                                Skills you learn
+                                </h4>
+                                <ul>
+                                <li>
+                                    Hands on experience on How to customize
+                                    wordpress settings
+                                </li>
+                                <li>Make a Post on Wordpress</li>
+                                <li>You can install child theme</li>
+                                <li>
+                                    You can add widget in your wordpress website
+                                </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div>
+                    <input
+                        type="checkbox"
+                        name="example_accordion"
+                        id="about2"
+                        class="accordion__input"
+                    />
+                    <label for="about2" class="accordion__label"
+                        >Wordpress Advance
+
+                        <div class="label__icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="15"
+                            height="12"
+                            viewBox="0 0 15 12"
+                        >
+                            <g data-name="Group 10752">
+                            <g data-name="Group 10750">
+                                <path
+                                fill="#5a6484"
+                                data-name="Path 24560"
+                                d="M57.953,366.747h-15v2h15Z"
+                                transform="translate(-43 -367)"
+                                ></path>
+                                <path
+                                fill="#5a6484"
+                                data-name="Rectangle 3451"
+                                transform="translate(0 5)"
+                                d="M0 0H11V2H0z"
+                                ></path>
+                                <path
+                                fill="#5a6484"
+                                data-name="Rectangle 3452"
+                                transform="translate(0 10)"
+                                d="M0 0H9V2H0z"
+                                ></path>
+                            </g>
+                            </g>
+                        </svg>
+
+                        5 topics
+                        </div>
+                    </label>
+                    <div class="accordion__content">
+                        <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-lg-7">
+                            <div class="topics">
+                                <h4 class="topics__title">Topics</h4>
+                                <ul>
+                                <li>
+                                    <div class="list__inner">
+                                    Introduction to Wordpress
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list__inner">
+                                    Wordpress Dashboard Introduction
+                                    </div>
+                                </li>
+                                <li>Child theme</li>
+                                <li>Wordpress settings</li>
+                                <li>Wordpress widget</li>
+                                <li>Working with Wordpress Media</li>
+                                <li>How to Make a post in wordpress</li>
+                                </ul>
+                            </div>
+                            </div>
+
+                            <div class="col-lg-5">
+                            <div class="skills__you--learn">
+                                <h4 class="topics__title">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    class="topics__title--icon"
+                                >
+                                    <path
+                                    fill="currentColor"
+                                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9Z"
+                                    />
+                                </svg>
+                                Skills you learn
+                                </h4>
+                                <ul>
+                                <li>
+                                    Hands on experience on How to customize
+                                    wordpress settings
+                                </li>
+                                <li>Make a Post on Wordpress</li>
+                                <li>You can install child theme</li>
+                                <li>
+                                    You can add widget in your wordpress website
+                                </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <!-- course content end  -->
+            {{end}}
+
+            
+            {{block "section_whatWeNeedTodoClass" .}}
+                <!-- what need to do class start -->
+                <section class="what__need--todoclass">
+                <h2 class="title">All you need to the class</h2>
+                <div class="what__need--todoclass--info">
+                    <p>
+                    <i class="fa fa-check" aria-hidden="true"></i> Internet
+                    connection
+                    </p>
+                    <p>
+                    <i class="fa fa-check" aria-hidden="true"></i> Smartphone or
+                    PC
+                    </p>
+                </div>
+                </section>
+                <!-- what need to do class end -->
+            {{end}}
+
+
+            {{block "section_coursePayment" .}}
+                <!-- how to give payment start -->
+                <section class="payment">
+                <h2 class="title">How to give payment</h2>
+                <p class="payment__modal">
+                    <span>Watch the video</span> to know how to give payment
+                </p>
+                </section>
+                <!-- how to give payment end -->
+            {{end}}
+
+
+            {{block "section_courseCertificate" .}}
+                <!-- certificate start  -->
+                <section class="certificate">
+                <h2 class="title">Course Certificate</h2>
+
+                <div class="certificate__inner">
+                    <h4 class="course__completion--text">
+                    On successful completion of the course you have a certificate
+                    which you
+                    </h4>
+                    <p class="list">
+                    <iconify-icon icon="mdi:tick"></iconify-icon> Can add to your
+                    CV
+                    </p>
+                    <p class="list">
+                    <iconify-icon icon="mdi:tick"></iconify-icon>
+                    You can share directly on your LinkedIn profile
+                    </p>
+                    <p class="list">
+                    <iconify-icon icon="mdi:tick"></iconify-icon> You can share on
+                    Facebook with one click
+                    </p>
+                    <img
+                    src="./assets/images/coursedetails/certificate.jpg"
+                    alt=""
+                    />
+                </div>
+                </section>
+                <!-- certificate end  -->
+            {{end}}
+
+
+            {{block "section_courseStudentTestemonial" .}}
+                <!-- student testetmonial start  -->
+                <section class="student__testemonial">
+                <h2 class="student__testemonial--title">What our Student says</h2>
+
+                <div class="student__testemonial--slider">
+                    <div class="student__testemonial--single">
+                    <i class="fa fa-quote-left quote" aria-hidden="true"></i>
+                    <p class="text">
+                        Undoubtedly Facebook Marketing Course is one the best
+                        courses I have done so far and surprisingly it has A-Z
+                        information one may need in this sector! Adding to that the
+                        Certificate I have received is just not only impressive but
+                        added a value in my CV.
+                    </p>
+                    <div class="footer">
+                        <img src="./assets/images/branch/branch.png" alt="" />
+
+                        <div class="info">
+                        <h4 class="name">Shawon Islam</h4>
+                        <p class="designation">freelancer</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="student__testemonial--single">
+                    <i class="fa fa-quote-left quote" aria-hidden="true"></i>
+                    <p class="text">
+                        Undoubtedly Facebook Marketing Course is one the best
+                        courses I have done so far and surprisingly it has A-Z
+                        information one may need in this sector! Adding to that the
+                        Certificate I have received is just not only impressive but
+                        added a value in my CV.
+                    </p>
+                    <div class="footer">
+                        <img src="./assets/images/branch/branch.png" alt="" />
+
+                        <div class="info">
+                        <h4 class="name">Shawon Islam</h4>
+                        <p class="designation">freelancer</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="student__testemonial--single">
+                    <i class="fa fa-quote-left quote" aria-hidden="true"></i>
+                    <p class="text">
+                        Undoubtedly Facebook Marketing Course is one the best
+                        courses I have done so far and surprisingly it has A-Z
+                        information one may need in this sector! Adding to that the
+                        Certificate I have received is just not only impressive but
+                        added a value in my CV.
+                    </p>
+                    <div class="footer">
+                        <img src="./assets/images/branch/branch.png" alt="" />
+
+                        <div class="info">
+                        <h4 class="name">Shawon Islam</h4>
+                        <p class="designation">freelancer</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <!-- student testetmonial end -->
+            {{end}}
+
+
+            {{block "section_faq" .}}
+                <!-- faq start  -->
+                <section class="frequently__asked--question">
+                <h2 class="title">Frequently Asked Question</h2>
+
+                <div class="accordion">
+                    <div>
+                    <input
+                        type="checkbox"
+                        name="example_accordion"
+                        id="faq1"
+                        class="accordion__input"
+                    />
+                    <label for="faq1" class="accordion__label"
+                        >How to give payment</label
+                    >
+                    <div class="accordion__content">
+                        <p>
+                        WordPress Development Course is a comprehensive training
+                        program designed to teach individuals how to build and
+                        customize websites using WordPress, a popular content
+                        management system (CMS). The course covers topics such as
+                        installation and setup, theme development, plugin
+                        development, customization of templates and styles, and
+                        optimization of website performance. <br />
+                        <br />The course is suitable for beginners who want to
+                        learn WordPress development from scratch, as well as for
+                        experienced developers who want to enhance their skills
+                        and knowledge. By the end of the course, students will
+                        have the skills to create professional-quality websites
+                        using WordPress.
+                        </p>
+                    </div>
+                    </div>
+                    <div>
+                    <input
+                        type="checkbox"
+                        name="example_accordion"
+                        id="faq2"
+                        class="accordion__input"
+                    />
+                    <label for="faq2" class="accordion__label"
+                        >How to Study</label
+                    >
+                    <div class="accordion__content">
+                        <p>
+                        WordPress Development Course is a comprehensive training
+                        program designed to teach individuals how to build and
+                        customize websites using WordPress, a popular content
+                        management system (CMS). The course covers topics such as
+                        installation and setup, theme development, plugin
+                        development, customization of templates and styles, and
+                        optimization of website performance. <br />
+                        <br />The course is suitable for beginners who want to
+                        learn WordPress development from scratch, as well as for
+                        experienced developers who want to enhance their skills
+                        and knowledge. By the end of the course, students will
+                        have the skills to create professional-quality websites
+                        using WordPress.
+                        </p>
+                    </div>
+                    </div>
+                    <div>
+                    <input
+                        type="checkbox"
+                        name="example_accordion"
+                        id="faq3"
+                        class="accordion__input"
+                    />
+                    <label for="faq3" class="accordion__label"
+                        >How to get certificate</label
+                    >
+                    <div class="accordion__content">
+                        <p>
+                        WordPress Development Course is a comprehensive training
+                        program designed to teach individuals how to build and
+                        customize websites using WordPress, a popular content
+                        management system (CMS). The course covers topics such as
+                        installation and setup, theme development, plugin
+                        development, customization of templates and styles, and
+                        optimization of website performance. <br />
+                        <br />The course is suitable for beginners who want to
+                        learn WordPress development from scratch, as well as for
+                        experienced developers who want to enhance their skills
+                        and knowledge. By the end of the course, students will
+                        have the skills to create professional-quality websites
+                        using WordPress.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <!-- faq end  -->
+            {{end}}
+
+
+            {{block "section_courseEnrollmentForm" .}}
+                <!-- course details enrollment form start -->
+                <section class="course__details--enrollment--form">
+                <div class="course__details--enrollment--form--inner">
+                    <div class="title">Like the curriculum? Get started</div>
+
+                    <form action="">
+                    <div class="form__group">
+                        <div class="form__field">
+                        <label for="phone">Phone</label>
+                        <input
+                            type="number"
+                            name="phone"
+                            id="phone"
+                            placeholder="phone"
+                        />
+                        </div>
+                        <div class="form__field">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="email"
+                        />
+                        </div>
+                        <button type="submit" class="default_btn">
+                        Enroll now
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                </section>
+                <!-- course detail enfollment form end -->
+            {{end}}
+          </div>
+
+          <!-- course right section  -->
+          <div
+            class="right-columm col-md-4 col-lg-4 order-1 order-sm-1 order-md-2 order-lg-2"
+          >
+
+          {{block "section_courseDetailsCard" .}}
+                <!-- course details card -->
+                <div class="course__details--card">
+                <div class="course__details--img--box course__modal">
+                    <img
+                    src="./assets/images/course/advance-wordpress.jpg"
+                    alt=""
+                    />
+                    <div class="video-play--icon">
+                    <i class="fa fa-play video-play--icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="course__content">
+                    <h2>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                        fill="currentColor"
+                        d="M18.09 10.5V9h-8.5V4.5A1.5 1.5 0 0 0 8.09 3a1.5 1.5 0 0 0-1.5 1.5A1.5 1.5 0 0 0 8.09 6v3h-3v1.5h3v6.2c0 2.36 1.91 4.27 4.25 4.3c2.34-.04 4.2-1.96 4.16-4.3c0-1.59-.75-3.09-2-4.08a4.08 4.08 0 0 0-.7-.47c-.22-.1-.46-.15-.7-.15c-.71 0-1.36.39-1.71 1c-.19.3-.29.65-.29 1c.01 1.1.9 2 2.01 2c.62 0 1.2-.31 1.58-.8c.21.47.31.98.31 1.5c.04 1.5-1.14 2.75-2.66 2.8c-1.53 0-2.76-1.27-2.75-2.8v-6.2h8.5Z"
+                        />
+                    </svg>
+                    6000.00
+                    </h2>
+                    <button class="course__enroll--btn">Enroll Now</button>
+                    <p>
+                    <span class="icon">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                        <path
+                            fill="currentColor"
+                            d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9A3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42c-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3a3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3a3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.536 5.536 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13v-1.75M0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9c-.59.68-.95 1.62-.95 2.65V20H0m24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65c2.56.34 4.45 1.51 4.45 2.9V20Z"
+                        />
+                        </svg> </span
+                    >Total Student
+                    <span class="lavel">1200</span>
+                    </p>
+                    <p>
+                    <span class="icon">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                        <path
+                            fill="currentColor"
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.71L11 12.41V7h2v4.59l3.71 3.71l-1.42 1.41z"
+                        />
+                        </svg> </span
+                    >Course Duration
+                    <span class="lavel">10 hour</span>
+                    </p>
+
+                    <p>
+                    <span class="icon">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                        <path
+                            fill="currentColor"
+                            d="M7 4v7l2.5-1.5L12 11V4Zm11 19q-2.075 0-3.537-1.462Q13 20.075 13 18q0-2.075 1.463-3.538Q15.925 13 18 13t3.538 1.462Q23 15.925 23 18q0 2.075-1.462 3.538Q20.075 23 18 23Zm-1.25-2.5l4-2.5l-4-2.5ZM11 18q0 1.075.338 2.087q.337 1.013.912 1.913H5q-.825 0-1.413-.587Q3 20.825 3 20V4q0-.825.587-1.413Q4.175 2 5 2h12q.825 0 1.413.587Q19 3.175 19 4v7.05q-.25-.025-.5-.038Q18.25 11 18 11q-2.925 0-4.962 2.037Q11 15.075 11 18Z"
+                        />
+                        </svg> </span
+                    >Lesson
+                    <span class="lavel">95</span>
+                    </p>
+                    <p>
+                    <span class="icon">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                        <path
+                            fill="currentColor"
+                            d="M0 3h18v2c-1.1 0-2 .9-2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V7c0-1.1-.9-2-2-2V3m4 6v1h3V9H4m0 2v1h3v-1H4m3 5v-1H4v1h3m2-2v-1H4v1h5m0-6V7H4v1h5m12.5 7.5V17H20v-1.5h1.5m-2-5H18V10c0-1.66 1.34-3 3-3s3 1.34 3 3c0 .97-.5 1.88-1.29 2.41l-.3.19c-.57.4-.91 1.02-.91 1.7v.2H20v-.2c0-1.19.6-2.3 1.59-2.95l.29-.19c.39-.26.62-.69.62-1.16c0-.82-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.5Z"
+                        />
+                        </svg> </span
+                    >Quizes
+                    <span class="lavel">20</span>
+                    </p>
+                    <p>
+                    <span class="icon">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                        <g fill="none" fill-rule="evenodd">
+                            <path
+                            d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                            />
+                            <path
+                            fill="currentColor"
+                            d="M19 11a3 3 0 0 1 2 5.236v4.955a.5.5 0 0 1-.724.447L19 21l-1.276.638a.5.5 0 0 1-.724-.447v-4.955A3 3 0 0 1 19 11Zm1-7a2 2 0 0 1 2 2v4a5 5 0 0 0-7 7v3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16ZM8 13H6a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2Zm4-4H6a1 1 0 0 0-.117 1.993L6 11h6a1 1 0 0 0 .117-1.993L12 9Z"
+                            />
+                        </g>
+                        </svg> </span
+                    >Certificate
+                    <span class="lavel">Yes</span>
+                    </p>
+                </div>
+                </div>
+          {{end}}
+
+
+        {{block "section_careerCounselingForm" .}}
+            <div class="career__counceling">
+              <div class="header">
+                <h4>Free Career Conceling</h4>
+                <p>We are happy to help you 24/7</p>
+              </div>
+
+              <div class="body">
+                <form action="">
+                  <div class="form__group">
+                    <label for="careeremail">Your email</label>
+                    <input
+                      type="email"
+                      name="careeremail"
+                      id="careeremail"
+                      placeholder="Your email address"
+                    />
+                  </div>
+                  <div class="form__group">
+                    <label for="careerphone">Your phone</label>
+                    <input
+                      type="number"
+                      name="careerphone"
+                      id="careerphone"
+                      placeholder="Your Mobile Number"
+                    />
+                  </div>
+                  <p class="note">
+                    Please Note : By continuing and signing in, you agree to
+                    Edureka’s <span>Terms & Conditions</span> and
+                    <span>Privacy Policy.</span>
+                  </p>
+
+                  <button type="submit" class="default_btn">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- course right section -->
+
+        {{end}}
+        </div>
+      </div>
+    </main>
+
+    <!-- course details end  -->
+
+
+    {{block "section_courseDetailsModal" .}}
+        <!-- Modal Start -->
+        <div class="modal__area">
+        <div class="video__modal--area">
+            <div class="modal__area--overlay"></div>
+
+            <div class="container">
+            <div class="video__area--inner">
+                <i class="fa fa-times modal__close--btn" aria-hidden="true"></i>
+
+                <div class="video__area">
+                <!-- video -->
+                </div>
+
+                <div class="modal__form">
+                <h4 class="title">Join our community of <br />5000 learners</h4>
+                <img src="./assets/images/branch/branch.png" alt="" />
+                <p class="question">Have Question ? Ask our expert</p>
+                <h2 class="phone">Call +88 01963 851464</h2>
+                <p class="or">OR</p>
+
+                <p class="request__callback">Request a Callback</p>
+                <form action="" class="modal__submit--form">
+                    <input
+                    type="number"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    />
+                    <button type="submit">Submit</button>
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    {{end}}
+
+
+    {{block "footer" .}}
+    <!-- Start Footer -->
+    <footer
+      id="rs-footer"
+      class="rs-footer footer-style-1 has-footer-contact pt-5"
+    >
+      <!-- adding footer widget -->
+      <div class="container contact-container">
+        <div class="footer-contact-desc">
+          <div class="row">
+            <div class="col-md-4">
+              <section id="text-15" class="widget widget_text">
+                <div class="textwidget">
+                  <div class="contact-inner">
+                    <h3 class="contact-title address-icon">Address:</h3>
+                    <p class="contact-desc">
+                      Head Office <br />
+                      House# 01, Road# 02 <br />
+                      Dhanmondi, Dhaka
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-4">
+              <section id="text-16" class="widget widget_text">
+                <div class="textwidget">
+                  <div class="contact-inner">
+                    <h3 class="contact-title phone-icon">Phone Number</h3>
+                    <p class="contact-desc">01771599533</p>
+                    <p class="contact-desc">01977500800</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-4">
+              <section id="text-17" class="widget widget_text">
+                <div class="textwidget">
+                  <div class="contact-inner">
+                    <h3 class="contact-title mail-icon">Web Address</h3>
+                    <p class="contact-desc">
+                      Email: <a href="#">youthictbd@gmail.com</a><br />
+                      Web: <a href="https://youthict.org">www.youthict.org</a>
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer top start here -->
+      <div class="footer-top">
+        <div class="container">
+          <div class="row g-5 justify-content-center">
+            <div class="col-sm-12 col-md-3 col-lg-4">
+              <div class="about-widget">
+                <a href="#"
+                  ><img
+                    class="img-fluid"
+                    src="assets/images/home/footerlogo.png"
+                    alt="Home"
+                /></a>
+                <div class="footer-share">
+                  <ul>
+                    <li>
+                      <a href="#" target="_blank"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="# " target="_blank"
+                        ><i class="fa fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="# " target="_blank"
+                        ><i class="fa fa-pinterest-p"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="# " target="_blank"
+                        ><i class="fa fa-google-plus-square"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-4 col-md-3 col-lg-3">
+              <section id="nav_menu-7" class="widget widget_nav_menu">
+                <h3 class="footer-title">Quick Links</h3>
+                <div class="menu-footer-menu-container">
+                  <ul id="menu-footer-menu" class="menu">
+                    <li class="menu-item">
+                      <a href="/">Career</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Join as a Teacher</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Privacy Polity</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Affiliate</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Refund Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col col-sm-4 col-md-3 col-lg-3">
+              <section id="nav_menu-7" class="widget widget_nav_menu">
+                <h3 class="footer-title">Course</h3>
+                <div class="menu-footer-menu-container">
+                  <ul id="menu-footer-menu" class="menu">
+                    <li class="menu-item">
+                      <a href="/"> Web development</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Graphics Design</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Diploma</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Digital Marketing</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Wordpress Development</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2">
+              <section id="nav_menu-7" class="widget widget_nav_menu">
+                <h3 class="footer-title">Others</h3>
+                <div class="menu-footer-menu-container">
+                  <ul id="menu-footer-menu" class="menu">
+                    <li class="menu-item">
+                      <a href="/"> About us </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Contact us </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Privacy Policy</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/">Refund Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer top start here -->
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-inner">
+            <div class="copyright">
+              <p>
+                &copy; 2023. All Rights Reserved By: youthict.org || Developed
+                By:
+                <a href="http://www.mateors.com">MATEORS DOT COM </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    {{end}}
+
+
+    {{block "scriptsrc" .}}
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/iconify-icon.min.js"></script>
+        <script src="assets/js/courseDetails.js"></script>
+        <script src="assets/js/header.js"></script>
+    {{end}}
+
+
+  {{block "script" .}}
+
+  {{end}}
+
+  </body>
+</html>

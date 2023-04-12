@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.Title}}</title>
+    <link rel="canonical" href="https://youthict.org" />
+    <link
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+      alt="Youth ICT | Favicon"
+    />
+
+    {{block "linkstyle" .}}
+        <link rel="preload" as="style" href="assets/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/css/feather.min.css" />
+        <link rel="stylesheet" href="assets/css/style.min.css" />
+    {{end}}
+
+   {{block "style" .}}
+        <style>
+
+        </style>
+   {{end}} 
+
+  </head>
+
+  <body class="result__body body-container rbt-header-sticky">
+
+    {{block "top_section" .}}
+        <!-- Start Header -->
+        <header class="rbt-header rbt-header-10">
+            <div class="rbt-sticky-placeholder"></div>
+
+            <!-- Start Header Top   -->
+            <div class="notice__area">
+            <div class="container">
+                <div class="notice__area--inner">
+                <h2>Notice</h2>
+                <marquee behavior="scroll" direction="left" onMouseOver="this.stop()" onMouseOut="this.start()">
+                    পরীক্ষার নোটিশঃ সকল আঞ্চলিক পরিচালকবৃন্দকে অবহিত করা যাচ্ছে যে,
+                    জুলাই-ডিসেম্বর ২০২২ এবং অক্টোবর-ডিসেম্বর ২০২২ সেশনে ছয় মাস ও তিন
+                    মাস মেয়াদী বেসিক
+                </marquee>
+                </div>
+            </div>
+            </div>
+
+            <!-- add header-top-gradiant class to add gradiant -->
+            <div
+            class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation">
+            <div class="container">
+                <div class="top-expended-wrapper">
+                <div class="top-expended-inner rbt-header-sec align-items-center">
+                    <div class="rbt-header-sec-col rbt-header-left">
+                    <div class="rbt-header-content">
+                        <!-- Start Header Information List  -->
+                        <div class="header-info">
+                        <ul class="rbt-information-list">
+                            <li class="phone">
+                            <!-- add black-text class to make black text  -->
+                            <a href="#"><i class="feather-phone"></i>01771599533</a>
+                            </li>
+                            <li class="email">
+                            <a href="#"><i class="feather-mail"></i>youthictbd@gmail.com</a>
+                            </li>
+                            <li class="verify">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2l-45-46.2z" />
+                                </svg>Verify certificate</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <!-- End Header Information List  -->
+                    </div>
+                    </div>
+
+                    <div class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10">
+                    <div class="rbt-header-content justify-content-start justify-content-lg-end">
+                        <div class="header-info d-none d-xl-block">
+                        <ul class="social-share-transparent">
+                            <li>
+                            <a href="#"><i class="feather-facebook"></i></a>
+                            </li>
+                            <li>
+                            <a href="#"><i class="feather-twitter"></i></a>
+                            </li>
+                            <li>
+                            <a href="#"><i class="feather-linkedin"></i></a>
+                            </li>
+                            <li>
+                            <a href="#"><i class="feather-instagram"></i></a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="rbt-separator d-none d-xl-block"></div>
+                        <div class="header-info d-none d-xl-block">
+                        <div class="language">
+                            <span class="en selected">En</span>
+                            <span class="divider">|</span>
+                            <span class="bn">বাং</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- End Header Top  -->
+
+            <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
+            <div class="rbt-header-wrapper header-space-betwween header-sticky">
+            <div class="container">
+                <div class="mainbar-row rbt-navigation-center align-items-center">
+                <div class="header-left rbt-header-content">
+                    <div class="header-info">
+                    <div class="logo">
+                        <a href="/">
+                        <img src="assets/images/logo.webp" alt="Youth ICT" class="logo__img" />
+                        </a>
+
+                    </div>
+                    </div>
+
+                    <div class="header-info">
+                    <div class="rbt-category-menu-wrapper">
+                        <div class="rbt-category-btn rbt-side-offcanvas-activation">
+                        <div class="rbt-offcanvas-trigger md-size icon">
+                            <span class="d-none d-xl-block">
+                            <i class="feather-grid"></i>
+                            </span>
+                            <i title="Category" class="feather-grid d-block d-xl-none"></i>
+                        </div>
+                        <span class="category-text d-none d-xl-block">Courses</span>
+                        <iconify-icon icon="ic:twotone-keyboard-arrow-down"></iconify-icon>
+                        </div>
+                        <div class="category-dropdown-menu d-none d-xl-block">
+                        <div class="category-menu-item">
+                            <div class="rbt-vertical-nav">
+                            <ul class="rbt-vertical-nav-list-wrapper vertical-nav-menu">
+                                <li class="vertical-nav-item">
+                                <a href="/course">Offline</a>
+                                </li>
+                                <li class="vertical-nav-item">
+                                <a href="/course">Online </a>
+                                </li>
+                                <li class="vertical-nav-item">
+                                <a href="/course">Diploma</a>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                <div class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block">
+                    <nav class="mainmenu-nav">
+                    <ul class="mainmenu">
+                        <li>
+                        <a href="/">Home</a>
+                        </li>
+
+                        <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Branch
+                            <i class="feather-chevron-down"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="has-dropdown">
+                            <a href="/branchapply">Apply for Branch</a>
+                            <a href="/searchbranch">Search for Branch</a>
+                            </li>
+                        </ul>
+                        </li>
+
+                        <li class="has-dropdown has-menu-child-item">
+                        <a href="#">Student
+                            <i class="feather-chevron-down"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="has-dropdown">
+                            <a href="/studentapply">Apply for Student</a>
+                            <a href="/result">Student Result</a>
+                            </li>
+                        </ul>
+                        </li>
+
+                        <li>
+                        <a href="/jobgetters">Govt. Job getters</a>
+                        </li>
+                        <li>
+                        <a href="/gallery">Gallery</a>
+                        </li>
+                        <li>
+                        <a href="/aboutus">About us</a>
+                        </li>
+                        <li>
+                        <a href="/contactus">Contact us</a>
+                        </li>
+                    </ul>
+                    </nav>
+                </div>
+
+
+                <div class="header-right">
+                    <!-- add (login__white) class with login__btn for white button -->
+                    <a class="login__btn d-none d-lg-block d-xl-block d-xxl-block" href="/login">Login</a>
+                    <!-- Start Mobile-Menu-Bar -->
+                    <div class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none">
+                    <div class="hamberger">
+                        <button class="hamberger-button rbt-round-btn" type="button" aria-labelledby="hamberger button">
+                        <i class="feather-menu"></i>
+                        </button>
+                    </div>
+                    </div>
+                    <!-- End Mobile-Menu-Bar -->
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </header>
+        <!-- End Header --> 
+
+        <!-- Mobile Menu Section -->
+        <div class="popup-mobile-menu">
+            <div class="inner-wrapper">
+            <div class="popup__header">
+                <a href="/"> 
+                    <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo">
+                </a>
+                <div class="rbt-btn-close">
+                <button class="close-button rbt-round-btn">
+                    <i class="feather-x"></i>
+                </button>
+                </div>
+            </div>
+            <nav class="mainmenu-nav">
+                <ul class="mainmenu">
+                <li class="with-megamenu has-menu-child-item">
+                    <!-- Start Mega Menu  -->
+                    <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="nav-quick-access">
+                        <li>
+                            <a href="/"> Home</a>
+                        </li>
+                        <li>
+                            <a href="/course"> Browse Course</a>
+                        </li>
+
+                        <li>
+                            <div class="button__box" onclick="toggleDropdown('branch-dropdown')">
+                            <button>Branch
+                            </button>
+
+                            <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
+                            </div>
+
+                            <ul id="branch-dropdown" class="dropdown hide">
+                            <a href="/branchapply">Apply for Branch</a>
+                            <a href="/searchbranch">Search Branch</a>
+                            </ul>
+
+                        </li>
+
+                        <li>
+
+                            <div class="button__box" onclick="toggleDropdown('student-dropdown')">
+                            <button>Student
+                            </button>
+                            <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
+                            </div>
+
+
+                            <ul id="student-dropdown" class="dropdown hide">
+                            <a href="/studentapply">Apply for Student</a>
+                            <a href="/result">Student Result</a>
+                            </ul>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a href="/jobgetters"> Govt. Job getters</a>
+                        </li>
+                        <li>
+                            <a href="/gallery"> Gallery</a>
+                        </li>
+                        <li>
+                            <a href="/aboutus"> About Us</a>
+                        </li>
+                        <li>
+                            <a href="/contactus"> Contact us</a>
+                        </li>
+
+                        <div class="footer__btn">
+                            <a class="offcanvas__login--btn" href="/login">Login</a>
+                        </div>
+
+                        </ul>
+
+
+                    </div>
+                    </div>
+                    <!-- End Mega Menu  -->
+                </li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+        <!-- Mobile Menu Section end -->
+    {{end}}
+   
+
+    <main>
+    {{block "section_pageHeader" .}}
+      <!-- student apply header start  -->
+      <section class="page__header">
+        <div class="container">
+          <img
+            class="shape-1 shape"
+            src="./assets/images/gallery/shape-13.png"
+            alt=""
+          />
+          <img
+            src="./assets/images/gallery/shape-15.png"
+            alt=""
+            class="shape-2 shape"
+          />
+          <img
+            src="./assets/images/gallery/shape-25.png"
+            alt=""
+            class="shape-3 shape"
+          />
+
+          <div class="row justify-content-between align-items-center">
+            <div class="col-md-6 col-lg-6">
+              <div class="page__header--info">
+                <h2>Our Courses</h2>
+                <p>
+                  We offer various type of coure. Pick up your favourite course
+                  from here and build your career as a professional.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="img__box">
+                <img src="./assets/images/course/course__header.jpeg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- student apply header end -->
+    {{end}}
+
+
+    {{block "section_resultSearch" .}}
+      <!-- search result box start  -->
+      <div class="result__search--box">
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-sm-11 col-md-10 col-lg-8">
+              <form>
+                <div class="form__field">
+                  <input
+                    type="number"
+                    name="registration"
+                    placeholder="Registration ID"
+                    class="search__input"
+                  />
+                  <button type="submit">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- search result box end  -->
+    {{end}}
+
+    
+    {{block "section_resultCard" .}}
+      <!-- search result card start  -->
+      <section class="search__result--card">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-11 col-md-10 col-lg-8">
+              <div class="search__result--card--inner">
+                <div class="card__header">
+                  <div class="card__header--img--box">
+                    <img src="./assets/images/results/result.png" alt="" />
+                  </div>
+                  <div class="info">
+                    <h3 class="name">Tasnim Rahman</h3>
+                    <p class="reg__no">Reg : 2012</p>
+                    <p class="grade">A+</p>
+                  </div>
+                  <button class="card__header--btn">
+                    <iconify-icon
+                      icon="material-symbols:print-rounded"
+                    ></iconify-icon>
+                  </button>
+                </div>
+
+                <h2 class="program__name">
+                  Advance Office Application Program
+                </h2>
+
+                <div class="card__info">
+                  <img
+                    class="dot"
+                    src="./assets/images/results/dot.png"
+                    alt=""
+                  />
+                  <img
+                    class="circle"
+                    src="./assets/images/results/circle.png"
+                    alt=""
+                  />
+
+                  <div class="property">
+                    <p>Father's Name</p>
+                    <p>Mother's Name</p>
+                    <p>Session</p>
+                    <p>District</p>
+                  </div>
+                  <div class="value">
+                    <p>Ashik Rahman</p>
+                    <p>Sultana Begum</p>
+                    <p>2021-21</p>
+                    <p>Dhaka</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- search result card end  -->
+    {{end}}
+
+
+    {{block "section_resultBranchCard" .}}
+      <!-- branch card start  -->
+      <section class="result__branch--card">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-12 co-md-12 col-lg-8">
+              <section class="table__list--area">
+                <!-- single Branch  -->
+                <a href="#" class="branch__card">
+                  <!-- add rounded class in with img__box class for rounded image  -->
+                  <div class="img__box rounded">
+                    <img src="./assets/images/jobgetters/3.jpeg" alt="" />
+                  </div>
+                  <div class="course__info">
+                    <h3 class="name">Porag D'Rozario</h3>
+                    <p class="code">Branch Code : 313</p>
+                    <p class="designation">Regional Director</p>
+                  </div>
+
+                  <div class="course__details">
+                    <div class="course__details--info">
+                      <div class="course__details--info--single">
+                        <h6>Course</h6>
+                        <h2 class="count">7</h2>
+                      </div>
+                      <div class="course__details--info--single">
+                        <h6>Hours</h6>
+                        <h2 class="count">200</h2>
+                      </div>
+                      <div class="course__details--info--single">
+                        <h6>Learners</h6>
+                        <h2 class="count">8k</h2>
+                      </div>
+                    </div>
+
+                    <div class="button__area">
+                      <!-- <iconify-icon icon="mdi:cards-heart"></iconify-icon> -->
+                      <button>View Details</button>
+                    </div>
+                  </div>
+                </a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- branch card end -->
+    {{end}}
+
+    </main>
+
+
+    {{block "footer" .}}
+        <!-- Start Footer -->
+        <footer
+        id="rs-footer"
+        class="rs-footer footer-style-1 has-footer-contact pt-5"
+        >
+        <!-- adding footer widget -->
+        <div class="container contact-container">
+            <div class="footer-contact-desc">
+            <div class="row">
+                <div class="col-md-4">
+                <section id="text-15" class="widget widget_text">
+                    <div class="textwidget">
+                    <div class="contact-inner">
+                        <h3 class="contact-title address-icon">Address:</h3>
+                        <p class="contact-desc">
+                        Head Office <br />
+                        House# 01, Road# 02 <br />
+                        Dhanmondi, Dhaka
+                        </p>
+                    </div>
+                    </div>
+                </section>
+                </div>
+                <div class="col-md-4">
+                <section id="text-16" class="widget widget_text">
+                    <div class="textwidget">
+                    <div class="contact-inner">
+                        <h3 class="contact-title phone-icon">Phone Number</h3>
+                        <p class="contact-desc">01771599533</p>
+                        <p class="contact-desc">01977500800</p>
+                    </div>
+                    </div>
+                </section>
+                </div>
+                <div class="col-md-4">
+                <section id="text-17" class="widget widget_text">
+                    <div class="textwidget">
+                    <div class="contact-inner">
+                        <h3 class="contact-title mail-icon">Web Address</h3>
+                        <p class="contact-desc">
+                        Email: <a href="#">youthictbd@gmail.com</a><br />
+                        Web: <a href="https://youthict.org">www.youthict.org</a>
+                        </p>
+                    </div>
+                    </div>
+                </section>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- footer top start here -->
+        <div class="footer-top">
+            <div class="container">
+            <div class="row g-5 justify-content-center">
+                <div class="col-sm-12 col-md-3 col-lg-4">
+                <div class="about-widget">
+                    <a href="#"
+                    ><img
+                        class="img-fluid"
+                        src="assets/images/home/footerlogo.png"
+                        alt="Home"
+                    /></a>
+                    <div class="footer-share">
+                    <ul>
+                        <li>
+                        <a href="#" target="_blank"
+                            ><i class="fa fa-facebook"></i
+                        ></a>
+                        </li>
+                        <li>
+                        <a href="# " target="_blank"
+                            ><i class="fa fa-twitter"></i
+                        ></a>
+                        </li>
+                        <li>
+                        <a href="# " target="_blank"
+                            ><i class="fa fa-pinterest-p"></i
+                        ></a>
+                        </li>
+                        <li>
+                        <a href="# " target="_blank"
+                            ><i class="fa fa-google-plus-square"></i
+                        ></a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="col col-sm-4 col-md-3 col-lg-3">
+                <section id="nav_menu-7" class="widget widget_nav_menu">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <div class="menu-footer-menu-container">
+                    <ul id="menu-footer-menu" class="menu">
+                        <li class="menu-item">
+                        <a href="/">Career</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Join as a Teacher</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Privacy Polity</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Affiliate</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Refund Policy</a>
+                        </li>
+                    </ul>
+                    </div>
+                </section>
+                </div>
+                <div class="col col-sm-4 col-md-3 col-lg-3">
+                <section id="nav_menu-7" class="widget widget_nav_menu">
+                    <h3 class="footer-title">Course</h3>
+                    <div class="menu-footer-menu-container">
+                    <ul id="menu-footer-menu" class="menu">
+                        <li class="menu-item">
+                        <a href="/"> Web development</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Graphics Design</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Diploma</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Digital Marketing</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Wordpress Development</a>
+                        </li>
+                    </ul>
+                    </div>
+                </section>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2">
+                <section id="nav_menu-7" class="widget widget_nav_menu">
+                    <h3 class="footer-title">Others</h3>
+                    <div class="menu-footer-menu-container">
+                    <ul id="menu-footer-menu" class="menu">
+                        <li class="menu-item">
+                        <a href="/"> About us </a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Contact us </a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Privacy Policy</a>
+                        </li>
+                        <li class="menu-item">
+                        <a href="/">Refund Policy</a>
+                        </li>
+                    </ul>
+                    </div>
+                </section>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- footer top start here -->
+
+        <div class="footer-bottom">
+            <div class="container">
+            <div class="footer-bottom-inner">
+                <div class="copyright">
+                <p>
+                    &copy; 2023. All Rights Reserved By: youthict.org || Developed
+                    By:
+                    <a href="http://www.mateors.com">MATEORS DOT COM </a>
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </footer>
+        <!-- End Footer -->
+    {{end}}
+
+
+    {{block "scriptsrc" .}}
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/iconify-icon.min.js"></script>
+        <script src="assets/js/header.js"></script>
+    {{end}}
+
+    {{block "script" .}}
+
+    {{end}}
+
+  </body>
+</html>

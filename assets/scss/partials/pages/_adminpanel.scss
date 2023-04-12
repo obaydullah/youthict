@@ -1,5 +1,6 @@
 .admin__panel--body {
   margin-top: 0 !important;
+  top: 0 !important;
 
   .container {
     @include tablet {
@@ -9,6 +10,7 @@
     }
   }
 }
+
 .rbt-header-wrapper.header-space-betwween.header-sticky.adminpanel-sticky.rbt-sticky {
   top: 0 !important;
 }

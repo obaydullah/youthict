@@ -750,58 +750,7 @@
     <script src="assets/js/venobox.min.js"></script>
     <script src="assets/js/iconify-icon.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/gallery.js"></script>
     <script src="assets/js/header.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        // gallery popup start
-        $(".gallery__image--popup").venobox({
-          titleattr: "data-title",
-          numeratio: true,
-          infinigall: true,
-          spinner: "wandering-cubes",
-          arrowsColor: "#fff",
-          closeColor: "#fff",
-          bgcolor: "#fff",
-          overlayColor: "rgba(6, 6, 6, 0.85)",
-          closeBackground: "rgba(0, 0, 0, 0.5)",
-          overlayClose: true,
-          share: [],
-        });
-        // gallery popup end
-
-        // video popup start
-        $(".gallery__video--popup").venobox({
-          bgcolor: "#000",
-          border: "0",
-          autoplay: true,
-          showCloseButton: true,
-          overlayClose: true,
-          spinner: "wave",
-        });
-        // video popup end
-
-        // init Isotope
-        var $gallery = $(".gallery__item").isotope({
-          // options
-        });
-        $(".button-group").on("click", "button", function () {
-          var filterValue = $(this).attr("data-filter");
-          $gallery.isotope({ filter: filterValue, itemSelector: ".grid-item" });
-        });
-      });
-
-      // add active class on button click
-      const buttonLinks = document.querySelectorAll(".gallery__button--link");
-
-      buttonLinks.forEach((buttonLink) => {
-        buttonLink.addEventListener("click", () => {
-          buttonLinks.forEach((buttonLink) => {
-            buttonLink.classList.remove("active");
-          });
-          buttonLink.classList.add("active");
-        });
-      });
-    </script>
   </body>
 </html>
