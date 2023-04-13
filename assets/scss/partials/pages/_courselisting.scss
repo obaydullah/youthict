@@ -63,6 +63,7 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      z-index: 1 !important;
 
       h3 {
         font-size: 1.6rem;
