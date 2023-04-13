@@ -64,11 +64,13 @@ func branchapply(w http.ResponseWriter, r *http.Request) {
 }
 
 func searchbranch(w http.ResponseWriter, r *http.Request) {
-	ptmp, err :=template.ParseFiles("template/branch.gohtml")
+	ptmp, err :=template.ParseFiles("template/base.gohtml")
 
 	if err != nil {
 		log.Println(err)
 	}
+
+	ptmp.ParseFiles("wpage/branch.gohtml")
 
 	data := struct {
 		Title string

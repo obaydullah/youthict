@@ -327,9 +327,8 @@
     {{end}}
 
 
+  {{block "container" .}}
   <main>
-
-    {{block "section_banner" .}}
         <!-- Start Slider -->
         <section class="slider_banner">
         <div class="container">
@@ -447,10 +446,8 @@
         </div>
         </section>
         <!-- End Slider -->
-    {{end}}
 
 
-    {{block "section_popularCourse" .}}
         <!-- Start Tabs Carousel -->
         <section id="courseslide" class="section-ptb">
         <div class="container populer_courses">
@@ -811,10 +808,8 @@
         </div>
         </section>
         <!-- End Tabs Carousel -->
-    {{end}}
 
 
-    {{block "section_placement" .}}
         <!-- Start Job Placement Section -->
         <section class="job__getters section__padding--default">
         <div class="container">
@@ -907,10 +902,9 @@
         </div>
         </section>
         <!-- End Job Placement Section -->
-    {{end}}
 
 
-    {{block "section_createProfile" .}}
+
         <!-- Start create profile Section -->
         <div class="students__apply section__padding--default">
         <div class="container">
@@ -956,10 +950,10 @@
         </div>
         </div>
         <!-- End create profile Section -->
-    {{end}}
 
 
-    {{block "section_testemonial" .}}
+
+
         <!-- start testemonial section -->
         <div class="aboutus__testemonial home__testemonial section__padding--default">
         <div class=" container">
@@ -1067,10 +1061,9 @@
         </div>
         </div>
         <!-- end testemonial section -->
-    {{end}}
 
 
-    {{block "section_counter" .}}
+
         <!-- Start Countdown Section -->
         <section class="counter__home section-ptb-2 counter__home section__padding--default">
         <div class="container">
@@ -1128,11 +1121,11 @@
         </div>
         </section>
         <!-- End Countdown Section -->
-    {{end}}
 
 
 
-    {{block "section_primeMinister" .}}
+
+
         <!-- Start Prime Mister Section -->
         <section class="minsiter teacher-details section__padding--default">
         <div class="container">
@@ -1185,10 +1178,10 @@
         </div>
         </section>
         <!-- End Prime Minster Section -->
-    {{end}}
 
 
-    {{block "section_certificate" .}}
+
+
         <!-- Start Cetrificate Section -->
         <section class="certificate section__padding--default">
         <div class="container">
@@ -1264,10 +1257,9 @@
         </div>
         </section>
         <!-- End Certificate Section -->
-    {{end}}
 
 
-    {{block "section_advertisement" .}}
+
         <!-- Advertisement section start  -->
         <div class="advertisement section__padding--default">
         <div class="container">
@@ -1286,10 +1278,10 @@
         </div>
         </div>
         <!-- Advertisement section end -->
-    {{end}}
 
 
-   {{block "section_partner" .}}
+
+
         <!-- Start Partner Carousel Section -->
         <section id="course_department" class="mb-5">
         <div class="container">
@@ -1350,37 +1342,37 @@
         </div>
         </section>
         <!-- End Partner Carousel Section -->
-   {{end}}
 
 
-  {{block "section_animation" .}}
-    <!-- Start banner animation Section -->
-    <section class="banner__animation">
-    <div class="banner__animation--slide">
-        <div class="slide__single">
-        <img src="./assets/images/1.webp" alt="Mr. Minho Kim - South Korea" />
-        <div class="container">
-            <div class="slide__content">
-            <h2>Mr. Minho Kim - South Korea</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+
+
+        <!-- Start banner animation Section -->
+        <section class="banner__animation">
+        <div class="banner__animation--slide">
+            <div class="slide__single">
+            <img src="./assets/images/1.webp" alt="Mr. Minho Kim - South Korea" />
+            <div class="container">
+                <div class="slide__content">
+                <h2>Mr. Minho Kim - South Korea</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            </div>
+            <div class="slide__single">
+            <img src="./assets/images/2.webp" alt="Mrs. Kim - South Korea" />
+            <div class="container">
+                <div class="slide__content">
+                <h2>Mrs. Kim</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
             </div>
         </div>
-        </div>
-        <div class="slide__single">
-        <img src="./assets/images/2.webp" alt="Mrs. Kim - South Korea" />
-        <div class="container">
-            <div class="slide__content">
-            <h2>Mrs. Kim</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
-    <!-- End banner animation Section -->
-  {{end}}
+        </section>
+        <!-- End banner animation Section -->
 
   </main>
+  {{end}}
 
 
   {{block "footer" .}}
