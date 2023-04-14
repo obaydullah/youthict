@@ -16,7 +16,8 @@
 }
 
 .table__area {
-  margin-top: 6rem;
+  margin: 6rem 0;
+  min-height: calc(100vh - 305px);
 
   @include mobile {
     margin-top: 4rem;
