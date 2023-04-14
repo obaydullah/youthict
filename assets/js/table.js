@@ -15,15 +15,6 @@ modalClose.addEventListener("click", function () {
   modal.style.visibility = "hidden";
 });
 
-document.addEventListener("click", function (e) {
-  if (e.target == modal) {
-    if (!modalForm.contains(e.target)) {
-      modal.style.opacity = 0;
-      modal.style.visibility = "hidden";
-    }
-  }
-});
-
 // add new moal end
 
 // update modal start
@@ -41,15 +32,6 @@ updateModalOpen.addEventListener("click", function () {
 updateModalClose.addEventListener("click", function () {
   updateModal.style.opacity = 0;
   updateModal.style.visibility = "hidden";
-});
-
-document.addEventListener("click", function (e) {
-  if (e.target == updateModal) {
-    if (!updateModalForm.contains(e.target)) {
-      updateModal.style.opacity = 0;
-      updateModal.style.visibility = "hidden";
-    }
-  }
 });
 
 // update modal end
