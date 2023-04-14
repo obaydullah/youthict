@@ -1,0 +1,628 @@
+.table__body {
+  margin-top: 0 !important;
+  top: 0 !important;
+
+  .container {
+    @include tablet {
+      padding: 0 2rem !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+    }
+  }
+}
+
+.rbt-header-wrapper.header-space-betwween.header-sticky.adminpanel-sticky.rbt-sticky {
+  top: 0 !important;
+}
+
+.table__area {
+  margin-top: 6rem;
+
+  @include mobile {
+    margin-top: 4rem;
+  }
+  // header part
+
+  &--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+
+    .button__area {
+      display: flex;
+      gap: 1rem;
+      padding: 0.2rem 0;
+    }
+
+    .new__view,
+    .create__table--btn {
+      background: $white;
+      font-size: 1.4rem;
+      font-family: $default_font;
+      padding: 0.8rem 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.05);
+      border-radius: 0.3rem;
+    }
+    .new__view {
+      border: 1px solid $primary-color;
+      @include mobile {
+        display: none;
+      }
+
+      &:hover {
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: $white;
+      }
+    }
+
+    .create__table--btn {
+      border: 1px solid transparent;
+      background: $primary-color;
+      color: $white;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      span {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &:hover {
+        background: $primary-light;
+      }
+    }
+  }
+
+  //table start
+  .card__table {
+    margin-bottom: 10rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .card__header {
+    background-color: $semi-white;
+    color: $black_4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .card__table {
+    .table__responsive {
+      margin-top: 0;
+
+      @include desktop {
+        overflow-x: scroll;
+      }
+      @include tablet {
+        overflow-x: scroll;
+      }
+
+      thead {
+        background: rgba(0, 0, 0, 0.05);
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: $black_4;
+        vertical-align: middle;
+
+        svg {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+
+      tbody tr {
+        height: 6rem !important;
+        vertical-align: middle;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        i {
+          cursor: pointer;
+        }
+        i.delete {
+          color: red;
+        }
+      }
+      .card-table tr td:first-child,
+      .card-table tr th:first-child {
+        padding-left: 1.5rem;
+        border-left: 0;
+      }
+      .card-table tr td:last-child,
+      .card-table tr th:last-child {
+        padding-right: 0;
+        border-left: 0;
+      }
+
+      input.form-check-input {
+        font-size: 2rem;
+
+        &:checked {
+          background-color: $primary-color;
+        }
+      }
+      button.btn.dropdown-toggle.align-text-top {
+        padding: 1rem;
+        font-size: 1.4rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .card__footer {
+      padding: 1rem 2rem;
+      margin-top: -1rem;
+
+      //pagination style
+      .adminpanel__pagination {
+        text-align: center;
+
+        @include mobile {
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 1.5rem;
+        }
+
+        .pagination {
+          display: flex;
+          gap: 0.5rem;
+          padding: 0;
+          margin: 0;
+        }
+        .pagination a {
+          color: black;
+          text-decoration: none;
+          font-size: 1.4rem;
+          height: 3rem !important;
+          width: 3rem !important;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 !important;
+        }
+
+        .pagination .prev,
+        .pagination .next {
+          background: $white;
+          display: flex;
+          align-items: center;
+          margin-top: 0.5rem;
+        }
+        .pagination .prev {
+          padding: 0 3rem !important;
+          align-items: center;
+
+          iconify-icon {
+            margin-top: -0.4rem;
+          }
+        }
+        .pagination .next {
+          padding: 0 3rem !important;
+
+          iconify-icon {
+            margin-top: -0.4rem;
+          }
+        }
+
+        .pagination .page-number {
+          border: 1px solid #ddd;
+          padding: 2rem;
+        }
+        .pagination .page-number.active {
+          color: $white;
+        }
+      }
+    }
+  }
+  //table end
+}
+//modal style
+.table__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+  backdrop-filter: blur(3px);
+  z-index: 999999;
+
+  .table__modal--form {
+    border-radius: 0.5rem;
+    margin-top: 3rem !important;
+    background: $white;
+    width: 60%;
+    margin: 0 auto;
+
+    @include desktop {
+      width: 70%;
+    }
+    @include tablet {
+      width: 90%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      iconify-icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .content {
+    padding: 2rem;
+
+    label,
+    .reporttype__label {
+      width: 100%;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .reporttype__label {
+      margin-top: 1rem;
+    }
+    input,
+    textarea {
+      padding: 0.8rem 1rem;
+      color: $black_3;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid $primary-color;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $black_4;
+        opacity: 0.8;
+      }
+    }
+    .form__field {
+      margin-top: 1rem;
+      flex: 1;
+    }
+    .form__group {
+      display: flex;
+      width: 100%;
+      gap: 1rem;
+      align-items: stretch;
+
+      @include desktop {
+        display: block;
+      }
+      @include tablet {
+        display: block;
+      }
+    }
+
+    .form__field.radio {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      border-radius: 0.2rem;
+      cursor: pointer;
+
+      input[type="radio"] {
+        width: 2rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      label {
+        position: relative;
+        padding-left: 4rem;
+        cursor: pointer;
+      }
+      label::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        left: 0.7rem;
+        transform: translateY(-50%);
+        transition: border-color 400ms ease;
+      }
+      label::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: $primary-color;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        left: 0.7rem;
+        transform: translateY(-50%) scale(0);
+        transition: transform 400ms ease;
+      }
+
+      input[type="radio"]:checked + label::before {
+        border-color: $primary-color;
+      }
+
+      input[type="radio"]:checked + label::after {
+        transform: translateY(-50%) scale(0.55);
+      }
+    }
+  }
+  .button__area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .cancel {
+      color: $black_4;
+      border: none;
+      background: none;
+      transform: all 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .submit__btn {
+      background: $white;
+      font-size: 1.4rem;
+      font-family: $default_font;
+      padding: 0.8rem 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.05);
+      border-radius: 0.3rem;
+    }
+
+    .submit__btn {
+      border: 1px solid transparent;
+      background: $primary-color;
+      color: $white;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      &:hover {
+        background: $primary-light;
+      }
+    }
+  }
+}
+.update__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+  backdrop-filter: blur(3px);
+  z-index: 999999;
+
+  .table_update--modal--form {
+    border-radius: 0.5rem;
+    margin-top: 3rem !important;
+    background: $white;
+    width: 60%;
+    margin: 0 auto;
+
+    @include desktop {
+      width: 70%;
+    }
+    @include tablet {
+      width: 90%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      iconify-icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .content {
+    padding: 2rem;
+
+    label,
+    .reporttype__label {
+      width: 100%;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .reporttype__label {
+      margin-top: 1rem;
+    }
+    input,
+    textarea {
+      padding: 0.8rem 1rem !important;
+      color: $black_3;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid $primary-color;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $black_4;
+        opacity: 0.8;
+      }
+    }
+    .form__field {
+      margin-top: 1rem;
+      flex: 1;
+    }
+    .form__group {
+      display: flex;
+      width: 100%;
+      gap: 1rem;
+      align-items: stretch;
+
+      @include desktop {
+        display: block;
+      }
+      @include tablet {
+        display: block;
+      }
+    }
+
+    .form__field.radio {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      border-radius: 0.2rem;
+      cursor: pointer;
+
+      input[type="radio"] {
+        width: 2rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      label {
+        position: relative;
+        padding-left: 4rem;
+        cursor: pointer;
+      }
+      label::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        left: 0.7rem;
+        transform: translateY(-50%);
+        transition: border-color 400ms ease;
+      }
+      label::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: $primary-color;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        left: 0.7rem;
+        transform: translateY(-50%) scale(0);
+        transition: transform 400ms ease;
+      }
+
+      input[type="radio"]:checked + label::before {
+        border-color: $primary-color;
+      }
+
+      input[type="radio"]:checked + label::after {
+        transform: translateY(-50%) scale(0.55);
+      }
+    }
+  }
+  .button__area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .cancel {
+      color: $black_4;
+      border: none;
+      background: none;
+      transform: all 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .submit__btn {
+      background: $white;
+      font-size: 1.4rem;
+      font-family: $default_font;
+      padding: 0.8rem 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.05);
+      border-radius: 0.3rem;
+    }
+
+    .submit__btn {
+      border: 1px solid transparent;
+      background: $primary-color;
+      color: $white;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      &:hover {
+        background: $primary-light;
+      }
+    }
+  }
+}
