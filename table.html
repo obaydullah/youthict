@@ -10,6 +10,7 @@
     <link rel="icon" href="assets/images/favicon.png" type="image/png" alt="Youth ICT | Favicon" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/feather.css" />
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap-datepicker.standalone.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -288,7 +289,7 @@
                     <div class="table__area--header">
                         <h3 class="card__title">Invoices</h3>
                         <div class="button__area">
-                            <button class="new__view"><iconify-icon
+                            <button class="new__view filter__btn"><iconify-icon
                                     icon="fluent-mdl2:calculator-addition"></iconify-icon>New View</button>
                             <button class="create__table--btn">
                                 <iconify-icon icon="fluent-mdl2:calculator-addition"></iconify-icon><span>Add
@@ -297,7 +298,7 @@
                         </div>
                     </div>
                     <div class="table__responsive">
-                        <table class="table card-table table-vcenter text-nowrap datatable">
+                        <table class="table card-table table-vcenter text-nowrap datatable table-striped table-hover">
                             <thead>
                                 <tr>
                                     <th class="w-1">
@@ -611,6 +612,84 @@
     <!-- update modal end  -->
 
 
+    <!-- update modal start -->
+    <div class="filter__modal">
+        <form class="table_filter--modal--form">
+            <div class="header">
+                <h2>Filter Modal</h2>
+                <iconify-icon class="modal__close filter__close" icon="material-symbols:close-rounded"></iconify-icon>
+            </div>
+
+            <div class="content">
+                <div class="form__field">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" />
+                </div>
+
+
+
+                <div class="form__field">
+                    <label for="url">Report URL</label>
+                    <input type="text" name="url" id="url" placeholder="Report URL" />
+                </div>
+                <div class="form__field">
+                    <label for="course">Select Course</label>
+                    <select name="course" id="course" name="state" class="select__course">
+                        <option value="">select course</option>
+                        <option value="Golang"> Golang</option>
+                        <option value="Javascript">Javascript</option>
+                    </select>
+                </div>
+
+
+                <div class="form__field">
+                    <label for="clientname">Select subject</label>
+                    <div class="checkbox__item">
+
+                        <input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Web Design"
+                            id="webdesign" />
+
+                        <label for="webdesign"> Web Design</label>
+                    </div>
+                    <div class="checkbox__item">
+
+                        <input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Graphics Design"
+                            id="graphicsdesign" />
+
+                        <label for="graphicsdesign"> Graphics design</label>
+                    </div>
+
+
+                </div>
+                <div class="form__field">
+                    <label for="reportingperiod">Reporting Period</label>
+                    <div class="input-group date" data-provide="datepicker">
+                        <input type="text" placeholder="Select Date">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__field">
+                    <label for="additionalinfo">Additional Info</label>
+                    <textarea placeholder="Additional Information" name="additionalinfo" id="additionalinfo" cols="3"
+                        rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="button__area">
+                <button class="cancel">Cancel</button>
+
+                <button type="submit" class="submit__btn">
+                    <iconify-icon icon="fluent-mdl2:calculator-addition"></iconify-icon>Create new
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- update modal end  -->
+
+
 
     <!-- Start Footer -->
     <footer id="rs-footer" class="rs-footer footer-style-1 has-footer-contact course__listing--footer">
@@ -635,6 +714,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/iconify-icon.min.js"></script>
     <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/table.js"></script>
 </body>

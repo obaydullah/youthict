@@ -4685,6 +4685,7 @@ select.chosen-select {
 .select2-container {
   padding: 1rem !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  z-index: 99999 !important;
 }
 .select2-container--default .select2-selection--single {
   background-color: #fff !important;
@@ -9449,4 +9450,4 @@ marquee {
 @import "./partials/pages/courselisting";
 @import "./partials/pages/login";
 @import "./partials/pages/adminpanel";
-@import "./partials/pages/table"
+@import "./partials/pages/table";

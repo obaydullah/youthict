@@ -36,8 +36,32 @@ updateModalClose.addEventListener("click", function () {
 
 // update modal end
 
+// filter modal start
+let filterModal = document.querySelector(".filter__modal");
+let filterModalForm = document.querySelector(".table_filter--modal--form");
+let filterModalOpen = document.querySelector(".filter__btn");
+let filterModalClose = document.querySelector(".filter__close");
+
+filterModalOpen.addEventListener("click", function () {
+  filterModal.style.opacity = 1;
+  filterModal.style.visibility = "visible";
+  filterModal.style.overflowY = "scroll";
+});
+
+filterModalClose.addEventListener("click", function () {
+  filterModal.style.opacity = 0;
+  filterModal.style.visibility = "hidden";
+});
+
+// update modal end
+
 //datepicker
-$(".datepicker").datepicker({
-  format: "mm/dd/yyyy",
-  startDate: "-3d",
+
+$(document).ready(function () {
+  $(".datepicker").datepicker({
+    format: "mm/dd/yyyy",
+    startDate: "-3d",
+  });
+
+  $(".select__course").select2();
 });
