@@ -152,6 +152,12 @@
     .card__footer {
       padding: 1rem 2rem;
       margin-top: -1rem;
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
 
       //pagination style
       .adminpanel__pagination {
