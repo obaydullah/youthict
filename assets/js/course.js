@@ -12,18 +12,12 @@ $(document).ready(function () {
 // modal area
 let discountBtn = document.querySelector(".discount__btn");
 let modalArea = document.querySelector(".discount__modal");
-let modalClose = document.querySelector(".modal__area--overlay");
 let modalCloseBtn = document.querySelector(".modal__close--btn");
 
 discountBtn.addEventListener("click", function (e) {
   e.preventDefault();
   modalArea.style.opacity = "1";
   modalArea.style.visibility = "visible";
-});
-
-modalClose.addEventListener("click", function () {
-  modalArea.style.opacity = "0";
-  modalArea.style.visibility = "hidden";
 });
 
 modalCloseBtn.addEventListener("click", function () {

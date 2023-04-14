@@ -46,14 +46,4 @@ modalClose.addEventListener("click", function () {
   modal.style.visibility = "hidden";
 });
 
-document.addEventListener("click", function (e) {
-  if (e.target == modal) {
-    if (!modalForm.contains(e.target)) {
-      modal.style.opacity = 0;
-      modal.style.visibility = "hidden";
-      html.style.overflow = "scroll";
-    }
-  }
-});
-
 // modal end

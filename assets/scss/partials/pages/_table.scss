@@ -45,16 +45,24 @@
       transition: all 0.3s;
       box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.05);
       border-radius: 0.3rem;
+
+      iconify-icon {
+        font-size: 1.2rem;
+      }
     }
     .new__view {
       border: 1px solid $primary-color;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
       @include mobile {
         display: none;
       }
 
       &:hover {
-        border: 1px solid $primary-color;
-        background-color: $primary-color;
+        border: 1px solid $primary-light;
+        background-color: $primary-light;
         color: $white;
       }
     }
@@ -117,12 +125,21 @@
         height: 6rem !important;
         vertical-align: middle;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
 
         i {
           cursor: pointer;
         }
         i.delete {
           color: red;
+        }
+
+        &:hover {
+          background-color: $black_6;
+        }
+        &:nth-child(2n + 1) {
+          background-color: $black_6;
+          transition: all 0.3s;
         }
       }
       .card-table tr td:first-child,
@@ -201,7 +218,7 @@
           align-items: center;
 
           iconify-icon {
-            margin-top: -0.4rem;
+            margin-top: -0.6rem;
           }
         }
         .pagination .next {
