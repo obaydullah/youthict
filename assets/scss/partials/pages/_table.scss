@@ -118,7 +118,7 @@
         text-transform: uppercase;
         color: $black_4;
         vertical-align: middle;
-        height: 4rem;
+        height: 6rem;
         box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.03);
 
         svg {
@@ -808,16 +808,18 @@
   transition: all 0.3s ease-in;
   backdrop-filter: blur(3px);
   z-index: 999999;
+  overflow-y: hidden !important;
 
   .table_student--modal--form {
     border-radius: 0.5rem;
     margin-top: 3rem !important;
     background: $white;
-    width: 60%;
+    width: 1000px;
     margin: 0 auto;
+    padding: 2.4rem;
 
     @include desktop {
-      width: 70%;
+      width: 65%;
     }
     @include tablet {
       width: 90%;
@@ -826,8 +828,8 @@
     .header {
       display: flex;
       justify-content: space-between;
-      padding: 1rem 2rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 1.6rem;
 
       iconify-icon {
         display: flex;
@@ -839,10 +841,17 @@
   }
 
   .content {
-    padding: 2rem;
+    max-height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0.5rem;
 
     .select__element {
       position: relative;
+    }
+    .select2-container {
+      border-radius: 0.5rem;
+      padding: 0.8rem 1rem !important;
     }
 
     label,
@@ -875,8 +884,14 @@
         opacity: 0.8;
       }
     }
+    .form__group {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
     .form__field {
       margin-top: 1rem;
+      flex: 1;
 
       .checkbox__item {
         display: flex;
@@ -914,10 +929,12 @@
     }
 
     .radio__group {
-      display: flex;
-      gap: 3rem;
-      padding: 0;
-      margin-bottom: 1rem;
+      flex: 1;
+
+      .form__group {
+        gap: 1rem;
+        justify-content: flex-start;
+      }
     }
 
     .radio__field {
@@ -1014,6 +1031,7 @@
     padding: 1rem 2rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
+    padding-top: 1.6rem;
 
     @include mobile {
       flex-wrap: wrap;

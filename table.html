@@ -707,46 +707,55 @@
                     <label for="fullname">Full Name</label>
                     <input type="text" name="fullname" id="fullname" placeholder="Full name" />
                 </div>
-                <div class="form__field">
-                    <label for="fathersname">Father's Name</label>
-                    <input type="text" name="fathersname" id="fathersname" placeholder="Father's Name" />
-                </div>
-                <div class="form__field">
-                    <label for="mothersname">Mother's Name</label>
-                    <input type="text" name="mothersname" id="mothersname" placeholder="Mother's Name" />
+                <div class="form__group">
+                    <div class="form__field">
+                        <label for="fathersname">Father's Name</label>
+                        <input type="text" name="fathersname" id="fathersname" placeholder="Father's Name" />
+                    </div>
+                    <div class="form__field">
+                        <label for="mothersname">Mother's Name</label>
+                        <input type="text" name="mothersname" id="mothersname" placeholder="Mother's Name" />
+                    </div>
                 </div>
 
-                <div class="form__field">
-                    <label for="dob">Date of Birth</label>
-                    <div class="input-group date" data-provide="datepicker">
-                        <input type="text" placeholder="date of birth" id="dob" name="dob">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
+                <div class="form__group">
+                    <div class="form__field">
+                        <label for="dob">Date of Birth</label>
+                        <div class="input-group date" data-provide="datepicker">
+                            <input type="text" placeholder="date of birth" id="dob" name="dob">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="radio__group">
+                        <p class="radio__label">Gender</p>
+                        <div class="form__group">
+                            <div class="radio__field">
+                                <input type="radio" name="gender" id="male" value="Male" />
+                                <label for="male">Male</label>
+                            </div>
+
+                            <div class="radio__field">
+                                <input type="radio" name="gender" id="female" value="Female" />
+                                <label for="female">Female</label>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <p class="radio__label">Gender</p>
-                <div class="radio__group">
-                    <div class="radio__field">
-                        <input type="radio" name="gender" id="male" value="Male" />
-                        <label for="male">Male</label>
+                <div class="form__group">
+                    <div class="form__field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" />
                     </div>
 
-                    <div class="radio__field">
-                        <input type="radio" name="gender" id="female" value="Female" />
-                        <label for="female">Female</label>
+                    <div class="form__field">
+                        <label for="email">Phone Number</label>
+                        <input type="number" name="phonenumber" id="phonenumber" placeholder="Phone Number" />
                     </div>
-                </div>
-
-                <div class="form__field">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email" />
-                </div>
-
-                <div class="form__field">
-                    <label for="email">Phone Number</label>
-                    <input type="number" name="phonenumber" id="phonenumber" placeholder="Phone Number" />
                 </div>
 
                 <div class="form__field">
@@ -755,36 +764,40 @@
                 </div>
 
                 <div class="select__element">
-                    <div class="form__field form__field--thana">
-                        <label for="selectthana">Select Thana</label>
-                        <select name="selectthana" id="selectthana" name="state" class="select__thana">
-                            <option value="">selet thana</option>
-                            <option value="Araihazar"> Araihazar</option>
-                            <option value="Bisnondi">Bisnondi</option>
-                        </select>
-                    </div>
+                    <div class="form__group">
+                        <div class="form__field form__field--thana">
+                            <label for="selectthana">Select Thana</label>
+                            <select name="selectthana" id="selectthana" name="state" class="select__thana">
+                                <option value="">selet thana</option>
+                                <option value="Araihazar"> Araihazar</option>
+                                <option value="Bisnondi">Bisnondi</option>
+                            </select>
+                        </div>
 
-                    <div class="form__field">
-                        <label for="selectcourse">Select Course</label>
-                        <select name="selectcourse" id="selectcourse" name="state" class="select__course--student">
-                            <option value="">select course</option>
-                            <option value="Golang"> Golang</option>
-                            <option value="Javascript">Javascript</option>
-                        </select>
+                        <div class="form__field">
+                            <label for="selectcourse">Select Course</label>
+                            <select name="selectcourse" id="selectcourse" name="state" class="select__course--student">
+                                <option value="">select course</option>
+                                <option value="Golang"> Golang</option>
+                                <option value="Javascript">Javascript</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
 
                 <p class="radio__label">Course Type</p>
                 <div class="radio__group">
-                    <div class="radio__field">
-                        <input type="radio" name="coursetype" id="online" value="Online" />
-                        <label for="online">Online</label>
-                    </div>
+                    <div class="form__group">
+                        <div class="radio__field">
+                            <input type="radio" name="coursetype" id="online" value="Online" />
+                            <label for="online">Online</label>
+                        </div>
 
-                    <div class="radio__field">
-                        <input type="radio" name="coursetype" id="offline" value="Offline" />
-                        <label for="offline">Offline</label>
+                        <div class="radio__field">
+                            <input type="radio" name="coursetype" id="offline" value="Offline" />
+                            <label for="offline">Offline</label>
+                        </div>
                     </div>
                 </div>
             </div>
