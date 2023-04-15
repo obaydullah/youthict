@@ -252,12 +252,13 @@
   transition: all 0.3s ease-in;
   backdrop-filter: blur(3px);
   z-index: 999999;
+  overflow-y: hidden !important;
 
   .table__modal--form {
     border-radius: 0.5rem;
     margin-top: 3rem !important;
     background: $white;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
 
     @include desktop {
@@ -270,8 +271,10 @@
     .header {
       display: flex;
       justify-content: space-between;
-      padding: 1rem 2rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 2.4rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
 
       iconify-icon {
         display: flex;
@@ -283,7 +286,11 @@
   }
 
   .content {
-    padding: 2rem;
+    overflow-y: scroll;
+    max-height: 70vh;
+    padding: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     label,
     .reporttype__label {
@@ -401,9 +408,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
+    padding: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     @include mobile {
       flex-wrap: wrap;
@@ -432,14 +441,14 @@
 
     .submit__btn {
       border: 1px solid transparent;
-      background: $primary-color;
+      background: $primary-light;
       color: $white;
       display: flex;
       align-items: center;
       gap: 0.8rem;
 
       &:hover {
-        background: $primary-light;
+        background: $primary-color;
       }
     }
   }
@@ -456,6 +465,7 @@
   transition: all 0.3s ease-in;
   backdrop-filter: blur(3px);
   z-index: 999999;
+  overflow: hidden !important;
 
   .table_update--modal--form {
     border-radius: 0.5rem;
@@ -474,8 +484,10 @@
     .header {
       display: flex;
       justify-content: space-between;
-      padding: 1rem 2rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 2.4rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
 
       iconify-icon {
         display: flex;
@@ -487,7 +499,12 @@
   }
 
   .content {
-    padding: 2rem;
+    padding: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 70vh;
 
     label,
     .reporttype__label {
@@ -605,9 +622,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
+    padding: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     @include mobile {
       flex-wrap: wrap;
@@ -636,14 +655,14 @@
 
     .submit__btn {
       border: 1px solid transparent;
-      background: $primary-color;
+      background: $primary-light;
       color: $white;
       display: flex;
       align-items: center;
       gap: 0.8rem;
 
       &:hover {
-        background: $primary-light;
+        background: $primary-color;
       }
     }
   }
@@ -660,6 +679,7 @@
   transition: all 0.3s ease-in;
   backdrop-filter: blur(3px);
   z-index: 999999;
+  overflow: hidden !important;
 
   .table_filter--modal--form {
     border-radius: 0.5rem;
@@ -678,8 +698,10 @@
     .header {
       display: flex;
       justify-content: space-between;
-      padding: 1rem 2rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 2.4rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
 
       iconify-icon {
         display: flex;
@@ -691,7 +713,21 @@
   }
 
   .content {
-    padding: 2rem;
+    max-height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    .select__element {
+      position: relative;
+    }
+    .select2-container {
+      width: 100% !important;
+      border-radius: 0.5rem;
+      padding: 0.8rem 1rem !important;
+    }
 
     label,
     .reporttype__label {
@@ -752,9 +788,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
+    padding: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     @include mobile {
       flex-wrap: wrap;
@@ -783,14 +821,14 @@
 
     .submit__btn {
       border: 1px solid transparent;
-      background: $primary-color;
+      background: $primary-light;
       color: $white;
       display: flex;
       align-items: center;
       gap: 0.8rem;
 
       &:hover {
-        background: $primary-light;
+        background: $primary-color;
       }
     }
   }
@@ -815,7 +853,6 @@
     background: $white;
     width: 70%;
     margin: 0 auto;
-    padding: 2.4rem;
 
     @include desktop {
       width: 65%;
@@ -828,7 +865,9 @@
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      padding-bottom: 1.6rem;
+      padding: 2.4rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
 
       iconify-icon {
         display: flex;
@@ -840,10 +879,13 @@
   }
 
   .content {
-    max-height: 70vh;
+    max-height: 65vh;
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0.5rem;
+    padding: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     .select__element {
       position: relative;
@@ -1022,6 +1064,9 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
     padding-top: 1.6rem;
+    padding: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     @include mobile {
       flex-wrap: wrap;
