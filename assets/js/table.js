@@ -52,8 +52,24 @@ filterModalClose.addEventListener("click", function () {
   filterModal.style.opacity = 0;
   filterModal.style.visibility = "hidden";
 });
-
 // update modal end
+
+// student add modal start
+let studentModal = document.querySelector(".student__modal");
+let studentModalOpen = document.querySelector(".create__student--btn");
+let studentModalClose = document.querySelector(".student__close");
+
+studentModalOpen.addEventListener("click", function () {
+  studentModal.style.opacity = 1;
+  studentModal.style.visibility = "visible";
+  studentModal.style.overflowY = "scroll";
+});
+
+studentModalClose.addEventListener("click", function () {
+  studentModal.style.opacity = 0;
+  studentModal.style.visibility = "hidden";
+});
+// student add modal end
 
 //datepicker
 
@@ -65,5 +81,12 @@ $(document).ready(function () {
 
   $(".select__course").select2({
     dropdownParent: $(".table_filter--modal--form"),
+  });
+
+  $(".select__course--student").select2({
+    dropdownParent: $(".select__course--element"),
+  });
+  $(".select__thana").select2({
+    dropdownParent: $(".select__course--element"),
   });
 });

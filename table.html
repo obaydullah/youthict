@@ -295,6 +295,10 @@
                                 <iconify-icon icon="fluent-mdl2:calculator-addition"></iconify-icon><span>Add
                                     new</span>
                             </button>
+                            <button class="create__student--btn">
+                                <iconify-icon icon="fluent-mdl2:calculator-addition"></iconify-icon><span>Add
+                                    Student</span>
+                            </button>
                         </div>
                     </div>
                     <div class="table__responsive">
@@ -688,6 +692,114 @@
         </form>
     </div>
     <!-- update modal end  -->
+
+
+    <!-- student modal start -->
+    <div class="student__modal">
+        <form class="table_student--modal--form">
+            <div class="header">
+                <h2>Add New Student</h2>
+                <iconify-icon class="modal__close student__close" icon="material-symbols:close-rounded"></iconify-icon>
+            </div>
+
+            <div class="content">
+                <div class="form__field">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Full name" />
+                </div>
+                <div class="form__field">
+                    <label for="fathersname">Father's Name</label>
+                    <input type="text" name="fathersname" id="fathersname" placeholder="Father's Name" />
+                </div>
+                <div class="form__field">
+                    <label for="mothersname">Mother's Name</label>
+                    <input type="text" name="mothersname" id="mothersname" placeholder="Mother's Name" />
+                </div>
+
+                <div class="form__field">
+                    <label for="dob">Date of Birth</label>
+                    <div class="input-group date" data-provide="datepicker">
+                        <input type="text" placeholder="date of birth" id="dob" name="dob">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="radio__label">Gender</p>
+                <div class="radio__group">
+                    <div class="radio__field">
+                        <input type="radio" name="gender" id="male" value="Male" />
+                        <label for="male">Male</label>
+                    </div>
+
+                    <div class="radio__field">
+                        <input type="radio" name="gender" id="female" value="Female" />
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+                <div class="form__field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                </div>
+
+                <div class="form__field">
+                    <label for="email">Phone Number</label>
+                    <input type="number" name="phonenumber" id="phonenumber" placeholder="Phone Number" />
+                </div>
+
+                <div class="form__field">
+                    <label for="photo">Photo</label>
+                    <input type="file" name="photo" id="photo" placeholder="Photo" />
+                </div>
+
+                <div class="select__thana--element">
+                    <div class="form__field form__field--thana">
+                        <label for="selectthana">Select Thana</label>
+                        <select name="selectthana" id="selectthana" name="state" class="select__thana">
+                            <option value="">selet thana</option>
+                            <option value="Araihazar"> Araihazar</option>
+                            <option value="Bisnondi">Bisnondi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="select__course--element">
+                    <div class="form__field">
+                        <label for="selectcourse">Select Course</label>
+                        <select name="selectcourse" id="selectcourse" name="state" class="select__course--student">
+                            <option value="">select course</option>
+                            <option value="Golang"> Golang</option>
+                            <option value="Javascript">Javascript</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="radio__label">Course Type</p>
+                <div class="radio__group">
+                    <div class="radio__field">
+                        <input type="radio" name="coursetype" id="online" value="Online" />
+                        <label for="online">Online</label>
+                    </div>
+
+                    <div class="radio__field">
+                        <input type="radio" name="coursetype" id="offline" value="Offline" />
+                        <label for="offline">Offline</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button__area">
+                <button class="cancel">Cancel</button>
+
+                <button type="submit" class="submit__btn">
+                    <iconify-icon icon="fluent-mdl2:calculator-addition"></iconify-icon>Create new
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- student modal end  -->
 
 
 
