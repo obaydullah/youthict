@@ -63,5 +63,7 @@ $(document).ready(function () {
     startDate: "-3d",
   });
 
-  $(".select__course").select2();
+  $(".select__course").select2({
+    dropdownParent: $(".table_filter--modal--form"),
+  });
 });
