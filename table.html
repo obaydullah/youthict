@@ -631,7 +631,6 @@
                 </div>
 
 
-
                 <div class="form__field">
                     <label for="url">Report URL</label>
                     <input type="text" name="url" id="url" placeholder="Report URL" />
@@ -719,28 +718,33 @@
                 </div>
 
                 <div class="form__group">
-                    <div class="form__field">
-                        <label for="dob">Date of Birth</label>
-                        <div class="input-group date" data-provide="datepicker">
-                            <input type="text" placeholder="date of birth" id="dob" name="dob">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
+                    <div class="form__group">
+                        <div class="form__field">
+                            <label for="dob">Date of Birth</label>
+                            <div class="input-group date" data-provide="datepicker">
+                                <input type="text" placeholder="date of birth" id="dob" name="dob">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="radio__group">
-                        <p class="radio__label">Gender</p>
-                        <div class="form__group">
-                            <div class="radio__field">
-                                <input type="radio" name="gender" id="male" value="Male" />
-                                <label for="male">Male</label>
+                    <div class="form__group radio gender">
+                        <label for="" class="reporttype__label">Gender</label>
+                        <div class="form__group--gender">
+                            <div class="form__field radio">
+                                <input type="radio" name="gender" id="male" value="male" />
+                                <label for="male">
+                                    Male
+                                </label>
                             </div>
-
-                            <div class="radio__field">
-                                <input type="radio" name="gender" id="female" value="Female" />
-                                <label for="female">Female</label>
+                            <div class="form__field radio">
+                                <input type="radio" name="gender" id="female" value="female" />
+                                <label for="female">
+                                    Female
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -786,18 +790,19 @@
                 </div>
 
 
-                <p class="radio__label">Course Type</p>
-                <div class="radio__group">
-                    <div class="form__group">
-                        <div class="radio__field">
-                            <input type="radio" name="coursetype" id="online" value="Online" />
-                            <label for="online">Online</label>
-                        </div>
-
-                        <div class="radio__field">
-                            <input type="radio" name="coursetype" id="offline" value="Offline" />
-                            <label for="offline">Offline</label>
-                        </div>
+                <label for="" class="reporttype__label">Course type</label>
+                <div class="form__group radio">
+                    <div class="form__field radio">
+                        <input type="radio" name="coursetype" id="online" value="Online" />
+                        <label for="online">
+                            Online
+                        </label>
+                    </div>
+                    <div class="form__field radio">
+                        <input type="radio" name="coursetype" id="offline" value="offline" />
+                        <label for="offline">
+                            Offline
+                        </label>
                     </div>
                 </div>
             </div>
