@@ -84,9 +84,9 @@ $(document).ready(function () {
   });
 
   $(".select__course--student").select2({
-    dropdownParent: $(".select__course--element"),
+    dropdownParent: $(".select__element"),
   });
   $(".select__thana").select2({
-    dropdownParent: $(".select__course--element"),
+    dropdownParent: $(".select__element"),
   });
 });
