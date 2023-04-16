@@ -409,11 +409,11 @@
     border-radius: 0.5rem;
     margin-top: 3rem !important;
     background: $white;
-    width: 60%;
+    max-width: 800px;
     margin: 0 auto;
 
     @include desktop {
-      width: 70%;
+      width: 700px;
     }
     @include tablet {
       width: 90%;

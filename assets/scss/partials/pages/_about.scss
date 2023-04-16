@@ -138,12 +138,12 @@
       padding-bottom: 1.5rem;
     }
 
-    button {
-      padding: 1.2rem 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+    // button {
+    //   padding: 1.2rem 2rem;
+    //   display: flex;
+    //   align-items: center;
+    //   gap: 1rem;
+    // }
   }
   .about__us--hero--img--box {
     display: flex;
@@ -799,6 +799,7 @@
     }
   }
 }
+
 .aboutus__testemonial {
   margin-bottom: 10rem;
 
@@ -937,3 +938,39 @@
 }
 
 // about us testemonial end
+
+.default_btn {
+  box-sizing: border-box;
+  font-weight: 600;
+  max-width: 469px;
+  font-family: $default_font;
+  color: $white;
+  border-radius: 4px;
+  padding: 13px 22px;
+  margin-right: 22px;
+  transition: all 0.3s;
+  text-align: center;
+  font-weight: normal;
+  border: none;
+  @include btn__gradiant__dark;
+
+  span {
+    margin-right: 9px;
+    transition: 0.3s;
+  }
+  &:hover {
+    @include btn__gradiant;
+    @include btn__shadow;
+
+    span {
+      opacity: 0;
+      visibility: hidden;
+      margin-right: 0;
+      &.angle {
+        color: $hover;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+  }
+}
