@@ -10,7 +10,6 @@ gulp.task("sass", function () {
     .src("./assets/scss/style.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest("./assets/css/"));
 });
 
@@ -31,22 +30,6 @@ gulp.task("responsive", function () {
     .pipe(gulp.dest("./assets/css/"));
 });
 
-gulp.task("feather", function () {
-  return gulp
-    .src("./assets/css/feather.css")
-    .pipe(rename("feather.min.css"))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest("./assets/css/"));
-});
-
-gulp.task("slick", function () {
-  return gulp
-    .src("./assets/css/slick.css")
-    .pipe(rename("slick.min.css"))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest("./assets/css/"));
-});
-
 gulp.task("minify-js", function () {
   return gulp
     .src("./assets/js/main.js")
@@ -58,14 +41,7 @@ gulp.task("minify-js", function () {
 //build task
 gulp.task(
   "build",
-  gulp.parallel(
-    "sass",
-    "minify-css",
-    "responsive",
-    "feather",
-    "slick",
-    "minify-js"
-  )
+  gulp.parallel("sass", "minify-css", "responsive", "minify-js")
 );
 
 // Watch Task
@@ -80,16 +56,6 @@ gulp.task("watch", function () {
     "./assets/css/responsive.css",
     { debounceDelay: 500 },
     gulp.series("responsive")
-  );
-  gulp.watch(
-    "./assets/css/feather.css",
-    { debounceDelay: 500 },
-    gulp.series("feather")
-  );
-  gulp.watch(
-    "./assets/css/slick.css",
-    { debounceDelay: 500 },
-    gulp.series("slick")
   );
   gulp.watch(
     "./assets/js/main.js",
