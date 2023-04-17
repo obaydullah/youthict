@@ -28,7 +28,7 @@
     }
   }
   .content {
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 70vh;
     padding: 2.4rem;
     padding-top: 1.5rem;
@@ -228,13 +228,6 @@
   overflow: hidden !important;
 
   .content {
-    padding: 2.4rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-height: 70vh;
-
     label,
     .reporttype__label {
       width: 100%;
@@ -363,13 +356,6 @@
   overflow: hidden !important;
 
   .content {
-    max-height: 70vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 2.4rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-
     .select__element {
       position: relative;
     }
@@ -450,14 +436,6 @@
   overflow-y: hidden !important;
 
   .content {
-    max-height: 65vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 0.5rem;
-    padding: 2.4rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-
     .select__element {
       position: relative;
     }

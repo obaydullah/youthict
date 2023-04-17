@@ -20998,7 +20998,7 @@ input.invalid {
   font-size: 2rem;
 }
 .modal__form--table .content {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 70vh;
   padding: 2.4rem;
   padding-top: 1.5rem;
@@ -21186,14 +21186,6 @@ input.invalid {
   z-index: 999999;
   overflow: hidden !important;
 }
-.update__modal .content {
-  padding: 2.4rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 70vh;
-}
 .update__modal .content label,
 .update__modal .content .reporttype__label {
   width: 100%;
@@ -21317,14 +21309,6 @@ input.invalid {
   z-index: 999999;
   overflow: hidden !important;
 }
-.filter__modal .content {
-  max-height: 70vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding: 2.4rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
 .filter__modal .content .select__element {
   position: relative;
 }
@@ -21400,15 +21384,6 @@ input.invalid {
   backdrop-filter: blur(3px);
   z-index: 999999;
   overflow-y: hidden !important;
-}
-.student__modal .content {
-  max-height: 65vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding: 0.5rem;
-  padding: 2.4rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 .student__modal .content .select__element {
   position: relative;
