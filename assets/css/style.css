@@ -21685,19 +21685,77 @@ input.invalid {
 .profile__area .thumbnail {
   margin-bottom: 30px;
   text-align: center;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
-.profile__area .thumbnail .thumbnail__img {
+@media (min-width: 768px) and (max-width: 991px) {
+  .profile__area .thumbnail {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .profile__area .thumbnail {
+    margin: 0 auto;
+  }
+}
+.profile__area .thumbnail:hover .thumbnail__img {
+  filter: brightness(0.5);
+}
+.profile__area .thumbnail:hover .profile__upload--area {
+  opacity: 1;
+  visibility: visible;
+}
+.profile__area .thumbnail .profile__upload--area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.profile__area .thumbnail .profile__upload--area .profile-upload-label {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #f4f4f4;
+  border: 3px solid #cccccc;
+  border-radius: 5px;
+  cursor: pointer;
+  border-style: dotted;
+}
+.profile__area .thumbnail .profile__upload--area .profile-upload-label i {
+  font-size: 30px;
+}
+.profile__area .thumbnail .profile__upload--area .profile-upload-input {
+  display: none;
+}
+.profile__area .thumbnail .thumbnail__img,
+.profile__area .thumbnail .thumbnail__preview--area {
   width: 350px;
   max-width: 100%;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
+  transition: all 0.3s;
 }
 .profile__area .social__share {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .profile__area .social__share {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .profile__area .social__share {
+    margin-top: 2rem;
+  }
 }
 .profile__area .social__share a {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -21797,18 +21855,51 @@ input.invalid {
   line-height: 25px;
   margin-bottom: 20px;
 }
-.profile__area .details .contact__me--details span {
-  font-size: 16px;
-  font-weight: 500;
-  color: #342b27;
-  min-width: 200px;
-  min-width: 100px;
-  display: inline-block;
+.profile__area .details .contact__me--details .details__info {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
 }
-.profile__area .details .contact__me--details p {
+@media (min-width: 768px) and (max-width: 991px) {
+  .profile__area .details .contact__me--details .details__info {
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .profile__area .details .contact__me--details .details__info {
+    justify-content: center;
+    width: 100%;
+  }
+}
+.profile__area .details .contact__me--details .details__info div {
+  border-bottom: 2px solid #cccccc;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .profile__area .details .contact__me--details .details__info div {
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .profile__area .details .contact__me--details .details__info div {
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+.profile__area .details .contact__me--details h4 {
+  font-size: 15px;
   font-weight: 400;
   color: #808080;
   display: inline-block;
+}
+.profile__area .details .contact__me--details h4 span {
+  color: #342b27;
+  display: inline-block;
+  font-size: 16px;
+  min-width: 100px;
 }
 
 .profile__card {
@@ -21819,20 +21910,20 @@ input.invalid {
   text-align: center;
   margin-bottom: 4rem;
 }
-.profile__card .instructor__item {
+.profile__card .profile__card--item {
   position: relative;
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
-.profile__card .instructor__single {
+.profile__card .card__single {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
   width: 300px;
 }
-.profile__card .instructor__single .file__upload--area {
+.profile__card .card__single .file__upload--area {
   position: absolute;
   top: 13rem;
   left: 50%;
@@ -21845,7 +21936,7 @@ input.invalid {
   visibility: hidden;
   transition: all 0.3s;
 }
-.profile__card .instructor__single .file__upload--area .file-upload-label {
+.profile__card .card__single .file__upload--area .file-upload-label {
   display: inline-block;
   padding: 20px 10px;
   background-color: #f4f4f4;
@@ -21854,16 +21945,16 @@ input.invalid {
   cursor: pointer;
   border-style: dotted;
 }
-.profile__card .instructor__single .file__upload--area .file-upload-input {
+.profile__card .card__single .file__upload--area .file-upload-input {
   display: none;
 }
-.profile__card .instructor__single .file__upload--area .drag-drop-text {
+.profile__card .card__single .file__upload--area .drag-drop-text {
   font-size: 18px;
   font-weight: normal;
   text-align: center;
   color: #615e58;
 }
-.profile__card .instructor__single .overlay {
+.profile__card .card__single .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -21875,27 +21966,27 @@ input.invalid {
   visibility: hidden;
   transition: all 0.3s;
 }
-.profile__card .instructor__single:hover .overlay {
+.profile__card .card__single:hover .overlay {
   opacity: 1;
   visibility: visible;
 }
-.profile__card .instructor__single:hover .file__upload--area {
+.profile__card .card__single:hover .file__upload--area {
   opacity: 1;
   visibility: visible;
   top: 10rem;
 }
-.profile__card .instructor__single .img__box {
+.profile__card .card__single .img__box {
   width: 100%;
   height: 35rem;
   background-color: #dfdfdf;
 }
-.profile__card .instructor__single .img__box img {
+.profile__card .card__single .img__box img {
   border-radius: 1rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.profile__card .instructor__single--info {
+.profile__card .card__single--info {
   position: absolute;
   bottom: 2rem;
   left: 50%;
@@ -21905,7 +21996,7 @@ input.invalid {
   text-align: center;
   padding: 0 2rem;
 }
-.profile__card .instructor__single--info .name {
+.profile__card .card__single--info .name {
   background: #fff;
   color: #1f1e1e;
   display: inline-block;
@@ -21913,13 +22004,4 @@ input.invalid {
   border-radius: 1rem;
   font-size: 2.2rem;
   font-weight: bold;
-}
-.profile__card .instructor__single--info .designation {
-  background: #fff;
-  color: rgba(0, 0, 0, 0.8);
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  font-size: 1.4rem;
-  font-weight: normal;
 }

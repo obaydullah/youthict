@@ -1,484 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="canonical" href="https://youthict.org" />
+    <link
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+      alt="Youth ICT | Favicon"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/feather.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/bootstrap-datepicker.standalone.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profile</title>
-  <link rel="canonical" href="https://youthict.org" />
-  <link rel="icon" href="assets/images/favicon.png" type="image/png" alt="Youth ICT | Favicon" />
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/feather.css" />
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/bootstrap-datepicker.standalone.min.css">
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <body class="table__body body-container rbt-header-sticky">
+    <!-- Start Header -->
+    <!-- Start Header Area -->
+    <header class="rbt-header rbt-header-10">
+      <div class="rbt-sticky-placeholder"></div>
 
-
-</head>
-
-<body class="table__body body-container rbt-header-sticky">
-  <!-- Start Header -->
-  <!-- Start Header Area -->
-  <header class="rbt-header rbt-header-10">
-    <div class="rbt-sticky-placeholder"></div>
-
-    <!-- add header-top-gradiant class to add gradiant -->
-    <div
-      class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation">
-      <div class="container">
-        <div class="top-expended-wrapper">
-          <div class="top-expended-inner rbt-header-sec align-items-center">
-            <div class="rbt-header-sec-col rbt-header-left">
-              <div class="rbt-header-content">
-                <!-- Start Header Information List  -->
-                <div class="header-info">
-                  <ul class="rbt-information-list">
-                    <li class="phone">
-                      <!-- add black-text class to make black text  -->
-                      <a href="#"><i class="feather-phone"></i>01771599533</a>
-                    </li>
-                    <li class="email">
-                      <a href="#"><i class="feather-mail"></i>youthictbd@gmail.com</a>
-                    </li>
-                    <li class="verify">
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
-                          viewBox="0 0 512 512">
-                          <path fill="currentColor"
-                            d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2l-45-46.2z" />
-                        </svg>Verify certificate</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- End Header Information List  -->
-              </div>
-            </div>
-
-            <div class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10">
-              <div class="rbt-header-content justify-content-start justify-content-lg-end">
-                <div class="header-info d-none d-xl-block">
-                  <ul class="social-share-transparent">
-                    <li>
-                      <a href="#"><i class="feather-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="feather-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="feather-linkedin"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="feather-instagram"></i></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="rbt-separator d-none d-xl-block"></div>
-                <div class="header-info d-none d-xl-block">
-                  <div class="language">
-                    <span class="en selected">En</span>
-                    <span class="divider">|</span>
-                    <span class="bn">বাং</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Header Top  -->
-
-    <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
-    <div class="rbt-header-wrapper header-space-betwween header-sticky profile-sticky">
-      <div class="container">
-        <div class="mainbar-row rbt-navigation-center align-items-center">
-          <div class="header-left rbt-header-content">
-            <div class="header-info">
-              <div class="logo">
-                <a href="#">
-                  <img src="assets/images/logo.webp" alt="Youth ICT" class="logo__img" />
-                </a>
-              </div>
-            </div>
-
-            <div class="header-info">
-              <div class="rbt-category-menu-wrapper">
-                <div class="rbt-category-btn rbt-side-offcanvas-activation">
-                  <div class="rbt-offcanvas-trigger md-size icon">
-                    <span class="d-none d-xl-block">
-                      <i class="feather-grid"></i>
-                    </span>
-                    <i title="Category" class="feather-grid d-block d-xl-none"></i>
-                  </div>
-                  <span class="category-text d-none d-xl-block">Courses</span>
-                  <iconify-icon icon="ic:twotone-keyboard-arrow-down"></iconify-icon>
-                </div>
-                <div class="category-dropdown-menu d-none d-xl-block">
-                  <div class="category-menu-item">
-                    <div class="rbt-vertical-nav">
-                      <ul class="rbt-vertical-nav-list-wrapper vertical-nav-menu">
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Offline</a>
-                        </li>
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Online </a>
-                        </li>
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Govt. Job</a>
-                        </li>
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Diploma</a>
-                        </li>
-                        <li class="vertical-nav-item">
-                          <a href="course.html">Shorthand</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block">
-            <nav class="mainmenu-nav">
-              <ul class="mainmenu">
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-
-                <li class="has-dropdown has-menu-child-item">
-                  <a href="#">Branch
-                    <i class="feather-chevron-down"></i>
-                  </a>
-                  <ul class="submenu">
-                    <li class="has-dropdown">
-                      <a href="branchapply.html">Apply for Branch</a>
-                      <a href="branch.html">Search for Branch</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="has-dropdown has-menu-child-item">
-                  <a href="#">Student
-                    <i class="feather-chevron-down"></i>
-                  </a>
-                  <ul class="submenu">
-                    <li class="has-dropdown">
-                      <a href="studentsapply.html">Apply for Student</a>
-                      <a href="results.html">Student Result</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="govjobgetters.html">Govt. Job getters</a>
-                </li>
-                <li>
-                  <a href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                  <a href="about.html">About us</a>
-                </li>
-                <li>
-                  <a href="contact.html">Contact us</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="header-right">
-            <!-- add (login__white) class with login__btn for white button -->
-            <a class="login__btn d-none d-lg-block d-xl-block d-xxl-block" href="login.html">Login</a>
-            <!-- Start Mobile-Menu-Bar -->
-            <div class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none">
-              <div class="hamberger">
-                <button class="hamberger-button rbt-round-btn" type="button" aria-labelledby="hamberger button">
-                  <i class="feather-menu"></i>
-                </button>
-              </div>
-            </div>
-            <!-- End Mobile-Menu-Bar -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- Mobile Menu Section -->
-  <div class="popup-mobile-menu">
-    <div class="inner-wrapper">
-      <div class="popup__header">
-        <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo" />
-        <div class="rbt-btn-close">
-          <button class="close-button rbt-round-btn">
-            <i class="feather-x"></i>
-          </button>
-        </div>
-      </div>
-      <nav class="mainmenu-nav">
-        <ul class="mainmenu">
-          <li class="with-megamenu has-menu-child-item">
-            <!-- Start Mega Menu  -->
-            <div class="row">
-              <div class="col-lg-12">
-                <ul class="nav-quick-access">
-                  <li>
-                    <a href="index.html"> Home</a>
-                  </li>
-                  <li>
-                    <a href="course.html"> Browse Course</a>
-                  </li>
-
-                  <li>
-                    <div class="button__box" onclick="toggleDropdown('branch-dropdown')">
-                      <button>Branch</button>
-
-                      <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
-                    </div>
-
-                    <ul id="branch-dropdown" class="dropdown hide">
-                      <a href="branchapply.html">Apply for Branch</a>
-                      <a href="branch.html">Search Branch</a>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <div class="button__box" onclick="toggleDropdown('student-dropdown')">
-                      <button>Student</button>
-                      <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
-                    </div>
-
-                    <ul id="student-dropdown" class="dropdown hide">
-                      <a href="branchapply.html">Apply for Student</a>
-                      <a href="branch.html">Student Result</a>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <a href="govjobgetters.html"> Govt. Job getters</a>
-                  </li>
-                  <li>
-                    <a href="gallery.html"> Gallery</a>
-                  </li>
-                  <li>
-                    <a href="about.html"> About Us</a>
-                  </li>
-                  <li>
-                    <a href="contact.html"> Contact us</a>
-                  </li>
-
-                  <div class="footer__btn">
-                    <a class="offcanvas__login--btn" href="login.html">Login</a>
-                  </div>
-                </ul>
-              </div>
-            </div>
-            <!-- End Mega Menu  -->
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <!-- Start Side Vav -->
-
-  <main>
-    <div class="profile__page">
-
-      <!-- profile area start  -->
-      <section class="profile__area">
+      <!-- add header-top-gradiant class to add gradiant -->
+      <div
+        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation"
+      >
         <div class="container">
-          <div class="row gx-5">
-
-            <div class="col-lg-4 pr-2">
-              <div class="thumbnail">
-                <img class="thumbnail__img" src="./assets/images/profile/team-18.webp" alt="Profile Picture">
+          <div class="top-expended-wrapper">
+            <div class="top-expended-inner rbt-header-sec align-items-center">
+              <div class="rbt-header-sec-col rbt-header-left">
+                <div class="rbt-header-content">
+                  <!-- Start Header Information List  -->
+                  <div class="header-info">
+                    <ul class="rbt-information-list">
+                      <li class="phone">
+                        <!-- add black-text class to make black text  -->
+                        <a href="#"><i class="feather-phone"></i>01771599533</a>
+                      </li>
+                      <li class="email">
+                        <a href="#"
+                          ><i class="feather-mail"></i>youthictbd@gmail.com</a
+                        >
+                      </li>
+                      <li class="verify">
+                        <a href="#">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="512"
+                            height="512"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2l-45-46.2z"
+                            />
+                          </svg>
+                          Verify certificate</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- End Header Information List  -->
+                </div>
               </div>
-              <div class="social__share">
-                <a href="#">
-                  <i class="fa fa-share-alt" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
+
+              <div
+                class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10"
+              >
+                <div
+                  class="rbt-header-content justify-content-start justify-content-lg-end"
+                >
+                  <div class="header-info d-none d-xl-block">
+                    <ul class="social-share-transparent">
+                      <li>
+                        <a href="#"><i class="feather-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-twitter"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-linkedin"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-instagram"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rbt-separator d-none d-xl-block"></div>
+                  <div class="header-info d-none d-xl-block">
+                    <div class="language">
+                      <span class="en selected">En</span>
+                      <span class="divider">|</span>
+                      <span class="bn">বাং</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Header Top  -->
 
-            <div class="col-lg-8 pl-2">
-              <div class="details">
-                <div class="header">
-                  <h4>Instructor</h4>
-                  <h5>Edward Norton</h5>
-                  <h6>Developer and Teacher</h6>
+      <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
+      <div
+        class="rbt-header-wrapper header-space-betwween header-sticky profile-sticky"
+      >
+        <div class="container">
+          <div class="mainbar-row rbt-navigation-center align-items-center">
+            <div class="header-left rbt-header-content">
+              <div class="header-info">
+                <div class="logo">
+                  <a href="#">
+                    <img
+                      src="assets/images/logo.webp"
+                      alt="Youth ICT"
+                      class="logo__img"
+                    />
+                  </a>
+                </div>
+              </div>
 
-                  <div class="ratings">
-                    <div class="students">
-                      <i class="fa fa-user-o" aria-hidden="true"></i>
-                      <p>20 Students</p>
+              <div class="header-info">
+                <div class="rbt-category-menu-wrapper">
+                  <div class="rbt-category-btn rbt-side-offcanvas-activation">
+                    <div class="rbt-offcanvas-trigger md-size icon">
+                      <span class="d-none d-xl-block">
+                        <i class="feather-grid"></i>
+                      </span>
+                      <i
+                        title="Category"
+                        class="feather-grid d-block d-xl-none"
+                      ></i>
                     </div>
-
-                    <div class="seperator"></div>
-
-                    <div class="ratings__item">
-                      <div class="icon">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <span>(720 ratings)</span>
+                    <span class="category-text d-none d-xl-block">Courses</span>
+                    <iconify-icon
+                      icon="ic:twotone-keyboard-arrow-down"
+                    ></iconify-icon>
+                  </div>
+                  <div class="category-dropdown-menu d-none d-xl-block">
+                    <div class="category-menu-item">
+                      <div class="rbt-vertical-nav">
+                        <ul
+                          class="rbt-vertical-nav-list-wrapper vertical-nav-menu"
+                        >
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Offline</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Online </a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Govt. Job</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Diploma</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Shorthand</a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-
-
                   </div>
-                </div>
-
-                <!-- about me   -->
-                <div class="about__me">
-                  <h4 class="profile__title">About me </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur elit sed do eius mod tempor incidid labore dolore magna
-                    aliqua. enim ad minim eniam quis nostrud exercitation ullamco laboris nisi aliquip ex commodo
-                    consequat. duis aute irure dolor in repreed ut perspiciatis unde omnis iste natus error sit voluptat
-                    em acus antium.</p>
-                  <p>doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch
-                    itecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-
-                <div class="contact__me">
-                  <h4 class="profile__title">Contact me</h4>
-                  <div class="contact__me--details">
-
-                    <div>
-                      <span>Address: </span>
-                      <p> North Helenavile, FV77 8WS</p>
-                    </div>
-                    <div>
-                      <span>Email: </span>
-                      <p> edublink@example.com </p>
-                    </div>
-                    <div>
-                      <span>Phone: </span>
-                      <p> +37 (417) 683-4409</p>
-                    </div>
-
-                  </div>
-
                 </div>
               </div>
             </div>
-          </div>
-      </section>
-      <!-- profile area end  -->
+            <div
+              class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block"
+            >
+              <nav class="mainmenu-nav">
+                <ul class="mainmenu">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
 
+                  <li class="has-dropdown has-menu-child-item">
+                    <a href="#"
+                      >Branch
+                      <i class="feather-chevron-down"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li class="has-dropdown">
+                        <a href="branchapply.html">Apply for Branch</a>
+                        <a href="branch.html">Search for Branch</a>
+                      </li>
+                    </ul>
+                  </li>
 
-      <!-- profile card area start  -->
-      <section class="profile__card">
-        <div class="container">
-          <div class="instructor__area--header">
-            <p class="pre__title">License</p>
-            <h2 class="title">License & Images</h2>
-          </div>
+                  <li class="has-dropdown has-menu-child-item">
+                    <a href="#"
+                      >Student
+                      <i class="feather-chevron-down"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li class="has-dropdown">
+                        <a href="studentsapply.html">Apply for Student</a>
+                        <a href="results.html">Student Result</a>
+                      </li>
+                    </ul>
+                  </li>
 
-          <div class="row">
-            <div class="instructor__item">
-
-              <div class="instructor__single">
-                <div class="overlay"></div>
-                <div class="img__box preview">
-                  <!-- <img src="./assets/images/about/team-05.webp" alt="" /> -->
-                </div>
-
-                <div class="file__upload--area">
-                  <label for="tradelicense" class="file-upload-label">
-                    <h2 class="drag-drop-text">Upload your file here</h2>
-                  </label>
-                  <input type="file" id="tradelicense" name="file-upload" class="file-upload-input">
-                </div>
-                <div class="instructor__single--info">
-                  <h2 class="name">Trade License</h2>
-
-                </div>
-              </div>
-
-              <div class="instructor__single">
-                <div class="overlay"></div>
-                <div class="img__box preview">
-                  <!-- <img src="./assets/images/about/team-06.webp" alt="" /> -->
-                </div>
-
-                <div class="file__upload--area">
-                  <label for="file-upload" class="file-upload-label">
-                    <h2 class="drag-drop-text">Upload your file here</h2>
-                  </label>
-                  <input type="file" id="file-upload" name="file-upload" class="file-upload-input">
-                </div>
-                <div class="instructor__single--info">
-                  <h2 class="name">Trade License</h2>
-
-                </div>
-              </div>
-
-
-
+                  <li>
+                    <a href="govjobgetters.html">Govt. Job getters</a>
+                  </li>
+                  <li>
+                    <a href="gallery.html">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="about.html">About us</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact us</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-          </div>
-        </div>
 
-      </section>
-      <!-- profile card area end -->
-    </div>
-
-  </main>
-
-
-
-  <!-- Start Footer -->
-  <footer id="rs-footer" class="rs-footer footer-style-1 has-footer-contact course__listing--footer">
-    <div class="footer-bottom login__footer">
-      <div class="container">
-        <div class="footer-bottom-inner">
-          <div class="copyright">
-            <p>
-              &copy; 2023. All Rights Reserved By: youthict.org || Developed
-              By:
-              <a href="http://www.mateors.com">MATEORS DOT COM </a>
-            </p>
+            <div class="header-right">
+              <!-- add (login__white) class with login__btn for white button -->
+              <a
+                class="login__btn d-none d-lg-block d-xl-block d-xxl-block"
+                href="login.html"
+                >Login</a
+              >
+              <!-- Start Mobile-Menu-Bar -->
+              <div
+                class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none"
+              >
+                <div class="hamberger">
+                  <button
+                    class="hamberger-button rbt-round-btn"
+                    type="button"
+                    aria-labelledby="hamberger button"
+                  >
+                    <i class="feather-menu"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- End Mobile-Menu-Bar -->
+            </div>
           </div>
         </div>
       </div>
+    </header>
+    <!-- Mobile Menu Section -->
+    <div class="popup-mobile-menu">
+      <div class="inner-wrapper">
+        <div class="popup__header">
+          <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo" />
+          <div class="rbt-btn-close">
+            <button class="close-button rbt-round-btn">
+              <i class="feather-x"></i>
+            </button>
+          </div>
+        </div>
+        <nav class="mainmenu-nav">
+          <ul class="mainmenu">
+            <li class="with-megamenu has-menu-child-item">
+              <!-- Start Mega Menu  -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nav-quick-access">
+                    <li>
+                      <a href="index.html"> Home</a>
+                    </li>
+                    <li>
+                      <a href="course.html"> Browse Course</a>
+                    </li>
+
+                    <li>
+                      <div
+                        class="button__box"
+                        onclick="toggleDropdown('branch-dropdown')"
+                      >
+                        <button>Branch</button>
+
+                        <iconify-icon
+                          icon="ic:twotone-keyboard-arrow-right"
+                        ></iconify-icon>
+                      </div>
+
+                      <ul id="branch-dropdown" class="dropdown hide">
+                        <a href="branchapply.html">Apply for Branch</a>
+                        <a href="branch.html">Search Branch</a>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <div
+                        class="button__box"
+                        onclick="toggleDropdown('student-dropdown')"
+                      >
+                        <button>Student</button>
+                        <iconify-icon
+                          icon="ic:twotone-keyboard-arrow-right"
+                        ></iconify-icon>
+                      </div>
+
+                      <ul id="student-dropdown" class="dropdown hide">
+                        <a href="branchapply.html">Apply for Student</a>
+                        <a href="branch.html">Student Result</a>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="govjobgetters.html"> Govt. Job getters</a>
+                    </li>
+                    <li>
+                      <a href="gallery.html"> Gallery</a>
+                    </li>
+                    <li>
+                      <a href="about.html"> About Us</a>
+                    </li>
+                    <li>
+                      <a href="contact.html"> Contact us</a>
+                    </li>
+
+                    <div class="footer__btn">
+                      <a class="offcanvas__login--btn" href="login.html"
+                        >Login</a
+                      >
+                    </div>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Mega Menu  -->
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </footer>
-  <!-- End Footer -->
+    <!-- Start Side Vav -->
 
-  <script src="assets/js/jquery-3.6.3.min.js"></script>
-  <script src="assets/js/slick.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/iconify-icon.min.js"></script>
-  <script src="assets/js/header.js"></script>
+    <main>
+      <div class="profile__page">
+        <!-- profile area start  -->
+        <section class="profile__area">
+          <div class="container">
+            <div class="row gx-5">
+              <div class="col-lg-4 pr-2">
+                <div class="thumbnail">
+                  <!-- In thumbnail preview area we can preview  -->
+                  <div class="thumbnail__preview--area thumbnail__img">
+                    <img
+                      class="thumbnail__img"
+                      src="./assets/images/profile/team-18.webp"
+                      alt="Profile Picture"
+                    />
+                  </div>
 
-  <script>
-    const tradeLicense = document.getElementById('tradelicense');
-    const preview = document.querySelector('.preview');
+                  <div class="profile__upload--area">
+                    <label for="profilephoto" class="profile-upload-label">
+                      <i class="fa fa-upload" aria-hidden="true"></i>
+                    </label>
+                    <input
+                      type="file"
+                      id="profilephoto"
+                      name="file-upload"
+                      class="profile-upload-input"
+                    />
+                  </div>
+                </div>
+                <div class="social__share">
+                  <a href="#">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
 
-    tradeLicense.addEventListener('change', () => {
-      const file = tradeLicense.files[0];
-      const reader = new FileReader();
+              <div class="col-lg-8 pl-2">
+                <div class="details">
+                  <div class="header">
+                    <h4>Instructor</h4>
+                    <h5>Edward Norton</h5>
+                    <h6>Developer and Teacher</h6>
 
-      reader.addEventListener('load', () => {
-        preview.innerHTML = `<img src="${reader.result}" alt="preview">`;
-      });
+                    <div class="ratings">
+                      <div class="students">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                        <p>20 Students</p>
+                      </div>
 
-      if (file) {
-        reader.readAsDataURL(file);
-      }
-    });
-  </script>
+                      <div class="seperator"></div>
 
-</body>
+                      <div class="ratings__item">
+                        <div class="icon">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <span>(720 ratings)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
+                  <!-- about me   -->
+                  <div class="about__me">
+                    <h4 class="profile__title">About me</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur elit sed do eius
+                      mod tempor incidid labore dolore magna aliqua. enim ad
+                      minim eniam quis nostrud exercitation ullamco laboris nisi
+                      aliquip ex commodo consequat. duis aute irure dolor in
+                      repreed ut perspiciatis unde omnis iste natus error sit
+                      voluptat em acus antium.
+                    </p>
+                    <p>
+                      doloremque laudantium totam rem aperiam, eaque ipsa quae
+                      ab illo inventore veritatis et quasi arch itecto beatae
+                      vitae dicta sunt explicabo.
+                    </p>
+                  </div>
+
+                  <div class="contact__me">
+                    <h4 class="profile__title">Contact me</h4>
+                    <div class="contact__me--details">
+                      <div class="details__info">
+                        <div>
+                          <h4>
+                            <span>Address: </span>
+                            North Helenavile, FV77 8WS
+                          </h4>
+                        </div>
+
+                        <div>
+                          <h4>
+                            <span>Email: </span>
+                            edublink@example.com
+                          </h4>
+                        </div>
+
+                        <div>
+                          <h4>
+                            <span>Phone: </span>
+                            +37 (417) 683-4409
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- profile area end  -->
+
+        <!-- profile card area start  -->
+        <section class="profile__card">
+          <div class="container">
+            <div class="profile__card--header">
+              <p class="pre__title">License</p>
+              <h2 class="title">License & Images</h2>
+            </div>
+
+            <div class="row">
+              <div class="profile__card--item">
+                <div class="card__single">
+                  <div class="overlay"></div>
+                  <div class="img__box preview">
+                    <!-- <img src="./assets/images/about/team-05.webp" alt="" /> -->
+                  </div>
+
+                  <div class="file__upload--area">
+                    <label for="tradelicense" class="file-upload-label">
+                      <h2 class="drag-drop-text">Upload your file here</h2>
+                    </label>
+                    <input
+                      type="file"
+                      id="tradelicense"
+                      name="file-upload"
+                      class="file-upload-input"
+                    />
+                  </div>
+                  <div class="card__single--info">
+                    <h2 class="name">Trade License</h2>
+                  </div>
+                </div>
+
+                <div class="card__single">
+                  <div class="overlay"></div>
+                  <div class="img__box preview">
+                    <!-- <img src="./assets/images/about/team-06.webp" alt="" /> -->
+                  </div>
+
+                  <div class="file__upload--area">
+                    <label for="file-upload" class="file-upload-label">
+                      <h2 class="drag-drop-text">Upload your file here</h2>
+                    </label>
+                    <input
+                      type="file"
+                      id="file-upload"
+                      name="file-upload"
+                      class="file-upload-input"
+                    />
+                  </div>
+                  <div class="card__single--info">
+                    <h2 class="name">Signature</h2>
+                  </div>
+                </div>
+
+                <div class="card__single">
+                  <div class="overlay"></div>
+                  <div class="img__box preview">
+                    <!-- <img src="./assets/images/about/team-06.webp" alt="" /> -->
+                  </div>
+
+                  <div class="file__upload--area">
+                    <label for="file-upload" class="file-upload-label">
+                      <h2 class="drag-drop-text">Upload your file here</h2>
+                    </label>
+                    <input
+                      type="file"
+                      id="file-upload"
+                      name="file-upload"
+                      class="file-upload-input"
+                    />
+                  </div>
+                  <div class="card__single--info">
+                    <h2 class="name">NID</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- profile card area end -->
+      </div>
+    </main>
+
+    <!-- Start Footer -->
+    <footer
+      id="rs-footer"
+      class="rs-footer footer-style-1 has-footer-contact course__listing--footer"
+    >
+      <div class="footer-bottom login__footer">
+        <div class="container">
+          <div class="footer-bottom-inner">
+            <div class="copyright">
+              <p>
+                &copy; 2023. All Rights Reserved By: youthict.org || Developed
+                By:
+                <a href="http://www.mateors.com">MATEORS DOT COM </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/iconify-icon.min.js"></script>
+    <script src="assets/js/header.js"></script>
+
+    <script>
+      // const tradeLicense = document.getElementById('tradelicense');
+      // const preview = document.querySelector('.preview');
+
+      // tradeLicense.addEventListener('change', () => {
+      //   const file = tradeLicense.files[0];
+      //   const reader = new FileReader();
+
+      //   reader.addEventListener('load', () => {
+      //     preview.innerHTML = `<img src="${reader.result}" alt="preview">`;
+      //   });
+
+      //   if (file) {
+      //     reader.readAsDataURL(file);
+      //   }
+      // });
+    </script>
+  </body>
 </html>
