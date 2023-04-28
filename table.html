@@ -14,6 +14,59 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap-datepicker.standalone.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
+
+
+    <style>
+        .file-upload-label {
+            display: inline-block;
+            padding: 20px 10px;
+            background-color: #F4F4F4;
+            border: 3px solid #cccccc;
+            border-radius: 5px;
+            cursor: pointer;
+            border-style: dotted;
+
+        }
+
+        .file-upload-input {
+            display: none;
+        }
+
+        .drag-drop-text {
+            font-size: 18px;
+            font-weight: normal;
+            text-align: center;
+            color: #615e58;
+        }
+
+
+        td.column {
+            width: 48% !important;
+        }
+
+        @media (max-width: 768px) {
+            td.column {
+                display: block;
+                width: 100% !important;
+            }
+        }
+
+        #preview {
+            background-color: #f4f4f4;
+            height: 72px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #preview img {
+            height: 72px;
+            width: auto;
+            object-fit: contain;
+            width: 100%;
+
+        }
+    </style>
 </head>
 
 <body class="table__body body-container rbt-header-sticky">
@@ -455,7 +508,7 @@
     </main>
 
     <!-- add new modal start -->
-    <div class="table__modal">
+    <!-- <div class="table__modal">
         <form class="table__modal--form modal__form--table">
             <div class="header">
                 <h2>New Report</h2>
@@ -532,12 +585,12 @@
                 </button>
             </div>
         </form>
-    </div>
+    </div> -->
 
     <!-- add new modal end  -->
 
     <!-- update modal start -->
-    <div class="update__modal">
+    <!-- <div class="update__modal">
         <form class="table_update--modal--form modal__form--table">
             <div class="header">
                 <h2>Update Modal</h2>
@@ -614,11 +667,11 @@
                 </button>
             </div>
         </form>
-    </div>
+    </div> -->
     <!-- update modal end  -->
 
 
-    <!-- update modal start -->
+    <!-- filter modal start -->
     <div class="filter__modal">
         <form class="table_filter--modal--form modal__form--table">
             <div class="header">
@@ -627,60 +680,139 @@
             </div>
 
             <div class="content">
-                <div class="form__field">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" />
-                </div>
+                <table width="100%" cellpadding="0" cellspacing="0" style="margin:0; padding:0;">
+                    <tr>
+                        <td style="padding-right: 10px;" class="column">
+                            <div class="form__field">
+                                <label for="name">First Name</label>
+                                <input type="text" name="name" id="name" placeholder="Enter your name" />
+                            </div>
+                        </td>
+                        <td style="padding-left: 10px;" class="column">
+                            <div class="form__field">
+                                <label for="name">Last Name</label>
+                                <input type="text" name="name" id="name" placeholder="Enter your name" />
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <div class="form__field">
+                                <label for="url">Report
+                                    URL</label>
+                                <input type="text" name="url" id="url" placeholder="Report URL" />
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <div class="form__field">
+                                <label for="course">Select
+                                    Course</label>
+                                <select name="course" id="course" name="state" class="select__course">
+                                    <option value="">select course</option>
+                                    <option value="Golang"> Golang</option>
+                                    <option value="Javascript">Javascript</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <div class="form__field">
+                                <label for="clientname">Select
+                                    subject</label>
+                                <div class="checkbox__item">
+                                    <input class="form-check-input m-0 align-middle" type="checkbox"
+                                        aria-label="Web Design" id="webdesign" />
+
+                                    <label for="webdesign"> Web Design</label>
+                                </div>
+                                <div class="checkbox__item">
+                                    <input class="form-check-input m-0 align-middle" type="checkbox"
+                                        aria-label="Graphics Design" id="graphicsdesign" />
+
+                                    <label for="graphicsdesign"> Graphics
+                                        design</label>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
 
 
-                <div class="form__field">
-                    <label for="url">Report URL</label>
-                    <input type="text" name="url" id="url" placeholder="Report URL" />
-                </div>
-                <div class="form__field">
-                    <label for="course">Select Course</label>
-                    <select name="course" id="course" name="state" class="select__course">
-                        <option value="">select course</option>
-                        <option value="Golang"> Golang</option>
-                        <option value="Javascript">Javascript</option>
-                    </select>
-                </div>
+                    <tr>
+                        <td colspan="2">
+                            <div class="form__field">
+                                <label for="reportingperiod">Reporting
+                                    Period</label>
+                                <div class="input-group date" data-provide="datepicker">
+                                    <input type="text" placeholder="Select Date">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <div class="form__field">
+                                <label for="additionalinfo">Additional Info</label>
+                                <textarea placeholder="Additional Information" name="additionalinfo" id="additionalinfo"
+                                    cols="3" rows="3"></textarea>
+                            </div>
+                        </td>
+                    </tr>
 
 
-                <div class="form__field">
-                    <label for="clientname">Select subject</label>
-                    <div class="checkbox__item">
+                    <tr>
+                        <td style="padding-right: 10px;" class="column">
+                            <div class="form__field">
+                                <div id="preview">
+                                    preview
+                                </div>
+                            </div>
+                        </td>
 
-                        <input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Web Design"
-                            id="webdesign" />
+                        <td style="padding-left: 10px; padding-top: 4px;" class="column">
+                            <div class="form__field">
+                                <label for="file-upload" class="file-upload-label">
+                                    <h2 class="drag-drop-text">Drop your file here</h2>
+                                </label>
+                                <input type="file" id="file-upload" name="file-upload" class="file-upload-input">
+                            </div>
+                        </td>
+                    </tr>
 
-                        <label for="webdesign"> Web Design</label>
-                    </div>
-                    <div class="checkbox__item">
+                    <tr>
+                        <td colspan="2">
+                            <label for="" class="reporttype__label">Course
+                                type</label>
+                            <div class="form__group radio">
+                                <div class="form__field radio">
+                                    <input type="radio" name="coursetype" id="online" value="Online" />
+                                    <label for="online">
+                                        Online
+                                    </label>
+                                </div>
+                                <div class="form__field radio">
+                                    <input type="radio" name="coursetype" id="offline" value="offline" />
+                                    <label for="offline">
+                                        Offline
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
 
-                        <input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Graphics Design"
-                            id="graphicsdesign" />
-
-                        <label for="graphicsdesign"> Graphics design</label>
-                    </div>
+                </table>
 
 
-                </div>
-                <div class="form__field">
-                    <label for="reportingperiod">Reporting Period</label>
-                    <div class="input-group date" data-provide="datepicker">
-                        <input type="text" placeholder="Select Date">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form__field">
-                    <label for="additionalinfo">Additional Info</label>
-                    <textarea placeholder="Additional Information" name="additionalinfo" id="additionalinfo" cols="3"
-                        rows="3"></textarea>
-                </div>
             </div>
 
             <div class="button__area">
@@ -692,11 +824,12 @@
             </div>
         </form>
     </div>
-    <!-- update modal end  -->
+
+    <!-- filter modal end  -->
 
 
     <!-- student modal start -->
-    <div class="student__modal">
+    <!-- <div class="student__modal">
         <form class="table_student--modal--form modal__form--table">
             <div class="header">
                 <h2>Add New Student</h2>
@@ -817,7 +950,7 @@
                 </button>
             </div>
         </form>
-    </div>
+    </div> -->
     <!-- student modal end  -->
 
 
@@ -848,6 +981,24 @@
     <script src="assets/js/select2.min.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/table.js"></script>
+
+    <script>
+        const input = document.getElementById('file-upload');
+        const preview = document.getElementById('preview');
+
+        input.addEventListener('change', () => {
+            const file = input.files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener('load', () => {
+                preview.innerHTML = `<img src="${reader.result}" alt="preview">`;
+            });
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 
 </html>

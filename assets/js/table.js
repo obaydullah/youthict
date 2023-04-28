@@ -41,7 +41,7 @@ let filterModal = document.querySelector(".filter__modal");
 let filterModalForm = document.querySelector(".table_filter--modal--form");
 let filterModalOpen = document.querySelector(".filter__btn");
 let filterModalClose = document.querySelector(".filter__close");
-
+console.log(filterModal);
 filterModalOpen.addEventListener("click", function () {
   filterModal.style.opacity = 1;
   filterModal.style.visibility = "visible";
