@@ -81,6 +81,47 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Certificate";
+  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"),
+    url("../webfonts/CertificateRegularSWFTE.woff") format("woff"),
+    url("../webfonts/CertificateRegularSWFTE.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-bold-webfont.woff2") format("woff2"),
+    url("../webfonts/myriadpro-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-light-webfont.woff2") format("woff2"),
+    url("../webfonts/myriadpro-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-regular-webfont.woff2") format("woff2"),
+    url("../webfonts/myriadpro-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-semibold-webfont.woff2") format("woff2"),
+    url("../webfonts/myriadpro-semibold-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
 
 /*************************** start common css **************************************/
 

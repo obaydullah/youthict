@@ -1,0 +1,189 @@
+// .registration__card {
+//   overflow-x: auto;
+// }
+.registration {
+  position: relative;
+  width: 8.25in;
+  height: 11.2in;
+  z-index: 1;
+  margin: 0 auto;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("../images/certificate/registration__card.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &__content {
+    padding: 130px;
+    padding-top: 120px;
+
+    .logo__area {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+
+      .logo__main {
+        width: 83px;
+        height: auto;
+      }
+      .logo__two {
+        width: 385px;
+        height: auto;
+      }
+    }
+    .logo__bottom {
+      text-align: center;
+      margin-top: 2rem;
+      position: relative;
+
+      h2 {
+        font-size: 2.4rem;
+        font-family: $certificate_font;
+        font-weight: 500;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          position: absolute;
+          top: -1rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 164px;
+          height: 100%;
+          content: "";
+          background-image: url("../images/certificate/asset-1.svg");
+          background-repeat: no-repeat;
+          z-index: -1;
+        }
+        &::after {
+          position: absolute;
+          left: 50%;
+          bottom: -3rem;
+          transform: translateX(-50%);
+          width: 185px;
+          height: 100%;
+          content: "";
+          background-image: url("../images/certificate/asset-2.svg");
+          background-repeat: no-repeat;
+          z-index: -1;
+        }
+      }
+
+      .profile__img {
+        height: 124px;
+        width: 102px;
+        overflow: hidden;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        right: 1.5rem;
+        margin-top: -2rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .registration__table {
+      margin-top: 60px;
+
+      & > table {
+        font-size: 14px;
+        font-family: $font_myriad;
+
+        tr:first-child td {
+          padding-bottom: 20px;
+        }
+
+        .property {
+          max-width: 60px;
+          font-weight: bold;
+          white-space: nowrap;
+        }
+        .double {
+          display: flex;
+          align-items: center;
+
+          span {
+            width: 14px;
+          }
+
+          table {
+            margin-top: -6px;
+          }
+        }
+      }
+
+      .inner__table {
+        border-collapse: separate;
+        border-spacing: 6px 0 !important;
+
+        th,
+        td {
+          padding-bottom: 0 !important;
+        }
+        .inner__property {
+          max-width: 40px;
+        }
+        .underline {
+          border-bottom: 1px solid $black_4;
+          padding-left: 6px;
+        }
+
+        .td__middle {
+          background: #f2f2f3;
+          font-weight: bold;
+
+          &.gender {
+            max-width: 20px;
+          }
+          &.session {
+            max-width: 20px;
+          }
+          &.issue {
+            max-width: 24px;
+          }
+          &.upazila {
+            max-width: 20px;
+          }
+        }
+        .gender__end {
+          max-width: 31px;
+        }
+        .session__end {
+          max-width: 26px;
+        }
+        .reg__end {
+          max-width: 28px;
+        }
+        .upazila__end {
+          max-width: 27px;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  @page {
+    size: 8.25in 11.2in;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .registration {
+    margin-left: -23px;
+
+    &::after {
+      content: url("../images/certificate/registration__card.svg");
+    }
+  }
+}

@@ -829,10 +829,18 @@
   //single course area end
 }
 
-/* The Modal (background) */
-/* The Modal (background) */
-
 //modal style start
+
+.listing__modal,
+.warning__modal,
+.success__modal,
+.alert__modal {
+  .content {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
+
 .listing__modal {
   position: fixed;
   top: 0;
