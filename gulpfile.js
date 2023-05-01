@@ -13,6 +13,30 @@ gulp.task("sass", function () {
     .pipe(gulp.dest("./assets/css/"));
 });
 
+gulp.task("registration__card", function () {
+  return gulp
+    .src("./assets/scss/registration__card.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./assets/css/"));
+});
+
+gulp.task("admit__card", function () {
+  return gulp
+    .src("./assets/scss/admit__card.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./assets/css/"));
+});
+
+gulp.task("certificate", function () {
+  return gulp
+    .src("./assets/scss/certificate.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./assets/css/"));
+});
+
 // Task to rename and minify your CSS file
 gulp.task("minify-css", function () {
   return gulp
@@ -47,6 +71,9 @@ gulp.task(
 // Watch Task
 gulp.task("watch", function () {
   gulp.watch("./assets/scss/**/*.scss", gulp.series("sass"));
+  gulp.watch("./assets/scss/**/*.scss", gulp.series("registration__card"));
+  gulp.watch("./assets/scss/**/*.scss", gulp.series("admit__card"));
+  gulp.watch("./assets/scss/**/*.scss", gulp.series("certificate"));
   gulp.watch(
     "./assets/css/style.css",
     { debounceDelay: 500 },

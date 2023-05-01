@@ -1,6 +1,7 @@
-// .registration__card {
-//   overflow-x: auto;
-// }
+@import "partials/variables";
+@import "partials/default";
+@import "partials/media_query";
+
 .registration {
   position: relative;
   width: 8.25in;
@@ -169,6 +170,65 @@
         }
       }
     }
+
+    .footer {
+      margin-top: 130px;
+      display: flex;
+      justify-content: space-around;
+
+      .qr__code {
+        width: 50px;
+        margin-top: -10px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .signature {
+        text-align: center;
+        position: relative;
+
+        .signature__img {
+          height: 50px;
+          width: auto;
+          position: absolute;
+          bottom: 55px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        h4 {
+          font-size: 11px;
+          font-weight: 600;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          position: relative;
+          letter-spacing: -0.5px;
+
+          &::before {
+            position: absolute;
+            top: -3px;
+            left: -4%;
+            width: 108%;
+            height: 1px;
+            content: "";
+            background: $black_4;
+          }
+        }
+        p {
+          font-size: 9px;
+          font-weight: 600;
+          letter-spacing: -0.6px;
+        }
+      }
+      .chairman {
+        h4 {
+          letter-spacing: 0.2px;
+        }
+      }
+    }
   }
 }
 
@@ -180,10 +240,32 @@
     margin-bottom: 0;
   }
   .registration {
-    margin-left: -23px;
+    margin-left: -5px;
+    width: 8.25in;
+    height: 11.2in;
 
     &::after {
       content: url("../images/certificate/registration__card.svg");
+    }
+  }
+
+  .footer {
+    margin-top: 110px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .qr__code {
+      width: 30px;
+    }
+    .qr__code img {
+      width: 100%;
+      height: auto;
+    }
+
+    .signature {
+      text-align: center;
+      position: relative;
     }
   }
 }
