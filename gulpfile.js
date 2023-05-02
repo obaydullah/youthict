@@ -18,7 +18,7 @@ gulp.task("registration__card", function () {
     .src("./assets/scss/registration__card.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./assets/css/"));
+    .pipe(gulp.dest("./certificate/css/"));
 });
 
 gulp.task("admit__card", function () {
@@ -26,7 +26,7 @@ gulp.task("admit__card", function () {
     .src("./assets/scss/admit__card.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./assets/css/"));
+    .pipe(gulp.dest("./certificate/css/"));
 });
 
 gulp.task("certificate", function () {
@@ -34,7 +34,7 @@ gulp.task("certificate", function () {
     .src("./assets/scss/certificate.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./assets/css/"));
+    .pipe(gulp.dest("./certificate/css/"));
 });
 
 gulp.task("membership", function () {
@@ -42,7 +42,7 @@ gulp.task("membership", function () {
     .src("./assets/scss/membership.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./assets/css/"));
+    .pipe(gulp.dest("./certificate/css/"));
 });
 
 // Task to rename and minify your CSS file

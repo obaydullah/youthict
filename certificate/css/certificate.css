@@ -1,0 +1,325 @@
+/**
+* ============================
+*  3.Media Query
+* ============================
+*/
+@font-face {
+  font-family: "potro_sans";
+  src: url("../webfonts/potro_sans_bangla_regular-webfont.woff2") format("woff2"), url("../webfonts/potro_sans_bangla_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Italic.woff2") format("woff2"), url("../webfonts/OpenSans-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../webfonts/OpenSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Bold.woff2") format("woff2"), url("../webfonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-MediumItalic.woff2") format("woff2"), url("../webfonts/OpenSans-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Regular.woff2") format("woff2"), url("../webfonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Light.woff2") format("woff2"), url("../wdbfonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-SemiBold.woff2") format("woff2"), url("OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Medium.woff2") format("woff2"), url("../webfonts/OpenSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Certificate";
+  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff"), url("../webfonts/CertificateRegularSWFTE.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-bold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-light-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-regular-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-semibold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-semibold-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "italianno";
+  src: url("../webfonts/Italianno-Regular.woff2") format("woff2"), url("../webfonts/Italianno-Regular.woff") format("woff"), url("../webfonts/Italianno-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*************************** start common css **************************************/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+}
+body a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.pt9,
+.py9 {
+  padding-top: 90px !important;
+}
+
+.mt9,
+.my9 {
+  margin-top: 90px !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pb-6,
+.site_map {
+  padding-bottom: 60px;
+}
+
+.py9 {
+  padding-bottom: 90px !important;
+}
+
+.pt45,
+.py45 {
+  padding-top: 45px !important;
+}
+
+.pb45,
+.py45 {
+  padding-bottom: 45px !important;
+}
+
+.mb9 {
+  margin-bottom: 90px;
+}
+
+.my9 {
+  margin-bottom: 90px !important;
+}
+
+.mt45,
+.my45 {
+  margin-top: 45px !important;
+}
+
+.mb45,
+.my45 {
+  margin-bottom: 45px !important;
+}
+
+/*************************** end common css **************************************/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.certificate {
+  width: 11.4in;
+  height: 8.4in;
+  z-index: 1;
+  margin: 0 auto;
+  position: relative;
+  padding: 85px;
+}
+.certificate::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url("../img/certificate.svg");
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.certificate__content {
+  display: flex;
+  height: 100%;
+}
+.certificate__content .left {
+  width: 19%;
+  margin-top: 500px;
+  margin-bottom: 118px;
+  text-align: center;
+  padding-left: 12px;
+}
+.certificate__content .left p {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #342b27;
+}
+.certificate__content .left a {
+  color: #342b27;
+  font-size: 8px;
+  letter-spacing: -0.4px;
+}
+.certificate__content .left .domain {
+  font-size: 1.6rem;
+  color: #00718a;
+  font-family: sans-serif;
+  display: inline-block;
+  margin-top: 38px;
+}
+.certificate__content .left .qr__code--img {
+  width: 85px;
+  height: auto;
+}
+.certificate__content .right {
+  width: 81%;
+}
+.certificate__content .right .table {
+  margin-top: 295px;
+  margin-left: 30px;
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "italianno";
+  display: flex;
+  flex-direction: column;
+  width: 93%;
+  color: #342b27;
+  gap: 14px;
+}
+.certificate__content .right .table p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.certificate__content .right .table .name {
+  margin-left: 180px;
+}
+.certificate__content .right .table .father {
+  margin-left: 150px;
+}
+.certificate__content .right .table .mother {
+  margin-left: 100px;
+  margin-top: -5px;
+}
+.certificate__content .right .table .course {
+  margin-left: 210px;
+  margin-top: -7px;
+}
+.certificate__content .right .table .ins__name {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 55px;
+  margin-top: -4px;
+}
+.certificate__content .right .table .ins__name .branch__code {
+  margin-right: 20px;
+}
+.certificate__content .right .table .session__grade {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 60px;
+}
+.certificate__content .right .table .session__grade .grade {
+  margin-right: 21px;
+}
+.certificate__content .right .table .reg__issue__serial {
+  display: flex;
+  margin-left: 75px;
+  margin-top: 5px;
+}
+.certificate__content .right .table .reg__issue__serial .issue__date {
+  margin-left: 255px;
+}
+.certificate__content .right .table .reg__issue__serial .serial__no {
+  margin-left: 200px;
+}
+.certificate__content .right .signature {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 55px;
+  margin-top: 32px;
+}
+.certificate__content .right .signature img {
+  height: 40px;
+  width: auto;
+}
+
+@media print {
+  @page {
+    size: 11.4in 8.4in;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+  .certificate {
+    margin: 0;
+    padding: 0;
+  }
+  .certificate::after {
+    content: url("../img/certificate.svg");
+  }
+}

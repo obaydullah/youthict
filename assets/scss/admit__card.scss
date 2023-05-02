@@ -1,6 +1,11 @@
-@import "partials/variables";
-@import "partials/default";
-@import "partials/media_query";
+@import "./partials/variables";
+@import "./partials/default";
+// @import "./partials/media_query";
+
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .admit__card {
   position: relative;
@@ -16,7 +21,7 @@
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url("../images/certificate/admit_card.svg");
+    background-image: url("../img/admit_card.svg");
     background-repeat: no-repeat;
     z-index: -1;
   }
@@ -57,7 +62,7 @@
     .logo__bottom {
       text-align: center;
       position: relative;
-      margin-top: -10px;
+      margin-top: -30px;
 
       h2 {
         font-size: 20px;
@@ -74,7 +79,7 @@
           width: 110px;
           height: 100%;
           content: "";
-          background-image: url("../images/certificate/asset-1.svg");
+          background-image: url("../img/asset-1.svg");
           background-repeat: no-repeat;
           z-index: -1;
         }
@@ -86,7 +91,7 @@
           width: 120px;
           height: 100%;
           content: "";
-          background-image: url("../images/certificate/asset-2.svg");
+          background-image: url("../img/asset-2.svg");
           background-repeat: no-repeat;
           z-index: -1;
         }
@@ -247,7 +252,8 @@
     height: 5.5in;
 
     &::after {
-      content: url("../images/certificate/admit_card.svg");
+      // content: url("../img/admit_card.svg");
+      display: none;
     }
   }
 }
