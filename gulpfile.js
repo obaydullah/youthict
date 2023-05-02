@@ -37,6 +37,14 @@ gulp.task("certificate", function () {
     .pipe(gulp.dest("./assets/css/"));
 });
 
+gulp.task("membership", function () {
+  return gulp
+    .src("./assets/scss/membership.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./assets/css/"));
+});
+
 // Task to rename and minify your CSS file
 gulp.task("minify-css", function () {
   return gulp
@@ -74,6 +82,7 @@ gulp.task("watch", function () {
   gulp.watch("./assets/scss/**/*.scss", gulp.series("registration__card"));
   gulp.watch("./assets/scss/**/*.scss", gulp.series("admit__card"));
   gulp.watch("./assets/scss/**/*.scss", gulp.series("certificate"));
+  gulp.watch("./assets/scss/**/*.scss", gulp.series("membership"));
   gulp.watch(
     "./assets/css/style.css",
     { debounceDelay: 500 },

@@ -1,0 +1,273 @@
+@import "partials/variables";
+@import "partials/default";
+@import "partials/media_query";
+
+.membership {
+  width: 11.4in;
+  height: 8.4in;
+  z-index: 1;
+  margin: 0 auto;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("../images/certificate/pattern.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__content {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .left {
+      width: 299px;
+      background: #f37226;
+      height: 100%;
+      text-align: center;
+      position: relative;
+
+      .profile__photo {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        border: 5px solid #0b617d;
+        margin-top: 25px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+        }
+      }
+
+      .vertical__text {
+        color: white;
+        transform-origin: center center;
+        margin-bottom: 0;
+        font-family: "Certificate";
+        font-weight: bold;
+        font-size: 50px;
+        position: absolute;
+        top: 61%;
+        left: -105px;
+        width: 170%;
+        height: 37%;
+        transform: translateY(-50%) rotate(270deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .right {
+      flex: 1;
+
+      .logo__area {
+        display: flex;
+        gap: 2.5rem;
+        justify-content: center;
+        margin-top: 40px;
+        align-items: center;
+
+        .logo__main {
+          width: 101px;
+          height: auto;
+        }
+        .logo__right {
+          width: 475px;
+          height: auto;
+        }
+      }
+
+      .table__top {
+        padding: 75px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        font-family: $font_italiano;
+        font-weight: 600;
+        gap: 1.5rem;
+
+        &--single {
+          display: flex;
+          align-items: center;
+
+          .value {
+            display: block;
+            flex: 1;
+            position: relative;
+
+            p {
+              margin-bottom: 0;
+              font-size: 32px;
+              position: absolute;
+              top: -35px;
+              left: 12px;
+            }
+          }
+          .underline {
+            border-bottom: 1px solid $black_4;
+            margin-top: 6px;
+          }
+
+          h4 {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 0;
+            max-width: 165px;
+            min-width: 165px;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .table__bottom {
+        padding: 75px;
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        font-family: $font_italiano;
+        font-weight: 600;
+        gap: 3.5rem;
+
+        &--single {
+          display: flex;
+          align-items: center;
+          gap: 2.5rem;
+
+          .blank {
+            width: 160px;
+          }
+
+          h4 {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 0;
+            white-space: nowrap;
+          }
+
+          .underline {
+            border-bottom: 1px solid $black_4;
+            margin-top: 6px;
+          }
+
+          .value {
+            display: block;
+            flex: 1;
+            position: relative;
+
+            p {
+              margin-bottom: 0;
+              font-size: 32px;
+              position: absolute;
+              top: -35px;
+              left: 12px;
+            }
+          }
+        }
+        &--single.bottom__row {
+          h4 {
+            font-size: 23px;
+          }
+        }
+      }
+
+      .footer {
+        margin-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 80px;
+        font-family: $font_myriad;
+
+        .qr__code {
+          width: 55px;
+          margin-top: -15px;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .signature {
+          text-align: center;
+          position: relative;
+
+          .signature__img {
+            height: 50px;
+            width: auto;
+            position: absolute;
+            bottom: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          h4 {
+            font-size: 16px;
+            font-weight: 500;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            position: relative;
+            letter-spacing: -0.5px;
+
+            &::before {
+              position: absolute;
+              top: -3px;
+              left: -4%;
+              width: 108%;
+              height: 1px;
+              content: "";
+              background: $black_4;
+            }
+          }
+          p {
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: -0.6px;
+            line-height: 10px;
+          }
+        }
+        .chairman {
+          h4 {
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+    .right__bar {
+      width: 20px;
+      height: 100%;
+      background-color: #0b617d;
+    }
+  }
+}
+
+@media print {
+  @page {
+    size: 11.4in 8.4in;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .membership {
+    &::after {
+      content: url("../images/certificate/pattern.svg");
+    }
+  }
+}

@@ -1,0 +1,419 @@
+/**
+* ============================
+*  3.Media Query
+* ============================
+*/
+@font-face {
+  font-family: "potro_sans";
+  src: url("../webfonts/potro_sans_bangla_regular-webfont.woff2") format("woff2"), url("../webfonts/potro_sans_bangla_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Italic.woff2") format("woff2"), url("../webfonts/OpenSans-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../webfonts/OpenSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Bold.woff2") format("woff2"), url("../webfonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-MediumItalic.woff2") format("woff2"), url("../webfonts/OpenSans-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Regular.woff2") format("woff2"), url("../webfonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Light.woff2") format("woff2"), url("../wdbfonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-SemiBold.woff2") format("woff2"), url("OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../webfonts/OpenSans-Medium.woff2") format("woff2"), url("../webfonts/OpenSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Certificate";
+  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff"), url("../webfonts/CertificateRegularSWFTE.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-bold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-light-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-regular-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../webfonts/myriadpro-semibold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-semibold-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "italianno";
+  src: url("../webfonts/Italianno-Regular.woff2") format("woff2"), url("../webfonts/Italianno-Regular.woff") format("woff"), url("../webfonts/Italianno-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*************************** start common css **************************************/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+}
+body a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.pt9,
+.py9 {
+  padding-top: 90px !important;
+}
+
+.mt9,
+.my9 {
+  margin-top: 90px !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pb-6,
+.site_map {
+  padding-bottom: 60px;
+}
+
+.py9 {
+  padding-bottom: 90px !important;
+}
+
+.pt45,
+.py45 {
+  padding-top: 45px !important;
+}
+
+.pb45,
+.py45 {
+  padding-bottom: 45px !important;
+}
+
+.mb9 {
+  margin-bottom: 90px;
+}
+
+.my9 {
+  margin-bottom: 90px !important;
+}
+
+.mt45,
+.my45 {
+  margin-top: 45px !important;
+}
+
+.mb45,
+.my45 {
+  margin-bottom: 45px !important;
+}
+
+/*************************** end common css **************************************/
+/**
+* ============================
+*  3.Media Query
+* ============================
+*/
+.membership {
+  width: 11.4in;
+  height: 8.4in;
+  z-index: 1;
+  margin: 0 auto;
+  position: relative;
+}
+.membership::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url("../images/certificate/pattern.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.membership__content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.membership__content .left {
+  width: 299px;
+  background: #f37226;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.membership__content .left .profile__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 5px solid #0b617d;
+  margin-top: 25px;
+}
+.membership__content .left .profile__photo img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.membership__content .left .vertical__text {
+  color: white;
+  transform-origin: center center;
+  margin-bottom: 0;
+  font-family: "Certificate";
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  top: 61%;
+  left: -105px;
+  width: 170%;
+  height: 37%;
+  transform: translateY(-50%) rotate(270deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.membership__content .right {
+  flex: 1;
+}
+.membership__content .right .logo__area {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 40px;
+  align-items: center;
+}
+.membership__content .right .logo__area .logo__main {
+  width: 101px;
+  height: auto;
+}
+.membership__content .right .logo__area .logo__right {
+  width: 475px;
+  height: auto;
+}
+.membership__content .right .table__top {
+  padding: 75px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: "italianno";
+  font-weight: 600;
+  gap: 1.5rem;
+}
+.membership__content .right .table__top--single {
+  display: flex;
+  align-items: center;
+}
+.membership__content .right .table__top--single .value {
+  display: block;
+  flex: 1;
+  position: relative;
+}
+.membership__content .right .table__top--single .value p {
+  margin-bottom: 0;
+  font-size: 32px;
+  position: absolute;
+  top: -35px;
+  left: 12px;
+}
+.membership__content .right .table__top--single .underline {
+  border-bottom: 1px solid #615e58;
+  margin-top: 6px;
+}
+.membership__content .right .table__top--single h4 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 0;
+  max-width: 165px;
+  min-width: 165px;
+  white-space: nowrap;
+}
+.membership__content .right .table__bottom {
+  padding: 75px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  font-family: "italianno";
+  font-weight: 600;
+  gap: 3.5rem;
+}
+.membership__content .right .table__bottom--single {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.membership__content .right .table__bottom--single .blank {
+  width: 160px;
+}
+.membership__content .right .table__bottom--single h4 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+.membership__content .right .table__bottom--single .underline {
+  border-bottom: 1px solid #615e58;
+  margin-top: 6px;
+}
+.membership__content .right .table__bottom--single .value {
+  display: block;
+  flex: 1;
+  position: relative;
+}
+.membership__content .right .table__bottom--single .value p {
+  margin-bottom: 0;
+  font-size: 32px;
+  position: absolute;
+  top: -35px;
+  left: 12px;
+}
+.membership__content .right .table__bottom--single.bottom__row h4 {
+  font-size: 23px;
+}
+.membership__content .right .footer {
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  font-family: "myriad";
+}
+.membership__content .right .footer .qr__code {
+  width: 55px;
+  margin-top: -15px;
+}
+.membership__content .right .footer .qr__code img {
+  width: 100%;
+  height: auto;
+}
+.membership__content .right .footer .signature {
+  text-align: center;
+  position: relative;
+}
+.membership__content .right .footer .signature .signature__img {
+  height: 50px;
+  width: auto;
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.membership__content .right .footer .signature h4 {
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+.membership__content .right .footer .signature h4::before {
+  position: absolute;
+  top: -3px;
+  left: -4%;
+  width: 108%;
+  height: 1px;
+  content: "";
+  background: #615e58;
+}
+.membership__content .right .footer .signature p {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  line-height: 10px;
+}
+.membership__content .right .footer .chairman h4 {
+  letter-spacing: 0.2px;
+}
+.membership__content .right__bar {
+  width: 20px;
+  height: 100%;
+  background-color: #0b617d;
+}
+
+@media print {
+  @page {
+    size: 11.4in 8.4in;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .membership::after {
+    content: url("../images/certificate/pattern.svg");
+  }
+}
