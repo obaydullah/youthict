@@ -284,7 +284,7 @@ body {
   padding-bottom: 20px;
 }
 .registration__content .registration__table > table .property {
-  max-width: 60px;
+  max-width: 65px;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -307,7 +307,7 @@ body {
   padding-bottom: 0 !important;
 }
 .registration__content .registration__table .inner__table .inner__property {
-  max-width: 40px;
+  width: 50%;
 }
 .registration__content .registration__table .inner__table .underline {
   border-bottom: 1px solid #615e58;
@@ -316,18 +316,9 @@ body {
 .registration__content .registration__table .inner__table .td__middle {
   background: #f2f2f3;
   font-weight: bold;
-}
-.registration__content .registration__table .inner__table .td__middle.gender {
-  max-width: 20px;
-}
-.registration__content .registration__table .inner__table .td__middle.session {
-  max-width: 20px;
-}
-.registration__content .registration__table .inner__table .td__middle.issue {
-  max-width: 24px;
-}
-.registration__content .registration__table .inner__table .td__middle.upazila {
-  max-width: 20px;
+  padding: 4px 0 !important;
+  width: 20%;
+  max-width: 25%;
 }
 .registration__content .registration__table .inner__table .gender__end {
   max-width: 31px;
