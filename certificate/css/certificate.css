@@ -188,7 +188,6 @@ body {
   z-index: 1;
   margin: 0 auto;
   position: relative;
-  padding: 85px;
 }
 .certificate::after {
   position: absolute;
@@ -204,10 +203,12 @@ body {
 .certificate__content {
   display: flex;
   height: 100%;
+  padding: 0 75px;
+  padding-top: 29px;
 }
 .certificate__content .left {
   width: 19%;
-  margin-top: 500px;
+  margin-top: 480px;
   margin-bottom: 118px;
   text-align: center;
   padding-left: 12px;
@@ -247,7 +248,7 @@ body {
   flex-direction: column;
   width: 93%;
   color: #342b27;
-  gap: 14px;
+  gap: 10px;
 }
 .certificate__content .right .table p {
   margin-bottom: 0;
@@ -261,20 +262,19 @@ body {
 }
 .certificate__content .right .table .mother {
   margin-left: 100px;
-  margin-top: -5px;
+  margin-top: -6px;
 }
 .certificate__content .right .table .course {
   margin-left: 210px;
-  margin-top: -7px;
+  margin-top: -15px;
 }
 .certificate__content .right .table .ins__name {
   display: flex;
   justify-content: space-between;
   margin-left: 55px;
-  margin-top: -4px;
 }
 .certificate__content .right .table .ins__name .branch__code {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .certificate__content .right .table .session__grade {
   display: flex;
@@ -287,19 +287,18 @@ body {
 .certificate__content .right .table .reg__issue__serial {
   display: flex;
   margin-left: 75px;
-  margin-top: 5px;
 }
 .certificate__content .right .table .reg__issue__serial .issue__date {
-  margin-left: 255px;
+  margin-left: 212px;
 }
 .certificate__content .right .table .reg__issue__serial .serial__no {
-  margin-left: 200px;
+  margin-left: 160px;
 }
 .certificate__content .right .signature {
   display: flex;
   justify-content: space-between;
   padding: 0 55px;
-  margin-top: 32px;
+  margin-top: 26px;
 }
 .certificate__content .right .signature img {
   height: 40px;
@@ -320,6 +319,6 @@ body {
     padding: 0;
   }
   .certificate::after {
-    content: url("../img/certificate.svg");
+    display: none;
   }
 }

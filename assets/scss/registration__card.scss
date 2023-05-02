@@ -2,6 +2,11 @@
 @import "./partials/default";
 @import "./partials/media_query";
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .registration {
   position: relative;
   width: 8.25in;
@@ -20,6 +25,7 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+
   &__content {
     padding: 130px;
     padding-top: 120px;
@@ -58,7 +64,7 @@
           width: 164px;
           height: 100%;
           content: "";
-          background-image: url("../images/certificate/asset-1.svg");
+          background-image: url("../img/asset-1.svg");
           background-repeat: no-repeat;
           z-index: -1;
         }
@@ -70,7 +76,7 @@
           width: 185px;
           height: 100%;
           content: "";
-          background-image: url("../images/certificate/asset-2.svg");
+          background-image: url("../img/asset-2.svg");
           background-repeat: no-repeat;
           z-index: -1;
         }
@@ -98,7 +104,7 @@
 
       & > table {
         font-size: 14px;
-        font-family: $font_myriad;
+        font-family: $default_font;
 
         tr:first-child td {
           padding-bottom: 20px;
@@ -172,7 +178,7 @@
     }
 
     .footer {
-      margin-top: 130px;
+      margin-top: 155px;
       display: flex;
       justify-content: space-around;
 
@@ -221,6 +227,7 @@
           font-size: 9px;
           font-weight: 600;
           letter-spacing: -0.6px;
+          margin-top: 0;
         }
       }
       .chairman {
@@ -246,24 +253,7 @@
       display: none;
     }
   }
-
   .footer {
-    margin-top: 110px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    .qr__code {
-      width: 30px;
-    }
-    .qr__code img {
-      width: 100%;
-      height: auto;
-    }
-
-    .signature {
-      text-align: center;
-      position: relative;
-    }
+    margin-top: 140px !important;
   }
 }
