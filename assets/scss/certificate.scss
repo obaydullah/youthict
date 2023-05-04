@@ -8,12 +8,11 @@ body {
 }
 
 .certificate {
-  width: 11.4in;
-  height: 8.4in;
+  position: relative;
+  width: 11.6929in;
+  height: 8.2678in;
   z-index: 1;
   margin: 0 auto;
-  position: relative;
-  // padding: 85px;
 
   &::after {
     position: absolute;
@@ -22,15 +21,16 @@ body {
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url("../img/certificate.svg");
+    background-image: url("../img/certificate.png");
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: -1;
   }
 
   &__content {
     display: flex;
     height: 100%;
-    padding: 0 75px;
+    padding: 0 96px;
     padding-top: 29px;
 
     .left {
@@ -51,13 +51,6 @@ body {
         font-size: 8px;
         letter-spacing: -0.4px;
       }
-      .domain {
-        font-size: 1.6rem;
-        color: #00718a;
-        font-family: sans-serif;
-        display: inline-block;
-        margin-top: 38px;
-      }
 
       .qr__code--img {
         width: 85px;
@@ -68,7 +61,7 @@ body {
       width: 81%;
 
       .table {
-        margin-top: 295px;
+        margin-top: 292px;
         margin-left: 30px;
         font-size: 26px;
         font-weight: 600;
@@ -111,6 +104,7 @@ body {
           display: flex;
           justify-content: space-between;
           margin-left: 60px;
+          margin-top: -4px;
 
           .grade {
             margin-right: 21px;
@@ -119,6 +113,7 @@ body {
         .reg__issue__serial {
           display: flex;
           margin-left: 75px;
+          margin-top: -4px;
 
           .issue__date {
             margin-left: 212px;
@@ -145,7 +140,7 @@ body {
 
 @media print {
   @page {
-    size: 11.4in 8.4in;
+    size: 11.6929in 8.272in;
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -156,10 +151,11 @@ body {
   .certificate {
     margin: 0;
     padding: 0;
+    width: 11.6929in;
+    height: 8.2678in;
 
     &::after {
-      // content: url("../img/certificate.svg");
-      display: none;
+      // display: none;
     }
   }
 }

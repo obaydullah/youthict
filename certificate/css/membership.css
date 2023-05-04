@@ -67,39 +67,64 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Certificate";
-  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff"), url("../webfonts/CertificateRegularSWFTE.ttf") format("truetype");
+  font-family: "certificate";
+  src: url("../webfonts/Certificate.woff2") format("woff2"), url("../webfonts/Certificate.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-bold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-bold-webfont.woff") format("woff");
-  font-weight: 700;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateBoldSWFTE.woff2") format("woff2"), url("../webfonts/CertificateBoldSWFTE.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-light-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-light-webfont.woff") format("woff");
-  font-weight: 300;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-regular-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-regular-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateBoldItalicSWFTE.woff2") format("woff2"), url("../webfonts/CertificateBoldItalicSWFTE.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-semibold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-semibold-webfont.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateItalicSWFTE.woff2") format("woff2"), url("../webfonts/CertificateItalicSWFTE.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "italianno";
   src: url("../webfonts/Italianno-Regular.woff2") format("woff2"), url("../webfonts/Italianno-Regular.woff") format("woff"), url("../webfonts/Italianno-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-MediumCn.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-MediumCn.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-HeavyCn.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-HeavyCn.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -177,11 +202,6 @@ ul {
 }
 
 /*************************** end common css **************************************/
-/**
-* ============================
-*  3.Media Query
-* ============================
-*/
 body {
   margin: 0;
   padding: 0;
@@ -198,10 +218,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 11.4in;
+  height: 8.4in;
   content: "";
-  background-image: url("../img/pattern.svg");
+  background-image: url("../img/membership.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -215,69 +235,37 @@ body {
   height: 100%;
 }
 .membership__content .left {
-  width: 299px;
-  background: #f37226;
+  width: 293px;
   height: 100%;
   text-align: center;
   position: relative;
 }
 .membership__content .left .profile__photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 165px;
+  height: 203px;
   overflow: hidden;
-  margin: 0 auto;
-  border: 5px solid #0b617d;
-  margin-top: 25px;
+  margin-top: 35px;
+  margin-left: 67px;
 }
 .membership__content .left .profile__photo img {
   width: 100%;
   height: 100%;
   background-size: cover;
 }
-.membership__content .left .vertical__text {
-  color: white;
-  transform-origin: center center;
-  margin-bottom: 0;
-  font-family: "Certificate";
-  font-weight: bold;
-  font-size: 50px;
-  position: absolute;
-  top: 57%;
-  left: -105px;
-  width: 170%;
-  height: 37%;
-  transform: translateY(-50%) rotate(270deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .membership__content .right {
   flex: 1;
-}
-.membership__content .right .logo__area {
-  display: flex;
-  gap: 2.5rem;
-  justify-content: center;
-  margin-top: 40px;
-  align-items: center;
-}
-.membership__content .right .logo__area .logo__main {
-  width: 101px;
-  height: auto;
-}
-.membership__content .right .logo__area .logo__right {
-  width: 475px;
-  height: auto;
+  padding-right: 19px;
 }
 .membership__content .right .table__top {
-  padding: 75px;
-  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   font-family: "italianno";
   font-weight: 600;
-  gap: 1.5rem;
+  gap: 55px;
+  margin-top: 287px;
+  padding: 0;
+  margin-left: 274px;
+  width: 438px;
 }
 .membership__content .right .table__top--single {
   display: flex;
@@ -296,71 +284,39 @@ body {
   left: 12px;
   margin-top: 0;
 }
-.membership__content .right .table__top--single .underline {
-  border-bottom: 1px solid #615e58;
-  margin-top: 6px;
-}
-.membership__content .right .table__top--single h4 {
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  margin-bottom: 0;
-  max-width: 165px;
-  min-width: 165px;
-  white-space: nowrap;
-  margin-top: 0;
-}
 .membership__content .right .table__bottom {
-  padding: 75px;
-  padding-top: 15px;
   display: flex;
   flex-direction: column;
   font-family: "italianno";
   font-weight: 600;
-  gap: 3.5rem;
+  gap: 19px;
+  padding: 0 63px;
+  margin-top: 20px;
 }
 .membership__content .right .table__bottom--single {
+  padding-left: 65px;
+}
+.membership__content .right .table__bottom--single.double {
+  margin-left: 210px;
   display: flex;
-  align-items: center;
-  gap: 2.5rem;
 }
-.membership__content .right .table__bottom--single .blank {
-  width: 160px;
+.membership__content .right .table__bottom--single .branch__code {
+  width: 262px;
 }
-.membership__content .right .table__bottom--single h4 {
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  margin-bottom: 0;
+.membership__content .right .table__bottom--single .issue__date {
+  width: 116px;
   white-space: nowrap;
-  margin-top: 0;
 }
-.membership__content .right .table__bottom--single .underline {
-  border-bottom: 1px solid #615e58;
-  margin-top: 6px;
-}
-.membership__content .right .table__bottom--single .value {
-  display: block;
-  flex: 1;
-  position: relative;
-}
-.membership__content .right .table__bottom--single .value p {
+.membership__content .right .table__bottom--single p {
   margin-bottom: 0;
   font-size: 32px;
-  position: absolute;
-  top: -35px;
-  left: 12px;
   margin-top: 0;
 }
-.membership__content .right .table__bottom--single.bottom__row h4 {
-  font-size: 23px;
-}
 .membership__content .right .footer {
-  margin-top: 60px;
   display: flex;
   justify-content: space-between;
-  padding: 0 80px;
-  font-family: "myriad";
+  padding: 0 175px;
+  margin-top: 132px;
 }
 .membership__content .right .footer .qr__code {
   width: 55px;
@@ -375,7 +331,7 @@ body {
   position: relative;
 }
 .membership__content .right .footer .signature .signature__img {
-  height: 50px;
+  height: 60px;
   width: auto;
   position: absolute;
   bottom: 50px;
@@ -410,15 +366,10 @@ body {
 .membership__content .right .footer .chairman h4 {
   letter-spacing: 0.2px;
 }
-.membership__content .right__bar {
-  width: 20px;
-  height: 100%;
-  background-color: #0b617d;
-}
 
 @media print {
   @page {
-    size: 11.4in 8.4in;
+    size: 11.4in 8.41in;
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -428,8 +379,8 @@ body {
   .membership {
     margin: 0;
     padding: 0;
-  }
-  .membership::after {
-    display: none;
+    width: 11.4in;
+    height: 8.4in;
+    overflow: hidden;
   }
 }

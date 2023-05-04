@@ -9,8 +9,8 @@ body {
 
 .admit__card {
   position: relative;
-  width: 8.4in;
-  height: 5.5in;
+  width: 8.2678in;
+  height: 5.8464in;
   z-index: 1;
   margin: 0 auto;
 
@@ -21,14 +21,15 @@ body {
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url("../img/admit_card.svg");
+    background-image: url("../img/admit__card.png");
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: -1;
   }
 
   &--content {
     padding: 86px;
-    padding-top: 84px;
+    padding-top: 105px;
 
     .logo__area {
       display: flex;
@@ -47,8 +48,8 @@ body {
       }
 
       .profile__image {
-        height: 75px;
-        width: 68px;
+        height: 89px;
+        width: 76px;
         overflow: hidden;
         margin-top: 6px;
 
@@ -107,12 +108,13 @@ body {
         width: 65%;
         table-layout: auto !important;
         border-collapse: separate;
-        border-spacing: 10px 6px;
+        border-spacing: 10px 7px;
         margin-top: -22px;
 
         td.property {
-          max-width: 64px;
+          width: 62px;
           white-space: nowrap;
+          padding-right: 10px;
         }
         td.value {
           border-bottom: 1.4px dotted $black_4;
@@ -132,7 +134,8 @@ body {
         &--table {
           border-collapse: separate;
           border-spacing: 8px 0;
-          width: 100%;
+          width: 93%;
+          margin-left: 31px;
 
           .underline {
             border-bottom: 1.4px dotted $black_4;
@@ -167,9 +170,10 @@ body {
         td.tr__property {
           max-width: 38px;
           white-space: nowrap;
+          font-weight: bold;
         }
         td.tr__value {
-          padding: 6px;
+          padding: 7px;
           background-color: #f8f4f9;
           border: 1px solid rgba(0, 0, 0, 0.4);
         }
@@ -177,14 +181,13 @@ body {
     }
 
     .footer {
-      margin-top: 33px;
+      margin-top: 38px;
       display: flex;
       justify-content: space-between;
       padding: 0 47px;
 
       .qr__code {
         width: 42px;
-        margin-top: -12px;
 
         img {
           width: 100%;
@@ -249,12 +252,11 @@ body {
     margin-right: 0;
   }
   .admit__card {
-    width: 8.4in;
-    height: 5.5in;
+    width: 8.2678in;
+    height: 5.8464in;
 
     &::after {
-      // content: url("../img/admit_card.svg");
-      display: none;
+      // display: none;
     }
   }
 }

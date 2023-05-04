@@ -67,39 +67,64 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Certificate";
-  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff"), url("../webfonts/CertificateRegularSWFTE.ttf") format("truetype");
+  font-family: "certificate";
+  src: url("../webfonts/Certificate.woff2") format("woff2"), url("../webfonts/Certificate.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-bold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-bold-webfont.woff") format("woff");
-  font-weight: 700;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateBoldSWFTE.woff2") format("woff2"), url("../webfonts/CertificateBoldSWFTE.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-light-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-light-webfont.woff") format("woff");
-  font-weight: 300;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-regular-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-regular-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateBoldItalicSWFTE.woff2") format("woff2"), url("../webfonts/CertificateBoldItalicSWFTE.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-semibold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-semibold-webfont.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateItalicSWFTE.woff2") format("woff2"), url("../webfonts/CertificateItalicSWFTE.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "italianno";
   src: url("../webfonts/Italianno-Regular.woff2") format("woff2"), url("../webfonts/Italianno-Regular.woff") format("woff"), url("../webfonts/Italianno-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-MediumCn.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-MediumCn.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-HeavyCn.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-HeavyCn.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -183,11 +208,11 @@ body {
 }
 
 .certificate {
-  width: 11.4in;
-  height: 8.4in;
+  position: relative;
+  width: 11.6929in;
+  height: 8.2678in;
   z-index: 1;
   margin: 0 auto;
-  position: relative;
 }
 .certificate::after {
   position: absolute;
@@ -196,14 +221,15 @@ body {
   width: 100%;
   height: 100%;
   content: "";
-  background-image: url("../img/certificate.svg");
+  background-image: url("../img/certificate.png");
   background-repeat: no-repeat;
+  background-size: cover;
   z-index: -1;
 }
 .certificate__content {
   display: flex;
   height: 100%;
-  padding: 0 75px;
+  padding: 0 96px;
   padding-top: 29px;
 }
 .certificate__content .left {
@@ -224,13 +250,6 @@ body {
   font-size: 8px;
   letter-spacing: -0.4px;
 }
-.certificate__content .left .domain {
-  font-size: 1.6rem;
-  color: #00718a;
-  font-family: sans-serif;
-  display: inline-block;
-  margin-top: 38px;
-}
 .certificate__content .left .qr__code--img {
   width: 85px;
   height: auto;
@@ -239,7 +258,7 @@ body {
   width: 81%;
 }
 .certificate__content .right .table {
-  margin-top: 295px;
+  margin-top: 292px;
   margin-left: 30px;
   font-size: 26px;
   font-weight: 600;
@@ -280,6 +299,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-left: 60px;
+  margin-top: -4px;
 }
 .certificate__content .right .table .session__grade .grade {
   margin-right: 21px;
@@ -287,6 +307,7 @@ body {
 .certificate__content .right .table .reg__issue__serial {
   display: flex;
   margin-left: 75px;
+  margin-top: -4px;
 }
 .certificate__content .right .table .reg__issue__serial .issue__date {
   margin-left: 212px;
@@ -307,7 +328,7 @@ body {
 
 @media print {
   @page {
-    size: 11.4in 8.4in;
+    size: 11.6929in 8.272in;
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -317,8 +338,7 @@ body {
   .certificate {
     margin: 0;
     padding: 0;
-  }
-  .certificate::after {
-    display: none;
+    width: 11.6929in;
+    height: 8.2678in;
   }
 }

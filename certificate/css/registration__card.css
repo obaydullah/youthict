@@ -67,39 +67,64 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Certificate";
-  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff"), url("../webfonts/CertificateRegularSWFTE.ttf") format("truetype");
+  font-family: "certificate";
+  src: url("../webfonts/Certificate.woff2") format("woff2"), url("../webfonts/Certificate.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-bold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-bold-webfont.woff") format("woff");
-  font-weight: 700;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateBoldSWFTE.woff2") format("woff2"), url("../webfonts/CertificateBoldSWFTE.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-light-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-light-webfont.woff") format("woff");
-  font-weight: 300;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-regular-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-regular-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateBoldItalicSWFTE.woff2") format("woff2"), url("../webfonts/CertificateBoldItalicSWFTE.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: "myriad";
-  src: url("../webfonts/myriadpro-semibold-webfont.woff2") format("woff2"), url("../webfonts/myriadpro-semibold-webfont.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
+  font-family: "certificate";
+  src: url("../webfonts/CertificateItalicSWFTE.woff2") format("woff2"), url("../webfonts/CertificateItalicSWFTE.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "italianno";
   src: url("../webfonts/Italianno-Regular.woff2") format("woff2"), url("../webfonts/Italianno-Regular.woff") format("woff"), url("../webfonts/Italianno-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-MediumCn.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-MediumCn.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-HeavyCn.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-HeavyCn.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../webfonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -201,13 +226,15 @@ body {
   width: 100%;
   height: 100%;
   content: "";
-  background-image: url("../img/registration__card.svg");
+  background-image: url("../img/registration__card.png");
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
 }
 .registration__content {
-  padding: 130px;
-  padding-top: 120px;
+  padding: 108px;
+  padding-top: 105px;
+  padding-right: 96px;
 }
 .registration__content .logo__area {
   display: flex;
@@ -215,11 +242,11 @@ body {
   justify-content: center;
 }
 .registration__content .logo__area .logo__main {
-  width: 83px;
+  width: 100px;
   height: auto;
 }
 .registration__content .logo__area .logo__two {
-  width: 385px;
+  width: 460px;
   height: auto;
 }
 .registration__content .logo__bottom {
@@ -229,7 +256,7 @@ body {
 }
 .registration__content .logo__bottom h2 {
   font-size: 2.4rem;
-  font-family: "Certificate";
+  font-family: "certificate";
   font-weight: 500;
   position: relative;
   z-index: 1;
@@ -259,8 +286,8 @@ body {
   z-index: -1;
 }
 .registration__content .logo__bottom .profile__img {
-  height: 124px;
-  width: 102px;
+  height: 135px;
+  width: 120px;
   overflow: hidden;
   object-fit: contain;
   position: absolute;
@@ -276,31 +303,35 @@ body {
 .registration__content .registration__table {
   margin-top: 60px;
 }
-.registration__content .registration__table > table {
+.registration__content .registration__table .table__main {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  width: 100%;
 }
-.registration__content .registration__table > table tr:first-child td {
+.registration__content .registration__table .table__main tr:first-child td {
   padding-bottom: 20px;
 }
-.registration__content .registration__table > table .property {
-  max-width: 65px;
+.registration__content .registration__table .table__main .property {
   font-weight: bold;
   white-space: nowrap;
+  width: 100px;
+  padding-right: 10px;
 }
-.registration__content .registration__table > table .double {
+.registration__content .registration__table .table__main .double {
   display: flex;
   align-items: center;
 }
-.registration__content .registration__table > table .double span {
+.registration__content .registration__table .table__main .double span {
   width: 14px;
 }
-.registration__content .registration__table > table .double table {
+.registration__content .registration__table .table__main .double table {
   margin-top: -6px;
 }
 .registration__content .registration__table .inner__table {
   border-collapse: separate;
-  border-spacing: 6px 0 !important;
+  border-spacing: 12px 0 !important;
 }
 .registration__content .registration__table .inner__table th,
 .registration__content .registration__table .inner__table td {
@@ -314,23 +345,22 @@ body {
   padding-left: 6px;
 }
 .registration__content .registration__table .inner__table .td__middle {
-  background: #f2f2f3;
   font-weight: bold;
   padding: 4px 0 !important;
-  width: 20%;
-  max-width: 25%;
+  text-align: left;
 }
-.registration__content .registration__table .inner__table .gender__end {
-  max-width: 31px;
+.registration__content .registration__table .inner__table .td__middle.gender {
+  width: 30px;
 }
-.registration__content .registration__table .inner__table .session__end {
-  max-width: 26px;
+.registration__content .registration__table .inner__table .td__middle.session {
+  width: 30px;
 }
-.registration__content .registration__table .inner__table .reg__end {
-  max-width: 28px;
+.registration__content .registration__table .inner__table .td__middle.issue {
+  width: 74px;
+  white-space: nowrap;
 }
-.registration__content .registration__table .inner__table .upazila__end {
-  max-width: 27px;
+.registration__content .registration__table .inner__table .td__middle.upazila {
+  width: 30px;
 }
 .registration__content .footer {
   margin-top: 155px;
@@ -353,7 +383,7 @@ body {
   height: 50px;
   width: auto;
   position: absolute;
-  bottom: 55px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -386,16 +416,16 @@ body {
 
 @media print {
   @page {
-    size: 8.25in 11.2in;
+    size: A4 portrait;
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
   }
   .registration {
-    margin-left: -5px;
-  }
-  .registration::after {
-    display: none;
+    width: 8.25in;
+    height: 11.2in;
   }
   .footer {
     margin-top: 140px !important;
