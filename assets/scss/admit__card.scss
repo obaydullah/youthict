@@ -36,11 +36,12 @@ body {
       justify-content: space-between;
       align-items: flex-start;
       padding: 0 16px;
+      padding-right: 10px;
 
       .logo__main {
-        height: 100px;
-        width: auto;
-        margin-top: -20px;
+        width: 67px;
+        height: auto;
+        margin-top: -2px;
       }
       .logo__two {
         width: 330px;
