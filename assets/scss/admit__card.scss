@@ -188,7 +188,8 @@ body {
       font-family: $font_avenir;
 
       .qr__code {
-        width: 42px;
+        width: 72px;
+        margin-top: -22px;
 
         img {
           width: 100%;

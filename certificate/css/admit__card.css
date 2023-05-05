@@ -68,42 +68,42 @@
 }
 @font-face {
   font-family: "certificate";
-  src: url("../webfonts/Certificate.woff2") format("woff2"), url("../webfonts/Certificate.woff") format("woff");
+  src: url("../../assets/webfonts/Certificate.woff2") format("woff2"), url("../../assets/webfonts/Certificate.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "certificate";
-  src: url("../webfonts/CertificateBoldSWFTE.woff2") format("woff2"), url("../webfonts/CertificateBoldSWFTE.woff") format("woff");
+  src: url("../../assets/webfonts/CertificateBoldSWFTE.woff2") format("woff2"), url("../../assets/webfonts/CertificateBoldSWFTE.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "certificate";
-  src: url("../webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../webfonts/CertificateRegularSWFTE.woff") format("woff");
+  src: url("../../assets/webfonts/CertificateRegularSWFTE.woff2") format("woff2"), url("../../assets/webfonts/CertificateRegularSWFTE.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "certificate";
-  src: url("../webfonts/CertificateBoldItalicSWFTE.woff2") format("woff2"), url("../webfonts/CertificateBoldItalicSWFTE.woff") format("woff");
+  src: url("../../assets/webfonts/CertificateBoldItalicSWFTE.woff2") format("woff2"), url("../../assets/webfonts/CertificateBoldItalicSWFTE.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "certificate";
-  src: url("../webfonts/CertificateItalicSWFTE.woff2") format("woff2"), url("../webfonts/CertificateItalicSWFTE.woff") format("woff");
+  src: url("../../assets/webfonts/CertificateItalicSWFTE.woff2") format("woff2"), url("../../assets/webfonts/CertificateItalicSWFTE.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "italianno";
-  src: url("../webfonts/Italianno-Regular.woff2") format("woff2"), url("../webfonts/Italianno-Regular.woff") format("woff"), url("../webfonts/Italianno-Regular.ttf") format("truetype");
+  src: url("../../assets/webfonts/Italianno-Regular.woff2") format("woff2"), url("../../assets/webfonts/Italianno-Regular.woff") format("woff"), url("../../assets/webfonts/Italianno-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -387,7 +387,8 @@ body {
   font-family: "avenir";
 }
 .admit__card--content .footer .qr__code {
-  width: 42px;
+  width: 72px;
+  margin-top: -22px;
 }
 .admit__card--content .footer .qr__code img {
   width: 100%;

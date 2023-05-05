@@ -52,6 +52,17 @@
           border: none;
         }
       }
+
+      @media only screen and (max-width: 450px) {
+        .block_td {
+          display: block;
+          text-align: center;
+          margin: 0 auto;
+        }
+        .social__links {
+          margin-top: 10px;
+        }
+      }
     </style>
   </head>
 
@@ -284,7 +295,7 @@
       </tr>
 
       <!-- footer logo section -->
-      <tr>
+      <!-- <tr>
         <td style="padding: 20px 40px; background: #f5fbfe" align="middle">
           <img
             src="./img/logo.webp"
@@ -293,25 +304,84 @@
             style="max-width: 100%; display: block"
           />
         </td>
-      </tr>
+      </tr> -->
 
-      <!-- terms and conditions -->
-      <tr style="background-color: #11586d">
-        <td
-          align="middle"
-          valign="center"
-          style="color: #f4f4f4; font-size: 16px; height: 40px; padding: 0 40px"
-        >
-          <a
-            href="#"
-            style="
-              font-size: 16px;
-              font-weight: normal;
-              text-decoration: none;
-              color: white;
-            "
-            >Terms & Conditions</a
-          >
+      <!-- footer area -->
+      <tr>
+        <td style="padding: 20px 40px; background: #f5fbfe; font-size: 0">
+          <table>
+            <tr style="background: #f5fbfe">
+              <td class="block_td" style="max-width: 160px">
+                <a href="#"
+                  ><img
+                    style="width: 90px; height: auto"
+                    src="./img/logo.webp"
+                    alt="YouthICT"
+                /></a>
+              </td>
+
+              <td
+                class="block_td"
+                style="width: 250px; max-width: 100%; text-align: center"
+              >
+                <p style="font-size: 12px; font-weight: bold">
+                  Youth Development Computer & Shorthand Training Center
+                </p>
+                <p style="font-size: 10px; font-weight: normal">
+                  House No. 1, Road No: 02, Dhanmondi, Dhaka.
+                </p>
+                <a
+                  href="#"
+                  style="
+                    font-size: 10px;
+                    font-weight: normal;
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #1f1e1e;
+                    margin-right: 6px;
+                  "
+                >
+                  www.youthict.org
+                </a>
+                <p
+                  style="
+                    font-size: 10px;
+                    font-weight: normal;
+                    display: inline-block;
+                  "
+                >
+                  01977500800
+                </p>
+
+                <div class="social__media">
+                  <a href="#"
+                    ><img
+                      style="width: 20px; height: 20px; margin: 3px"
+                      src="./img/facebook.png"
+                      alt="Facebook"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      style="width: 20px; height: 20px; margin: 3px"
+                      src="./img/youtube.png"
+                      alt="Youtube"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      style="width: 20px; height: 20px; margin: 3px"
+                      src="./img/twitter.png"
+                      alt="Twitter"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      style="width: 20px; height: 20px; margin: 3px"
+                      src="./img/linkedin.png"
+                      alt="Linkedin"
+                  /></a>
+                </div>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>
