@@ -250,6 +250,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
+    padding: 0;
   }
   .admit__card {
     width: 8.2678in;
@@ -258,5 +259,8 @@ body {
     &::after {
       // display: none;
     }
+  }
+  .admit__card:last-child {
+    margin-top: -15px;
   }
 }

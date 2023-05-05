@@ -439,9 +439,13 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
+    padding: 0;
   }
   .admit__card {
     width: 8.2678in;
     height: 5.8464in;
+  }
+  .admit__card:last-child {
+    margin-top: -15px;
   }
 }
