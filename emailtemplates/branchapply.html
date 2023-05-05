@@ -38,6 +38,19 @@
       td {
         border: none;
       }
+      .social__media {
+        margin-top: 5px;
+      }
+      .footer__logo {
+        width: 66px;
+        border-right: 2px solid #e5e5e5;
+      }
+      .footer__right {
+        text-align: left;
+        width: 250px;
+        max-width: 100%;
+        padding-left: 26px;
+      }
 
       @media only screen and (max-width: 400px) {
         .font_14 {
@@ -59,8 +72,14 @@
           text-align: center;
           margin: 0 auto;
         }
-        .social__links {
-          margin-top: 10px;
+        .footer__logo {
+          width: 100%;
+          display: block;
+          border-right: none;
+        }
+        .footer__right {
+          text-align: center;
+          padding-left: 0;
         }
       }
     </style>
@@ -281,24 +300,12 @@
         </td>
       </tr>
 
-      <!-- footer logo section -->
-      <!-- <tr>
-        <td style="padding: 20px 40px; background: #f5fbfe" align="middle">
-          <img
-            src="./img/logo.webp"
-            alt="Logo"
-            width="120px"
-            style="max-width: 100%; display: block"
-          />
-        </td>
-      </tr> -->
-
-      <!-- footer area -->
+      <!-- footer section -->
       <tr>
         <td style="padding: 20px 40px; background: #f5fbfe; font-size: 0">
           <table>
             <tr style="background: #f5fbfe">
-              <td class="block_td" style="max-width: 160px">
+              <td class="block_td footer__logo">
                 <a href="#"
                   ><img
                     style="width: 90px; height: auto"
@@ -307,10 +314,7 @@
                 /></a>
               </td>
 
-              <td
-                class="block_td"
-                style="width: 250px; max-width: 100%; text-align: center"
-              >
+              <td class="block_td footer__right">
                 <p style="font-size: 12px; font-weight: bold">
                   Youth Development Computer & Shorthand Training Center
                 </p>
