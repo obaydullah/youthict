@@ -33,15 +33,16 @@ body {
 
     .logo__area {
       display: flex;
-      gap: 1.5rem;
-      justify-content: center;
+      gap: 1.3rem;
+      justify-content: space-between;
+      padding-right: 13px;
 
       .logo__main {
-        width: 100px;
+        width: 90px;
         height: auto;
       }
       .logo__two {
-        width: 460px;
+        width: 455px;
         height: auto;
       }
     }
