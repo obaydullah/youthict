@@ -110,22 +110,36 @@
 }
 @font-face {
   font-family: "avenir";
-  src: url("../webfonts/AvenirNextLTPro-MediumCn.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-MediumCn.woff") format("woff");
+  src: url("../../assets/webfonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/webfonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../../assets/webfonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/webfonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../../assets/webfonts/AvenirNextLTPro-MediumCn.woff2") format("woff2"), url("../../assets/webfonts/AvenirNextLTPro-MediumCn.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "avenir";
-  src: url("../webfonts/AvenirNextLTPro-HeavyCn.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-HeavyCn.woff") format("woff");
+  src: url("../../assets/webfonts/AvenirNextLTPro-HeavyCn.woff2") format("woff2"), url("../../assets/webfonts/AvenirNextLTPro-HeavyCn.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "avenir";
-  src: url("../webfonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../webfonts/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
+  src: url("../../assets/webfonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/webfonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -202,11 +216,6 @@ ul {
 }
 
 /*************************** end common css **************************************/
-/**
-* ============================
-*  3.Media Query
-* ============================
-*/
 body {
   margin: 0;
   padding: 0;
@@ -305,7 +314,7 @@ body {
 }
 .registration__content .registration__table .table__main {
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "avenir";
   border-collapse: separate;
   border-spacing: 0 20px;
   width: 100%;
@@ -366,6 +375,7 @@ body {
   margin-top: 155px;
   display: flex;
   justify-content: space-around;
+  font-family: "avenir";
 }
 .registration__content .footer .qr__code {
   width: 50px;

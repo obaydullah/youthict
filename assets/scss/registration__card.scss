@@ -1,6 +1,5 @@
 @import "./partials/variables";
 @import "./partials/default";
-@import "./partials/media_query";
 
 body {
   margin: 0;
@@ -106,7 +105,7 @@ body {
 
       .table__main {
         font-size: 14px;
-        font-family: $default_font;
+        font-family: $font_avenir;
         border-collapse: separate;
         border-spacing: 0 20px;
         width: 100%;
@@ -177,6 +176,7 @@ body {
       margin-top: 155px;
       display: flex;
       justify-content: space-around;
+      font-family: $font_avenir;
 
       .qr__code {
         width: 50px;
