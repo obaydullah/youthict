@@ -20,7 +20,7 @@ body {
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url("../img/registration__card.png");
+    background-image: url("../img/registration__card--updated.png");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -105,7 +105,7 @@ body {
       margin-top: 60px;
 
       .table__main {
-        font-size: 14px;
+        font-size: 16px;
         font-family: $font_avenir;
         border-collapse: separate;
         border-spacing: 0 20px;
@@ -174,7 +174,7 @@ body {
     }
 
     .footer {
-      margin-top: 155px;
+      margin-top: 140px;
       display: flex;
       justify-content: space-around;
       font-family: $font_avenir;
