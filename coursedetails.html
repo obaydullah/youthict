@@ -610,6 +610,8 @@
             <!-- course content start  -->
             <section class="course__content">
               <h2 class="about__course--title">Course Content Preview</h2>
+
+              <!-- accordion style one  -->
               <div class="accordion">
                 <div>
                   <input
@@ -820,6 +822,75 @@
                   </div>
                 </div>
               </div>
+              <br /><br />
+              <!-- accordion style two -->
+              <div class="accordion">
+                <div>
+                  <input
+                    type="checkbox"
+                    name="example_accordion"
+                    id="sectionone"
+                    class="accordion__input"
+                  />
+                  <label for="sectionone" class="accordion__label style__two"
+                    >Wordpress Basic
+
+                    <div class="label__icon style__two">
+                      <span>6 Lectures</span>
+                      <span class="seperator"></span>
+                      <span>10min</span>
+                    </div>
+                  </label>
+                  <div class="accordion__content">
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <ul class="style__two">
+                            <li>
+                              <a href="javascript:void(0)">
+                                <iconify-icon
+                                  icon="material-symbols:file-copy-outline-rounded"
+                                ></iconify-icon>
+                                <span class="title"> How to get help</span>
+                                <div class="time">
+                                  <span> 02:45 </span>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)">
+                                <iconify-icon
+                                  icon="material-symbols:file-copy-outline-rounded"
+                                ></iconify-icon>
+                                <span class="title"> Course Resource</span>
+                                <div class="time">
+                                  <span> 02:45 </span>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="free"
+                                onclick="modalOpen(event, 'https://www.youtube.com/embed/pbD2XLZ-Ge0')"
+                              >
+                                <iconify-icon
+                                  icon="mdi:television-play"
+                                ></iconify-icon>
+                                <span class="title"> Environment Setup</span>
+                                <div class="time">
+                                  <span class="preview__text"> Preview </span>
+                                  <span> 02:45 </span>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
             <!-- course content end  -->
 
@@ -842,7 +913,10 @@
             <!-- how to give payment start -->
             <section class="payment">
               <h2 class="title">How to give payment</h2>
-              <p class="payment__modal">
+              <p
+                class="payment__modal"
+                onclick="modalOpen(event, 'https://www.youtube.com/embed/7iwk9q4XXnE')"
+              >
                 <span>Watch the video</span> to know how to give payment
               </p>
             </section>
@@ -1075,7 +1149,10 @@
           >
             <!-- course details card -->
             <div class="course__details--card">
-              <div class="course__details--img--box course__modal">
+              <div
+                class="course__details--img--box course__modal"
+                onclick="modalOpen(event, 'https://www.youtube.com/embed/8DKMhWo9o-w')"
+              >
                 <img
                   src="./assets/images/course/advance-wordpress.jpg"
                   alt=""
@@ -1237,11 +1314,15 @@
     <!-- Modal Start -->
     <div class="modal__area">
       <div class="video__modal--area">
-        <div class="modal__area--overlay"></div>
+        <div class="modal__area--overlay" onclick="modalClose(event)"></div>
 
         <div class="container">
           <div class="video__area--inner">
-            <i class="fa fa-times modal__close--btn" aria-hidden="true"></i>
+            <i
+              class="fa fa-times modal__close--btn"
+              aria-hidden="true"
+              onclick="modalClose(event)"
+            ></i>
 
             <div class="video__area">
               <!-- video -->

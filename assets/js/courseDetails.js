@@ -1,37 +1,20 @@
-let courseImage = document.querySelector(".course__modal");
 let modalArea = document.querySelector(".modal__area");
-let modalClose = document.querySelector(".modal__area--overlay");
 let videoArea = document.querySelector(".video__area");
-let modalCloseBtn = document.querySelector(".modal__close--btn");
-let paymentModal = document.querySelector(".payment__modal");
 
-courseImage.addEventListener("click", function () {
+function modalOpen(event, source) {
+  event.preventDefault();
   modalArea.style.opacity = "1";
   modalArea.style.visibility = "visible";
-  videoArea.innerHTML = `<iframe src="https://www.youtube.com/embed/sW9npZVpiMI" title="YouTube video player" frameborder="0"
+  videoArea.innerHTML = `<iframe src="${source}" title="YouTube video player" frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen></iframe>`;
-});
-
-modalClose.addEventListener("click", function () {
+}
+function modalClose(event) {
+  event.preventDefault();
   modalArea.style.opacity = "0";
   modalArea.style.visibility = "hidden";
   videoArea.innerHTML = ``;
-});
-
-modalCloseBtn.addEventListener("click", function () {
-  modalArea.style.opacity = "0";
-  modalArea.style.visibility = "hidden";
-  videoArea.innerHTML = ``;
-});
-
-paymentModal.addEventListener("click", function () {
-  modalArea.style.opacity = "1";
-  modalArea.style.visibility = "visible";
-  videoArea.innerHTML = `<iframe src="https://www.youtube.com/embed/sW9npZVpiMI" title="YouTube video player" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen></iframe>`;
-});
+}
 
 $(document).ready(function () {
   $(".student__testemonial--slider").slick({

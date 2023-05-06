@@ -6,14 +6,12 @@ const rename = require("gulp-rename");
 const terser = require("gulp-terser");
 
 gulp.task("sass", function () {
-  return (
-    gulp
-      .src("./assets/scss/style.scss")
-      .pipe(sourcemaps.init())
-      .pipe(sass().on("error", sass.logError))
-      // .pipe(sourcemaps.write())
-      .pipe(gulp.dest("./assets/css/"))
-  );
+  return gulp
+    .src("./assets/scss/style.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./assets/css/"));
 });
 
 gulp.task("registration__card", function () {

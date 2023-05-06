@@ -223,10 +223,13 @@ body {
 
 .admit__card {
   position: relative;
-  width: 8.2678in;
-  height: 5.8464in;
+  width: 9.5253in;
+  height: 5.9411in;
   z-index: 1;
   margin: 0 auto;
+  break-after: always;
+  break-before: always;
+  break-inside: avoid;
 }
 .admit__card::after {
   position: absolute;
@@ -235,14 +238,14 @@ body {
   width: 100%;
   height: 100%;
   content: "";
-  background-image: url("../img/admit__card.png");
+  background-image: url("../img/admit__card--updated-two.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 }
 .admit__card--content {
   padding: 86px;
-  padding-top: 100px;
+  padding-top: 85px;
 }
 .admit__card--content .logo__area {
   display: flex;
@@ -436,7 +439,7 @@ body {
 
 @media print {
   @page {
-    size: A4 portrait;
+    size: A4 landscape;
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -444,8 +447,10 @@ body {
     padding: 0;
   }
   .admit__card {
-    width: 8.2678in;
-    height: 5.8464in;
+    width: 9.53in;
+    height: 5.94in;
+    margin: 0 auto;
+    margin-top: 90px !important;
   }
   .admit__card:last-child {
     margin-top: -15px;
