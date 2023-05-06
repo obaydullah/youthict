@@ -172,6 +172,7 @@
       -ms-border-radius: 25px 25px 0 0;
       -o-border-radius: 25px 25px 0 0;
     }
+
     .course_text {
       padding: 20px 14px 28px 17px;
       border-radius: 0 0 25px 25px;
@@ -179,13 +180,14 @@
     .course_text {
       h6 {
         font-family: $bangla_font;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 23px;
-        display: flex;
-        -ms-flex-align: center;
-        align-items: center;
         letter-spacing: 0.2px;
         color: $hover-2;
+        border: 1px solid $hover-2;
+        display: inline-block;
+        padding: 4px 6px;
+        border-radius: 3px;
       }
       h3 {
         color: $black-2;

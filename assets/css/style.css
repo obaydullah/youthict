@@ -4749,11 +4749,8 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 .course_single_item .course_text h6 {
   font-family: "potro_sans";
-  font-size: 14px;
+  font-size: 12px;
   line-height: 23px;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
   letter-spacing: 0.2px;
   color: #f37021;
 }
@@ -18487,13 +18484,14 @@ input.invalid {
 }
 .course__item--single .course_text h6 {
   font-family: "potro_sans";
-  font-size: 14px;
+  font-size: 12px;
   line-height: 23px;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
   letter-spacing: 0.2px;
   color: #f37021;
+  border: 1px solid #f37021;
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 3px;
 }
 .course__item--single .course_text h3 {
   color: #1f1e1e;
