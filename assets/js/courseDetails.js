@@ -25,7 +25,7 @@ function modalTwoOpen(event, source) {
   modalTwo.style.opacity = "1";
   modalTwo.style.visibility = "visible";
   videoPreview.innerHTML = `<iframe width="100%" height="350"
-  src="${source}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+  src="${source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
 }
 
 function modalTwoClose() {
@@ -34,10 +34,26 @@ function modalTwoClose() {
   videoPreview.innerHTML = "";
 }
 
-function videoPlay(source) {
+function videoPlay(event, source) {
   videoPreview.innerHTML = `<iframe width="100%" height="350"
-   src="${source}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+   src="${source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+
+  const button = event.target.closest("button");
+  button.classList.add("active");
 }
+
+// add active class in sample video button
+const sampleVideoBtn = document.querySelectorAll(".sample__video--btn");
+
+sampleVideoBtn.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    sampleVideoBtn.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    button.classList.add("active");
+  });
+});
 
 $(document).ready(function () {
   $(".student__testemonial--slider").slick({

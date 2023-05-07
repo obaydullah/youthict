@@ -133,6 +133,7 @@ $border-color: rgb(219, 225, 235);
     }
   }
 }
+
 // Instructor Area end
 
 //What you will learn area start
@@ -997,6 +998,10 @@ $border-color: rgb(219, 225, 235);
         border: none;
         color: $white;
 
+        &.active {
+          background: #3e4143;
+        }
+
         .title {
           display: flex;
           align-items: center;
@@ -1008,6 +1013,7 @@ $border-color: rgb(219, 225, 235);
             color: $white;
             margin-bottom: 0;
             margin-bottom: 0;
+            text-align: left;
           }
 
           iconify-icon {
