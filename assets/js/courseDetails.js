@@ -5,7 +5,7 @@ function modalOpen(event, source) {
   event.preventDefault();
   modalArea.style.opacity = "1";
   modalArea.style.visibility = "visible";
-  videoArea.innerHTML = `<iframe src="${source}" title="YouTube video player" frameborder="0"
+  videoArea.innerHTML = `<iframe src="${source}?autoplay=1" title="YouTube video player" frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen></iframe>`;
 }
@@ -25,7 +25,7 @@ function modalTwoOpen(event, source) {
   modalTwo.style.opacity = "1";
   modalTwo.style.visibility = "visible";
   videoPreview.innerHTML = `<iframe width="100%" height="350"
-  src="${source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+  src="${source}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
 }
 
 function modalTwoClose() {
@@ -36,7 +36,7 @@ function modalTwoClose() {
 
 function videoPlay(event, source) {
   videoPreview.innerHTML = `<iframe width="100%" height="350"
-   src="${source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+   src="${source}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
 
   const button = event.target.closest("button");
   button.classList.add("active");
