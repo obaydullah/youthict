@@ -85,7 +85,7 @@ $border-color: rgb(219, 225, 235);
     border: 1px solid $border-color;
     border-radius: 0.5rem;
     transition: all 0.3s;
-    gap: 0 40px;
+    gap: 0 20px;
 
     @include desktop {
       flex-wrap: wrap;
@@ -106,7 +106,7 @@ $border-color: rgb(219, 225, 235);
     align-items: center;
     padding: 2rem;
     gap: 2rem;
-    width: 368px;
+    width: 400px;
 
     img {
       width: 7.3rem;
