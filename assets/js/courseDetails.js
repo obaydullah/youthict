@@ -1,3 +1,4 @@
+//modal one start
 let modalArea = document.querySelector(".modal__area");
 let videoArea = document.querySelector(".video__area");
 
@@ -15,13 +16,13 @@ function modalClose(event) {
   modalArea.style.visibility = "hidden";
   videoArea.innerHTML = ``;
 }
+//modal one enc
 
-// modal two javascript
+// modal two start
 let videoPreview = document.querySelector(".video__preview");
 let modalTwo = document.querySelector(".modal__two");
 
-function modalTwoOpen(event, source) {
-  event.preventDefault();
+function modalTwoOpen(source) {
   modalTwo.style.opacity = "1";
   modalTwo.style.visibility = "visible";
   videoPreview.innerHTML = `<iframe width="100%" height="350"
@@ -54,6 +55,47 @@ sampleVideoBtn.forEach((button) => {
     button.classList.add("active");
   });
 });
+
+//modal two end
+
+//modal three start
+let videoPreviewThree = document.querySelector(".video__preview--three");
+let modalThree = document.querySelector(".modal__three");
+
+function modalThreeOpen(source) {
+  modalThree.style.opacity = "1";
+  modalThree.style.visibility = "visible";
+  videoPreviewThree.innerHTML = `<iframe width="100%" height="400"
+   src="${source}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+}
+
+function modalThreeClose() {
+  modalThree.style.opacity = "0";
+  modalThree.style.visibility = "hidden";
+  videoPreviewThree.innerHTML = "";
+}
+
+function videoPlayThree(event, source) {
+  videoPreviewThree.innerHTML = `<iframe width="100%" height="400"
+   src="${source}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+
+  const button = event.target.closest("button");
+  button.classList.add("active");
+}
+
+// add active class in sample video button
+const sampleVideoBtnThree = document.querySelectorAll(".sample__video--btn");
+
+sampleVideoBtnThree.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    sampleVideoBtnThree.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    button.classList.add("active");
+  });
+});
+//modal three end
 
 $(document).ready(function () {
   $(".student__testemonial--slider").slick({
