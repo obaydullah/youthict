@@ -81,10 +81,11 @@ $border-color: rgb(219, 225, 235);
 
   &__info--box--area {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
     border: 1px solid $border-color;
     border-radius: 0.5rem;
     transition: all 0.3s;
+    gap: 0 40px;
 
     @include desktop {
       flex-wrap: wrap;
@@ -105,6 +106,7 @@ $border-color: rgb(219, 225, 235);
     align-items: center;
     padding: 2rem;
     gap: 2rem;
+    width: 368px;
 
     img {
       width: 7.3rem;
@@ -914,6 +916,111 @@ $border-color: rgb(219, 225, 235);
 }
 //modal style end
 
+//modal Two start
+.modal__two {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  .container {
+    height: 100vh;
+  }
+  .row {
+    height: 100%;
+  }
+  &--inner {
+    background: #1c1d1f;
+    color: $white;
+    border-radius: 2px;
+    max-height: 95vh;
+    overflow: hidden;
+
+    .header {
+      padding: 20px;
+      padding-bottom: 10px;
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        iconify-icon {
+          font-size: 22px;
+          cursor: pointer;
+          padding: 0 0 10px 10px;
+        }
+      }
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+    .video__preview {
+      margin: 10px 0;
+      padding: 10px 20px;
+    }
+
+    .free__videos {
+      max-height: 120px;
+      overflow-y: auto;
+
+      & > h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 0 20px;
+      }
+      .thumbnail {
+        img {
+          width: auto;
+          height: 4.8rem;
+        }
+      }
+    }
+
+    .video__list {
+      button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+        gap: 1.5rem;
+        background: transparent;
+        border: none;
+        color: $white;
+
+        .title {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          margin-right: auto;
+
+          h2 {
+            font-size: 1.4rem;
+            color: $white;
+            margin-bottom: 0;
+            margin-bottom: 0;
+          }
+
+          iconify-icon {
+            color: $white;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+//modal Two end
+
 // custom accordion start
 .accordion {
   max-width: 100% !important;
@@ -1008,6 +1115,10 @@ $border-color: rgb(219, 225, 235);
 }
 
 .accordion-body {
+  div[class^="col-lg"] {
+    padding: 0;
+  }
+
   ul {
     li {
       list-style-type: square;

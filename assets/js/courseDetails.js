@@ -16,6 +16,29 @@ function modalClose(event) {
   videoArea.innerHTML = ``;
 }
 
+// modal two javascript
+let videoPreview = document.querySelector(".video__preview");
+let modalTwo = document.querySelector(".modal__two");
+
+function modalTwoOpen(event, source) {
+  event.preventDefault();
+  modalTwo.style.opacity = "1";
+  modalTwo.style.visibility = "visible";
+  videoPreview.innerHTML = `<iframe width="100%" height="350"
+  src="${source}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+}
+
+function modalTwoClose() {
+  modalTwo.style.opacity = "0";
+  modalTwo.style.visibility = "hidden";
+  videoPreview.innerHTML = "";
+}
+
+function videoPlay(source) {
+  videoPreview.innerHTML = `<iframe width="100%" height="350"
+   src="${source}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+}
+
 $(document).ready(function () {
   $(".student__testemonial--slider").slick({
     centerMode: !1,
