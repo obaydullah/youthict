@@ -1093,6 +1093,13 @@ $border-color: rgb(219, 225, 235);
     .video__preview--three {
       margin: 10px 0;
       padding: 10px 20px;
+      height: 400px;
+      width: 100%;
+    }
+    .video__preview--three img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .left {
@@ -1180,6 +1187,7 @@ $border-color: rgb(219, 225, 235);
     }
   }
 }
+
 //modal three end
 
 // custom accordion start
