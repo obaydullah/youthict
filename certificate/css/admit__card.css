@@ -109,6 +109,20 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Pinyon Script";
+  src: url("../../assets/webfonts/PinyonScript-Regular.woff2") format("woff2"), url("../../assets/webfonts/PinyonScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Luxurious Script";
+  src: url("../../assets/webfonts/LuxuriousScript-Regular.woff2") format("woff2"), url("../../assets/webfonts/LuxuriousScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "avenir";
   src: url("../../assets/webfonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/webfonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
@@ -373,6 +387,8 @@ body {
   border-collapse: separate;
   border-spacing: 4px;
   padding-right: 5px;
+  margin-top: 9px;
+  font-weight: 500;
 }
 .admit__card--content .table__area .table__right td.tr__property {
   max-width: 38px;
@@ -380,10 +396,10 @@ body {
   font-weight: normal;
 }
 .admit__card--content .table__area .table__right td.tr__value {
-  padding: 7px;
+  padding: 7.5px;
   background-color: #f8f4f9;
   border: 1px solid rgba(0, 0, 0, 0.4);
-  letter-spacing: 0.2px;
+  transform: scaleY(0.96);
 }
 .admit__card--content .footer {
   margin-top: 50px;

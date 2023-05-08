@@ -34,7 +34,7 @@ body {
     padding-top: 29px;
 
     .left {
-      width: 19%;
+      width: 20%;
       margin-top: 480px;
       margin-bottom: 118px;
       text-align: center;
@@ -58,19 +58,19 @@ body {
       }
     }
     .right {
-      width: 81%;
+      width: 80%;
 
       .table {
-        margin-top: 292px;
+        margin-top: 280px;
         margin-left: 30px;
-        font-size: 26px;
+        font-size: 27px;
         font-weight: 600;
-        font-family: $font_italiano;
+        font-family: $font_luxurious;
         display: flex;
         flex-direction: column;
         width: 93%;
         color: $black_3;
-        gap: 10px;
+        gap: 11px;
 
         p {
           margin-bottom: 0;
@@ -89,7 +89,7 @@ body {
         }
         .course {
           margin-left: 210px;
-          margin-top: -12px;
+          margin-top: -2px;
         }
         .ins__name {
           display: flex;
@@ -104,7 +104,6 @@ body {
           display: flex;
           justify-content: space-between;
           margin-left: 60px;
-          margin-top: -4px;
 
           .grade {
             margin-right: 21px;
@@ -113,21 +112,21 @@ body {
         .reg__issue__serial {
           display: flex;
           margin-left: 75px;
-          margin-top: -4px;
+          margin-top: -1px;
 
           .issue__date {
-            margin-left: 212px;
+            margin-left: 224px;
           }
           .serial__no {
-            margin-left: 160px;
+            margin-left: 155px;
           }
         }
       }
       .signature {
         display: flex;
         justify-content: space-between;
-        padding: 0 55px;
-        margin-top: 26px;
+        padding: 0 47px;
+        margin-top: 10px;
 
         img {
           height: 40px;

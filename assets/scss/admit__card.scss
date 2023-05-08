@@ -171,6 +171,8 @@ body {
         border-collapse: separate;
         border-spacing: 4px;
         padding-right: 5px;
+        margin-top: 9px;
+        font-weight: 500;
 
         td.tr__property {
           max-width: 38px;
@@ -178,10 +180,10 @@ body {
           font-weight: normal;
         }
         td.tr__value {
-          padding: 7px;
+          padding: 7.5px;
           background-color: #f8f4f9;
           border: 1px solid rgba(0, 0, 0, 0.4);
-          letter-spacing: 0.2px;
+          transform: scaleY(0.96);
         }
       }
     }

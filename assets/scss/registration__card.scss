@@ -27,9 +27,8 @@ body {
   }
 
   &__content {
-    padding: 108px;
-    padding-top: 105px;
-    padding-right: 96px;
+    padding: 128px;
+    padding-right: 119px;
 
     .logo__area {
       display: flex;
@@ -38,11 +37,11 @@ body {
       padding-right: 13px;
 
       .logo__main {
-        width: 90px;
+        width: 92px;
         height: auto;
       }
       .logo__two {
-        width: 455px;
+        width: 420px;
         height: auto;
       }
     }
@@ -85,14 +84,15 @@ body {
       }
 
       .profile__img {
-        height: 135px;
-        width: 120px;
+        height: 124px;
+        width: 110px;
         overflow: hidden;
         object-fit: contain;
         position: absolute;
         top: 0;
-        right: 1.5rem;
+        right: 0;
         margin-top: -2rem;
+        margin-right: 12px;
 
         img {
           height: 100%;
@@ -138,6 +138,7 @@ body {
       .inner__table {
         border-collapse: separate;
         border-spacing: 12px 0 !important;
+        width: 100%;
 
         th,
         td {
@@ -174,7 +175,7 @@ body {
     }
 
     .footer {
-      margin-top: 140px;
+      margin-top: 85px;
       display: flex;
       justify-content: space-around;
       font-family: $font_avenir;
@@ -248,12 +249,13 @@ body {
   .registration {
     width: 8.25in;
     height: 11.2in;
+    margin: 0 auto;
 
     &::after {
       // display: none;
     }
   }
-  .footer {
-    margin-top: 140px !important;
-  }
+  // .footer {
+  //   margin-top: 140px !important;
+  // }
 }

@@ -109,6 +109,20 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Pinyon Script";
+  src: url("../../assets/webfonts/PinyonScript-Regular.woff2") format("woff2"), url("../../assets/webfonts/PinyonScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Luxurious Script";
+  src: url("../../assets/webfonts/LuxuriousScript-Regular.woff2") format("woff2"), url("../../assets/webfonts/LuxuriousScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "avenir";
   src: url("../../assets/webfonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/webfonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
@@ -241,9 +255,8 @@ body {
   z-index: -1;
 }
 .registration__content {
-  padding: 108px;
-  padding-top: 105px;
-  padding-right: 96px;
+  padding: 128px;
+  padding-right: 119px;
 }
 .registration__content .logo__area {
   display: flex;
@@ -252,11 +265,11 @@ body {
   padding-right: 13px;
 }
 .registration__content .logo__area .logo__main {
-  width: 90px;
+  width: 92px;
   height: auto;
 }
 .registration__content .logo__area .logo__two {
-  width: 455px;
+  width: 420px;
   height: auto;
 }
 .registration__content .logo__bottom {
@@ -296,14 +309,15 @@ body {
   z-index: -1;
 }
 .registration__content .logo__bottom .profile__img {
-  height: 135px;
-  width: 120px;
+  height: 124px;
+  width: 110px;
   overflow: hidden;
   object-fit: contain;
   position: absolute;
   top: 0;
-  right: 1.5rem;
+  right: 0;
   margin-top: -2rem;
+  margin-right: 12px;
 }
 .registration__content .logo__bottom .profile__img img {
   height: 100%;
@@ -342,6 +356,7 @@ body {
 .registration__content .registration__table .inner__table {
   border-collapse: separate;
   border-spacing: 12px 0 !important;
+  width: 100%;
 }
 .registration__content .registration__table .inner__table th,
 .registration__content .registration__table .inner__table td {
@@ -373,7 +388,7 @@ body {
   width: 30px;
 }
 .registration__content .footer {
-  margin-top: 140px;
+  margin-top: 85px;
   display: flex;
   justify-content: space-around;
   font-family: "avenir";
@@ -437,8 +452,6 @@ body {
   .registration {
     width: 8.25in;
     height: 11.2in;
-  }
-  .footer {
-    margin-top: 140px !important;
+    margin: 0 auto;
   }
 }

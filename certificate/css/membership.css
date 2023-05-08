@@ -109,6 +109,20 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Pinyon Script";
+  src: url("../../assets/webfonts/PinyonScript-Regular.woff2") format("woff2"), url("../../assets/webfonts/PinyonScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Luxurious Script";
+  src: url("../../assets/webfonts/LuxuriousScript-Regular.woff2") format("woff2"), url("../../assets/webfonts/LuxuriousScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "avenir";
   src: url("../../assets/webfonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/webfonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
@@ -255,11 +269,11 @@ body {
   position: relative;
 }
 .membership__content .left .profile__photo {
-  width: 165px;
-  height: 203px;
+  width: 137px;
+  height: 169px;
   overflow: hidden;
-  margin-top: 35px;
-  margin-left: 67px;
+  margin: 0 auto;
+  margin-top: 52px;
 }
 .membership__content .left .profile__photo img {
   width: 100%;
@@ -273,12 +287,12 @@ body {
 .membership__content .right .table__top {
   display: flex;
   flex-direction: column;
-  font-family: "italianno";
+  font-family: "Pinyon Script";
   font-weight: 600;
   gap: 55px;
   margin-top: 287px;
   padding: 0;
-  margin-left: 274px;
+  margin-left: 282px;
   width: 438px;
 }
 .membership__content .right .table__top--single {

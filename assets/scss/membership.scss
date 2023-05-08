@@ -41,11 +41,11 @@ body {
       position: relative;
 
       .profile__photo {
-        width: 165px;
-        height: 203px;
+        width: 137px;
+        height: 169px;
         overflow: hidden;
-        margin-top: 35px;
-        margin-left: 67px;
+        margin: 0 auto;
+        margin-top: 52px;
 
         img {
           width: 100%;
@@ -61,12 +61,12 @@ body {
       .table__top {
         display: flex;
         flex-direction: column;
-        font-family: $font_italiano;
+        font-family: $font_pinyon;
         font-weight: 600;
         gap: 55px;
         margin-top: 287px;
         padding: 0;
-        margin-left: 274px;
+        margin-left: 282px;
         width: 438px;
 
         &--single {
