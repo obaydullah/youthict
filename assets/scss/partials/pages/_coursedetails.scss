@@ -1216,12 +1216,17 @@ $border-color: rgb(219, 225, 235);
   justify-content: space-between;
 
   .label__icon {
-    margin-right: 7rem;
     font-weight: normal;
     display: flex;
     align-items: center;
     gap: 1rem;
-    width: 10rem;
+    width: 11rem;
+    margin-right: 3rem;
+    font-size: 1.6rem;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
 
     &.style__two {
       margin-right: 0;
@@ -1341,6 +1346,12 @@ $border-color: rgb(219, 225, 235);
       align-items: center;
       height: 32px;
       font-size: 15px;
+
+      .time {
+        width: 120px;
+        text-align: right;
+        justify-content: space-between;
+      }
 
       iconify-icon {
         margin-right: 10px;

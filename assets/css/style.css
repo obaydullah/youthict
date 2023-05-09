@@ -18161,14 +18161,21 @@ input.invalid {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-right: 45px;
 }
 .accordion__label .label__icon {
-  margin-right: 7rem;
   font-weight: normal;
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 10rem;
+  width: 11rem;
+  margin-right: 3rem;
+  font-size: 1.6rem;
+}
+@media (max-width: 991px) {
+  .accordion__label .label__icon {
+    display: none;
+  }
 }
 .accordion__label .label__icon.style__two {
   margin-right: 0;
@@ -18275,6 +18282,11 @@ input.invalid {
   align-items: center;
   height: 32px;
   font-size: 15px;
+}
+.accordion-body .style__two .accordion__list .time {
+  width: 120px;
+  text-align: right;
+  justify-content: space-between;
 }
 .accordion-body .style__two .accordion__list iconify-icon {
   margin-right: 10px;
