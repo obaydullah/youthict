@@ -295,6 +295,7 @@ body {
   padding: 0;
   margin-left: 267px;
   width: 545px;
+  letter-spacing: 1.5px;
 }
 .membership__content .right .table__top--single {
   display: flex;
@@ -321,6 +322,7 @@ body {
   gap: 25px;
   padding: 0 63px;
   margin-top: 20px;
+  letter-spacing: 1.5px;
 }
 .membership__content .right .table__bottom--single {
   padding-left: 65px;

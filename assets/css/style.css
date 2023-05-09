@@ -18161,7 +18161,6 @@ input.invalid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 45px;
 }
 .accordion__label .label__icon {
   font-weight: normal;
