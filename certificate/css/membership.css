@@ -263,7 +263,7 @@ body {
   height: 100%;
 }
 .membership__content .left {
-  width: 293px;
+  width: 248px;
   height: 100%;
   text-align: center;
   position: relative;
@@ -274,6 +274,7 @@ body {
   overflow: hidden;
   margin: 0 auto;
   margin-top: 52px;
+  padding-right: 2px;
 }
 .membership__content .left .profile__photo img {
   width: 100%;
@@ -289,11 +290,11 @@ body {
   flex-direction: column;
   font-family: "Pinyon Script";
   font-weight: 600;
-  gap: 55px;
-  margin-top: 287px;
+  gap: 57px;
+  margin-top: 290px;
   padding: 0;
-  margin-left: 282px;
-  width: 438px;
+  margin-left: 267px;
+  width: 545px;
 }
 .membership__content .right .table__top--single {
   display: flex;
@@ -306,7 +307,7 @@ body {
 }
 .membership__content .right .table__top--single .value p {
   margin-bottom: 0;
-  font-size: 32px;
+  font-size: 30px;
   position: absolute;
   top: -35px;
   left: 12px;
@@ -315,17 +316,20 @@ body {
 .membership__content .right .table__bottom {
   display: flex;
   flex-direction: column;
-  font-family: "italianno";
+  font-family: "Pinyon Script";
   font-weight: 600;
-  gap: 19px;
+  gap: 25px;
   padding: 0 63px;
   margin-top: 20px;
 }
 .membership__content .right .table__bottom--single {
   padding-left: 65px;
 }
+.membership__content .right .table__bottom--single .number {
+  font-size: 23px;
+}
 .membership__content .right .table__bottom--single.double {
-  margin-left: 210px;
+  margin-left: 205px;
   display: flex;
 }
 .membership__content .right .table__bottom--single .branch__code {
@@ -334,6 +338,7 @@ body {
 .membership__content .right .table__bottom--single .issue__date {
   width: 116px;
   white-space: nowrap;
+  margin-left: 15px;
 }
 .membership__content .right .table__bottom--single p {
   margin-bottom: 0;
@@ -343,7 +348,7 @@ body {
 .membership__content .right .footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 175px;
+  padding: 0 148px;
   margin-top: 132px;
 }
 .membership__content .right .footer .qr__code {

@@ -399,7 +399,8 @@ body {
   padding: 7.5px;
   background-color: #f8f4f9;
   border: 1px solid rgba(0, 0, 0, 0.4);
-  transform: scaleY(0.96);
+  font-weight: bold;
+  width: 120px;
 }
 .admit__card--content .footer {
   margin-top: 50px;
@@ -421,7 +422,7 @@ body {
   position: relative;
 }
 .admit__card--content .footer .signature .signature__img {
-  height: 33px;
+  height: 35px;
   width: auto;
   position: absolute;
   bottom: 45px;

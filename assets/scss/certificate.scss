@@ -61,16 +61,17 @@ body {
       width: 80%;
 
       .table {
-        margin-top: 280px;
+        margin-top: 278px;
         margin-left: 30px;
-        font-size: 27px;
+        font-size: 29px;
         font-weight: 600;
         font-family: $font_luxurious;
         display: flex;
         flex-direction: column;
         width: 93%;
         color: $black_3;
-        gap: 11px;
+        gap: 9px;
+        letter-spacing: 1.5px;
 
         p {
           margin-bottom: 0;
@@ -104,6 +105,7 @@ body {
           display: flex;
           justify-content: space-between;
           margin-left: 60px;
+          margin-top: -6px;
 
           .grade {
             margin-right: 21px;
@@ -112,14 +114,17 @@ body {
         .reg__issue__serial {
           display: flex;
           margin-left: 75px;
-          margin-top: -1px;
+          margin-top: -6px;
 
           .issue__date {
-            margin-left: 224px;
+            margin-left: 199px;
           }
           .serial__no {
-            margin-left: 155px;
+            margin-left: 140px;
           }
+        }
+        .number {
+          font-size: 31px;
         }
       }
       .signature {
