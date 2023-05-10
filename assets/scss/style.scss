@@ -8252,33 +8252,7 @@ ul#menu-footer-menu {
   display: inline-block;
   margin: 0 auto;
 }
-/* video section start here */
-/* .video-section {
-  overflow: hidden;
-  position: relative;
-  height: 400px;
-} */
-.video-left {
-  width: 100%;
-  position: relative;
-}
-.video-right {
-  width: 100%;
-}
-.video-left .video-thumb {
-  background: url("../../images/bg-img-7.jpg");
-  height: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.video-right .video-thumb {
-  background: url("../../images/map.png"), #003e59;
-  height: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+
 .video-icon {
   position: absolute;
   top: 50%;

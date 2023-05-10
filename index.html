@@ -13,17 +13,13 @@
       type="image/png"
       alt="Youth ICT | Favicon"
     />
-    <link
-      rel="preload"
-      as="style"
-      href="assets/css/bootstrap.min.css"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/feather.min.css" />
     <link rel="stylesheet" href="assets/css/slick.min.css" />
     <link rel="stylesheet" href="assets/css/venobox.min.css" />
-    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" defer />
     <link rel="stylesheet" href="assets/css/responsive.min.css" />
   </head>
 
@@ -142,9 +138,10 @@
                 <div class="logo">
                   <a href="#">
                     <img
-                      data-src="assets/images/logo.webp"
+                      src="assets/images/logo.webp"
                       alt="Youth ICT"
-                      class="logo__img lazyload"
+                      class="logo__img"
+                      style="height: 100px; aspect-ratio: 1"
                     />
                   </a>
                 </div>
@@ -278,9 +275,10 @@
       <div class="inner-wrapper">
         <div class="popup__header">
           <img
-            data-src="./assets/images/logo.webp"
+            src="./assets/images/logo.webp"
             alt="Logo"
-            class="popup__logo lazyload"
+            class="popup__logo"
+            style="height: 100px; aspect-ratio: 1"
           />
           <div class="rbt-btn-close">
             <button class="close-button rbt-round-btn">
@@ -409,9 +407,10 @@
                   href="https://youtu.be/GogcDtMpgMc"
                 >
                   <img
-                    class="img-fluid homebanner-thumb video_thumb lazyload"
-                    data-src="assets/images/top_banner.webp"
+                    class="img-fluid homebanner-thumb video_thumb"
+                    src="assets/images/top_banner.webp"
                     alt="Home Banner| Icon"
+                    style="width: 100%; aspect-ratio: 16/9"
                   />
                   <div class="banner_img_overly">
                     <div class="overly_icon">
@@ -436,20 +435,9 @@
                     </div>
                   </div>
                 </a>
-                <div class="dot_2">
-                  <img
-                    class="img-fluid lazyload"
-                    data-src="assets/images/banner_background/shape-3.png"
-                    alt="victor dot"
-                  />
-                </div>
 
                 <div class="dot_4">
-                  <img
-                    data-src="./assets/images/rounded__shape.png"
-                    alt="Shape"
-                    class="lazyload"
-                  />
+                  <img src="./assets/images/rounded__shape.png" alt="Shape" />
                 </div>
               </div>
             </div>
@@ -568,9 +556,10 @@
                       <div class="course_single_item">
                         <div class="course_image">
                           <img
-                            class="img-fluid w-100 lazyload"
+                            class="img-fluid lazyload"
                             data-src="./assets/images/course/graphicsdesign.jpg"
                             alt="প্রফেশনাল গ্রাফিক ডিজাইন"
+                            style="width: 100%; aspect-ratio: 19/10"
                           />
                         </div>
                         <div class="course_text">
@@ -652,6 +641,7 @@
                             class="img-fluid w-100 lazyload"
                             data-src="./assets/images/course/computer-hardware.jpg"
                             alt="মোশন গ্রাফিক্স"
+                            style="width: 100%; aspect-ratio: 19/10"
                           />
                         </div>
                         <div class="course_text">
@@ -733,6 +723,7 @@
                             class="img-fluid w-100 lazyload"
                             data-src="./assets/images/course/graphicsdesign.jpg"
                             alt="UX/UI ডিজাইন"
+                            style="width: 100%; aspect-ratio: 19/10"
                           />
                         </div>
                         <div class="course_text">
@@ -818,6 +809,7 @@
                             class="img-fluid w-100 lazyload"
                             data-src="./assets/images/course/graphicsdesign.jpg"
                             alt="প্রফেশনাল গ্রাফিক ডিজাইন"
+                            style="width: 100%; aspect-ratio: 19/10"
                           />
                         </div>
                         <div class="course_text">
@@ -902,6 +894,7 @@
                             class="img-fluid w-100 lazyload"
                             data-src="./assets/images/course/icteducation.jpg"
                             alt="মোশন গ্রাফিক্স"
+                            style="width: 100%; aspect-ratio: 19/10"
                           />
                         </div>
                         <div class="course_text">
@@ -987,6 +980,7 @@
                             class="img-fluid w-100 lazyload"
                             data-src="./assets/images/course/web-design.jpg"
                             alt="ওয়েব ডিজাইন"
+                            style="width: 100%; aspect-ratio: 19/10"
                           />
                         </div>
                         <div class="course_text">
@@ -1068,6 +1062,7 @@
                             class="img-fluid w-100 lazyload"
                             data-src="./assets/images/course/web-design.jpg"
                             alt="ওয়েব ডেভেলপমেন্ট"
+                            style="width: 100%; aspect-ratio: 19/10"
                           />
                         </div>
                         <div class="course_text">
@@ -1657,6 +1652,7 @@
                     data-src="assets/images/home/ceremony1.webp"
                     alt="certificate giving ceremony"
                     class="lazyload"
+                    style="width: 100%; aspect-ratio: 55/31"
                   />
                 </div>
                 <div class="certificate-content">
@@ -1681,6 +1677,7 @@
                     data-src="assets/images/home/ceremony2.webp"
                     alt="certificate giving ceremony"
                     class="lazyload"
+                    style="width: 100%; aspect-ratio: 55/31"
                   />
                 </div>
                 <div class="certificate-content">
@@ -1704,6 +1701,7 @@
                     data-src="assets/images/home/ceremony1.webp"
                     alt="certificate giving ceremony"
                     class="lazyload"
+                    style="width: 100%; aspect-ratio: 55/31"
                   />
                 </div>
                 <div class="certificate-content">
