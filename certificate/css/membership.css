@@ -269,12 +269,12 @@ body {
   position: relative;
 }
 .membership__content .left .profile__photo {
-  width: 137px;
-  height: 169px;
+  width: 136px;
+  height: 168px;
   overflow: hidden;
   margin: 0 auto;
-  margin-top: 52px;
-  padding-right: 2px;
+  margin-top: 61px;
+  padding-right: 1px;
 }
 .membership__content .left .profile__photo img {
   width: 100%;
@@ -290,7 +290,7 @@ body {
   flex-direction: column;
   font-family: "Pinyon Script";
   font-weight: 600;
-  gap: 57px;
+  gap: 55px;
   margin-top: 290px;
   padding: 0;
   margin-left: 267px;
@@ -319,7 +319,7 @@ body {
   flex-direction: column;
   font-family: "Pinyon Script";
   font-weight: 600;
-  gap: 25px;
+  gap: 24px;
   padding: 0 63px;
   margin-top: 20px;
   letter-spacing: 1.5px;
