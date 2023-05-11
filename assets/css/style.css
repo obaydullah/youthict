@@ -4793,12 +4793,16 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   margin-left: 1rem;
   margin-top: 0.3rem;
 }
-.course_single_item .course_text span svg {
+.course_single_item .course_text span svg,
+.course_single_item .course_text span iconify-icon {
   color: rgba(255, 148, 143, 0.5);
   margin: -4px;
   padding: 0;
   height: 2rem;
   width: 2rem;
+}
+.course_single_item .course_text span iconify-icon {
+  font-size: 2rem;
 }
 
 @media (max-width: 768px) {

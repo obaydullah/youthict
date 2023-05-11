@@ -1230,12 +1230,16 @@ CSS Index
       margin-top: 0.3rem;
     }
     span {
-      svg {
+      svg,
+      iconify-icon {
         color: $semi_hover;
         margin: -4px;
         padding: 0;
         height: 2rem;
         width: 2rem;
+      }
+      iconify-icon {
+        font-size: 2rem;
       }
     }
   }
