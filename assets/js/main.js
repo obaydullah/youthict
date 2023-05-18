@@ -164,36 +164,36 @@ $(document).ready(function () {
     time: 1000,
   });
 
-  $(".advertisement__slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: !0,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false,
-    fade: true,
-    cssEase: "linear",
+  // $(".advertisement__slider").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: !0,
+  //   dots: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   arrows: false,
+  //   fade: true,
+  //   cssEase: "linear",
 
-    responsive: [
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
-    ],
-  });
+  //   responsive: [
+  //     { breakpoint: 768, settings: { slidesToShow: 1 } },
+  //     { breakpoint: 480, settings: { slidesToShow: 1 } },
+  //   ],
+  // });
 
-  $(".banner__animation--slide").slick({
-    autoplay: true,
-    slidesToShow: 1,
-    autoplaySpeed: 2000,
-    arrows: false,
-    dots: false,
-    fade: true,
-    speed: 3000,
-    infinite: true,
-    loop: true,
-    pauseOnHover: false,
-    cssEase: "ease-in-out",
-  });
+  // $(".banner__animation--slide").slick({
+  //   autoplay: true,
+  //   slidesToShow: 1,
+  //   autoplaySpeed: 2000,
+  //   arrows: false,
+  //   dots: false,
+  //   fade: true,
+  //   speed: 3000,
+  //   infinite: true,
+  //   loop: true,
+  //   pauseOnHover: false,
+  //   cssEase: "ease-in-out",
+  // });
 
   $(".add__popup--venubox").venobox();
 });
@@ -253,4 +253,89 @@ $(".testemonial__videopopup").venobox({
   showCloseButton: true,
   overlayClose: true,
   spinner: "wave",
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // working with ad slider
+  const sliderImages = document.querySelectorAll(".advertisement__slider img");
+  let currentIndex = 0;
+
+  function addActiveClass() {
+    sliderImages[currentIndex].classList.add("active");
+    currentIndex = (currentIndex + 1) % sliderImages.length;
+
+    setTimeout(function () {
+      for (let i = 0; i < sliderImages.length; i++) {
+        if (i !== currentIndex) {
+          sliderImages[i].classList.remove("active");
+        }
+      }
+      updateActiveDot(currentIndex);
+      addActiveClass();
+    }, 5000);
+  }
+
+  // working with dots bottom of the slider
+  let adSlideDots = document.querySelector(".ad__slide--dots");
+
+  //creating dynamic button botom of slider
+  for (let i = 0; i < sliderImages.length; i++) {
+    let dot = document.createElement("div");
+    dot.className = "ad__dots--btn" + (i === currentIndex ? " active" : "");
+    dot.addEventListener("click", function () {
+      slideActive(i);
+      updateActiveDot(i);
+    });
+    adSlideDots.appendChild(dot);
+  }
+
+  //when we click the dots the corresponding image change
+  function slideActive(num) {
+    currentIndex = num;
+
+    for (let i = 0; i < sliderImages.length; i++) {
+      if (i === currentIndex) {
+        sliderImages[i].classList.add("active");
+      } else {
+        sliderImages[i].classList.remove("active");
+      }
+    }
+  }
+
+  //when we click the dots the active class only appear this particular div
+  function updateActiveDot(dotIndex) {
+    let dots = document.querySelectorAll(".ad__dots--btn");
+    for (let i = 0; i < dots.length; i++) {
+      if (i === dotIndex) {
+        dots[i].classList.add("active");
+      } else {
+        dots[i].classList.remove("active");
+      }
+    }
+  }
+
+  // Call addActiveClass once to start the animation
+  addActiveClass();
+
+  // Working with banner animation
+  const bannerSlides = document.querySelectorAll(
+    ".banner__animation .slide__single"
+  );
+  bannerCurrIndex = 0;
+
+  function addBannerActiveClass() {
+    bannerSlides[bannerCurrIndex].classList.add("active");
+    bannerCurrIndex = (bannerCurrIndex + 1) % bannerSlides.length;
+
+    setTimeout(function () {
+      for (let i = 0; i < bannerSlides.length; i++) {
+        if (i !== bannerCurrIndex) {
+          bannerSlides[i].classList.remove("active");
+        }
+      }
+      addBannerActiveClass();
+    }, 4000);
+  }
+
+  addBannerActiveClass();
 });

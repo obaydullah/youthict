@@ -1,0 +1,147 @@
+/* -------------------------- */
+/* Advertisement Slider */
+/* -------------------------- */
+.advertisement__slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 261/85;
+}
+.advertisement__slider img {
+  width: 100%;
+  aspect-ratio: 261/85;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+
+.advertisement__slider img.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ad__slide--dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.ad__dots--btn {
+  height: 10px;
+  width: 10px;
+  background-color: #b6b6b6;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.ad__dots--btn.active {
+  background-color: #f37021;
+}
+
+/* -------------------------- */
+/* Banner Animation Area */
+/* -------------------------- */
+
+.banner__animation {
+  margin-top: 5rem;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 337/160;
+  overflow: hidden;
+}
+.banner__animation::after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.banner__animation .slide__single {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+.banner__animation .slide__single.active {
+  opacity: 1;
+  visibility: visible;
+}
+.banner__animation .slide__single img {
+  height: 100%;
+  width: 100%;
+  /* object-fit: cover; */
+  background-repeat: no-repeat;
+  transition: all 1s;
+}
+.banner__animation .slide__single.active img {
+  transform: scale(1.15);
+}
+.banner__animation .container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.banner__animation .slide__content {
+  margin-bottom: 110px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  transform: scale(0.5);
+  transition: all 3s;
+}
+
+.banner__animation .slide__single.active .slide__content {
+  transform: scale(1);
+}
+
+.banner__animation .slide__content h2 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.banner__animation .slide__content p {
+  font-size: 35px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 992px) {
+  .banner__animation .slide__content {
+    margin-bottom: 50px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    transform: scale(0.5);
+    transition: all 3s;
+  }
+}
+@media screen and (max-width: 575px) {
+  .banner__animation .slide__content {
+    margin-bottom: 20px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    transform: scale(0.5);
+    transition: all 3s;
+  }
+
+  .banner__animation .slide__content h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .banner__animation .slide__content p {
+    font-size: 12px;
+  }
+}

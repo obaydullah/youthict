@@ -373,4 +373,7 @@ body {
     width: 11.6929in;
     height: 8.2678in;
   }
+  .certificate::after {
+    display: none !important;
+  }
 }

@@ -1,510 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Table</title>
     <link rel="canonical" href="https://youthict.org" />
-    <link rel="icon" href="assets/images/favicon.png" type="image/png" alt="Youth ICT | Favicon" />
+    <link
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+      alt="Youth ICT | Favicon"
+    />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/feather.css" />
-    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.standalone.min.css">
+    <link
+      rel="stylesheet"
+      href="assets/css/bootstrap-datepicker.standalone.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
 
-
     <style>
-        .file-upload-label {
-            display: inline-block;
-            padding: 20px 10px;
-            background-color: #F4F4F4;
-            border: 3px solid #cccccc;
-            border-radius: 5px;
-            cursor: pointer;
-            border-style: dotted;
+      .file-upload-label {
+        display: inline-block;
+        padding: 20px 10px;
+        background-color: #f4f4f4;
+        border: 3px solid #cccccc;
+        border-radius: 5px;
+        cursor: pointer;
+        border-style: dotted;
+      }
 
-        }
+      .file-upload-input {
+        display: none;
+      }
 
-        .file-upload-input {
-            display: none;
-        }
+      .drag-drop-text {
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+        color: #615e58;
+      }
 
-        .drag-drop-text {
-            font-size: 18px;
-            font-weight: normal;
-            text-align: center;
-            color: #615e58;
-        }
+      td.column {
+        width: 48% !important;
+      }
 
-
+      @media (max-width: 768px) {
         td.column {
-            width: 48% !important;
+          display: block;
+          width: 100% !important;
         }
+      }
 
-        @media (max-width: 768px) {
-            td.column {
-                display: block;
-                width: 100% !important;
-            }
-        }
+      #preview {
+        background-color: #f4f4f4;
+        height: 72px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        #preview {
-            background-color: #f4f4f4;
-            height: 72px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #preview img {
-            height: 72px;
-            width: auto;
-            object-fit: contain;
-            width: 100%;
-
-        }
+      #preview img {
+        height: 72px;
+        width: auto;
+        object-fit: contain;
+        width: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body class="table__body body-container rbt-header-sticky">
+  <body class="table__body body-container rbt-header-sticky">
     <!-- Start Header -->
     <!-- Start Header Area -->
     <header class="rbt-header rbt-header-10">
-        <div class="rbt-sticky-placeholder"></div>
+      <div class="rbt-sticky-placeholder"></div>
 
-        <!-- add header-top-gradiant class to add gradiant -->
-        <div
-            class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation">
-            <div class="container">
-                <div class="top-expended-wrapper">
-                    <div class="top-expended-inner rbt-header-sec align-items-center">
-                        <div class="rbt-header-sec-col rbt-header-left">
-                            <div class="rbt-header-content">
-                                <!-- Start Header Information List  -->
-                                <div class="header-info">
-                                    <ul class="rbt-information-list">
-                                        <li class="phone">
-                                            <!-- add black-text class to make black text  -->
-                                            <a href="#"><i class="feather-phone"></i>01771599533</a>
-                                        </li>
-                                        <li class="email">
-                                            <a href="#"><i class="feather-mail"></i>youthictbd@gmail.com</a>
-                                        </li>
-                                        <li class="verify">
-                                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
-                                                    viewBox="0 0 512 512">
-                                                    <path fill="currentColor"
-                                                        d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2l-45-46.2z" />
-                                                </svg>Verify certificate</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Header Information List  -->
-                            </div>
-                        </div>
-
-                        <div class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10">
-                            <div class="rbt-header-content justify-content-start justify-content-lg-end">
-                                <div class="header-info d-none d-xl-block">
-                                    <ul class="social-share-transparent">
-                                        <li>
-                                            <a href="#"><i class="feather-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="feather-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="feather-linkedin"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="feather-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="rbt-separator d-none d-xl-block"></div>
-                                <div class="header-info d-none d-xl-block">
-                                    <div class="language">
-                                        <span class="en selected">En</span>
-                                        <span class="divider">|</span>
-                                        <span class="bn">বাং</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- add header-top-gradiant class to add gradiant -->
+      <div
+        class="rbt-header-top rbt-header-top-1 header-space-betwween bg-not-transparent bg-color-darker top-expended-activation"
+      >
+        <div class="container">
+          <div class="top-expended-wrapper">
+            <div class="top-expended-inner rbt-header-sec align-items-center">
+              <div class="rbt-header-sec-col rbt-header-left">
+                <div class="rbt-header-content">
+                  <!-- Start Header Information List  -->
+                  <div class="header-info">
+                    <ul class="rbt-information-list">
+                      <li class="phone">
+                        <!-- add black-text class to make black text  -->
+                        <a href="#"><i class="feather-phone"></i>01771599533</a>
+                      </li>
+                      <li class="email">
+                        <a href="#"
+                          ><i class="feather-mail"></i>youthictbd@gmail.com</a
+                        >
+                      </li>
+                      <li class="verify">
+                        <a href="#"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="512"
+                            height="512"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M211 7.3C205 1 196-1.4 187.6.8s-14.9 8.9-17.1 17.3l-15.8 62.5l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62l-62.5 15.9c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45l-46.2 45c-6.3 6-8.7 15-6.5 23.4s8.9 14.9 17.3 17.1l62.5 15.8l-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5l15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2l45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5l62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62l62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45l46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8l17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5l-15.9-62.5c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3l-45 46.2l-45-46.2z"
+                            /></svg
+                          >Verify certificate</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- End Header Information List  -->
                 </div>
-            </div>
-        </div>
-        <!-- End Header Top  -->
+              </div>
 
-        <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
-        <div class="rbt-header-wrapper header-space-betwween header-sticky adminpanel-sticky">
-            <div class="container">
-                <div class="mainbar-row rbt-navigation-center align-items-center">
-                    <div class="header-left rbt-header-content">
-                        <div class="header-info">
-                            <div class="logo">
-                                <a href="#">
-                                    <img src="assets/images/logo.webp" alt="Youth ICT" class="logo__img" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="header-info">
-                            <div class="rbt-category-menu-wrapper">
-                                <div class="rbt-category-btn rbt-side-offcanvas-activation">
-                                    <div class="rbt-offcanvas-trigger md-size icon">
-                                        <span class="d-none d-xl-block">
-                                            <i class="feather-grid"></i>
-                                        </span>
-                                        <i title="Category" class="feather-grid d-block d-xl-none"></i>
-                                    </div>
-                                    <span class="category-text d-none d-xl-block">Courses</span>
-                                    <iconify-icon icon="ic:twotone-keyboard-arrow-down"></iconify-icon>
-                                </div>
-                                <div class="category-dropdown-menu d-none d-xl-block">
-                                    <div class="category-menu-item">
-                                        <div class="rbt-vertical-nav">
-                                            <ul class="rbt-vertical-nav-list-wrapper vertical-nav-menu">
-                                                <li class="vertical-nav-item">
-                                                    <a href="course.html">Offline</a>
-                                                </li>
-                                                <li class="vertical-nav-item">
-                                                    <a href="course.html">Online </a>
-                                                </li>
-                                                <li class="vertical-nav-item">
-                                                    <a href="course.html">Govt. Job</a>
-                                                </li>
-                                                <li class="vertical-nav-item">
-                                                    <a href="course.html">Diploma</a>
-                                                </li>
-                                                <li class="vertical-nav-item">
-                                                    <a href="course.html">Shorthand</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+              <div
+                class="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10"
+              >
+                <div
+                  class="rbt-header-content justify-content-start justify-content-lg-end"
+                >
+                  <div class="header-info d-none d-xl-block">
+                    <ul class="social-share-transparent">
+                      <li>
+                        <a href="#"><i class="feather-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-twitter"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-linkedin"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="feather-instagram"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rbt-separator d-none d-xl-block"></div>
+                  <div class="header-info d-none d-xl-block">
+                    <div class="language">
+                      <span class="en selected">En</span>
+                      <span class="divider">|</span>
+                      <span class="bn">বাং</span>
                     </div>
-                    <div class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block">
-                        <nav class="mainmenu-nav">
-                            <ul class="mainmenu">
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-
-                                <li class="has-dropdown has-menu-child-item">
-                                    <a href="#">Branch
-                                        <i class="feather-chevron-down"></i>
-                                    </a>
-                                    <ul class="submenu">
-                                        <li class="has-dropdown">
-                                            <a href="branchapply.html">Apply for Branch</a>
-                                            <a href="branch.html">Search for Branch</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="has-dropdown has-menu-child-item">
-                                    <a href="#">Student
-                                        <i class="feather-chevron-down"></i>
-                                    </a>
-                                    <ul class="submenu">
-                                        <li class="has-dropdown">
-                                            <a href="studentsapply.html">Apply for Student</a>
-                                            <a href="results.html">Student Result</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="govjobgetters.html">Govt. Job getters</a>
-                                </li>
-                                <li>
-                                    <a href="gallery.html">Gallery</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About us</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contact us</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div class="header-right">
-                        <!-- add (login__white) class with login__btn for white button -->
-                        <a class="login__btn d-none d-lg-block d-xl-block d-xxl-block" href="login.html">Login</a>
-                        <!-- Start Mobile-Menu-Bar -->
-                        <div class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none">
-                            <div class="hamberger">
-                                <button class="hamberger-button rbt-round-btn" type="button"
-                                    aria-labelledby="hamberger button">
-                                    <i class="feather-menu"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- End Mobile-Menu-Bar -->
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <!-- End Header Top  -->
+
+      <!-- add (header-gradiant) class with rbt-header-wrapper for gradiant bg -->
+      <div
+        class="rbt-header-wrapper header-space-betwween header-sticky adminpanel-sticky"
+      >
+        <div class="container">
+          <div class="mainbar-row rbt-navigation-center align-items-center">
+            <div class="header-left rbt-header-content">
+              <div class="header-info">
+                <div class="logo">
+                  <a href="#">
+                    <img
+                      src="assets/images/logo.webp"
+                      alt="Youth ICT"
+                      class="logo__img"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="header-info">
+                <div class="rbt-category-menu-wrapper">
+                  <div class="rbt-category-btn rbt-side-offcanvas-activation">
+                    <div class="rbt-offcanvas-trigger md-size icon">
+                      <span class="d-none d-xl-block">
+                        <i class="feather-grid"></i>
+                      </span>
+                      <i
+                        title="Category"
+                        class="feather-grid d-block d-xl-none"
+                      ></i>
+                    </div>
+                    <span class="category-text d-none d-xl-block">Courses</span>
+                    <iconify-icon
+                      icon="ic:twotone-keyboard-arrow-down"
+                    ></iconify-icon>
+                  </div>
+                  <div class="category-dropdown-menu d-none d-xl-block">
+                    <div class="category-menu-item">
+                      <div class="rbt-vertical-nav">
+                        <ul
+                          class="rbt-vertical-nav-list-wrapper vertical-nav-menu"
+                        >
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Offline</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Online </a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Govt. Job</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Diploma</a>
+                          </li>
+                          <li class="vertical-nav-item">
+                            <a href="course.html">Shorthand</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rbt-main-navigation d-none d-lg-block d-xl-block d-xxl-block"
+            >
+              <nav class="mainmenu-nav">
+                <ul class="mainmenu">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+
+                  <li class="has-dropdown has-menu-child-item">
+                    <a href="#"
+                      >Branch
+                      <i class="feather-chevron-down"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li class="has-dropdown">
+                        <a href="branchapply.html">Apply for Branch</a>
+                        <a href="branch.html">Search for Branch</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="has-dropdown has-menu-child-item">
+                    <a href="#"
+                      >Student
+                      <i class="feather-chevron-down"></i>
+                    </a>
+                    <ul class="submenu">
+                      <li class="has-dropdown">
+                        <a href="studentsapply.html">Apply for Student</a>
+                        <a href="results.html">Student Result</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="govjobgetters.html">Govt. Job getters</a>
+                  </li>
+                  <li>
+                    <a href="gallery.html">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="about.html">About us</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact us</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="header-right">
+              <!-- add (login__white) class with login__btn for white button -->
+              <a
+                class="login__btn d-none d-lg-block d-xl-block d-xxl-block"
+                href="login.html"
+                >Login</a
+              >
+              <!-- Start Mobile-Menu-Bar -->
+              <div
+                class="mobile-menu-bar d-block d-lg-none d-xl-none d-xxl-none"
+              >
+                <div class="hamberger">
+                  <button
+                    class="hamberger-button rbt-round-btn"
+                    type="button"
+                    aria-labelledby="hamberger button"
+                  >
+                    <i class="feather-menu"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- End Mobile-Menu-Bar -->
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- Mobile Menu Section -->
     <div class="popup-mobile-menu">
-        <div class="inner-wrapper">
-            <div class="popup__header">
-                <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo" />
-                <div class="rbt-btn-close">
-                    <button class="close-button rbt-round-btn">
-                        <i class="feather-x"></i>
-                    </button>
-                </div>
-            </div>
-            <nav class="mainmenu-nav">
-                <ul class="mainmenu">
-                    <li class="with-megamenu has-menu-child-item">
-                        <!-- Start Mega Menu  -->
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <ul class="nav-quick-access">
-                                    <li>
-                                        <a href="index.html"> Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="course.html"> Browse Course</a>
-                                    </li>
-
-                                    <li>
-                                        <div class="button__box" onclick="toggleDropdown('branch-dropdown')">
-                                            <button>Branch</button>
-
-                                            <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
-                                        </div>
-
-                                        <ul id="branch-dropdown" class="dropdown hide">
-                                            <a href="branchapply.html">Apply for Branch</a>
-                                            <a href="branch.html">Search Branch</a>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <div class="button__box" onclick="toggleDropdown('student-dropdown')">
-                                            <button>Student</button>
-                                            <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
-                                        </div>
-
-                                        <ul id="student-dropdown" class="dropdown hide">
-                                            <a href="branchapply.html">Apply for Student</a>
-                                            <a href="branch.html">Student Result</a>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <a href="govjobgetters.html"> Govt. Job getters</a>
-                                    </li>
-                                    <li>
-                                        <a href="gallery.html"> Gallery</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html"> About Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html"> Contact us</a>
-                                    </li>
-
-                                    <div class="footer__btn">
-                                        <a class="offcanvas__login--btn" href="login.html">Login</a>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- End Mega Menu  -->
-                    </li>
-                </ul>
-            </nav>
+      <div class="inner-wrapper">
+        <div class="popup__header">
+          <img src="./assets/images/logo.webp" alt="Logo" class="popup__logo" />
+          <div class="rbt-btn-close">
+            <button class="close-button rbt-round-btn">
+              <i class="feather-x"></i>
+            </button>
+          </div>
         </div>
+        <nav class="mainmenu-nav">
+          <ul class="mainmenu">
+            <li class="with-megamenu has-menu-child-item">
+              <!-- Start Mega Menu  -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nav-quick-access">
+                    <li>
+                      <a href="index.html"> Home</a>
+                    </li>
+                    <li>
+                      <a href="course.html"> Browse Course</a>
+                    </li>
+
+                    <li>
+                      <div
+                        class="button__box"
+                        onclick="toggleDropdown('branch-dropdown')"
+                      >
+                        <button>Branch</button>
+
+                        <iconify-icon
+                          icon="ic:twotone-keyboard-arrow-right"
+                        ></iconify-icon>
+                      </div>
+
+                      <ul id="branch-dropdown" class="dropdown hide">
+                        <a href="branchapply.html">Apply for Branch</a>
+                        <a href="branch.html">Search Branch</a>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <div
+                        class="button__box"
+                        onclick="toggleDropdown('student-dropdown')"
+                      >
+                        <button>Student</button>
+                        <iconify-icon
+                          icon="ic:twotone-keyboard-arrow-right"
+                        ></iconify-icon>
+                      </div>
+
+                      <ul id="student-dropdown" class="dropdown hide">
+                        <a href="branchapply.html">Apply for Student</a>
+                        <a href="branch.html">Student Result</a>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="govjobgetters.html"> Govt. Job getters</a>
+                    </li>
+                    <li>
+                      <a href="gallery.html"> Gallery</a>
+                    </li>
+                    <li>
+                      <a href="about.html"> About Us</a>
+                    </li>
+                    <li>
+                      <a href="contact.html"> Contact us</a>
+                    </li>
+
+                    <div class="footer__btn">
+                      <a class="offcanvas__login--btn" href="login.html"
+                        >Login</a
+                      >
+                    </div>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Mega Menu  -->
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <!-- Start Side Vav -->
 
     <main>
-        <!-- course list view start  -->
-        <div class="table__area">
-            <div class="container">
-
-                <div class="card__table">
-                    <div class="table__area--header">
-                        <h3 class="card__title">Invoices</h3>
-                        <div class="button__area">
-                            <button class="filter__btn"><iconify-icon
-                                    icon="fluent-mdl2:calculator-addition"></iconify-icon><span>Filter
-                                    Modal</span></button>
-                            <button class="create__table--btn">
-                                <iconify-icon icon="fluent-mdl2:calculator-addition"></iconify-icon><span>Create new
-                                    modal
-                                </span>
-                            </button>
-                            <button class="create__student--btn">
-                                <iconify-icon icon="fluent-mdl2:calculator-addition"></iconify-icon><span>Add
-                                    Student</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="table__responsive">
-                        <table class="table card-table table-vcenter text-nowrap datatable table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="w-1">
-                                        <input class="form-check-input m-0 align-middle" type="checkbox"
-                                            aria-label="Select all invoices" />
-                                    </th>
-                                    <th class="w-1">
-                                        No.
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-sm icon-thick"
-                                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
-                                            stroke="currentColor" fill="none" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M6 15l6 -6l6 6"></path>
-                                        </svg>
-                                    </th>
-                                    <th>Invoice Subject</th>
-                                    <th>Client</th>
-                                    <th>VAT No.</th>
-                                    <th>Created</th>
-                                    <th>Status</th>
-                                    <th>Price</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <input class="form-check-input m-0 align-middle" type="checkbox"
-                                            aria-label="Select invoice" />
-                                    </td>
-                                    <td><span class="text-muted">001401</span></td>
-                                    <td><a href="#" tabindex="-1">Design Works</a></td>
-                                    <td>Carlson Limited</td>
-                                    <td>87956621</td>
-                                    <td>15 Dec 2017</td>
-                                    <td>
-                                        <span class="badge bg-success me-1"></span> Paid
-                                    </td>
-                                    <td>$887</td>
-                                    <td><i class="fa fa-pencil update" aria-hidden="true"></i></td>
-                                    <td><i class="fa fa-trash delete" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="form-check-input m-0 align-middle" type="checkbox"
-                                            aria-label="Select invoice" />
-                                    </td>
-                                    <td><span class="text-muted">001401</span></td>
-                                    <td><a href="#" tabindex="-1">Design Works</a></td>
-                                    <td>Carlson Limited</td>
-                                    <td>87956621</td>
-                                    <td>15 Dec 2017</td>
-                                    <td>
-                                        <span class="badge bg-success me-1"></span> Paid
-                                    </td>
-                                    <td>$887</td>
-                                    <td><i class="fa fa-pencil update" aria-hidden="true"></i></td>
-                                    <td><i class="fa fa-trash delete" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="form-check-input m-0 align-middle" type="checkbox"
-                                            aria-label="Select invoice" />
-                                    </td>
-                                    <td><span class="text-muted">001401</span></td>
-                                    <td><a href="#" tabindex="-1">Design Works</a></td>
-                                    <td>Carlson Limited</td>
-                                    <td>87956621</td>
-                                    <td>15 Dec 2017</td>
-                                    <td>
-                                        <span class="badge bg-success me-1"></span> Paid
-                                    </td>
-                                    <td>$887</td>
-                                    <td><i class="fa fa-pencil update" aria-hidden="true"></i></td>
-                                    <td><i class="fa fa-trash delete" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="form-check-input m-0 align-middle" type="checkbox"
-                                            aria-label="Select invoice" />
-                                    </td>
-                                    <td><span class="text-muted">001401</span></td>
-                                    <td><a href="#" tabindex="-1">Design Works</a></td>
-                                    <td>Carlson Limited</td>
-                                    <td>87956621</td>
-                                    <td>15 Dec 2017</td>
-                                    <td>
-                                        <span class="badge bg-success me-1"></span> Paid
-                                    </td>
-                                    <td>$887</td>
-                                    <td><i class="fa fa-pencil update" aria-hidden="true"></i></td>
-                                    <td><i class="fa fa-trash delete" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="form-check-input m-0 align-middle" type="checkbox"
-                                            aria-label="Select invoice" />
-                                    </td>
-                                    <td><span class="text-muted">001401</span></td>
-                                    <td><a href="#" tabindex="-1">Design Works</a></td>
-                                    <td>Carlson Limited</td>
-                                    <td>87956621</td>
-                                    <td>15 Dec 2017</td>
-                                    <td>
-                                        <span class="badge bg-success me-1"></span> Paid
-                                    </td>
-                                    <td>$887</td>
-                                    <td><i class="fa fa-pencil update" aria-hidden="true"></i></td>
-                                    <td><i class="fa fa-trash delete" aria-hidden="true"></i></td>
-
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="card__footer d-flex align-items-center">
-                        <p class="m-0 text-muted">
-                            Showing <span>1</span> to <span>8</span> of
-                            <span>16</span> entries
-                        </p>
-                        <div class="adminpanel__pagination">
-                            <div class="pagination">
-                                <a href="#" class="prev">
-                                    <iconify-icon icon="ic:outline-keyboard-arrow-left"></iconify-icon>
-                                    <span>Prev</span>
-                                </a>
-                                <a href="#" class="page-number active">1</a>
-                                <a href="#" class="page-number">2</a>
-                                <a href="#" class="page-number">3</a>
-
-                                <a href="#" class="next">
-                                    <span>Next</span>
-                                    <iconify-icon icon="ic:twotone-keyboard-arrow-right"></iconify-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- course list view start  -->
+      <div class="table__area">
+        <div class="container">
+          <div class="card__table">
+            <div class="table__area--header">
+              <h3 class="card__title">Invoices</h3>
+              <div class="button__area">
+                <button class="filter__btn">
+                  <iconify-icon
+                    icon="fluent-mdl2:calculator-addition"
+                  ></iconify-icon
+                  ><span>Filter Modal</span>
+                </button>
+                <button class="create__table--btn">
+                  <iconify-icon
+                    icon="fluent-mdl2:calculator-addition"
+                  ></iconify-icon
+                  ><span>Create new modal </span>
+                </button>
+                <button class="create__student--btn">
+                  <iconify-icon
+                    icon="fluent-mdl2:calculator-addition"
+                  ></iconify-icon
+                  ><span>Add Student</span>
+                </button>
+              </div>
             </div>
+            <div class="table__responsive">
+              <table
+                class="table card-table table-vcenter text-nowrap datatable table-striped table-hover"
+              >
+                <thead>
+                  <tr>
+                    <th class="w-1">
+                      <input
+                        class="form-check-input m-0 align-middle"
+                        type="checkbox"
+                        aria-label="Select all invoices"
+                      />
+                    </th>
+                    <th class="w-1">
+                      No.
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-sm icon-thick"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M6 15l6 -6l6 6"></path>
+                      </svg>
+                    </th>
+                    <th>Invoice Subject</th>
+                    <th>Client</th>
+                    <th>VAT No.</th>
+                    <th>Created</th>
+                    <th>Status</th>
+                    <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input
+                        class="form-check-input m-0 align-middle"
+                        type="checkbox"
+                        aria-label="Select invoice"
+                      />
+                    </td>
+                    <td><span class="text-muted">001401</span></td>
+                    <td><a href="#" tabindex="-1">Design Works</a></td>
+                    <td>Carlson Limited</td>
+                    <td>87956621</td>
+                    <td>15 Dec 2017</td>
+                    <td><span class="badge bg-success me-1"></span> Paid</td>
+                    <td>$887</td>
+                    <td>
+                      <i class="fa fa-pencil update" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-trash delete" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        class="form-check-input m-0 align-middle"
+                        type="checkbox"
+                        aria-label="Select invoice"
+                      />
+                    </td>
+                    <td><span class="text-muted">001401</span></td>
+                    <td><a href="#" tabindex="-1">Design Works</a></td>
+                    <td>Carlson Limited</td>
+                    <td>87956621</td>
+                    <td>15 Dec 2017</td>
+                    <td><span class="badge bg-success me-1"></span> Paid</td>
+                    <td>$887</td>
+                    <td>
+                      <i class="fa fa-pencil update" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-trash delete" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        class="form-check-input m-0 align-middle"
+                        type="checkbox"
+                        aria-label="Select invoice"
+                      />
+                    </td>
+                    <td><span class="text-muted">001401</span></td>
+                    <td><a href="#" tabindex="-1">Design Works</a></td>
+                    <td>Carlson Limited</td>
+                    <td>87956621</td>
+                    <td>15 Dec 2017</td>
+                    <td><span class="badge bg-success me-1"></span> Paid</td>
+                    <td>$887</td>
+                    <td>
+                      <i class="fa fa-pencil update" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-trash delete" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        class="form-check-input m-0 align-middle"
+                        type="checkbox"
+                        aria-label="Select invoice"
+                      />
+                    </td>
+                    <td><span class="text-muted">001401</span></td>
+                    <td><a href="#" tabindex="-1">Design Works</a></td>
+                    <td>Carlson Limited</td>
+                    <td>87956621</td>
+                    <td>15 Dec 2017</td>
+                    <td><span class="badge bg-success me-1"></span> Paid</td>
+                    <td>$887</td>
+                    <td>
+                      <i class="fa fa-pencil update" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-trash delete" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        class="form-check-input m-0 align-middle"
+                        type="checkbox"
+                        aria-label="Select invoice"
+                      />
+                    </td>
+                    <td><span class="text-muted">001401</span></td>
+                    <td><a href="#" tabindex="-1">Design Works</a></td>
+                    <td>Carlson Limited</td>
+                    <td>87956621</td>
+                    <td>15 Dec 2017</td>
+                    <td><span class="badge bg-success me-1"></span> Paid</td>
+                    <td>$887</td>
+                    <td>
+                      <i class="fa fa-pencil update" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-trash delete" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card__footer d-flex align-items-center">
+              <p class="m-0 text-muted">
+                Showing <span>1</span> to <span>8</span> of
+                <span>16</span> entries
+              </p>
+              <div class="adminpanel__pagination">
+                <div class="pagination">
+                  <a href="#" class="prev">
+                    <iconify-icon
+                      icon="ic:outline-keyboard-arrow-left"
+                    ></iconify-icon>
+                    <span>Prev</span>
+                  </a>
+                  <a href="#" class="page-number active">1</a>
+                  <a href="#" class="page-number">2</a>
+                  <a href="#" class="page-number">3</a>
+
+                  <a href="#" class="next">
+                    <span>Next</span>
+                    <iconify-icon
+                      icon="ic:twotone-keyboard-arrow-right"
+                    ></iconify-icon>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- course list view end  -->
+      </div>
+      <!-- course list view end  -->
     </main>
 
     <!-- add new modal start -->
@@ -670,163 +771,197 @@
     </div> -->
     <!-- update modal end  -->
 
-
     <!-- filter modal start -->
     <div class="filter__modal">
-        <form class="table_filter--modal--form modal__form--table">
-            <div class="header">
-                <h2>Filter Modal</h2>
-                <iconify-icon class="modal__close filter__close" icon="material-symbols:close-rounded"></iconify-icon>
-            </div>
+      <form class="table_filter--modal--form modal__form--table">
+        <div class="header">
+          <h2>Filter Modal</h2>
+          <iconify-icon
+            class="modal__close filter__close"
+            icon="material-symbols:close-rounded"
+          ></iconify-icon>
+        </div>
 
-            <div class="content">
-                <table width="100%" cellpadding="0" cellspacing="0" style="margin:0; padding:0;">
-                    <tr>
-                        <td style="padding-right: 10px;" class="column">
-                            <div class="form__field">
-                                <label for="name">First Name</label>
-                                <input type="text" name="name" id="name" placeholder="Enter your name" />
-                            </div>
-                        </td>
-                        <td style="padding-left: 10px;" class="column">
-                            <div class="form__field">
-                                <label for="name">Last Name</label>
-                                <input type="text" name="name" id="name" placeholder="Enter your name" />
-                            </div>
-                        </td>
-                    </tr>
+        <div class="content">
+          <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0; padding: 0"
+          >
+            <tr>
+              <td style="padding-right: 10px" class="column">
+                <div class="form__field">
+                  <label for="name">First Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                  />
+                </div>
+              </td>
+              <td style="padding-left: 10px" class="column">
+                <div class="form__field">
+                  <label for="name">Last Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                  />
+                </div>
+              </td>
+            </tr>
 
-                    <tr>
-                        <td colspan="2">
-                            <div class="form__field">
-                                <label for="url">Report
-                                    URL</label>
-                                <input type="text" name="url" id="url" placeholder="Report URL" />
-                            </div>
-                        </td>
-                    </tr>
+            <tr>
+              <td colspan="2">
+                <div class="form__field">
+                  <label for="url">Report URL</label>
+                  <input
+                    type="text"
+                    name="url"
+                    id="url"
+                    placeholder="Report URL"
+                  />
+                </div>
+              </td>
+            </tr>
 
-                    <tr>
-                        <td colspan="2">
-                            <div class="form__field">
-                                <label for="course">Select
-                                    Course</label>
-                                <select name="course" id="course" name="state" class="select__course">
-                                    <option value="">select course</option>
-                                    <option value="Golang"> Golang</option>
-                                    <option value="Javascript">Javascript</option>
-                                </select>
-                            </div>
-                        </td>
-                    </tr>
+            <tr>
+              <td colspan="2">
+                <div class="form__field">
+                  <label for="course">Select Course</label>
+                  <select
+                    name="course"
+                    id="course"
+                    name="state"
+                    class="select__course"
+                  >
+                    <option value="">select course</option>
+                    <option value="Golang">Golang</option>
+                    <option value="Javascript">Javascript</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
 
-                    <tr>
-                        <td colspan="2">
-                            <div class="form__field">
-                                <label for="clientname">Select
-                                    subject</label>
-                                <div class="checkbox__item">
-                                    <input class="form-check-input m-0 align-middle" type="checkbox"
-                                        aria-label="Web Design" id="webdesign" />
+            <tr>
+              <td colspan="2">
+                <div class="form__field">
+                  <label for="clientname">Select subject</label>
+                  <div class="checkbox__item">
+                    <input
+                      class="form-check-input m-0 align-middle"
+                      type="checkbox"
+                      aria-label="Web Design"
+                      id="webdesign"
+                    />
 
-                                    <label for="webdesign"> Web Design</label>
-                                </div>
-                                <div class="checkbox__item">
-                                    <input class="form-check-input m-0 align-middle" type="checkbox"
-                                        aria-label="Graphics Design" id="graphicsdesign" />
+                    <label for="webdesign"> Web Design</label>
+                  </div>
+                  <div class="checkbox__item">
+                    <input
+                      class="form-check-input m-0 align-middle"
+                      type="checkbox"
+                      aria-label="Graphics Design"
+                      id="graphicsdesign"
+                    />
 
-                                    <label for="graphicsdesign"> Graphics
-                                        design</label>
-                                </div>
+                    <label for="graphicsdesign"> Graphics design</label>
+                  </div>
+                </div>
+              </td>
+            </tr>
 
-                            </div>
-                        </td>
-                    </tr>
+            <tr>
+              <td colspan="2">
+                <div class="form__field">
+                  <label for="reportingperiod">Reporting Period</label>
+                  <div class="input-group date" data-provide="datepicker">
+                    <input type="text" placeholder="Select Date" />
+                    <div class="input-group-addon">
+                      <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
 
+            <tr>
+              <td colspan="2">
+                <div class="form__field">
+                  <label for="additionalinfo">Additional Info</label>
+                  <textarea
+                    placeholder="Additional Information"
+                    name="additionalinfo"
+                    id="additionalinfo"
+                    cols="3"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </td>
+            </tr>
 
-                    <tr>
-                        <td colspan="2">
-                            <div class="form__field">
-                                <label for="reportingperiod">Reporting
-                                    Period</label>
-                                <div class="input-group date" data-provide="datepicker">
-                                    <input type="text" placeholder="Select Date">
-                                    <div class="input-group-addon">
-                                        <span class="glyphicon glyphicon-th"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+            <tr>
+              <td style="padding-right: 10px" class="column">
+                <div class="form__field">
+                  <div id="preview">preview</div>
+                </div>
+              </td>
 
-                    <tr>
-                        <td colspan="2">
-                            <div class="form__field">
-                                <label for="additionalinfo">Additional Info</label>
-                                <textarea placeholder="Additional Information" name="additionalinfo" id="additionalinfo"
-                                    cols="3" rows="3"></textarea>
-                            </div>
-                        </td>
-                    </tr>
+              <td style="padding-left: 10px; padding-top: 4px" class="column">
+                <div class="form__field">
+                  <label for="file-upload" class="file-upload-label">
+                    <h2 class="drag-drop-text">Drop your file here</h2>
+                  </label>
+                  <input
+                    type="file"
+                    id="file-upload"
+                    name="file-upload"
+                    class="file-upload-input"
+                  />
+                </div>
+              </td>
+            </tr>
 
+            <tr>
+              <td colspan="2">
+                <label for="" class="reporttype__label">Course type</label>
+                <div class="form__group radio">
+                  <div class="form__field radio">
+                    <input
+                      type="radio"
+                      name="coursetype"
+                      id="online"
+                      value="Online"
+                    />
+                    <label for="online"> Online </label>
+                  </div>
+                  <div class="form__field radio">
+                    <input
+                      type="radio"
+                      name="coursetype"
+                      id="offline"
+                      value="offline"
+                    />
+                    <label for="offline"> Offline </label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
 
-                    <tr>
-                        <td style="padding-right: 10px;" class="column">
-                            <div class="form__field">
-                                <div id="preview">
-                                    preview
-                                </div>
-                            </div>
-                        </td>
+        <div class="button__area">
+          <button class="cancel">Cancel</button>
 
-                        <td style="padding-left: 10px; padding-top: 4px;" class="column">
-                            <div class="form__field">
-                                <label for="file-upload" class="file-upload-label">
-                                    <h2 class="drag-drop-text">Drop your file here</h2>
-                                </label>
-                                <input type="file" id="file-upload" name="file-upload" class="file-upload-input">
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">
-                            <label for="" class="reporttype__label">Course
-                                type</label>
-                            <div class="form__group radio">
-                                <div class="form__field radio">
-                                    <input type="radio" name="coursetype" id="online" value="Online" />
-                                    <label for="online">
-                                        Online
-                                    </label>
-                                </div>
-                                <div class="form__field radio">
-                                    <input type="radio" name="coursetype" id="offline" value="offline" />
-                                    <label for="offline">
-                                        Offline
-                                    </label>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-
-                </table>
-
-
-            </div>
-
-            <div class="button__area">
-                <button class="cancel">Cancel</button>
-
-                <button type="submit" class="submit__btn">
-                    Create new
-                </button>
-            </div>
-        </form>
+          <button type="submit" class="submit__btn">Create new</button>
+        </div>
+      </form>
     </div>
 
     <!-- filter modal end  -->
-
 
     <!-- student modal start -->
     <!-- <div class="student__modal">
@@ -953,27 +1088,28 @@
     </div> -->
     <!-- student modal end  -->
 
-
-
     <!-- Start Footer -->
-    <footer id="rs-footer" class="rs-footer footer-style-1 has-footer-contact course__listing--footer">
-        <div class="footer-bottom login__footer">
-            <div class="container">
-                <div class="footer-bottom-inner">
-                    <div class="copyright">
-                        <p>
-                            &copy; 2023. All Rights Reserved By: youthict.org || Developed
-                            By:
-                            <a href="http://www.mateors.com">MATEORS DOT COM </a>
-                        </p>
-                    </div>
-                </div>
+    <footer
+      id="rs-footer"
+      class="rs-footer footer-style-1 has-footer-contact course__listing--footer"
+    >
+      <div class="footer-bottom login__footer">
+        <div class="container">
+          <div class="footer-bottom-inner">
+            <div class="copyright">
+              <p>
+                &copy; 2023. All Rights Reserved By: youthict.org || Developed
+                By:
+                <a href="http://www.mateors.com">MATEORS DOT COM </a>
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- End Footer -->
 
-    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/iconify-icon.min.js"></script>
@@ -983,22 +1119,21 @@
     <script src="assets/js/table.js"></script>
 
     <script>
-        const input = document.getElementById('file-upload');
-        const preview = document.getElementById('preview');
+      const input = document.getElementById("file-upload");
+      const preview = document.getElementById("preview");
 
-        input.addEventListener('change', () => {
-            const file = input.files[0];
-            const reader = new FileReader();
+      input.addEventListener("change", () => {
+        const file = input.files[0];
+        const reader = new FileReader();
 
-            reader.addEventListener('load', () => {
-                preview.innerHTML = `<img src="${reader.result}" alt="preview">`;
-            });
-
-            if (file) {
-                reader.readAsDataURL(file);
-            }
+        reader.addEventListener("load", () => {
+          preview.innerHTML = `<img src="${reader.result}" alt="preview">`;
         });
-    </script>
-</body>
 
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </body>
 </html>

@@ -26,6 +26,7 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <link rel="stylesheet" href="assets/css/feather.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/slick.min.css" />
     <link rel="stylesheet" href="assets/css/venobox.min.css" />
     <link
@@ -34,6 +35,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="assets/css/slider.css" />
     <link rel="stylesheet" href="assets/css/responsive.min.css" />
   </head>
 
@@ -1470,7 +1472,7 @@
       <!-- End Certificate Section -->
 
       <!-- Advertisement section start  -->
-      <div class="advertisement section__padding--default">
+      <!-- <div class="advertisement section__padding--default">
         <div class="container">
           <div class="advertisement__slider" aria-label="Advertisement Slider">
             <div class="advertisement__item">
@@ -1498,8 +1500,47 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Advertisement section end -->
+
+      <div class="advertisement section__padding--default">
+        <div class="container">
+          <div class="advertisement__slider" aria-label="Advertisement Slider">
+            <a
+              class="add__popup--venubox"
+              data-vbtype="video"
+              data-autoplay="true"
+              href="https://youtu.be/g6Qa7gT0U5c"
+            >
+              <img
+                data-src="./assets/images/ad-1.webp"
+                alt="Advertisement 1"
+                class="lazyload"
+              />
+            </a>
+
+            <img
+              data-src="./assets/images/ad-2.webp"
+              alt="Advertisement 2"
+              class="lazyload"
+            />
+
+            <img
+              data-src="./assets/images/ad-1.webp"
+              alt="Advertisement 1"
+              class="lazyload"
+            />
+
+            <img
+              data-src="./assets/images/ad-2.webp"
+              alt="Advertisement 2"
+              class="lazyload"
+            />
+          </div>
+
+          <div class="ad__slide--dots"></div>
+        </div>
+      </div>
 
       <!-- Start Partner Carousel Section -->
       <section id="course_department" class="mb-5">
@@ -1594,31 +1635,31 @@
 
       <!-- Start Slideshow Section -->
       <section class="banner__animation">
-        <div class="banner__animation--slide">
-          <div class="slide__single">
-            <img
-              data-src="./assets/images/1.webp"
-              alt="Mr. Minho Kim - South Korea"
-              class="lazyload"
-            />
-            <div class="container">
-              <div class="slide__content">
-                <h2>Mr. Minho Kim - South Korea</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
+        <div class="slide__single">
+          <div class="banner__overlay"></div>
+          <img
+            data-src="./assets/images/1.webp"
+            alt="Mr. Minho Kim - South Korea"
+            class="lazyload"
+          />
+          <div class="container">
+            <div class="slide__content">
+              <h2>Mr. Minho Kim - South Korea</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
-          <div class="slide__single">
-            <img
-              data-src="./assets/images/2.webp"
-              alt="Mrs. Kim - South Korea"
-              class="lazyload"
-            />
-            <div class="container">
-              <div class="slide__content">
-                <h2>Mrs. Kim</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
+        </div>
+        <div class="slide__single">
+          <div class="banner__overlay"></div>
+          <img
+            data-src="./assets/images/2.webp"
+            alt="Mrs. Kim - South Korea"
+            class="lazyload"
+          />
+          <div class="container">
+            <div class="slide__content">
+              <h2>Mrs. Kim</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
         </div>
@@ -1805,8 +1846,7 @@
     </footer>
     <!-- End Footer -->
 
-    <script src="assets/js/jquery-3.6.3.min.js"></script>
-    <script src="assets/js/jquery-migrate-3.4.1.min.js"></script>
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script defer src="assets/js/slick.min.js"></script>
     <script defer src="assets/js/waypoints.min.js"></script>
@@ -1814,7 +1854,7 @@
     <script defer src="assets/js/venobox.min.js"></script>
     <script defer src="assets/js/iconify-icon.min.js"></script>
     <script defer src="assets/js/lazysizes.min.js"></script>
-    <script defer src="assets/js/main.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
     <script src="assets/js/header.js"></script>
   </body>
 </html>
