@@ -422,43 +422,48 @@
                 </a>
               </div>
             </div>
+
             <div class="col-lg-7">
-              <div class="banner_img">
-                <a
+              <div
+                class="banner_img"
+                style="cursor: pointer"
+                onclick="videoPopup('3soTNmnuo-Y', 'open')"
+              >
+                <!-- <a
                   class="venobox vbox-item"
                   data-autoplay="true"
                   data-vbtype="video"
                   href="https://youtu.be/GogcDtMpgMc"
-                >
-                  <img
-                    class="img-fluid homebanner-thumb video_thumb"
-                    src="assets/images/top_banner.webp"
-                    alt="Home Banner| Icon"
-                    style="width: 736px; aspect-ratio: 736/405"
-                  />
-                  <div class="banner_img_overly">
-                    <div class="overly_icon">
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="play"
-                        class="svg-inline--fa fa-play"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div class="overly_text">
-                      <h4></h4>
-                    </div>
+                > -->
+                <img
+                  class="img-fluid homebanner-thumb video_thumb"
+                  src="assets/images/top_banner.webp"
+                  alt="Home Banner| Icon"
+                  style="width: 736px; aspect-ratio: 736/405"
+                />
+                <div class="banner_img_overly">
+                  <div class="overly_icon">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="play"
+                      class="svg-inline--fa fa-play"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 384 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"
+                      ></path>
+                    </svg>
                   </div>
-                </a>
+                  <div class="overly_text">
+                    <h4></h4>
+                  </div>
+                </div>
+                <!-- </a> -->
 
                 <div class="dot_4">
                   <img
@@ -976,6 +981,7 @@
                 </p>
               </article>
             </div>
+
             <div class="job__getters--single br-bottom-left">
               <article>
                 <picture>
@@ -1008,6 +1014,24 @@
           </div>
         </div>
       </section>
+
+      <!-- custom carousel -->
+      <div class="custom__carousel">
+        <div class="container">
+          <div class="carousel__inner">
+            <img src="assets/images/ad-1.webp" alt="" class="slide" />
+            <img src="assets/images/ad-2.webp" alt="" class="slide" />
+            <img src="assets/images/ad-1.webp" alt="" class="slide" />
+            <img src="assets/images/ad-2.webp" alt="" class="slide" />
+          </div>
+
+          <div class="nav__carousel">
+            <button onclick="slidePrev()">Prev</button>
+            <button onclick="slideNext()">Next</button>
+          </div>
+        </div>
+      </div>
+
       <!-- End Job Placement Section -->
 
       <!-- Start Contact Us Section -->
@@ -1636,6 +1660,20 @@
       </section>
       <!-- End Slide Show Section -->
     </main>
+
+    <div class="video__modal">
+      <div class="video__modal--inner">
+        <iconify-icon
+          icon="ic:round-close"
+          class="video__close--icon"
+          onclick="videoPopup('', 'close')"
+        ></iconify-icon>
+
+        <div class="video__area">
+          <!-- video iframe goes here  -->
+        </div>
+      </div>
+    </div>
 
     <!-- Start Footer -->
     <footer

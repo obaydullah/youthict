@@ -145,3 +145,98 @@
     font-size: 12px;
   }
 }
+
+/* -------------------------- */
+/* Video Popup Area */
+/* -------------------------- */
+.video__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.video__modal--inner {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.video__modal .video__close--icon {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.video__area iframe {
+  width: 800px;
+  height: 450px;
+}
+
+@media screen and (max-width: 992px) {
+  .video__area iframe {
+    width: 700px;
+    height: 380px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video__area iframe {
+    width: 530px;
+    height: 290px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .video__area iframe {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .video__area iframe {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+/* -------------------------- */
+/* Slider Area */
+/* -------------------------- */
+
+.custom__carousel {
+  width: 100%;
+  aspect-ratio: 1/0.3;
+}
+
+.custom__carousel .carousel__inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/0.4;
+  overflow: hidden;
+}
+
+.carousel__inner .slide {
+  width: 100%;
+  aspect-ratio: 1/0.4;
+  position: absolute;
+  transition: all 0.3s;
+}
+.nav__carousel {
+  text-align: center;
+}
+.nav__carousel button {
+  font-size: 40px;
+}

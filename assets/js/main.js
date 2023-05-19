@@ -157,7 +157,7 @@ $(document).ready(function () {
     ],
   });
 
-  $(".venobox").venobox();
+  // $(".venobox").venobox();
 
   $(".counter").counterUp({
     delay: 10,
@@ -255,87 +255,149 @@ $(".testemonial__videopopup").venobox({
   spinner: "wave",
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // working with ad slider
-  const sliderImages = document.querySelectorAll(".advertisement__slider img");
-  let currentIndex = 0;
+// working with ad slider
+const sliderImages = document.querySelectorAll(".advertisement__slider img");
+let currentIndex = 0;
 
-  function addActiveClass() {
-    sliderImages[currentIndex].classList.add("active");
-    currentIndex = (currentIndex + 1) % sliderImages.length;
+function addActiveClass() {
+  sliderImages[currentIndex].classList.add("active");
+  currentIndex = (currentIndex + 1) % sliderImages.length;
 
-    setTimeout(function () {
-      for (let i = 0; i < sliderImages.length; i++) {
-        if (i !== currentIndex) {
-          sliderImages[i].classList.remove("active");
-        }
-      }
-      updateActiveDot(currentIndex);
-      addActiveClass();
-    }, 5000);
-  }
-
-  // working with dots bottom of the slider
-  let adSlideDots = document.querySelector(".ad__slide--dots");
-
-  //creating dynamic button botom of slider
-  for (let i = 0; i < sliderImages.length; i++) {
-    let dot = document.createElement("div");
-    dot.className = "ad__dots--btn" + (i === currentIndex ? " active" : "");
-    dot.addEventListener("click", function () {
-      slideActive(i);
-      updateActiveDot(i);
-    });
-    adSlideDots.appendChild(dot);
-  }
-
-  //when we click the dots the corresponding image change
-  function slideActive(num) {
-    currentIndex = num;
-
+  setTimeout(function () {
     for (let i = 0; i < sliderImages.length; i++) {
-      if (i === currentIndex) {
-        sliderImages[i].classList.add("active");
-      } else {
+      if (i !== currentIndex) {
         sliderImages[i].classList.remove("active");
       }
     }
-  }
+    updateActiveDot(currentIndex);
+    addActiveClass();
+  }, 2000);
+}
 
-  //when we click the dots the active class only appear this particular div
-  function updateActiveDot(dotIndex) {
-    let dots = document.querySelectorAll(".ad__dots--btn");
-    for (let i = 0; i < dots.length; i++) {
-      if (i === dotIndex) {
-        dots[i].classList.add("active");
-      } else {
-        dots[i].classList.remove("active");
-      }
+// working with dots bottom of the slider
+let adSlideDots = document.querySelector(".ad__slide--dots");
+
+//creating dynamic button botom of slider
+for (let i = 0; i < sliderImages.length; i++) {
+  let dot = document.createElement("div");
+  dot.className = "ad__dots--btn" + (i === currentIndex ? " active" : "");
+  dot.addEventListener("click", function () {
+    slideActive(i);
+    updateActiveDot(i);
+  });
+  adSlideDots.appendChild(dot);
+}
+
+//when we click the dots the corresponding image change
+function slideActive(num) {
+  currentIndex = num;
+
+  for (let i = 0; i < sliderImages.length; i++) {
+    if (i === currentIndex) {
+      sliderImages[i].classList.add("active");
+    } else {
+      sliderImages[i].classList.remove("active");
     }
   }
+}
 
-  // Call addActiveClass once to start the animation
-  addActiveClass();
+//when we click the dots the active class only appear this particular div
+function updateActiveDot(dotIndex) {
+  let dots = document.querySelectorAll(".ad__dots--btn");
+  for (let i = 0; i < dots.length; i++) {
+    if (i === dotIndex) {
+      dots[i].classList.add("active");
+    } else {
+      dots[i].classList.remove("active");
+    }
+  }
+}
 
-  // Working with banner animation
-  const bannerSlides = document.querySelectorAll(
-    ".banner__animation .slide__single"
-  );
-  bannerCurrIndex = 0;
+// Call addActiveClass once to start the animation
+addActiveClass();
 
-  function addBannerActiveClass() {
-    bannerSlides[bannerCurrIndex].classList.add("active");
-    bannerCurrIndex = (bannerCurrIndex + 1) % bannerSlides.length;
+// Working with banner animation
+const bannerSlides = document.querySelectorAll(
+  ".banner__animation .slide__single"
+);
+bannerCurrIndex = 0;
 
-    setTimeout(function () {
-      for (let i = 0; i < bannerSlides.length; i++) {
-        if (i !== bannerCurrIndex) {
-          bannerSlides[i].classList.remove("active");
-        }
+function addBannerActiveClass() {
+  bannerSlides[bannerCurrIndex].classList.add("active");
+  bannerCurrIndex = (bannerCurrIndex + 1) % bannerSlides.length;
+
+  setTimeout(function () {
+    for (let i = 0; i < bannerSlides.length; i++) {
+      if (i !== bannerCurrIndex) {
+        bannerSlides[i].classList.remove("active");
       }
-      addBannerActiveClass();
-    }, 4000);
+    }
+    addBannerActiveClass();
+  }, 4000);
+}
+
+addBannerActiveClass();
+
+//working with Video popup
+function videoPopup(src = "", status) {
+  let videoModal = document.querySelector(".video__modal");
+  let videoArea = document.querySelector(".video__area");
+  let videoModalInner = document.querySelector(".video__modal--inner");
+
+  if (status === "open") {
+    videoArea.innerHTML += ` <iframe
+      src="https://www.youtube.com/embed/${src}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>`;
+
+    videoModal.style.opacity = "1";
+    videoModal.style.visibility = "visible";
   }
 
-  addBannerActiveClass();
+  if (status === "close") {
+    videoArea.innerHTML = "";
+
+    videoModal.style.opacity = "0";
+    videoModal.style.visibility = "hidden";
+  }
+
+  // Add event listener to close modal on click outside of iframe
+  videoModal.addEventListener("click", closeModal);
+  videoModalInner.addEventListener("click", closeModal);
+
+  function closeModal(event) {
+    // Check if the clicked element is the video modal's background
+    if (event.target === videoModal || event.target === videoModalInner) {
+      videoArea.innerHTML = "";
+
+      videoModal.style.opacity = "0";
+      videoModal.style.visibility = "hidden";
+    }
+  }
+}
+
+//Working with Slider
+const slides = document.querySelectorAll(".slide");
+var slideCount = 0;
+
+slides.forEach((slide, index) => {
+  slide.style.left = `${index * 100}%`;
 });
+
+function slidePrev() {
+  slideCount++;
+  slideImage();
+}
+function slideNext() {
+  slideCount--;
+  slideImage();
+}
+
+const slideImage = () => {
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${slideCount * 100}%)`;
+  });
+};
