@@ -338,27 +338,70 @@ function addBannerActiveClass() {
 
 addBannerActiveClass();
 
-//working with Video popup
+//Working with Modal
+function createModal() {
+  // Create the modal container
+  let videoModal = document.createElement("div");
+  videoModal.classList.add("video__modal");
+
+  // Create the modal inner container
+  let videoModalInner = document.createElement("div");
+  videoModalInner.classList.add("video__modal--inner");
+
+  // Create the close button
+  let closeButton = document.createElement("iconify-icon");
+  closeButton.setAttribute("icon", "ic:round-close");
+  closeButton.classList.add("video__close--icon");
+  closeButton.addEventListener("click", function () {
+    videoPopup("", "close");
+  });
+
+  // Create the video area
+  let videoArea = document.createElement("div");
+  videoArea.classList.add("video__area");
+
+  // Append elements to their respective containers
+  videoModalInner.appendChild(videoArea);
+  videoModal.appendChild(videoModalInner);
+  videoArea.appendChild(closeButton);
+
+  // Append the modal to the document body
+  document.body.appendChild(videoModal);
+}
+
 function videoPopup(src = "", status) {
   let videoModal = document.querySelector(".video__modal");
   let videoArea = document.querySelector(".video__area");
   let videoModalInner = document.querySelector(".video__modal--inner");
 
+  let iframe = videoArea.querySelector("iframe");
+
   if (status === "open") {
-    videoArea.innerHTML += ` <iframe
-      src="https://www.youtube.com/embed/${src}"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    ></iframe>`;
+    // Create a new iframe element
+    let newIframe = document.createElement("iframe");
+    newIframe.src = `https://www.youtube.com/embed/${src}`;
+    newIframe.title = "YouTube video player";
+    newIframe.frameborder = "0";
+    newIframe.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    newIframe.allowfullscreen = true;
+
+    // Replace the existing iframe with the new one
+    if (iframe) {
+      videoArea.replaceChild(newIframe, iframe);
+    } else {
+      videoArea.appendChild(newIframe);
+    }
 
     videoModal.style.opacity = "1";
     videoModal.style.visibility = "visible";
   }
 
   if (status === "close") {
-    videoArea.innerHTML = "";
+    // Remove the existing iframe
+    if (iframe) {
+      videoArea.removeChild(iframe);
+    }
 
     videoModal.style.opacity = "0";
     videoModal.style.visibility = "hidden";
@@ -369,9 +412,13 @@ function videoPopup(src = "", status) {
   videoModalInner.addEventListener("click", closeModal);
 
   function closeModal(event) {
-    // Check if the clicked element is the video modal's background
+    // Check if the clicked element is the video modal's background or inner container
     if (event.target === videoModal || event.target === videoModalInner) {
-      videoArea.innerHTML = "";
+      // Remove the iframe from videoArea
+      let iframe = videoArea.querySelector("iframe");
+      if (iframe) {
+        videoArea.removeChild(iframe);
+      }
 
       videoModal.style.opacity = "0";
       videoModal.style.visibility = "hidden";
@@ -379,25 +426,4 @@ function videoPopup(src = "", status) {
   }
 }
 
-//Working with Slider
-const slides = document.querySelectorAll(".slide");
-var slideCount = 0;
-
-slides.forEach((slide, index) => {
-  slide.style.left = `${index * 100}%`;
-});
-
-function slidePrev() {
-  slideCount++;
-  slideImage();
-}
-function slideNext() {
-  slideCount--;
-  slideImage();
-}
-
-const slideImage = () => {
-  slides.forEach((slide) => {
-    slide.style.transform = `translateX(-${slideCount * 100}%)`;
-  });
-};
+createModal();

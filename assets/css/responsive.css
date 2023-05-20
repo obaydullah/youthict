@@ -1809,7 +1809,9 @@
   .banner_text a.join_btn,
   .pg_banner_text .stars p,
   .side_text {
-    display: none;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 10px;
   }
   .logo img,
   .navbar-brand > img {

@@ -169,13 +169,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.video__area {
   position: relative;
 }
 
 .video__modal .video__close--icon {
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: -30px;
+  right: -30px;
   color: white;
   font-size: 30px;
   cursor: pointer;
@@ -210,33 +213,4 @@
     width: 300px;
     height: 200px;
   }
-}
-
-/* -------------------------- */
-/* Slider Area */
-/* -------------------------- */
-
-.custom__carousel {
-  width: 100%;
-  aspect-ratio: 1/0.3;
-}
-
-.custom__carousel .carousel__inner {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1/0.4;
-  overflow: hidden;
-}
-
-.carousel__inner .slide {
-  width: 100%;
-  aspect-ratio: 1/0.4;
-  position: absolute;
-  transition: all 0.3s;
-}
-.nav__carousel {
-  text-align: center;
-}
-.nav__carousel button {
-  font-size: 40px;
 }
