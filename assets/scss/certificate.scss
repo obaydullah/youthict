@@ -129,13 +129,16 @@ body {
       }
       .signature {
         display: flex;
-        justify-content: space-between;
-        padding: 0 47px;
+        padding: 0 20px;
         margin-top: 10px;
 
         img {
-          height: 40px;
-          width: auto;
+          height: 42px;
+          width: 120px;
+
+          &:last-child {
+            margin-left: 440px;
+          }
         }
       }
     }

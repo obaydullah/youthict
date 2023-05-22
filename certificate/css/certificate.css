@@ -349,13 +349,15 @@ body {
 }
 .certificate__content .right .signature {
   display: flex;
-  justify-content: space-between;
-  padding: 0 47px;
+  padding: 0 20px;
   margin-top: 10px;
 }
 .certificate__content .right .signature img {
-  height: 40px;
-  width: auto;
+  height: 42px;
+  width: 120px;
+}
+.certificate__content .right .signature img:last-child {
+  margin-left: 440px;
 }
 
 @media print {

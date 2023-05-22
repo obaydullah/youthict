@@ -366,8 +366,8 @@ body {
   position: relative;
 }
 .membership__content .right .footer .signature .signature__img {
-  height: 60px;
-  width: auto;
+  height: 42px;
+  width: 120px;
   position: absolute;
   bottom: 75px;
   left: 50%;
