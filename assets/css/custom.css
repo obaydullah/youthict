@@ -1,0 +1,320 @@
+/* course  */
+.course_image {
+  position: relative;
+}
+.course_image img {
+  aspect-ratio: 19/12 !important;
+}
+.course_text {
+  padding: 4rem 1.4rem !important;
+}
+.course__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f37021;
+  color: #fff;
+  padding: 2rem;
+  transform-origin: top;
+  transform: scaleY(0.8);
+  opacity: 0;
+  visibility: 0;
+  transition: all 0.5s;
+}
+.course__hover h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+.course__hover .category {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.course__hover .category {
+  margin-bottom: 0.5rem;
+}
+.course__hover .category h6 {
+  margin-bottom: 0 !important;
+  font-size: 1.6rem;
+}
+.course__hover ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.course__hover .stu {
+  display: block;
+}
+.course__hover .fee {
+  font-size: 2rem;
+  display: flex;
+  justify-content: end;
+}
+.course__hover .fee .round {
+  background-color: #003e59;
+  display: inline-block;
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course__hover .fee .round p {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+}
+
+/* hover animation  */
+.course_single_item:hover .course__hover {
+  transform: scaleY(1);
+  opacity: 1;
+  visibility: 1;
+}
+.course__item--single:hover .course__hover {
+  transform: scaleY(1);
+  opacity: 1;
+  visibility: 1;
+}
+
+/* prime minister  */
+.minister__content .prime__minister--quote {
+  height: 100%;
+}
+/* govt job getters */
+
+.job__getters--single {
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0 !important;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-image: linear-gradient(to top, #f37021, #f37021) !important;
+}
+.job__getters--single img {
+  height: 15rem !important;
+  width: 15rem !important;
+  border: 5px solid rgb(246, 246, 246);
+  border-radius: 50%;
+}
+.job__getters--single article {
+  padding: 2.5rem;
+  background-image: linear-gradient(to top, #11586d, #11586d) !important;
+}
+.job__getters--single article * {
+  color: #fff;
+}
+.job__getters--single picture {
+  padding: 2rem 2rem 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Add this line */
+  z-index: 1;
+}
+
+.job__getters--single picture img {
+  margin-bottom: 0 !important;
+}
+.job__getters--card--slider .slick-track {
+  display: flex !important;
+  gap: 2rem;
+}
+/* partner logo  */
+.partners_logo img {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* counter  */
+.counter__home--single.counter-1 {
+  background-color: #003e59 !important;
+  color: #fff;
+}
+.counter__home--single.counter-2 {
+  background-color: #f37021 !important;
+  color: #fff;
+}
+.counter__home--single.counter-3 {
+  background-color: #003e59 !important;
+  color: #fff;
+}
+.counter__home--single.counter-4 {
+  background-color: #f37021 !important;
+  color: #fff;
+}
+
+/* about us why choose area  */
+.why__choose--area--single {
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.why__choose--area--single--img {
+  border-radius: 0 !important;
+}
+.why__choose--area--single:hover {
+  background-color: #f37021 !important;
+  color: #fff;
+}
+
+/* about us instructor  */
+.instructor__area .instructor__single {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.instructor__area .instructor__single img {
+  border-radius: 1rem 1rem 0 0;
+}
+.instructor__area .instructor__single--info {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  gap: 0;
+  padding: 2rem;
+  flex-direction: row;
+  justify-content: center;
+}
+.instructor__area .instructor__single--info .name {
+  background: none;
+  padding: 0;
+}
+.instructor__area .instructor__single--info .designation {
+  background: none;
+  padding: 0;
+}
+.instructor__area .instructor__single .img__box {
+  position: relative;
+}
+.instructor__area .instructor__single .img__box .instructor__single--info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.instructor__area .instructor__single .img__box .instructor__single--info h2,
+.instructor__area .instructor__single .img__box .instructor__single--info p {
+  color: #fff;
+}
+
+.instructor__area .instructor__single .overlay {
+  transform: scaleY(0.5);
+  transform-origin: top;
+  transition: all 0.4s;
+}
+.instructor__area .instructor__single:hover .overlay {
+  background-color: #f37021;
+  opacity: 1;
+  transform: scaleY(1);
+}
+/* instructor area end  */
+.course__item--single {
+  height: 100%;
+}
+
+.section_heading h2 {
+  font-family: "Anek Bangla" !important;
+  color: #f37021;
+}
+
+/* new  */
+
+.slider_banner .sub__title {
+  letter-spacing: -1px;
+  font-family: "Anek Bangla" !important;
+}
+.banner_text h1 {
+  font-family: "Anek Bangla" !important;
+}
+.aboutus__hero--area .about__us--content .title {
+  font-family: "Anek Bangla" !important;
+}
+.title {
+  font-family: "Anek Bangla" !important;
+  color: #f37021;
+}
+
+/* payment success css */
+.payment__message {
+  padding: 4rem 0;
+  margin: 4rem 0;
+  margin-bottom: 8rem;
+}
+.payment__message--inner {
+  background-color: #d5f5fb !important;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.payment__message--inner.reject {
+  background-color: #fbd5d5 !important;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.payment__message--inner-head {
+  padding: 1rem 2rem;
+}
+.payment__message--inner-head h3 {
+  font-size: 3rem;
+  color: green;
+  font-weight: 600;
+}
+
+.payment__message--inner-head.reject h3 {
+  color: red;
+}
+.payment__message--inner-head i.fa {
+  font-size: 6rem;
+  color: green;
+}
+.payment__message--inner-head.reject i.fa {
+  color: red;
+}
+.payment__message--inner-body {
+  overflow-x: auto;
+}
+.payment__message--inner-body {
+  padding: 3rem;
+  text-align: center;
+}
+.payment__reject--inner-body.reject p {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.payment__message--inner-body table {
+  width: 100%;
+  border-collapse: separate;
+  padding: 1rem;
+}
+
+.payment__message--inner-body table tr.amount td {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.payment__message--inner-body table td {
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+.payment__message--inner-body table td.amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.payment__message--inner-body table tr td:first-child {
+  font-weight: bold;
+  color: #003e59;
+  text-align: left;
+}
+.payment__message--inner-body table tr td:last-child {
+  text-align: right;
+  font-weight: 600;
+}

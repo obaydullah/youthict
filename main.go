@@ -9,24 +9,7 @@ import (
 func main() {
 
 	http.HandleFunc("/", homepage)
-	http.HandleFunc("/branchapply", branchapply)
-	http.HandleFunc("/searchbranch", searchbranch)
-	http.HandleFunc("/studentapply", studentapply)
-	http.HandleFunc("/result", result)
-	http.HandleFunc("/jobgetters", jobgetters)
-	http.HandleFunc("/gallery", gallery)
-	http.HandleFunc("/aboutus", aboutus)
-	http.HandleFunc("/contactus", contactus)
-	http.HandleFunc("/login", login)
-	http.HandleFunc("/forgot", forgot)
-	http.HandleFunc("/courselist", courselist)
-	http.HandleFunc("/adminpanel", adminpanel)
-	http.HandleFunc("/course", course)
-	http.HandleFunc("/coursedetails", coursedetails)
 
-
-	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
-	http.ListenAndServe(":8080", nil)
 }
 
 func homepage(w http.ResponseWriter, r *http.Request) {

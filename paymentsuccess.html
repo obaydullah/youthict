@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Branchapply</title>
+    <title>Payment Success</title>
     <link rel="canonical" href="https://youthict.org" />
     <link
       rel="icon"
@@ -18,13 +18,13 @@
       href="assets/css/bootstrap.min.css"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link rel="stylesheet" href="./assets/css/feather.min.css" />
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/feather.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
   </head>
 
-  <body class="jobgetters__body body-container rbt-header-sticky">
+  <body class="body-container rbt-header-sticky">
     <!-- Start Header -->
     <!-- Start Header Area -->
     <header class="rbt-header rbt-header-10">
@@ -354,101 +354,79 @@
       </div>
     </div>
     <!-- Start Side Vav -->
-    <!-- Start Side Vav -->
 
     <main>
-      <!-- job getters apply header start -->
-      <section class="page__header">
+      <!-- payment success area  -->
+      <div class="payment__message">
         <div class="container">
-          <img
-            class="shape-1 shape"
-            src="./assets/images/gallery/shape-13.png"
-            alt=""
-          />
-          <img
-            src="./assets/images/gallery/shape-15.png"
-            alt=""
-            class="shape-2 shape"
-          />
-          <img
-            src="./assets/images/gallery/shape-25.png"
-            alt=""
-            class="shape-3 shape"
-          />
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="payment__message--inner">
+                <div class="payment__message--inner-head text-center">
+                  <i class="fa fa-check-circle"></i>
+                  <h3>Payment successfull</h3>
+                </div>
 
-          <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 col-lg-6">
-              <div class="page__header--info">
-                <h2>Our Courses</h2>
-                <p>
-                  We offer various type of coure. Pick up your favourite course
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="img__box">
-                <img src="./assets/images/course/course__header.jpeg" alt="" />
+                <div class="payment__message--inner-body">
+                  <table class="table__main">
+                    <tr>
+                      <td>Payment Type</td>
+                      <td>Bkash</td>
+                    </tr>
+                    <tr>
+                      <td>Bank</td>
+                      <td>Bkash</td>
+                    </tr>
+                    <tr>
+                      <td>Mobile</td>
+                      <td>+88 01963851464</td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td>obaydullah.dev2500@gmail.com</td>
+                    </tr>
+                    <tr class="amount">
+                      <td class="amount">Amount paid</td>
+                      <td class="amount">500tk</td>
+                    </tr>
+                    <tr>
+                      <td>Trax ID</td>
+                      <td>23432234324</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- job getters header end -->
+      </div>
+      <!-- payment success end  -->
 
-      <!-- job getters card start  -->
-      <section class="job__getters--card">
+      <!-- payment reject  -->
+      <div class="payment__message">
         <div class="container">
-          <div class="job__getters--card--inner">
-            <div class="job__getters--single">
-              <picture>
-                <img src="./assets/images/jobgetters/1.jpg" alt="" />
-              </picture>
-              <article>
-                <h3>Shawon Islam</h3>
-                <b>Bangladesh health ministry </b>
-                <p>Lorem, ipsum dolor sit amet tempore fuga.</p>
-              </article>
-            </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="payment__message--inner reject">
+                <div class="payment__message--inner-head reject text-center">
+                  <i class="fa fa-times-circle"></i>
+                  <h3>Payment reject</h3>
+                </div>
 
-            <div class="job__getters--single">
-              <picture>
-                <img src="./assets/images/jobgetters/2.jpg" alt="" />
-              </picture>
-              <article>
-                <h3>Josh Barnerd</h3>
-                <b>Data Scientist at Nerd Wallet </b>
-                <p>Josh has been sharing his passion</p>
-              </article>
-            </div>
-
-            <div class="job__getters--single">
-              <picture>
-                <img src="./assets/images/jobgetters/4.jpeg" alt="" />
-              </picture>
-              <article>
-                <h3>Josh Barnerd</h3>
-                <b>Data Scientist at Nerd Wallet </b>
-                <p>Josh has been sharing his passion</p>
-              </article>
-            </div>
-
-            <div class="job__getters--single">
-              <picture>
-                <img src="./assets/images/jobgetters/4.jpeg" alt="" />
-              </picture>
-              <article>
-                <h3>Josh Barnerd</h3>
-                <b>Data Scientist at Nerd Wallet </b>
-                <p>Josh has been sharing his passion</p>
-              </article>
+                <div class="payment__message--inner-body reject">
+                  <p>
+                    "Payment unsuccessful. Please verify your payment
+                    information and try again."
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- job getters card end -->
+      </div>
+      <!-- payment reject end  -->
     </main>
-    <!--  -->
+
     <!-- Start Footer -->
     <footer
       id="rs-footer"
@@ -627,10 +605,11 @@
     </footer>
     <!-- End Footer -->
 
-    <script src="./assets/js/jquery-2.2.4.min.js"></script>
-    <script src="./assets/js/jquery-migrate-3.4.1.js"></script>
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/iconify-icon.min.js"></script>
-    <script src="./assets/js/header.js"></script>
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.4.1.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/iconify-icon.min.js"></script>
+    <script src="assets/js/header.js"></script>
   </body>
 </html>

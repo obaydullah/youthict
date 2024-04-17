@@ -31,12 +31,13 @@
     <link rel="stylesheet" href="assets/css/venobox.min.css" />
     <link
       rel="preload"
-      href="assets/css/style.min.css"
+      href="assets/css/style.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <link rel="stylesheet" href="assets/css/slider.css" />
-    <link rel="stylesheet" href="assets/css/responsive.min.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
   </head>
 
   <body class="body-container rbt-header-sticky">
@@ -75,7 +76,7 @@
               <div class="rbt-header-sec-col rbt-header-left">
                 <div class="rbt-header-content">
                   <!-- Start Header Information List  -->
-                  <div class="header-info">
+                  <div class="header-info" style="margin-left: 0 !important">
                     <ul class="rbt-information-list">
                       <li class="phone">
                         <!-- add black-text class to make black text  -->
@@ -138,7 +139,7 @@
                     </ul>
                   </div>
                   <div class="rbt-separator d-none d-xl-block"></div>
-                  <div class="header-info d-none d-xl-block">
+                  <div class="header-info">
                     <div class="language">
                       <span class="en selected">En</span>
                       <span class="divider">|</span>
@@ -708,48 +709,6 @@
               <div class="course_catagory_item">
                 <div class="course_category_slider">
                   <div>
-                    <a class="course_slider_item" href="coursedetails.html">
-                      <div class="course_single_item">
-                        <div class="course_image">
-                          <img
-                            class="img-fluid w-100 lazyload"
-                            data-src="./assets/images/course/graphicsdesign.jpg"
-                            alt="প্রফেশনাল গ্রাফিক ডিজাইন"
-                            style="width: 100%; aspect-ratio: 19/10"
-                          />
-                        </div>
-                        <div class="course_text">
-                          <h6>সকল কোর্স</h6>
-                          <h3>প্রফেশনাল গ্রাফিক ডিজাইন</h3>
-                          <ul>
-                            <li>
-                              <span class="ratings">
-                                <iconify-icon
-                                  icon="ic:round-star"
-                                ></iconify-icon>
-                                <iconify-icon
-                                  icon="ic:round-star"
-                                ></iconify-icon>
-                                <iconify-icon
-                                  icon="ic:round-star"
-                                ></iconify-icon>
-                                <iconify-icon
-                                  icon="ic:round-star"
-                                ></iconify-icon>
-                                <iconify-icon
-                                  icon="ic:round-star-half"
-                                ></iconify-icon>
-                              </span>
-                              <span class="reviews"> ১৪,৪০০ রিভিউস</span>
-                              <span class="stu">১৮,০০০ স্টুডেন্ট</span>
-                            </li>
-                          </ul>
-                          <p>কোর্স ফি ৫০,০০০ ৳</p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
                     <a
                       class="course_slider_item"
                       href="./assets/images/course/icteducation.jpg"
@@ -762,34 +721,114 @@
                             alt="মোশন গ্রাফিক্স"
                             style="width: 100%; aspect-ratio: 19/10"
                           />
+
+                          <div class="course__hover">
+                            <h3>আইসিটি এডুকেশন কোর্স 2</h3>
+                            <div class="category">
+                              <iconify-icon
+                                icon="solar:book-outline"
+                              ></iconify-icon>
+                              <h6>আইসিটি এডুকেশন</h6>
+                            </div>
+
+                            <ul>
+                              <li>
+                                <span class="ratings">
+                                  <iconify-icon
+                                    icon="ic:round-star"
+                                  ></iconify-icon>
+                                  <iconify-icon
+                                    icon="ic:round-star"
+                                  ></iconify-icon>
+                                  <iconify-icon
+                                    icon="ic:round-star"
+                                  ></iconify-icon>
+                                  <iconify-icon
+                                    icon="ic:round-star"
+                                  ></iconify-icon>
+                                  <iconify-icon
+                                    icon="ic:round-star-half"
+                                  ></iconify-icon>
+                                </span>
+                                <span class="reviews"> ১৪,৪০০ রিভিউস</span>
+                              </li>
+                            </ul>
+
+                            <span class="stu">১৮,০০০ স্টুডেন্ট</span>
+
+                            <div class="fee">
+                              <div class="round">
+                                <p>৫০,০০০ ৳</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+
                         <div class="course_text">
-                          <h6>আইসিটি এডুকেশন</h6>
                           <h3>আইসিটি এডুকেশন কোর্স</h3>
-                          <ul>
-                            <li>
-                              <span class="ratings">
-                                <iconify-icon
-                                  icon="ic:round-star"
-                                ></iconify-icon>
-                                <iconify-icon
-                                  icon="ic:round-star"
-                                ></iconify-icon>
-                                <iconify-icon
-                                  icon="ic:round-star"
-                                ></iconify-icon>
-                                <iconify-icon
-                                  icon="ic:round-star"
-                                ></iconify-icon>
-                                <iconify-icon
-                                  icon="ic:round-star-half"
-                                ></iconify-icon>
-                              </span>
-                              <span class="reviews"> ১৪,৪০০ রিভিউস</span>
-                              <span class="stu">১৮,০০০ স্টুডেন্ট</span>
-                            </li>
-                          </ul>
-                          <p>কোর্স ফি ৫০,০০০ ৳</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div>
+                    <a
+                      class="course_slider_item"
+                      href="./assets/images/course/icteducation.jpg"
+                    >
+                      <div class="course_single_item">
+                        <div class="course_image">
+                          <img
+                            class="img-fluid w-100 lazyload"
+                            data-src="./assets/images/course/graphicsdesign.jpg"
+                            alt="প্রফেশনাল গ্রাফিক ডিজাইন"
+                            style="width: 100%; aspect-ratio: 19/10"
+                          />
+
+                          <div class="course__hover">
+                            <h3>আইসিটি এডুকেশন কোর্স 4</h3>
+                            <div class="category">
+                              <iconify-icon
+                                icon="solar:book-outline"
+                              ></iconify-icon>
+                              <h6>আইসিটি এডুকেশন</h6>
+                            </div>
+
+                            <ul>
+                              <li>
+                                <span class="ratings">
+                                  <iconify-icon
+                                    icon="ic:round-star"
+                                  ></iconify-icon>
+                                  <iconify-icon
+                                    icon="ic:round-star"
+                                  ></iconify-icon>
+                                  <iconify-icon
+                                    icon="ic:round-star"
+                                  ></iconify-icon>
+                                  <iconify-icon
+                                    icon="ic:round-star"
+                                  ></iconify-icon>
+                                  <iconify-icon
+                                    icon="ic:round-star-half"
+                                  ></iconify-icon>
+                                </span>
+                                <span class="reviews"> ১৪,৪০০ রিভিউস</span>
+                              </li>
+                            </ul>
+
+                            <span class="stu">১৮,০০০ স্টুডেন্ট</span>
+
+                            <div class="fee">
+                              <div class="round">
+                                <p>৫০,০০০ ৳</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="course_text">
+                          <h3>আইসিটি এডুকেশন কোর্স</h3>
                         </div>
                       </div>
                     </a>
@@ -916,81 +955,39 @@
 
         <div class="container">
           <div class="job__getters--card--slider">
-            <div class="job__getters--single br-right-top">
+            <div class="job__getters--single">
+              <picture>
+                <img src="./assets/images/jobgetters/1.jpg" alt="" />
+              </picture>
               <article>
-                <picture>
-                  <img
-                    class="lazyload"
-                    data-src="./assets/images/jobgetters/2.jpg"
-                    alt="jobgetters"
-                  />
-                </picture>
                 <h3>Shawon Islam</h3>
                 <b>Bangladesh health ministry </b>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
-                  recusandae nisi similique ipsum unde quae ipsam saepe voluptas
-                  tempore fuga.
-                </p>
+                <p>Lorem, ipsum dolor sit amet tempore fuga.</p>
               </article>
             </div>
-
-            <div class="job__getters--single br-right-bottom">
+            <div class="job__getters--single">
               <article>
                 <picture>
-                  <img
-                    data-src="./assets/images/jobgetters/2.jpg"
-                    alt="Jobgetters"
-                    class="lazyload"
-                  />
+                  <img src="./assets/images/jobgetters/4.jpeg" alt="" />
                 </picture>
                 <h3>Josh Barnerd</h3>
                 <b>Data Scientist at Nerd Wallet </b>
                 <p>
                   Josh has been sharing his passion for data for nearly a decade
                   at all levels of university, and as Lead Data Science
-                  Instructor at Galvanize. He's used data science for work
-                  ranging from cancer research to process automation.
                 </p>
               </article>
             </div>
-
-            <div class="job__getters--single br-left-top">
+            <div class="job__getters--single">
               <article>
                 <picture>
-                  <img
-                    data-src="./assets/images/jobgetters/2.jpg"
-                    alt="Job getters"
-                    class="lazyload"
-                  />
+                  <img src="./assets/images/jobgetters/4.jpeg" alt="" />
                 </picture>
                 <h3>Josh Barnerd</h3>
                 <b>Data Scientist at Nerd Wallet </b>
                 <p>
                   Josh has been sharing his passion for data for nearly a decade
                   at all levels of university, and as Lead Data Science
-                  Instructor at Galvanize. He's used data science for work
-                  ranging from cancer research to process automation.
-                </p>
-              </article>
-            </div>
-
-            <div class="job__getters--single br-bottom-left">
-              <article>
-                <picture>
-                  <img
-                    data-src="./assets/images/jobgetters/2.jpg"
-                    alt="Job getters"
-                    class="lazyload"
-                  />
-                </picture>
-                <h3>Josh Barnerd</h3>
-                <b>Data Scientist at Nerd Wallet </b>
-                <p>
-                  Josh has been sharing his passion for data for nearly a decade
-                  at all levels of university, and as Lead Data Science
-                  Instructor at Galvanize. He's used data science for work
-                  ranging from cancer research to process automation.
                 </p>
               </article>
             </div>
@@ -1317,7 +1314,7 @@
           <div class="row">
             <div class="col-12">
               <div class="section_heading text-center">
-                <h2>Thank You Prime Minister</h2>
+                <h2>ধন্যবাদ মাননীয় প্রধানমন্ত্রী</h2>
                 <p>
                   Digital World-2017 Opening Ceremony, BICC, Dhaka, Wednesday,
                   December 06, 2017
@@ -1344,7 +1341,7 @@
           class="rounded__shape lazyload />
 
           <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
               <div class="col-lg-6">
                 <div class="img__box">
                   <img
@@ -1355,8 +1352,8 @@
                 </div>
               </div>
 
-              <div class="col-lg-6">
-                <div class="prime__minister--quote">
+              <div class="col-lg-6 h-full">
+                <div class="prime__minister--quote h-full">
                   <p class="quote__text">
                     "Since 2011, we have compulsory ICT Education at the
                     Secondary level. As well as setting up Computer Labs and
