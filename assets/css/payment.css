@@ -1,0 +1,75 @@
+/* payment page css */
+.payment__message {
+  padding: 4rem 0;
+  margin: 4rem 0;
+  margin-bottom: 8rem;
+}
+.payment__message--inner {
+  background-color: #d5f5fb !important;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.payment__message--inner.reject {
+  background-color: #fbd5d5 !important;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.payment__message--inner-head {
+  padding: 1rem 2rem;
+}
+.payment__message--inner-head h3 {
+  font-size: 3rem;
+  color: green;
+  font-weight: 600;
+}
+
+.payment__message--inner-head.reject h3 {
+  color: red;
+}
+.payment__message--inner-head i.fa {
+  font-size: 6rem;
+  color: green;
+}
+.payment__message--inner-head.reject i.fa {
+  color: red;
+}
+.payment__message--inner-body {
+  overflow-x: auto;
+}
+.payment__message--inner-body {
+  padding: 3rem;
+  text-align: center;
+}
+.payment__reject--inner-body.reject p {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.payment__message--inner-body table {
+  width: 100%;
+  border-collapse: separate;
+  padding: 1rem;
+}
+
+.payment__message--inner-body table tr.amount td {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.payment__message--inner-body table td {
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+.payment__message--inner-body table td.amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.payment__message--inner-body table tr td:first-child {
+  font-weight: bold;
+  color: #003e59;
+  text-align: left;
+}
+.payment__message--inner-body table tr td:last-child {
+  text-align: right;
+  font-weight: 600;
+}
